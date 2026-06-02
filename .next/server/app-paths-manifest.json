@@ -46,7 +46,7 @@
   "/services/submenu/digital-marketing/page": "app/services/submenu/digital-marketing/page.js",
   "/services/submenu/mlm/page": "app/services/submenu/mlm/page.js",
   "/services/submenu/ppc/page": "app/services/submenu/ppc/page.js",
-  "/services/submenu/local-seo/page": "app/services/submenu/local-seo/page.js",
   "/services/submenu/software-development/page": "app/services/submenu/software-development/page.js",
+  "/services/submenu/local-seo/page": "app/services/submenu/local-seo/page.js",
   "/services/submenu/social-media-marketing/page": "app/services/submenu/social-media-marketing/page.js"
 }

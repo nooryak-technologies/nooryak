@@ -5228,13 +5228,19 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
   }
 
   .mlm-modal-card {
-      background: #ffffff !important; // Solid contrast background
-      border: 1.5px solid rgba(244, 81, 11, 0.2) !important;
-      border-radius: 24px !important;
+      // ── Premium Glassmorphism Modal Card ──
+      background: rgba(255, 255, 255, 0.92) !important;
+      backdrop-filter: blur(24px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+      border-radius: 28px !important;
       width: 100% !important;
       max-width: 900px !important;
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3), 
-                  0 0 40px rgba(255, 255, 255, 0.5) inset !important;
+      box-shadow:
+          0 32px 80px rgba(0, 0, 0, 0.22),
+          0 8px 24px rgba(244, 81, 11, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.04) !important;
       position: relative !important;
       overflow: hidden !important;
       padding: 42px !important;
@@ -5243,6 +5249,31 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
       opacity: 1 !important;
       visibility: visible !important;
       animation: mlmModalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+
+      // Subtle top shimmer line
+      &::before {
+          content: '' !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          height: 3px !important;
+          background: linear-gradient(90deg, #f4510b, #22c55e, #f4510b) !important;
+          border-radius: 28px 28px 0 0 !important;
+      }
+
+      // Decorative glow orb top-right
+      &::after {
+          content: '' !important;
+          position: absolute !important;
+          top: -60px !important;
+          right: -60px !important;
+          width: 200px !important;
+          height: 200px !important;
+          background: radial-gradient(circle, rgba(34, 197, 94, 0.07) 0%, transparent 70%) !important;
+          pointer-events: none !important;
+          border-radius: 50% !important;
+      }
 
       @media (max-width: 768px) {
           padding: 32px 24px !important;
@@ -5369,17 +5400,29 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
       display: inline-flex !important;
       align-items: center !important;
       gap: 6px !important;
-      background: rgba(244, 81, 11, 0.06) !important;
-      border: 1px solid rgba(244, 81, 11, 0.15) !important;
+      // ── Green glassmorphism badge ──
+      background: rgba(34, 197, 94, 0.08) !important;
+      border: 1px solid rgba(34, 197, 94, 0.25) !important;
       border-radius: 30px !important;
       padding: 6px 14px !important;
       font-size: 12.5px !important;
       font-weight: 600 !important;
-      color: #e04a0a !important;
+      color: #15803d !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255,255,255,0.6) !important;
+      transition: all 0.25s ease !important;
 
       i {
           font-size: 13px !important;
-          color: #f4510b !important;
+          color: #22c55e !important; // ✅ Green tick mark
+          filter: drop-shadow(0 0 3px rgba(34, 197, 94, 0.4)) !important;
+      }
+
+      &:hover {
+          background: rgba(34, 197, 94, 0.14) !important;
+          border-color: rgba(34, 197, 94, 0.4) !important;
+          transform: translateY(-1px) !important;
       }
   }
 
