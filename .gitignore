@@ -6,6 +6,8 @@ node_modules/
 # .next/
 # Exclude large webpack cache files (exceed GitHub's 100MB limit)
 .next/cache/
+# Exclude dev-specific next files/types to prevent build errors
+.next/dev/
 out/
 
 # production

@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/submenu/layout,_N_T_/services/submenu/local-seo/layout,_N_T_/services/submenu/local-seo/page,_N_T_/services/submenu/local-seo"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/submenu/local-seo/__PAGE__",
+    "/services/submenu/local-seo",
+    "/services/submenu",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}
