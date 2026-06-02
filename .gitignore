@@ -4,6 +4,8 @@ node_modules/
 # next.js build output
 # COMMENTED OUT: We want Git to track .next so cPanel doesn't have to build it
 # .next/
+# Exclude large webpack cache files (exceed GitHub's 100MB limit)
+.next/cache/
 out/
 
 # production
