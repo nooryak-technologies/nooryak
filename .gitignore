@@ -31,3 +31,9 @@ coverage/
 # local deployment folders
 .vercel/
 
+# Large archive / zip files — too big for GitHub (>100MB limit)
+*.zip
+*.rar
+*.7z
+global.d.zip
+scripts.zip
