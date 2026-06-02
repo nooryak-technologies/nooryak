@@ -2,7 +2,8 @@
 node_modules/
 
 # next.js build output
-.next/
+# COMMENTED OUT: We want Git to track .next so cPanel doesn't have to build it
+# .next/
 out/
 
 # production
@@ -16,6 +17,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # environment files
+# Keep .env files hidden! They contain your private database credentials and passwords.
 .env
 .env.development.local
 .env.test.local
