@@ -3,9 +3,9 @@ import { Images } from "@/utils/Images";
 export const AppDevelopmentHeroData = {
   label: "APP DEVELOPMENT",
   title: {
-    line1: "Powerful Websites.",
-    line2: "Built for",
-    highlight: "Growth."
+    line1: "Built for Busibess.",
+    line2: " Growth  And ",
+    highlight: "#1 Rankings."
   },
   description:
     "We design and develop high-performance mobile applications that engage users, slove real problems, and accelerate business growth on every platform.",
