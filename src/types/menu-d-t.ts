@@ -1,0 +1,49 @@
+import { StaticImageData } from "next/image";
+
+export interface MenuItem {
+  id: number;
+  title: string;
+  heading?: string;
+  link: string;
+  pluseIncon?: boolean;
+  megaMenu?: boolean;
+  smallMenu?: boolean;
+  mediumMenu?: boolean;
+  active?: boolean;
+  hasDropdown?: boolean;
+  children?: boolean;
+  submenus?: Submenu[];
+  menuThumb?: thumbsDt;
+}
+
+export interface Submenu {
+  title?: string;
+  heading?: string;
+  link?: string;
+  pluseIncon?: boolean;
+  isThumb?: boolean;
+  thumbSrc?: StaticImageData;
+  thumbAlt?: string;
+  megaMenu?: MegaMenuItem[];
+  submenus?: Submenu[];
+  tag?: string;
+  themeDefault?: string;
+}
+
+export interface MegaMenuItem {
+  title: string;
+  heading?: string;
+  link: string;
+  tag?: string;
+  themeDefault?: string;
+}
+
+export interface thumbsDt {
+  title: string,
+  heading?: string,
+  link: string,
+  pluseIncon: boolean,
+  isThumb: boolean,
+  thumbSrc: StaticImageData,
+  thumbAlt: string
+}

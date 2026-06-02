@@ -1,0 +1,63 @@
+.tp-offcanvas-logo {
+    a {
+        img {
+            background: linear-gradient(135deg, #0f172a 60%, #ff5722 140%);
+            border-radius: 50px;
+            width: 150px;
+            height: auto;
+            padding: 2px 12px;
+        }
+    }
+}
+
+.tp-offcanvas-wrapper {
+    height: 100vh;
+    padding: 20px;
+
+    // Hide on desktop — mobile burger menu still works
+    @media (min-width: 1200px) {
+        display: none !important;
+    }
+
+    .tp-offcanvas-top {
+        margin-bottom: 20px;
+    }
+
+    .tp-megamenu-wrapper {
+        padding: 6px 2px;
+    }
+
+    .tp-offcanvas-menu .tp-megamenu-list ul li a {
+        padding: 8px 20px;
+        font-size: 14px;
+        background-color: transparent !important;
+    }
+
+    .tp-offcanvas-menu {
+        margin-bottom: 20px;
+    }
+
+    .tp-megamenu-list {
+        margin-top: 20px;
+        ul{
+            li{
+                a{
+                    padding: 8px 0;
+                }
+            }
+        }
+    }
+}
+
+// Hide body overlay on desktop too
+@media (min-width: 1200px) {
+    .body-overlay {
+        display: none !important;
+    }
+}
+
+
+
+.tp-offcanvas-menu ul li .submenu+.tp-menu-close {
+    display: none;
+}

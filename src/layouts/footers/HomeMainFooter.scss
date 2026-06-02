@@ -1,0 +1,232 @@
+.contact-hero {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    padding: clamp(20px, 5vw, 40px);
+    background: url("../../../public/assets/images/common/footerbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // TOP BAR
+    .top-bar {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-size: clamp(12px, 1.5vw, 14px);
+        width: 100%;
+        margin-top: 20px;
+
+        img {
+            width: 80%;
+            display: flex;
+            margin: auto;
+            height: 100%;
+        }
+
+        @media screen and (max-width:500px) {
+            top: 18%;
+
+            img {
+
+                width: 80%;
+            }
+        }
+
+    }
+
+    // CENTER
+    .center-content {
+        text-align: center;
+    }
+
+    .sub-text {
+        font-size: clamp(13px, 1vw, 16px);
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    // BIG TITLE (The "Mango Grotesque" display)
+    .main-title {
+        /* Fluid Font Size: Min 60px, Preferred 20vw, Max 280px */
+        font-weight: 500;
+        line-height: 0.9;
+        font-family: "MangoGrotesque", serif;
+        margin: 0;
+        pointer-events: auto;
+
+        span {
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            will-change: transform;
+            font-size: 350px;
+
+            @media screen and (max-width:992px) {
+                font-size: 200px;
+            }
+
+            @media screen and (max-width:678px) {
+                font-size: 150px;
+            }
+
+            &:hover {
+                transform: translateY(5%) scaleY(1.1);
+            }
+
+            @media screen and (max-width:500px) {
+                font-size: 100px;
+            }
+
+            &.space-gap {
+                width: 1.5rem;
+                
+                @media screen and (max-width:768px) {
+                    width: 0.8rem;
+                }
+
+                @media screen and (max-width:480px) {
+                    width: 0.5rem;
+                }
+
+                @media screen and (max-width:375px) {
+                    width: 0.3rem;
+                }
+            }
+        }
+    }
+
+    // BOTTOM
+    .bottom-bar {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        font-size: clamp(11px, 1vw, 13px);
+        opacity: 0.9;
+        width: 100%;
+        padding-top: 20px;
+
+        span,
+        a {
+            font-size: 14px;
+        }
+
+        .socials {
+            display: flex;
+            gap: clamp(15px, 2vw, 25px);
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:1300px) {
+        .top-bar {
+            img {
+                width: 80%;
+            }
+        }
+
+        .main-title {
+            span {
+                font-size: 300px;
+            }
+        }
+
+
+    }
+
+    @media screen and (min-width:1700px) {
+        height: unset;
+    }
+}
+
+
+/* ========================= */
+/* 📱 RESPONSIVE OVERRIDES   */
+/* ========================= */
+
+@media (max-width: 768px) {
+    .contact-hero {
+        height: auto;
+        min-height: unset;
+        padding: 40px 20px 30px;
+        margin: 15px;
+
+        .sub-text {
+            margin-bottom: 15px;
+            font-size: 11px;
+        }
+
+        .center-content {
+            margin-top: 0;
+            padding: 10px 0;
+        }
+
+        .main-title {
+            span {
+                font-size: 120px;
+            }
+        }
+
+        .bottom-bar {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+            padding-top: 15px;
+
+            span, a {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        margin: 10px;
+        border-radius: 15px;
+        padding: 30px 15px 20px;
+
+        .sub-text {
+            margin-bottom: 10px;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .center-content {
+            padding: 5px 0;
+        }
+
+        .main-title {
+            letter-spacing: 1px;
+            
+            span {
+                font-size: 80px;
+            }
+        }
+
+        .bottom-bar {
+            gap: 10px;
+            padding-top: 10px;
+
+            span, a {
+                font-size: 11px;
+            }
+        }
+    }
+}

@@ -1,0 +1,961 @@
+// ══════════════════════════════════════════
+// SERVICE PAGE — PIXEL-PERFECT STYLES
+// ══════════════════════════════════════════
+$org: #ff5722;
+$org-d: #e64a19;
+$dark: #0a0e1a;
+$txt: #555e6d;
+$bg: #f8f8f8;
+$white: #ffffff;
+$bdr: #e8e8e8;
+
+// ── Responsive container padding
+.srv-page {
+  .container {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+
+    @media (min-width: 576px) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media (min-width: 768px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media (min-width: 992px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+
+    @media (min-width: 1400px) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}
+
+// shared section header
+.srv-sec-head {
+  margin-bottom: 52px;
+
+  .srv-sec-tag {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: $org;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .srv-sec-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: $dark;
+    margin-bottom: 14px;
+    line-height: 1.2;
+    font-family: var(--font-space-grotesk), sans-serif;
+
+    @media(max-width:992px) {
+      font-size: 32px;
+    }
+
+    @media(max-width:768px) {
+      font-size: 28px;
+    }
+
+    @media(max-width:480px) {
+      font-size: 24px;
+    }
+  }
+
+  .srv-sec-sub {
+    font-size: 15px;
+    color: $txt;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.65;
+
+    @media(max-width:768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.srv-page {
+
+  // ══════════════════════
+  //  HERO
+  // ══════════════════════
+  .srv-hero {
+    padding: 130px 0 56px;
+    background: #faf9f7;
+    overflow-x: hidden;
+
+    @media(max-width:1200px) {
+      padding: 110px 0 48px;
+    }
+
+    @media(max-width:992px) {
+      padding: 90px 0 40px;
+    }
+
+    @media(max-width:768px) {
+      padding: 85px 0 36px;
+    }
+
+    // ── left column
+    &__left {
+      padding-right: 20px;
+    }
+
+    // breadcrumb
+    .srv-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 22px;
+
+      i {
+        font-size: 9px;
+        color: #bbb;
+      }
+
+      &__active {
+        color: $dark;
+        font-weight: 600;
+      }
+    }
+
+    // orange tag
+    &__tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: $org;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    &__dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: $org;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    // title
+    &__title {
+      font-size: 54px;
+      font-weight: 800;
+      color: $dark;
+      line-height: 1.13;
+      margin-bottom: 20px;
+      font-family: var(--font-space-grotesk), sans-serif;
+
+      @media(max-width:1400px) {
+        font-size: 48px;
+      }
+
+      @media(max-width:1200px) {
+        font-size: 42px;
+      }
+
+      @media(max-width:992px) {
+        font-size: 36px;
+      }
+
+      @media(max-width:768px) {
+        font-size: 30px;
+      }
+
+      @media(max-width:576px) {
+        font-size: 26px;
+      }
+    }
+
+    &__accent {
+      color: $org;
+    }
+
+    // desc
+    &__desc {
+      font-size: 15px;
+      color: $txt;
+      line-height: 1.75;
+      max-width: 470px;
+      margin-bottom: 34px;
+
+      @media(max-width:768px) {
+        font-size: 14px;
+      }
+    }
+
+    // buttons
+    &__btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    // ── right visual container
+    &__visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 440px;
+
+      @media(max-width:992px) {
+        margin-top: 50px;
+        min-height: auto;
+      }
+
+      @media(max-width:576px) {
+        margin-top: 36px;
+      }
+    }
+
+    // large orange glow ring
+    &__glow {
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 87, 34, 0.14) 0%, rgba(255, 87, 34, 0.05) 55%, transparent 72%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      pointer-events: none;
+
+      @media(max-width:992px) {
+        width: 340px;
+        height: 340px;
+      }
+
+      @media(max-width:576px) {
+        width: 260px;
+        height: 260px;
+      }
+    }
+
+    // hero image
+    &__img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: auto;
+      max-width: 560px;
+      object-fit: contain;
+      display: block;
+      animation: srvHeroFloat 4s ease-in-out infinite;
+
+      @media(max-width:1200px) {
+        max-width: 480px;
+      }
+
+      @media(max-width:992px) {
+        max-width: 420px;
+      }
+
+      @media(max-width:576px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // shared buttons
+  .srv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s ease;
+
+    @media(max-width:480px) {
+      font-size: 14px;
+    }
+
+    &--primary {
+      padding: 13px 26px;
+      background: $org;
+      color: $white;
+      box-shadow: 0 8px 22px rgba(255, 87, 34, .35);
+
+      &:hover {
+        background: $org-d;
+        color: $white;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(255, 87, 34, .45);
+      }
+
+      @media(max-width:480px) {
+        padding: 11px 20px;
+      }
+    }
+
+    &--outline {
+      padding: 13px 26px;
+      background: transparent;
+      color: $dark;
+      border: 1.5px solid #ccc;
+
+      &:hover {
+        border-color: $org;
+        color: $org;
+        transform: translateY(-3px);
+      }
+
+      @media(max-width:480px) {
+        padding: 11px 20px;
+      }
+    }
+  }
+
+  // ══════════════════════
+  //  STATS BAR
+  // ══════════════════════
+  .srv-stats {
+    padding: 0 0 56px;
+    background: #faf9f7;
+    border-bottom: none;
+
+    @media(max-width:992px) {
+      padding-bottom: 44px;
+    }
+
+    @media(max-width:768px) {
+      padding-bottom: 36px;
+    }
+
+    &__row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      background: $white;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, .08);
+      overflow: hidden;
+
+      @media(max-width:768px) {
+        flex-wrap: wrap;
+        border-radius: 12px;
+      }
+    }
+
+    // each stat cell
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+      padding: 28px 32px;
+
+      @media(max-width:1200px) {
+        padding: 24px 22px;
+        gap: 14px;
+      }
+
+      @media(max-width:992px) {
+        padding: 22px 18px;
+        gap: 12px;
+      }
+
+      @media(max-width:768px) {
+        flex: 0 0 50%;
+        padding: 22px 20px;
+      }
+
+      @media(max-width:480px) {
+        flex: 0 0 100%;
+        padding: 18px 20px;
+      }
+    }
+
+    // outlined circle icon — matches reference
+    &__icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $org;
+      font-size: 35px;
+      flex-shrink: 0;
+
+      @media(max-width:992px) {
+        width: 54px;
+        height: 54px;
+        font-size: 28px;
+      }
+
+      @media(max-width:768px) {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+      }
+    }
+
+    &__num {
+      font-size: 24px;
+      font-weight: 800;
+      color: $dark;
+      line-height: 1;
+      font-family: var(--font-space-grotesk), sans-serif;
+
+      @media(max-width:1200px) {
+        font-size: 20px;
+      }
+
+      @media(max-width:992px) {
+        font-size: 18px;
+      }
+    }
+
+    &__lbl {
+      font-size: 13px;
+      color: $txt;
+      margin-top: 4px;
+
+      @media(max-width:992px) {
+        font-size: 12px;
+      }
+    }
+
+    // vertical divider between cells
+    &__div {
+      width: 1px;
+      background: $bdr;
+      flex-shrink: 0;
+      align-self: stretch;
+      margin: 16px 0;
+
+      @media(max-width:768px) {
+        display: none;
+      }
+    }
+  }
+
+  // ══════════════════════
+  //  CORE SERVICES
+  // ══════════════════════
+  .srv-core {
+    padding: 36px 0 80px;
+    background: #faf9f7;
+
+    @media(max-width:992px) {
+      padding: 70px 0 60px;
+    }
+
+    @media(max-width:768px) {
+      padding: 56px 0 48px;
+    }
+  }
+
+  .srv-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+
+    @media(max-width:1200px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media(max-width:992px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    @media(max-width:768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    @media(max-width:400px) {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
+  .srv-card {
+    background: $white;
+    border-radius: 16px;
+    padding: 36px 20px 28px;
+    text-align: center; // ← centered like reference
+    border: none;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .07);
+    transition: all .28s ease;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media(max-width:992px) {
+      padding: 28px 16px 22px;
+      border-radius: 12px;
+    }
+
+    @media(max-width:768px) {
+      padding: 24px 14px 20px;
+      border-radius: 10px;
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(255, 87, 34, .13);
+
+      .srv-card__ico {
+        background: $org;
+        color: $white;
+        border-color: $org;
+      }
+
+      .srv-card__link {
+        color: $org;
+
+        i {
+          transform: translateX(4px);
+        }
+      }
+    }
+
+    // large outlined circle — matches reference
+    &__ico {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #fff5f2;
+      border: 1.5px solid rgba(255, 87, 34, .18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: $org;
+      margin: 0 auto 22px;
+      transition: all .28s ease;
+
+      @media(max-width:992px) {
+        width: 76px;
+        height: 76px;
+        font-size: 28px;
+        margin-bottom: 18px;
+      }
+
+      @media(max-width:768px) {
+        width: 64px;
+        height: 64px;
+        font-size: 24px;
+        margin-bottom: 14px;
+      }
+    }
+
+    &__name {
+      font-size: 15px;
+      font-weight: 700;
+      color: $dark;
+      margin-bottom: 10px;
+      font-family: var(--font-space-grotesk), sans-serif;
+      line-height: 1.3;
+
+      @media(max-width:768px) {
+        font-size: 14px;
+      }
+    }
+
+    &__desc {
+      font-size: 13px;
+      color: $txt;
+      line-height: 1.65;
+      margin-bottom: 18px;
+
+      @media(max-width:768px) {
+        font-size: 12px;
+        margin-bottom: 14px;
+      }
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      color: $org; // ← orange like reference
+      text-decoration: none;
+      transition: color .25s ease;
+
+      i {
+        font-size: 11px;
+        transition: transform .25s ease;
+      }
+    }
+  }
+
+  // ══════════════════════
+  //  WHY CHOOSE
+  // ══════════════════════
+  //  WHY CHOOSE
+  // ══════════════════════
+  .srv-why {
+    padding: 90px 0 80px;
+    background: $white;
+
+    @media(max-width:992px) {
+      padding: 70px 0 60px;
+    }
+
+    @media(max-width:768px) {
+      padding: 56px 0 48px;
+    }
+
+    // 4-col grid — collapses to 2 then 1
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+
+      @media(max-width:992px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      @media(max-width:480px) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+    // each card — warm beige fill, rounded, no border
+    &__card {
+      background: #fdf6f3;
+      border-radius: 16px;
+      padding: 32px 24px 28px;
+      text-align: center;
+      transition: box-shadow .28s ease, transform .28s ease;
+
+      @media(max-width:992px) {
+        padding: 26px 20px 22px;
+      }
+
+      @media(max-width:768px) {
+        padding: 22px 16px 20px;
+        border-radius: 12px;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 40px rgba(255, 87, 34, .12);
+
+        .srv-why__ico {
+          background: $org;
+          color: $white;
+          border-color: $org;
+        }
+      }
+    }
+
+    // rounded-rect icon box — matches reference
+    &__ico {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: $white;
+      border: 1.5px solid rgba(255, 87, 34, .2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 28px;
+      color: $org;
+      transition: all .28s ease;
+
+      @media(max-width:992px) {
+        width: 62px;
+        height: 62px;
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      @media(max-width:768px) {
+        width: 54px;
+        height: 54px;
+        font-size: 20px;
+        border-radius: 14px;
+        margin-bottom: 14px;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: $dark;
+      margin-bottom: 10px;
+      font-family: var(--font-space-grotesk), sans-serif;
+      line-height: 1.3;
+
+      @media(max-width:768px) {
+        font-size: 15px;
+      }
+    }
+
+    &__desc {
+      font-size: 14px;
+      color: $txt;
+      line-height: 1.68;
+      margin: 0;
+
+      @media(max-width:768px) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  // ══════════════════════
+  //  CTA BANNER
+  // ══════════════════════
+  .srv-cta {
+    padding: 0 0 80px; // section sits on white bg, banner has its own radius
+    background: $white;
+    position: relative;
+    overflow-x: hidden;
+
+    @media(max-width:992px) {
+      padding-bottom: 60px;
+    }
+
+    @media(max-width:768px) {
+      padding-bottom: 48px;
+    }
+
+    // glow orbs — left swirl matches reference
+    &__glow-l,
+    &__glow-r {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    &__glow-l {
+      width: 560px;
+      height: 560px;
+      left: -180px;
+      top: -180px;
+      background: radial-gradient(circle, rgba(255, 87, 34, .38) 0%, rgba(255, 87, 34, .12) 40%, transparent 68%);
+    }
+
+    &__glow-r {
+      width: 400px;
+      height: 400px;
+      right: -120px;
+      bottom: -120px;
+      background: radial-gradient(circle, rgba(255, 87, 34, .15) 0%, transparent 65%);
+    }
+
+    // dark rounded banner — key difference from current
+    &__inner {
+      background: #0f1120 url('/assets/images/services/needthebackground.png') center center / cover no-repeat;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 52px 60px;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+
+      @media(max-width:1200px) {
+        padding: 48px 48px;
+      }
+
+      @media(max-width:992px) {
+        padding: 44px 36px;
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+      }
+
+      @media(max-width:768px) {
+        padding: 36px 28px;
+        border-radius: 16px;
+        gap: 24px;
+      }
+
+      @media(max-width:480px) {
+        padding: 32px 20px;
+        border-radius: 14px;
+      }
+    }
+
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex: 1;
+
+      @media(max-width:992px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+    }
+
+    // rocket circle — glowing ring effect matches reference
+    &__rocket {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: $org;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: $white;
+      flex-shrink: 0;
+      position: relative;
+      box-shadow:
+        0 0 0 10px rgba(255, 87, 34, .18),
+        0 0 0 22px rgba(255, 87, 34, .08),
+        0 0 50px rgba(255, 87, 34, .5);
+
+      @media(max-width:768px) {
+        width: 62px;
+        height: 62px;
+        font-size: 24px;
+      }
+
+      @media(max-width:480px) {
+        width: 54px;
+        height: 54px;
+        font-size: 20px;
+      }
+    }
+
+    &__title {
+      font-size: 34px;
+      font-weight: 800;
+      color: $white;
+      line-height: 1.28;
+      margin: 0;
+      font-family: var(--font-space-grotesk), sans-serif;
+
+      span {
+        color: $org;
+      }
+
+      @media(max-width:1200px) {
+        font-size: 30px;
+      }
+
+      @media(max-width:992px) {
+        font-size: 28px;
+      }
+
+      @media(max-width:768px) {
+        font-size: 24px;
+      }
+
+      @media(max-width:480px) {
+        font-size: 21px;
+      }
+    }
+
+    &__right {
+      flex-shrink: 0;
+      max-width: 300px;
+
+      @media(max-width:992px) {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, .6);
+        line-height: 1.72;
+        margin-bottom: 24px;
+
+        @media(max-width:768px) {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: $org;
+      color: $white;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .3s ease;
+      box-shadow: 0 8px 28px rgba(255, 87, 34, .45);
+
+      &:hover {
+        background: $white;
+        color: $org;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, .22);
+      }
+
+      @media(max-width:480px) {
+        padding: 12px 26px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// float keyframe
+@keyframes srvFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-11px);
+  }
+}
+
+// hero image — smooth top-to-bottom float
+@keyframes srvHeroFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

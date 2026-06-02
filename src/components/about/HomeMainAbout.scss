@@ -1,0 +1,463 @@
+.dgm-about-review {
+    margin-right: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+
+    h4 {
+        .google_ratings {
+            letter-spacing: -.02em;
+            color: var(--tp-common-black);
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+        }
+    }
+
+    .dgm-about-review_child {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        p {
+            margin: 0;
+            font-size: 14px;
+
+            &.rating_star {
+                color: gold;
+                font-size: 28px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .dgm-about-review {
+        margin-right: 0 !important;
+    }
+
+    .dgm-about-ratting {
+        padding-top: 0 !important;
+    }
+
+    .dgm-about-review-box {
+        gap: 10px !important;
+    }
+}
+
+// .trustpilotratings {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+// }
+
+.review-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 25px;
+    padding: 20px;
+
+    background: #fff;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.review-left {
+    h4 {
+        font-size: 28px;
+        color: #ff5722;
+    }
+
+    span {
+        font-size: 13px;
+        color: #777;
+    }
+}
+
+.review-right {
+    h5 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .stars {
+        color: #ffb400;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 25px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .action-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.about {
+    padding: 50px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .about-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    /* LEFT SIDE */
+    .about-left {
+        flex: 1;
+
+        .image-box {
+            position: relative;
+            border-radius: 20px;
+            // overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+            }
+
+
+        }
+    }
+
+
+    /* RIGHT SIDE */
+    .about-right {
+        flex: 1;
+
+        .aboutTag {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 12px 26px;
+            border-radius: 999px;
+
+            /* pill background */
+            background: linear-gradient(135deg,
+                    #eef3f7,
+                    #e6edf3,
+                    #f3f5f7);
+
+            font-family: sans-serif;
+
+            .about1 {
+                font-weight: 700;
+                letter-spacing: 1px;
+                color: #4aa3b8;
+            }
+
+            .brand {
+                font-weight: 700;
+                letter-spacing: 1px;
+                color: #222;
+            }
+
+            .underline {
+                filter: blur(2px);
+                opacity: .9;
+                background: linear-gradient(to right, #ff8a00, #ffb347, #ffd54f);
+                border-radius: 50px;
+                width: 78px;
+                height: 5px;
+                position: absolute;
+                bottom: 8px;
+                right: 26px;
+            }
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #111;
+            position: relative;
+            margin: 20px 0 40px;
+            font-family: Space Grotesk;
+
+            &::before {
+                content: "";
+                background: url("../../../public/assets/images/home/blue_org.webp");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 360px;
+                height: 84px;
+                position: absolute;
+                bottom: -80px;
+                left: -30px;
+                z-index: -1;
+
+                @media screen and (max-width:480px) {
+                    width: 240px;
+                }
+            }
+
+        }
+
+        .desc {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+
+            li {
+                margin-bottom: 10px;
+                font-size: 16px;
+                color: #333;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+
+            .cta {
+                background: linear-gradient(135deg, #ff7a18, #ff3d00);
+                color: #fff;
+                border: 1px solid #ff3d00;
+                padding: 8px 24px;
+                border-radius: 30px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.3s;
+                box-shadow: 0 8px 25px rgba(255, 61, 0, 0.35);
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 12px 30px rgba(255, 61, 0, 0.5);
+                    background: #fff;
+                    color: #ff3d00;
+                }
+            }
+
+            .stats {
+                display: flex;
+                gap: 25px;
+
+                div {
+                    h4 {
+                        margin: 0;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    span {
+                        font-size: 13px;
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+        .about-wrapper {
+            flex-direction: column-reverse;
+        }
+
+        .about-right h2 {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .about-right h2 {
+            font-size: 26px;
+        }
+    }
+}
+
+.projectCard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 18px 36px;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    /* 🔥 Base gradient */
+    background: linear-gradient(135deg,
+            #fff7e5,
+            #ffe0a3,
+            #ffb347,
+            #ff8c00);
+
+    box-shadow:
+        0 20px 60px rgba(255, 140, 0, 0.25),
+        inset 0 2px 6px rgba(255, 255, 255, 0.4);
+
+    transition: all 0.5s ease;
+
+    animation: floatCard 5s ease-in-out infinite;
+    background: url("../../../public/assets/images/home/abt_no_bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    bottom: -30px;
+    left: 40px;
+    border-radius: 16px;
+
+
+    &:hover {
+        transform: rotate(0deg) translateY(-8px) scale(1.05);
+    }
+
+    /* 🌊 LAYER 1 – SOFT COLOR FLOW */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(120deg,
+                rgba(255, 255, 255, 0.4),
+                transparent,
+                rgba(255, 255, 255, 0.3));
+
+        opacity: 0.5;
+        animation: flowLight 6s ease-in-out infinite;
+    }
+
+    /* 🌊 LAYER 2 – WAVE SHAPE */
+    &::after {
+        content: "";
+        position: absolute;
+        width: 180%;
+        height: 180%;
+        top: -40%;
+        left: -40%;
+
+        background: radial-gradient(circle at 30% 50%,
+                rgba(255, 255, 255, 0.5),
+                transparent 60%);
+
+        animation: waveMove 8s linear infinite;
+    }
+
+    .icon {
+        font-size: 40px;
+        z-index: 2;
+    }
+
+    .text {
+        z-index: 2;
+
+        h3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0;
+            color: #111;
+            transition: transform 0.3s ease;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 0;
+            color: #333;
+        }
+    }
+
+    &:hover .text h3 {
+        transform: scale(1.1);
+    }
+
+    @media screen and (max-width:325px) {
+
+        padding: 5px 20px;
+
+        .icon {
+            font-size: 35px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+}
+
+/* 🌊 FLOATING */
+@keyframes floatCard {
+    0% {
+        transform: translateY(0px) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-4deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(-4deg);
+    }
+}
+
+/* ✨ LIGHT FLOW */
+@keyframes flowLight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 🌊 WAVE MOVEMENT */
+@keyframes waveMove {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(10%);
+    }
+}

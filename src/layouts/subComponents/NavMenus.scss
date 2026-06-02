@@ -1,0 +1,234 @@
+.menu-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.main-menu {
+  list-style: none;
+}
+.tp-megamenu-wrapper {
+  position: absolute;
+  // width: 100%;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  padding: 15px;
+  display: none;
+}
+
+.has-dropdown.active .tp-megamenu-wrapper {
+  display: block;
+}
+
+
+
+.menu-heading {
+  grid-column: span 4;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ff3d00;
+  margin-top: 15px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  transition: 0.3s;
+}
+
+.menu-link:hover {
+  color: #ff3d00;
+  transform: translateX(5px);
+}
+
+.menu-icon {
+  color: #ff3d00;
+  padding: 0 !important;
+  margin-left: 0 !important;
+
+  svg {
+    color: #000 !important;
+
+  }
+}
+
+.menu-text {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+
+  @media screen and (min-width:1300px) {
+    font-size: 11px !important;
+  }
+
+  @media screen and (min-width:1500px) {
+    font-size: 12.5px !important;
+  }
+
+  @media screen and (min-width:1700px) {
+    font-size: 14.5px !important;
+  }
+}
+
+li.menu-heading {
+  color: #ff5722;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tp-megamenu-list .mega-grid {
+  display: block;
+
+  li {
+    padding: 0;
+  }
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 25px;
+
+  li {
+    line-height: 35px;
+
+    &:not(.tp-megamenu-title) {
+
+      padding: 4px 10px !important;
+
+      &:hover {
+        background-color: #ff572229;
+        border-radius: 7px;
+
+        .menu-text {
+          color: #ff3d00;
+        }
+
+        .menu-icon {
+          svg {
+            color: #ff3d00 !important;
+
+          }
+        }
+
+      }
+    }
+
+    a.menu-link {
+      padding: 0 !important;
+    }
+
+    @media screen and (min-width:1500px) {
+      margin-top: 5px;
+    }
+
+    // &.tp-megamenu-title {
+    //   padding: 0 10px!important;
+
+    //   &:hover {
+    //     background-color: transparent;
+    //     border-radius: unset;
+    //   }
+    // }
+  }
+
+  .tp-megamenu-title {
+    line-height: unset !important;
+
+  }
+}
+
+// ── Bordered category headings (PPC, SOFTWARE DEVELOPMENT, LOCAL SEO, VIDEO EDITING)
+.mega-grid li.tp-megamenu-title {
+  padding: 8px 16px !important;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+
+  a {
+    transition: all 0.3s ease;
+    font-weight: 800 !important;
+    font-size: 16px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ff5722 !important;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #ff5722 0%, #ff3d00 100%) !important;
+    box-shadow: 0 6px 16px rgba(255, 87, 34, 0.35) !important;
+    transform: translateY(-3px) !important;
+
+    a {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// ── Category heading hover highlight
+// Wraps the <h4> inside a ThemeLink, so we target the anchor
+.tp-megamenu-list > a {
+  display: inline-block;
+  text-decoration: none;
+
+  .tp-megamenu-title--hoverable {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ff5722;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: 2px solid transparent;
+
+    // underline slide-in on hover
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ff5722;
+      border-radius: 2px;
+      transition: width 0.25s ease;
+    }
+  }
+
+  &:hover .tp-megamenu-title--hoverable {
+    color: #fff;
+    background: linear-gradient(135deg, #ff5722 0%, #ff3d00 100%);
+    border-color: #ff5722;
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+    transform: translateY(-2px);
+
+    &::after {
+      width: 0;
+    }
+  }
+}

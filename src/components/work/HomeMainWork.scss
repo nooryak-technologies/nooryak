@@ -1,0 +1,54 @@
+.homemainwork {
+    .tp-work-wrapper {
+        p,
+        h4 {
+            color: #fff;
+        }
+
+        .tp-work-item {
+            background-color: #111; // Fallback background
+            border-radius: 14px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 250px; // Ensure visibility on mobile
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            margin-bottom: 20px;
+
+            @media (max-width: 991px) {
+                min-height: 300px;
+                padding: 30px;
+            }
+        }
+
+        .tp-work-number {
+            margin-bottom: 25px;
+        }
+
+        // Target children of wrapper directly to support both pinned and unpinned states
+        & > div {
+            &:nth-child(1) .tp-work-item,
+            &.tp-work-item:nth-child(1) {
+                background-image: url("/assets/images/home/hww_1.webp");
+            }
+
+            &:nth-child(2) .tp-work-item,
+            &.tp-work-item:nth-child(2) {
+                background-image: url("/assets/images/home/hww_2.webp");
+            }
+
+            &:nth-child(3) .tp-work-item,
+            &.tp-work-item:nth-child(3) {
+                background-image: url("/assets/images/home/hww_3.webp");
+            }
+
+            &:nth-child(4) .tp-work-item,
+            &.tp-work-item:nth-child(4) {
+                background-image: url("/assets/images/home/hww_4.webp");
+            }
+        }
+    }
+}

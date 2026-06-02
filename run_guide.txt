@@ -1,0 +1,840 @@
+    at ignore-listed frames
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ source /home/bazaarwa/nodevenv/nooryak.com/20/bin/activate
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cd /home/bazaarwa/nooryak.com
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+Failed to compile.
+
+./src/app/admin/auth/login/page.tsx
+Module not found: Can't resolve '@/contexts/admin/AuthContext'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./src/app/admin/auth/login/page.tsx
+Module not found: Can't resolve '@/utils/Images'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./src/app/admin/blog/add/page.tsx
+Module not found: Can't resolve '@/components/admin/layout/AppShell'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./src/app/admin/blog/add/page.tsx
+Module not found: Can't resolve '@/components/admin/RichTextEditor'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./src/app/admin/blog/edit/[id]/page.tsx
+Module not found: Can't resolve '@/components/admin/layout/AppShell'
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+> Build failed because of webpack errors
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm start
+
+> agntix-react-nextjs@0.1.0 start
+> node server.js
+
+Failed to start server: Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id
+    at ignore-listed frames
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ source /home/bazaarwa/nodevenv/nooryak.com/20/bin/activate
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cd /home/bazaarwa/nooryak.com
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ # 1) Verify the 4 files truly exist with exact case
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ for f in \
+>   src/contexts/admin/AuthContext.tsx \
+>   src/utils/Images.tsx \
+>   src/components/admin/layout/AppShell.tsx \
+>   src/components/admin/RichTextEditor.tsx
+> do
+>   if [ -f "$f" ]; then echo "OK  $f"; else echo "MISS $f"; fi
+> done
+OK  src/contexts/admin/AuthContext.tsx
+OK  src/utils/Images.tsx
+OK  src/components/admin/layout/AppShell.tsx
+OK  src/components/admin/RichTextEditor.tsx
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ # 2) Force alias config so @/ resolves
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cat > jsconfig.json << 'EOF'
+> {
+>   "compilerOptions": {
+>     "baseUrl": ".",
+>     "paths": {
+>       "@/*": ["src/*"]
+>     }
+>   }
+> }
+> EOF
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ # 3) Rebuild cleanly
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ rm -rf .next
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ NPM_CONFIG_LEGACY_PEER_DEPS=true npm install --legacy-peer-deps
+
+up to date, audited 533 packages in 3s
+
+70 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (3 moderate, 1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+⚠ Compiled with warnings in 79s
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 69, column 23 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:69:23:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.length instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+69 | @for $i from 1 through length($user-colors) {
+
+src/app/admin/user/user.scss 70:24  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 70, column 16 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:70:16:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.length instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+70 |   &:nth-child(#{length($user-colors)}n + #{$i}) {
+
+src/app/admin/user/user.scss 71:17  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 71, column 18 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:71:18:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+71 |     border-color: nth($user-colors, $i);
+
+src/app/admin/user/user.scss 72:19  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 74, column 23 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:74:23:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+74 |       background: rgba(nth($user-colors, $i), 0.15);
+
+src/app/admin/user/user.scss 75:24  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 75, column 13 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:75:13:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+75 |       color: nth($user-colors, $i);
+
+src/app/admin/user/user.scss 76:14  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+3 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/notfound.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/notfound.scss
+Deprecation Warning on line 359, column 28 of file:///home/bazaarwa/nooryak.com/src/app/notfound.scss:359:28:
+The Sass if() syntax is deprecated in favor of the modern CSS syntax.
+
+Suggestion: if(sass($i % 3 == 0): rgba(255, 255, 255, 0.45); else: var(--accent))
+
+More info: https://sass-lang.com/d/if-function
+
+359 |                 background: if($i % 3 == 0, rgba(255, 255, 255, 0.45), var(--accent));
+
+src/app/notfound.scss 360:29  root stylesheet
+
+Import trace for requested module:
+./src/app/notfound.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/notfound.scss
+./src/app/notfound.scss
+./src/app/not-found.tsx
+
+  Running TypeScript  ..It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+Installing dependencies
+
+If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your app and pages directories).
+
+
+Installing devDependencies (npm):
+- typescript
+
+  Running TypeScript  ..npm warn reify Removing non-directory /home/bazaarwa/nooryak.com/node_modules
+  Running TypeScript  ..
+added 346 packages, and audited 542 packages in 1m
+
+67 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (3 moderate, 1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+The "id" argument must be of type string. Received undefined
+Next.js build worker exited with code: 1 and signal: null
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ rm -rf node_modules package-lock.json .next
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ NPM_CONFIG_PRODUCTION=false NPM_CONFIG_LEGACY_PEER_DEPS=true npm install --include=dev --legacy-peer-deps
+npm warn config production Use `--omit=dev` instead.
+
+added 336 packages, and audited 869 packages in 7s
+
+194 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (3 moderate, 1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm ls typescript
+agntix-react-nextjs@0.1.0 /home/bazaarwa/nooryak.com
+└── (empty)
+
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+⚠ Compiled with warnings in 78s
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 69, column 23 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:69:23:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.length instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+69 | @for $i from 1 through length($user-colors) {
+
+src/app/admin/user/user.scss 70:24  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 70, column 16 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:70:16:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.length instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+70 |   &:nth-child(#{length($user-colors)}n + #{$i}) {
+
+src/app/admin/user/user.scss 71:17  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 71, column 18 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:71:18:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+71 |     border-color: nth($user-colors, $i);
+
+src/app/admin/user/user.scss 72:19  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 74, column 23 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:74:23:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+74 |       background: rgba(nth($user-colors, $i), 0.15);
+
+src/app/admin/user/user.scss 75:24  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 75, column 13 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:75:13:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+75 |       color: nth($user-colors, $i);
+
+src/app/admin/user/user.scss 76:14  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+3 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/notfound.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/notfound.scss
+Deprecation Warning on line 359, column 28 of file:///home/bazaarwa/nooryak.com/src/app/notfound.scss:359:28:
+The Sass if() syntax is deprecated in favor of the modern CSS syntax.
+
+Suggestion: if(sass($i % 3 == 0): rgba(255, 255, 255, 0.45); else: var(--accent))
+
+More info: https://sass-lang.com/d/if-function
+
+359 |                 background: if($i % 3 == 0, rgba(255, 255, 255, 0.45), var(--accent));
+
+src/app/notfound.scss 360:29  root stylesheet
+
+Import trace for requested module:
+./src/app/notfound.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/notfound.scss
+./src/app/notfound.scss
+./src/app/not-found.tsx
+
+  Running TypeScript  ...Failed to type check.
+
+./src/layouts/wrapper.tsx:8:14
+Type error: Could not find a declaration file for module 'bootstrap/dist/js/bootstrap.bundle.min'. '/home/bazaarwa/nodevenv/nooryak.com/20/lib/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/bootstrap` if it exists or add a new declaration (.d.ts) file containing `declare module 'bootstrap/dist/js/bootstrap.bundle.min';`
+
+   6 |   useEffect(() => {
+   7 |     if (typeof window !== "undefined") {
+>  8 |       import("bootstrap/dist/js/bootstrap.bundle.min")
+     |              ^
+   9 |         .then(() => console.log("Bootstrap loaded"))
+  10 |         .catch((err) => console.error("Bootstrap failed to load", err));
+  11 |     }
+Next.js build worker exited with code: 1 and signal: null
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ declare module "bootstrap/dist/js/bootstrap.bundle.min";
+bash: declare: `bootstrap/dist/js/bootstrap.bundle.min': not a valid identifier
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cat > global.d.ts << 'EOF'
+> declare module
+> ^C
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cat > global.d.ts << 'EOF'
+> declare module "bootstrap/dist/js/bootstrap.bundle.min";
+> EOF
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 19.0s
+✓ Finished TypeScript in 24.8s
+✓ Collecting page data using 1 worker in 2.0s
+✓ Generating static pages using 1 worker (53/53) in 2.1s
+✓ Collecting build traces in 335ms
+✓ Finalizing page optimization in 336ms
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin
+├ ○ /admin/auth/login
+├ ○ /admin/blog
+├ ○ /admin/blog/add
+├ ƒ /admin/blog/edit/[id]
+├ ○ /admin/dashboard
+├ ○ /admin/enquiry
+├ ○ /admin/login
+├ ○ /admin/logs
+├ ○ /admin/services
+├ ○ /admin/services/add
+├ ƒ /admin/services/edit/[id]
+├ ○ /admin/setting
+├ ○ /admin/user
+├ ƒ /api/admin/blogs
+├ ƒ /api/admin/blogs/[id]
+├ ƒ /api/admin/enquiries
+├ ƒ /api/admin/login
+├ ƒ /api/admin/logout
+├ ƒ /api/admin/logs
+├ ƒ /api/admin/me
+├ ƒ /api/admin/services
+├ ƒ /api/admin/services/[id]
+├ ƒ /api/admin/settings/smtp
+├ ƒ /api/admin/stats
+├ ƒ /api/admin/users
+├ ƒ /api/admin/users/[id]
+├ ƒ /api/analytics/track
+├ ƒ /api/blog/[slug]
+├ ƒ /api/enquiry
+├ ƒ /api/services/[slug]
+├ ○ /blog
+├ ƒ /blog/[slug]
+├ ○ /contact
+├ ○ /login
+├ ○ /register
+├ ○ /services
+└ ƒ /services/submenu/[type]
+
+Route (pages)
+┌ ○ /about/about-creative/AboutCreativeMain
+├ ○ /about/about-me/AboutMeMain
+├ ○ /about/about-modern/AboutModernMain
+├ ○ /about/about-startup/AboutStartupMain
+├ ○ /about/about-us/AboutUsLightMain
+├ ○ /about/career/CareerMain
+├ ○ /career-details/CareerDetailsMain
+├ ○ /contacts/contact-me/ContactMeMain
+├ ○ /contacts/contact-us/ContactUsMain
+├ ○ /contacts/contact/ContactMain
+├ ○ /error/ErrorMain
+├ ○ /faq/FaqMain
+├ ○ /homes/home/HomeMain
+├ ○ /homes/it-solution/ITSolutionMain
+├ ○ /homes/mobile-application/MobileApplicationMain
+├ ○ /homes/personal-portfolio/PersonalPortfolioMain
+├ ○ /homes/shop-modern/ShopModernMain
+├ ○ /job-application-form/JobApplicationForm
+├ ○ /login/LoginMain
+├ ○ /pricing/PricingMain
+├ ○ /register/RegisterMain
+├ ○ /team/team-details/TeamDetailsMain
+└ ○ /team/team-light/TeamMain
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm start
+
+> agntix-react-nextjs@0.1.0 start
+> node server.js
+
+> Ready on http://0.0.0.0:3000
+> NODE_ENV: production
+> App directory: /home/bazaarwa/nooryak.com
+^C
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ source /home/bazaarwa/nodevenv/nooryak.com/20/bin/activate
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cd /home/bazaarwa/nooryak.com
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cat > postcss.config.js << 'EOF'
+> module.exports = {
+>   plugins: {
+>     tailwindcss: {},
+>     autoprefixer: {},
+>   },
+> };
+> EOF
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ ls -l tailwind.config.ts
+-rw-rw-rw- 1 bazaarwa bazaarwa 2613 Apr 20 11:14 tailwind.config.ts
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ rm -rf .next
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ NPM_CONFIG_PRODUCTION=false NPM_CONFIG_LEGACY_PEER_DEPS=true npm install --include=dev --legacy-peer-deps
+npm warn config production Use `--omit=dev` instead.
+
+up to date, audited 869 packages in 4s
+
+194 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (3 moderate, 1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+Segmentation fault (core dumped)
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ export NODE_OPTIONS="--max-old-space-size=4096"
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+Segmentation fault (core dumped)
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ rm -rf .next[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ ls -l tailwind.config.ts-rw-rw-rw- 1 bazaarwa bazaarwa 2613 Apr 20 11:14 tailwind.config.ts
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ NPM_CONFIG_PRODUCTION=false NPM_CONFIG_LEGACY_PEER_DEPS=true npm install --include=dev --legacy-peer-deps
+npm warn config production Use `--omit=dev` instead.
+
+up to date, audited 869 packages in 3s
+
+194 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (3 moderate, 1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+Segmentation fault (core dumped)
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ export NODE_OPTIONS="--max-old-space-size=4096"[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ NPM_CONFIG_PRODUCTION=false NPM_CONFIG_LEGACY_PEER_DEPS=true npm install --include=dev --legacy-peer-deps
+npm warn config production Use `--omit=dev` instead.
+
+up to date, audited 869 packages in 2s
+
+194 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (3 moderate, 1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+Segmentation fault (core dumped)
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ rm -rf .next[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ cat > global.d.ts << 'EOF'declare module "bootstrap/dist/js/bootstrap.bundle.min";
+EOF
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ NPM_CONFIG_PRODUCTION=false NPM_CONFIG_LEGACY_PEER_DEPS=true npm install --include=dev --legacy
+-peer-deps
+npm warn config production Use `--omit=dev` instead.
+
+up to date, audited 869 packages in 2s
+
+194 packages are looking for funding
+  run `npm fund` for details
+
+5 vulnerabilities (3 moderate, 1 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$ npm run build
+> agntix-react-nextjs@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · cpus: 1
+  ⨯ webpackBuildWorker
+
+  Creating an optimized production build ...
+⚠ Compiled with warnings in 83s
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 69, column 23 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:69:23:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.length instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+69 | @for $i from 1 through length($user-colors) {
+
+src/app/admin/user/user.scss 70:24  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 70, column 16 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:70:16:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.length instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+70 |   &:nth-child(#{length($user-colors)}n + #{$i}) {
+
+src/app/admin/user/user.scss 71:17  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 71, column 18 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:71:18:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+71 |     border-color: nth($user-colors, $i);
+
+src/app/admin/user/user.scss 72:19  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 74, column 23 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:74:23:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+74 |       background: rgba(nth($user-colors, $i), 0.15);
+
+src/app/admin/user/user.scss 75:24  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+Deprecation Warning on line 75, column 13 of file:///home/bazaarwa/nooryak.com/src/app/admin/user/user.scss:75:13:
+Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+Use list.nth instead.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+75 |       color: nth($user-colors, $i);
+
+src/app/admin/user/user.scss 76:14  root stylesheet
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+3 repetitive deprecation warnings omitted.
+Run in verbose mode to see all warnings.
+
+Import trace for requested module:
+./src/app/admin/user/user.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/admin/user/user.scss
+./src/app/admin/user/user.scss
+./src/app/admin/user/page.tsx
+
+./src/app/notfound.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/notfound.scss
+Deprecation Warning on line 359, column 28 of file:///home/bazaarwa/nooryak.com/src/app/notfound.scss:359:28:
+The Sass if() syntax is deprecated in favor of the modern CSS syntax.
+
+Suggestion: if(sass($i % 3 == 0): rgba(255, 255, 255, 0.45); else: var(--accent))
+
+More info: https://sass-lang.com/d/if-function
+
+359 |                 background: if($i % 3 == 0, rgba(255, 255, 255, 0.45), var(--accent));
+
+src/app/notfound.scss 360:29  root stylesheet
+
+Import trace for requested module:
+./src/app/notfound.scss.webpack[javascript/auto]!=!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[2]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[15].oneOf[11].use[3]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[15].oneOf[11].use[4]!../nodevenv/nooryak.com/20/lib/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[15].oneOf[11].use[5]!./src/app/notfound.scss
+./src/app/notfound.scss
+./src/app/not-found.tsx
+
+✓ Finished TypeScript in 24.5s
+✓ Collecting page data using 1 worker in 1969ms
+✓ Generating static pages using 1 worker (53/53) in 1930ms
+✓ Collecting build traces in 417ms
+✓ Finalizing page optimization in 418ms
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /admin
+├ ○ /admin/auth/login
+├ ○ /admin/blog
+├ ○ /admin/blog/add
+├ ƒ /admin/blog/edit/[id]
+├ ○ /admin/dashboard
+├ ○ /admin/enquiry
+├ ○ /admin/login
+├ ○ /admin/logs
+├ ○ /admin/services
+├ ○ /admin/services/add
+├ ƒ /admin/services/edit/[id]
+├ ○ /admin/setting
+├ ○ /admin/user
+├ ƒ /api/admin/blogs
+├ ƒ /api/admin/blogs/[id]
+├ ƒ /api/admin/enquiries
+├ ƒ /api/admin/login
+├ ƒ /api/admin/logout
+├ ƒ /api/admin/logs
+├ ƒ /api/admin/me
+├ ƒ /api/admin/services
+├ ƒ /api/admin/services/[id]
+├ ƒ /api/admin/settings/smtp
+├ ƒ /api/admin/stats
+├ ƒ /api/admin/users
+├ ƒ /api/admin/users/[id]
+├ ƒ /api/analytics/track
+├ ƒ /api/blog/[slug]
+├ ƒ /api/enquiry
+├ ƒ /api/services/[slug]
+├ ○ /blog
+├ ƒ /blog/[slug]
+├ ○ /contact
+├ ○ /login
+├ ○ /register
+├ ○ /services
+└ ƒ /services/submenu/[type]
+
+Route (pages)
+┌ ○ /about/about-creative/AboutCreativeMain
+├ ○ /about/about-me/AboutMeMain
+├ ○ /about/about-modern/AboutModernMain
+├ ○ /about/about-startup/AboutStartupMain
+├ ○ /about/about-us/AboutUsLightMain
+├ ○ /about/career/CareerMain
+├ ○ /career-details/CareerDetailsMain
+├ ○ /contacts/contact-me/ContactMeMain
+├ ○ /contacts/contact-us/ContactUsMain
+├ ○ /contacts/contact/ContactMain
+├ ○ /error/ErrorMain
+├ ○ /faq/FaqMain
+├ ○ /homes/home/HomeMain
+├ ○ /homes/it-solution/ITSolutionMain
+├ ○ /homes/mobile-application/MobileApplicationMain
+├ ○ /homes/personal-portfolio/PersonalPortfolioMain
+├ ○ /homes/shop-modern/ShopModernMain
+├ ○ /job-application-form/JobApplicationForm
+├ ○ /login/LoginMain
+├ ○ /pricing/PricingMain
+├ ○ /register/RegisterMain
+├ ○ /team/team-details/TeamDetailsMain
+└ ○ /team/team-light/TeamMain
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+[nooryak.com (20)] [bazaarwa@s3508 nooryak.com]$

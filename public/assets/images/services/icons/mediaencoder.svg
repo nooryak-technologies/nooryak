@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <rect width="100" height="100" rx="18" fill="#0d112b"/>
+  <rect x="2" y="2" width="96" height="96" rx="16" fill="none" stroke="#5c69ff" stroke-width="2" opacity="0.3"/>
+  <!-- Lines and arrow -->
+  <g stroke="#9ba4ff" stroke-width="6" stroke-linecap="round" fill="none">
+    <!-- Horizontal lines -->
+    <line x1="25" y1="30" x2="75" y2="30" stroke="#aab3ff" stroke-width="7" />
+    <line x1="25" y1="46" x2="75" y2="46" stroke="#8c96ff" stroke-width="7" />
+    <line x1="25" y1="62" x2="55" y2="62" stroke="#6b77ff" stroke-width="7" />
+    <line x1="25" y1="78" x2="45" y2="78" stroke="#4c58f0" stroke-width="7" />
+    <!-- Down-right arrow shape in the bottom right -->
+    <path d="M62,62 L78,78" stroke="#8c96ff" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M68,78 L78,78 L78,68" stroke="#8c96ff" stroke-width="7" stroke-linejoin="round"/>
+  </g>
+</svg>

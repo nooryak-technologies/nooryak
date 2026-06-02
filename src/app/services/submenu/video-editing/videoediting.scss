@@ -1,0 +1,1134 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   Video Editing Page – Styles (Pixel-perfect match to reference)
+   Namespace: .ve-page  →  .ve-*
+═══════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ── CSS Variables ────────────────────────────────────────────────────── */
+.ve-page {
+  --ve-orange: #ff6a1a;
+  --ve-orange-dk: #e85800;
+  --ve-navy: #07090f;
+  --ve-dark: #0d1020;
+  --ve-gray: #f7f8fa;
+  --ve-line: #eaedf3;
+  --ve-muted: #6b7280;
+  --ve-white: #ffffff;
+
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+  overflow-x: hidden;
+
+  /* ── Global container ── */
+  .ve-container {
+    width: min(1280px, calc(100% - 40px));
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: min(100%, calc(100% - 24px));
+    }
+  }
+
+  /* ── Section padding ── */
+  .ve-section {
+    padding: 72px 0;
+
+    @media (max-width: 768px) {
+      padding: 52px 0;
+    }
+  }
+
+  /* ── Section label ── */
+  .ve-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ve-orange);
+    margin-bottom: 12px;
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 3px;
+      border-radius: 99px;
+      background: var(--ve-orange);
+    }
+  }
+
+  /* ── Shared title ── */
+  .ve-title {
+    font-size: clamp(26px, 3.5vw, 42px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #111;
+    margin: 0;
+  }
+
+  .ve-title--white {
+    color: #fff;
+  }
+
+  .ve-title--center {
+    text-align: center;
+  }
+
+  /* ── Orange highlight ── */
+  .ve-highlight {
+    color: var(--ve-orange);
+  }
+
+  /* ── Buttons ── */
+  .ve-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+    border: none;
+  }
+
+  .ve-btn--primary {
+    background: linear-gradient(135deg, var(--ve-orange) 0%, var(--ve-orange-dk) 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(255, 106, 26, 0.32);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(255, 106, 26, 0.4);
+    }
+  }
+
+  .ve-btn--outline {
+    background: #ffffff;
+    color: #1f2937;
+    border: 1.5px solid #d1d5db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: #111827;
+      color: #111827;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  /* ── Scroll reveal ── */
+  .ve-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.ve-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     HERO SECTION
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-hero {
+    background: #fff;
+    padding: 64px 0 0;
+    overflow: hidden;
+    position: relative;
+
+    /* faint dot grid */
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ve-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── 2-col grid ── */
+    .ve-hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+      align-items: center;
+      gap: 32px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+    }
+
+    /* ── Left copy ── */
+    .ve-hero__copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+
+      @media (max-width: 1024px) {
+        align-items: center;
+      }
+    }
+
+    .ve-hero__eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ve-orange);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+
+      &::before {
+        content: '•';
+        font-size: 20px;
+        line-height: 1;
+        color: var(--ve-orange);
+      }
+    }
+
+    .ve-hero__h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #111;
+      margin: 0 0 4px;
+
+      @media (max-width: 1024px) {
+        font-size: clamp(32px, 8vw, 54px);
+      }
+    }
+
+    .ve-hero__h1-orange {
+      display: block;
+      color: var(--ve-orange);
+      font-size: clamp(42px, 5.5vw, 70px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+
+      @media (max-width: 1024px) {
+        font-size: clamp(36px, 9vw, 60px);
+      }
+    }
+
+    .ve-hero__desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ve-muted);
+      max-width: 460px;
+      margin-bottom: 28px;
+
+      @media (max-width: 1024px) {
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .ve-hero__ctas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
+    }
+
+    /* Badge strip below buttons */
+    .ve-hero__badges {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 12px;
+      width: 100%;
+
+      @media (max-width: 1200px) {
+        gap: 16px;
+      }
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+
+    .ve-hero__badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .ve-hero__badge-icon {
+      width: 42px;
+      height: 42px;
+      background: #ffffff;
+      border: 1.5px solid var(--ve-orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(255, 106, 26, 0.12);
+
+      i {
+        font-size: 16px;
+        color: var(--ve-orange);
+      }
+    }
+
+    .ve-hero__badge-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .ve-hero__badge-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .ve-hero__badge-sub {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    /* ── Right: hero image with background orbs ── */
+    .ve-hero__visual {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      overflow: visible;
+      min-height: 520px;
+      z-index: 2;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+        min-height: auto;
+        margin-top: 24px;
+      }
+    }
+
+    .ve-hero__img-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 760px;
+      flex-shrink: 0;
+      z-index: 2;
+
+      @media (max-width: 1200px) {
+        max-width: 640px;
+      }
+
+      @media (max-width: 1024px) {
+        max-width: 560px;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 640px) {
+        max-width: 100%;
+      }
+    }
+
+    /* Concentric orange circles background layer */
+    .ve-hero__imageBg {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain;
+      object-position: center center;
+      z-index: 1;
+      pointer-events: none;
+      transform: scale(1.22) translateY(-4%);
+      transform-origin: center center;
+
+      @media (max-width: 640px) {
+        transform: scale(1.1) translateY(-2%);
+      }
+    }
+
+    .ve-hero__image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     STATS BAR
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-statsbar {
+    background: #fff;
+    border: 1px solid #f1f2f4;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    margin: 56px 0 0;
+    overflow: hidden;
+
+    .ve-statsbar__inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: 860px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .ve-statsbar__item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 24px 32px;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 25%;
+        height: 50%;
+        width: 1px;
+        background: #eaedf3;
+
+        @media (max-width: 860px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        padding: 18px 20px;
+        gap: 12px;
+      }
+    }
+
+    .ve-statsbar__icon {
+      font-size: 26px;
+      color: var(--ve-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-right: 4px;
+    }
+
+    .ve-statsbar__value {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .ve-statsbar__label {
+      font-size: 12px;
+      color: var(--ve-muted);
+      font-weight: 600;
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     SERVICES SECTION
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-services {
+    background: var(--ve-gray);
+
+    .ve-services__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr);
+      gap: 48px;
+      align-items: start;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    .ve-services__head {
+      padding-top: 8px;
+      position: sticky;
+      top: 100px;
+
+      @media (max-width: 1024px) {
+        position: static;
+        text-align: center;
+      }
+    }
+
+    .ve-services__desc {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--ve-muted);
+      margin: 16px 0 28px;
+      max-width: 340px;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+
+    /* horizontal orange bar */
+    .ve-services__head-bar {
+      width: 48px;
+      height: 3px;
+      border-radius: 99px;
+      background: var(--ve-orange);
+      margin: 16px 0 20px;
+
+      @media (max-width: 1024px) {
+        margin: 16px auto 20px;
+      }
+    }
+
+    /* 3x2 card grid */
+    .ve-services__cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @media (max-width: 580px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ve-service-card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--ve-line);
+      padding: 22px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        border-color: rgba(255, 106, 26, 0.3);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        transform: translateY(-3px);
+
+        .ve-service-card__arrow {
+          color: var(--ve-orange);
+          transform: translateX(3px);
+        }
+      }
+    }
+
+    .ve-service-card__icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .ve-service-card__title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .ve-service-card__desc {
+      font-size: 12.5px;
+      color: var(--ve-muted);
+      line-height: 1.6;
+      margin: 0;
+      flex: 1;
+    }
+
+    .ve-service-card__arrow {
+      font-size: 13px;
+      color: #aab0be;
+      transition: all 0.25s ease;
+      align-self: flex-end;
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     PORTFOLIO / OUR WORK SECTION
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-portfolio {
+    background: #ffffff;
+    padding: 72px 0 80px;
+    border-top: 1px solid var(--ve-line);
+
+    .ve-portfolio__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 36px;
+      gap: 16px;
+
+      @media (max-width: 860px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+    }
+
+    .ve-portfolio__filters {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+
+      @media (max-width: 860px) {
+        width: 100%;
+      }
+    }
+
+    .ve-filter-btn {
+      background: transparent;
+      border: none;
+      padding: 8px 18px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #4b5563;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: all 0.25s ease;
+      font-family: inherit;
+
+      &:hover {
+        color: #111827;
+      }
+    }
+
+    .ve-filter-btn--active {
+      background: var(--ve-orange);
+      color: #fff !important;
+      box-shadow: 0 4px 14px rgba(255, 106, 26, 0.28);
+    }
+
+    /* ── Symmetrical 4-column grid of 16:9 landscape cards ── */
+    .ve-portfolio__grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      transition: all 0.35s ease;
+
+      @media (max-width: 1100px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      @media (max-width: 580px) {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+
+    .ve-portfolio-card {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 14px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease;
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+
+        .ve-portfolio-card__img {
+          transform: scale(1.06);
+        }
+
+        .ve-portfolio-card__play {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .ve-portfolio-card__img-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .ve-portfolio-card__img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Small white circular play button in bottom-left corner */
+    .ve-portfolio-card__play {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111827;
+      font-size: 11px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease;
+      z-index: 5;
+
+      i {
+        font-size: 11px;
+        color: #111827;
+        transition: color 0.2s ease;
+      }
+
+      &:hover {
+        background: var(--ve-orange);
+        color: #ffffff;
+
+        i {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     TOOLS SECTION
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-tools {
+    background: #ffffff;
+    padding: 72px 0;
+    border-top: 1px solid var(--ve-line);
+
+    .ve-tools__row {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+
+    .ve-tool-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #ffffff;
+      border: 1px solid #eaedf3;
+      border-radius: 16px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      padding: 16px 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 106, 26, 0.25);
+        box-shadow: 0 12px 28px rgba(255, 106, 26, 0.08);
+
+        .ve-tool-card__img {
+          transform: scale(1.08);
+        }
+
+        .ve-tool-card__label {
+          color: #111111;
+        }
+      }
+    }
+
+    .ve-tool-card__icon-wrap {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      @media (max-width: 768px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .ve-tool-card__img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .ve-tool-card__label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #4b5563;
+      text-align: center;
+      letter-spacing: 0.01em;
+      line-height: 1.35;
+      white-space: normal;
+      transition: color 0.3s ease;
+
+      @media (max-width: 768px) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     REVIEWS SECTION
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-reviews {
+    background: #fff;
+    border-top: 1px solid var(--ve-line);
+
+    .ve-reviews__slider-wrap {
+      overflow: hidden;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .ve-reviews__track {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .ve-reviews__slide {
+      flex-shrink: 0;
+      padding: 0 8px;
+    }
+
+    .ve-review-card {
+      background: var(--ve-gray);
+      border: 1px solid var(--ve-line);
+      border-radius: 20px;
+      padding: 28px 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ve-review-card__stars {
+      display: flex;
+      gap: 4px;
+
+      i {
+        color: #f59e0b;
+        font-size: 14px;
+      }
+    }
+
+    .ve-review-card__quote {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #374151;
+      flex: 1;
+      font-style: italic;
+    }
+
+    .ve-review-card__author-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ve-review-card__logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--ve-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    .ve-review-card__name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .ve-review-card__role {
+      font-size: 12px;
+      color: var(--ve-muted);
+    }
+
+    /* Pagination dots */
+    .ve-reviews__dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .ve-reviews__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #dde0ea;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      padding: 0;
+
+      &.ve-reviews__dot--active {
+        background: var(--ve-orange);
+        width: 24px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     CTA SECTION
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-cta {
+    background: #ffffff;
+    padding: 56px 0 80px;
+    position: relative;
+
+    .ve-cta__inner {
+      background: linear-gradient(135deg, #fff5f0 0%, #fffbf9 100%);
+      border-radius: 30px;
+      padding: 48px 4px;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      align-items: center;
+      gap: 48px;
+      border: 1px solid #ffeada;
+      box-shadow: 0 10px 40px rgba(255, 106, 26, 0.04);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      @media (max-width: 1024px) {
+        padding: 40px;
+        gap: 32px;
+      }
+
+      @media (max-width: 960px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 24px;
+        gap: 28px;
+      }
+    }
+
+    /* Left visual column */
+    .ve-cta__visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      @media (max-width: 960px) {
+        order: 1;
+      }
+    }
+
+    .ve-cta__img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      object-fit: contain;
+      border-radius: 20px;
+
+      @media (max-width: 960px) {
+        max-width: 440px;
+      }
+    }
+
+    /* Right copy column */
+    .ve-cta__copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      @media (max-width: 960px) {
+        align-items: center;
+        order: 2;
+      }
+    }
+
+    .ve-cta__title {
+      font-size: clamp(24px, 3.2vw, 36px);
+      font-weight: 800;
+      color: #111827;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin: 0;
+
+      span {
+        color: var(--ve-orange);
+      }
+    }
+
+    .ve-cta__desc {
+      font-size: 15px;
+      color: #4b5563;
+      line-height: 1.6;
+      max-width: 460px;
+      margin: 0 0 8px;
+
+      @media (max-width: 960px) {
+        max-width: 100%;
+      }
+    }
+
+    .ve-cta__br-desktop {
+      display: block;
+
+      @media (max-width: 960px) {
+        display: none;
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     KEYFRAMES
+  ══════════════════════════════════════════════════════════════════════ */
+  @keyframes veHeroFloat {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     STAGGERED REVEAL ANIMATIONS
+  ══════════════════════════════════════════════════════════════════════ */
+  .ve-revealed {
+    .ve-service-card {
+      opacity: 0;
+      animation: veFadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.07}s;
+        }
+      }
+    }
+
+    .ve-portfolio-card {
+      opacity: 0;
+      animation: veFadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.06}s;
+        }
+      }
+    }
+
+    .ve-tool-card {
+      opacity: 0;
+      animation: veFadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.05}s;
+        }
+      }
+    }
+  }
+
+  @keyframes veFadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

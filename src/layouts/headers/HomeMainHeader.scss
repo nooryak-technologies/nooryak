@@ -1,0 +1,243 @@
+.custom-header {
+    z-index: 999;
+    width: 96%;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    will-change: auto;
+
+    @media screen and (min-width:1500px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width:1700px) {
+        width: 96%;
+    }
+
+    .header-inner {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        width: 95%;
+        margin: auto;
+
+        .rights {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    .logo img {
+        height: auto;
+        background: #0000007a;
+        background: linear-gradient(135deg, #0f172a 60%, #ff5722 140%);
+        border-radius: 50px;
+        width: 150px;
+        height: auto;
+        padding: 2px 12px;
+
+        @media screen and (min-width:1500px) {
+            width: 180px;
+        }
+    }
+
+    .menu {
+        &.d-none.d-xl-block {
+            // -webkit-backdrop-filter: blur(12px);
+            // backdrop-filter: blur(12px);
+            background: #ffffffad;
+            border: 1px solid #ffffff;
+            border-radius: 50px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 12px;
+            display: flex;
+            box-shadow: 0 8px 30px #0000001a;
+        }
+    }
+
+    @media (max-width: 1199.98px) {
+        .header-inner {
+            width: 96%;
+            margin: 5px auto;
+            padding: 10px 1rem;
+            background: #ffffffb8;
+            border-radius: 50px;
+            backdrop-filter: blur(3px);
+        }
+
+        .rights {
+            gap: 10px;
+        }
+
+        .header-btn {
+            display: none;
+        }
+
+        .menu-btn {
+            display: flex;
+            background: linear-gradient(135deg, #ff7a18, #ff3d00);
+            border: 1px solid #ff3d00;
+            padding: 8px;
+            border-radius: 6px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        width: 96%;
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    ul {
+        display: flex;
+        gap: 20px;
+
+        li {
+            list-style: none;
+
+            a {
+                font-weight: 500;
+                color: #000;
+                transition: 0.3s;
+                padding: 6px 0;
+                display: flex;
+                align-items: center;
+
+                @media screen and (min-width:1500px) {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: #ff5722;
+                }
+            }
+
+
+        }
+    }
+}
+
+/* Button */
+.header-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 18px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff7a18, #ff3d00);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(255, 61, 0, 0.35);
+    font-weight: 500;
+    transition: 0.3s;
+
+    @media screen and (min-width:1500px) {
+        font-size: 16px;
+    }
+
+
+    &:hover {
+        transform: translateY(-2px);
+        background: #fff;
+        color: #ff3d00;
+        box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+    }
+
+    .btn-icon {
+        display: flex;
+    }
+}
+
+/* Mobile menu button */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+
+    span {
+        width: 22px;
+        height: 2px;
+        background: #000;
+
+        @media screen and (max-width:1200px) {
+            background: #fff;
+        }
+    }
+}
+
+
+// header .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+//     visibility: hidden;
+//     opacity: 0;
+//     transform: rotateX(-20deg) ;
+//     transition: all 3s ease;
+// }
+
+// header li.has-dropdown.p-static.active:hover .tp-megamenu-wrapper.mega-menu.megamenu-white-bg {
+//     visibility: visible;
+//     opacity: 1;
+//     height: auto;
+//     transform: rotateX(0deg);
+//     top: 42px;
+
+//     @media screen and (min-width:1500px) {
+//         top: 50px;
+//     }
+// }
+
+/* ✅ INITIAL STATE */
+// header li.has-dropdown.p-static {
+
+//     a {
+
+//         position: relative;
+
+//         &::after {
+//             content: ">";
+//             width: 4px;
+//             height: 40px;
+//             font-size: 12px;
+//             position: absolute;
+//             right: -1px;
+//             transform: rotate(90deg);
+//         }
+//     }
+// }
+
+header li.has-dropdown.p-static.active {
+    transition: all 1s ease-in-out;
+}
+
+header .tp-megamenu-wrapper.megamenu-white-bg {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transform-origin: top center;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    pointer-events: none;
+
+    &.small-menu {
+        width: 22%;
+    }
+}
+
+/* ✅ HOVER STATE — opens on mouse enter via React state (.active) */
+header li.has-dropdown.p-static.active .tp-megamenu-wrapper.megamenu-white-bg,
+header li.has-dropdown.p-static:hover .tp-megamenu-wrapper.megamenu-white-bg {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    top: 48px;
+    height: auto;
+
+    @media screen and (min-width:1500px) {
+        top: 50px;
+    }
+}

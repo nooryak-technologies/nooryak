@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rainbow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="25%" stop-color="#ff5e00"/>
+      <stop offset="50%" stop-color="#ffeb3b"/>
+      <stop offset="75%" stop-color="#00e676"/>
+      <stop offset="100%" stop-color="#00b0ff"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Circular rainbow background -->
+  <circle cx="50" cy="50" r="44" fill="url(#rainbow-grad)" />
+
+  <!-- Dark clapperboard shape overlapping the bottom-left -->
+  <path d="M12,42 L88,24 L84,36 L80,56 L70,82 C65,86 58,88 50,88 C32,88 18,74 15,56 Z" fill="#1a1a1a" opacity="0.95" />
+  
+  <!-- White stripes and lines of the clapperboard -->
+  <g stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+    <!-- Top bar diagonal -->
+    <line x1="20" y1="40" x2="80" y2="26" stroke-width="3.5" />
+    <line x1="20" y1="48" x2="78" y2="34" stroke-width="3.5" />
+    
+    <!-- Stripe marks -->
+    <line x1="30" y1="38" x2="35" y2="32" stroke-width="2.5" />
+    <line x1="45" y1="34" x2="50" y2="28" stroke-width="2.5" />
+    <line x1="60" y1="31" x2="65" y2="25" stroke-width="2.5" />
+  </g>
+</svg>
