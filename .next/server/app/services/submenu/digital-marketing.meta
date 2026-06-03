@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/services/layout,_N_T_/services/submenu/layout,_N_T_/services/submenu/digital-marketing/layout,_N_T_/services/submenu/digital-marketing/page,_N_T_/services/submenu/digital-marketing"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/services/submenu/digital-marketing/__PAGE__",
+    "/services/submenu/digital-marketing",
+    "/services/submenu",
+    "/services",
+    "/_index",
+    "/_head"
+  ]
+}
