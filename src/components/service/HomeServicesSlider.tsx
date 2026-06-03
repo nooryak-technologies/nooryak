@@ -42,9 +42,9 @@ function CapsuleCard({ name, img, href }: { name: string; img: string; href: str
 }
 
 // Single infinite marquee row
-function MarqueeRow({ services }: { services: typeof allServices }) {
+function MarqueeRow({ services, reverse = false }: { services: typeof allServices; reverse?: boolean }) {
   return (
-    <div className="tp-marquee-row">
+    <div className={`tp-marquee-row ${reverse ? 'tp-marquee-row--reverse' : ''}`}>
       {/* Track: 3 copies for seamless infinite loop */}
       <div className="tp-marquee-track">
         {[...services, ...services, ...services].map((svc, idx) => (
@@ -58,6 +58,9 @@ function MarqueeRow({ services }: { services: typeof allServices }) {
 }
 
 export default function HomeServicesSlider() {
+  const firstRow = allServices.slice(0, 6);
+  const secondRow = allServices.slice(6);
+
   return (
     <section className="tp-home-services-slider" aria-label="Our services">
       {/* Decorative gradient label */}
@@ -67,8 +70,11 @@ export default function HomeServicesSlider() {
         <span className="tp-slider-header__line" />
       </div>
 
-      {/* Single row — all 11 services scrolling left */}
-      <MarqueeRow services={allServices} />
+      {/* Row 1 — first 6 services scrolling left */}
+      <MarqueeRow services={firstRow} />
+
+      {/* Row 2 — remaining 5 services scrolling right */}
+      <MarqueeRow services={secondRow} reverse={true} />
     </section>
   );
 }

@@ -2,9 +2,9 @@ import { Images } from "@/utils/Images";
 export const WebDevelopmentHeroData = {
   label: "WEB DEVELOPMENT",
   title: {
-    line1: "Powerful Apps",
-    line2: "Built for High ",
-    highlight: "Engagement and Performance"
+    line1: "Powerful Websites",
+    line2: "Built for Business",
+    highlight: "Growth  And #1 Rankings"
   },
   description:
     "We build fast, secure, and scalable websites tailored to your business goals. From simple sites to complex web applications — we turn ideas into digital experiences that deliver results.",

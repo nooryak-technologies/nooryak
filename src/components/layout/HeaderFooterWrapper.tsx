@@ -11,6 +11,7 @@ import CursorAndBackgroundProvider from '@/components/provider/CustomCursorProvi
 import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import EnquiryForm from '../forms/EnquiryFrom';
+import FloatingButtons from '@/components/common/FloatingButtons';
 
 export default function HeaderFooterWrapper({
   children,
@@ -62,6 +63,7 @@ export default function HeaderFooterWrapper({
               <div id="ball"></div>
             </div>
             <BackToTop />
+            <FloatingButtons />
             
             <div id="smooth-wrapper">
               <div id="smooth-content">
