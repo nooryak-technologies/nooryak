@@ -1251,70 +1251,70 @@
          }
      }
 
-    .cta {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border-radius: 12px;
-        padding: 30px;
-        text-align: left;
-        margin-top: 40px;
+     .cta {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         border-radius: 12px;
+         padding: 30px;
+         text-align: left;
+         margin-top: 40px;
 
-        background:
-            radial-gradient(circle at 10% 20%, rgba(255, 102, 0, 0.25), transparent 40%),
-            radial-gradient(circle at 90% 80%, rgba(255, 102, 0, 0.2), transparent 40%),
-            linear-gradient(135deg, #0b0b0f 0%, #12121a 50%, #0b0b0f 100%);
+         background:
+             radial-gradient(circle at 10% 20%, rgba(255, 102, 0, 0.25), transparent 40%),
+             radial-gradient(circle at 90% 80%, rgba(255, 102, 0, 0.2), transparent 40%),
+             linear-gradient(135deg, #0b0b0f 0%, #12121a 50%, #0b0b0f 100%);
 
-        position: relative;
-        overflow: hidden;
+         position: relative;
+         overflow: hidden;
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 200px;
-            height: 500px;
-            border: 2px solid rgba(255, 102, 0, 0.2);
-            border-radius: 50%;
-            top: -150px;
-            left: -150px;
-            transform: rotate(25deg);
-        }
+         &::before {
+             content: "";
+             position: absolute;
+             width: 200px;
+             height: 500px;
+             border: 2px solid rgba(255, 102, 0, 0.2);
+             border-radius: 50%;
+             top: -150px;
+             left: -150px;
+             transform: rotate(25deg);
+         }
 
-        /* Right side glow line */
-        &::after {
-            content: "";
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            border: 2px solid rgba(255, 102, 0, 0.15);
-            border-radius: 50%;
-            bottom: -200px;
-            right: -200px;
-            transform: rotate(-20deg);
-        }
+         /* Right side glow line */
+         &::after {
+             content: "";
+             position: absolute;
+             width: 600px;
+             height: 600px;
+             border: 2px solid rgba(255, 102, 0, 0.15);
+             border-radius: 50%;
+             bottom: -200px;
+             right: -200px;
+             transform: rotate(-20deg);
+         }
 
 
-        h3 {
-            font-size: 22px;
-            margin: 0;
-            font-weight: 600;
-            color: #fff;
+         h3 {
+             font-size: 22px;
+             margin: 0;
+             font-weight: 600;
+             color: #fff;
 
-            span {
-                color: #ff6a2a;
-            }
-        }
+             span {
+                 color: #ff6a2a;
+             }
+         }
 
-        p {
-            font-size: 15px;
-            margin: 0;
-            color: #fff;
+         p {
+             font-size: 15px;
+             margin: 0;
+             color: #fff;
 
-            @media screen and (max-width:768px) {
-                font-size: 12px;
-            }
-        }
-    }
+             @media screen and (max-width:768px) {
+                 font-size: 12px;
+             }
+         }
+     }
 
 
      @media (max-width: 992px) {
@@ -1322,7 +1322,7 @@
              grid-template-columns: repeat(2, 1fr);
          }
 
-    
+
      }
 
      @media (max-width: 576px) {
@@ -1376,16 +1376,16 @@
  // ── SECTION 1: Hero ────────────────────────────────────────────────────────
  .sd-hero {
      background: #ffffff;
-     padding: 120px 0 60px;
+     padding: 180px 0 60px;
      overflow: hidden;
      position: relative;
 
      @media (max-width: 1024px) {
-         padding: 100px 0 50px;
+         padding: 140px 0 50px;
      }
 
      @media (max-width: 768px) {
-         padding: 90px 0 40px;
+         padding: 110px 0 40px;
      }
 
      &__breadcrumb {
@@ -1831,7 +1831,7 @@
      }
 
      &__icon {
-box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
+         box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
          transform: translateY(-3px);
          border-color: #f4510b;
      }
@@ -2074,50 +2074,50 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
      }
 
      &__line {
-          position: absolute;
-          top: 30px;
-          left: calc(100% / 12);
-          right: calc(100% / 12);
-          height: 2px;
-          background: transparent;
-          z-index: 0;
-          border-top: 1.5px dashed #d1d5db; // thin gray dashed track line
+         position: absolute;
+         top: 30px;
+         left: calc(100% / 12);
+         right: calc(100% / 12);
+         height: 2px;
+         background: transparent;
+         z-index: 0;
+         border-top: 1.5px dashed #d1d5db; // thin gray dashed track line
 
-          &::after {
-              content: '';
-              position: absolute;
-              top: -1.5px; // Align exactly with parent dashed border
-              left: 0;
-              width: 0%; // Start at 0%
-              height: 0;
-              border-top: 1.5px dashed #f4510b; // orange dashed sequential line
-              transition: width 3.5s cubic-bezier(0.4, 0, 0.2, 1);
-          }
+         &::after {
+             content: '';
+             position: absolute;
+             top: -1.5px; // Align exactly with parent dashed border
+             left: 0;
+             width: 0%; // Start at 0%
+             height: 0;
+             border-top: 1.5px dashed #f4510b; // orange dashed sequential line
+             transition: width 3.5s cubic-bezier(0.4, 0, 0.2, 1);
+         }
 
-          @media (max-width: 768px) {
-              display: none;
-          }
-      }
+         @media (max-width: 768px) {
+             display: none;
+         }
+     }
 
-      &__steps {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          gap: 58px;
-          position: relative;
-          z-index: 1;
+     &__steps {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         gap: 58px;
+         position: relative;
+         z-index: 1;
 
-          @media (max-width: 768px) {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 24px 16px;
-              justify-items: center;
-          }
+         @media (max-width: 768px) {
+             display: grid;
+             grid-template-columns: repeat(3, 1fr);
+             gap: 24px 16px;
+             justify-items: center;
+         }
 
-          @media (max-width: 480px) {
-              grid-template-columns: repeat(2, 1fr);
-          }
-      }
+         @media (max-width: 480px) {
+             grid-template-columns: repeat(2, 1fr);
+         }
+     }
  }
 
  // Active state draws sequential line and staggered lights
@@ -2135,7 +2135,8 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
                      box-shadow: 0 0 15px rgba(244, 81, 11, 0.2) !important;
                      transition-delay: calc((#{$i} - 1) * 0.6s) !important;
 
-                     &::before, &::after {
+                     &::before,
+                     &::after {
                          transform: translateY(-50%) scale(1) !important;
                          transition-delay: calc((#{$i} - 1) * 0.6s + 0.2s) !important;
                      }
@@ -2162,29 +2163,29 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
  }
 
  .sd-process-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      flex: 1;
-      position: relative;
-      min-width: 0;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     flex: 1;
+     position: relative;
+     min-width: 0;
+     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     cursor: pointer;
 
-      &:hover {
-          transform: translateY(-8px);
+     &:hover {
+         transform: translateY(-8px);
 
-          .sd-process-step__circle {
-              background: #f4510b !important;
-              border-color: #f4510b !important;
-              box-shadow: 0 0 20px rgba(244, 81, 11, 0.4) !important;
-              transform: scale(1.08);
+         .sd-process-step__circle {
+             background: #f4510b !important;
+             border-color: #f4510b !important;
+             box-shadow: 0 0 20px rgba(244, 81, 11, 0.4) !important;
+             transform: scale(1.08);
 
-              .sd-process-step__icon {
-                  color: #ffffff !important;
-              }
-          }
+             .sd-process-step__icon {
+                 color: #ffffff !important;
+             }
+         }
      }
 
      &:last-child {
@@ -2581,124 +2582,267 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
  }
 
  // CTA dark banner – right side
-  // CTA dark banner – right side
-  .sd-cta-banner {
-      background: radial-gradient(circle at 10% 20%, #ff660040, #0000 40%), radial-gradient(circle at 90% 80%, #f603, #0000 40%), linear-gradient(135deg, #0b0b0f 0%, #12121a 50%, #0b0b0f 100%);
-      border-radius: 16px;
-      padding: 14px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      position: relative;
-      overflow: visible !important; // Allow rocket to float outside
+ .sd-cta-banner {
+     background: radial-gradient(circle at 10% 20%, #ff660040, #0000 40%), radial-gradient(circle at 90% 80%, #f603, #0000 40%), linear-gradient(135deg, #0b0b0f 0%, #12121a 50%, #0b0b0f 100%);
+     border-radius: 16px;
+     padding: 14px 32px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 24px;
+     position: relative;
+     overflow: visible !important; // Allow rocket to float outside
 
-      &::before {
-          content: '';
-          position: absolute;
-          right: -50px;
-          top: -50px;
-          width: 180px;
-          height: 180px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(244, 81, 11, 0.28) 0%, transparent 70%);
-          pointer-events: none;
-      }
+     &::before {
+         content: '';
+         position: absolute;
+         right: -50px;
+         top: -50px;
+         width: 180px;
+         height: 180px;
+         border-radius: 50%;
+         background: radial-gradient(circle, rgba(244, 81, 11, 0.28) 0%, transparent 70%);
+         pointer-events: none;
+     }
 
-      &__left {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          text-align: left;
-      }
+     &__left {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         text-align: left;
+     }
 
-      &__right {
-          flex-shrink: 0;
-          position: relative;
-          z-index: 5;
-          margin-top: -65px;
-          margin-bottom: -55px;
-          margin-right: -10px;
+     &__right {
+         flex-shrink: 0;
+         position: relative;
+         z-index: 5;
+         margin-top: -110px;
+         margin-bottom: -100px;
+         margin-right: -30px;
 
-          @media (max-width: 900px) {
-              margin: 20px 0 0 0;
-              width: 100%;
-              display: flex;
-              justify-content: center;
-          }
-      }
+         @media (max-width: 900px) {
+             margin: 20px 0 0 0;
+             width: 100%;
+             display: flex;
+             justify-content: center;
+         }
+     }
 
-      &__rocket {
-          display: block;
-          transform-origin: center;
-          animation: rocketFloat 5s ease-in-out infinite;
-          filter: drop-shadow(0 15px 30px rgba(244, 81, 11, 0.35));
+     &__rocket-wrap {
+         position: relative;
+         display: block;
+         transform-origin: center;
+         animation: rocketFloat 5s ease-in-out infinite;
+         filter: drop-shadow(0 15px 30px rgba(244, 81, 11, 0.35));
+     }
 
-          @media (max-width: 900px) {
-              max-width: 220px !important;
-              height: auto !important;
-          }
-      }
+     &__rocket {
+         display: block;
+         position: relative;
+         z-index: 2;
+         pointer-events: none;
 
-      @media (max-width: 900px) {
-          flex-direction: column !important;
-          padding: 40px 24px !important;
-          text-align: center !important;
-          gap: 20px !important;
-          width: 100%;
-          overflow: hidden !important; // Crop rocket clipping on small viewports
+         @media (max-width: 900px) {
+             max-width: 220px !important;
+         }
+     }
 
-          &__left {
-              align-items: center !important;
-              text-align: center !important;
-          }
-      }
+     .rocket-flame-wrap {
+         position: absolute;
+         left: 33%;
+         top: 58%;
+         width: 50px;
+         height: 120px;
+         transform-origin: top center;
+         transform: rotate(45deg);
+         z-index: 1;
+         pointer-events: none;
+     }
 
-      &__content {
-          flex: 1;
-      }
+     .rocket-flame-outer {
+         position: absolute;
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(to bottom, rgba(255, 69, 0, 0.95) 0%, rgba(255, 120, 0, 0.5) 60%, rgba(255, 0, 0, 0) 100%);
+         border-radius: 0 0 50% 50% / 0 0 70% 70%;
+         filter: blur(3px);
+         animation: flameFlickerOuter 0.15s infinite alternate;
+     }
 
-      &__heading {
-          font-size: 18px;
-          font-weight: 800;
-          color: #fff;
-          margin-bottom: 6px;
-          line-height: 1.3;
+     .rocket-flame-mid {
+         position: absolute;
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 70%;
+         height: 80%;
+         background: linear-gradient(to bottom, rgba(255, 165, 0, 0.95) 0%, rgba(255, 215, 0, 0.6) 70%, rgba(255, 69, 0, 0) 100%);
+         border-radius: 0 0 50% 50% / 0 0 80% 80%;
+         filter: blur(2px);
+         animation: flameFlickerMid 0.12s infinite alternate;
+     }
 
-          @media (max-width: 768px) {
-              font-size: 16px;
-          }
-      }
+     .rocket-flame-core {
+         position: absolute;
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 40%;
+         height: 50%;
+         background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 0, 0.95) 60%, rgba(255, 215, 0, 0) 100%);
+         border-radius: 0 0 50% 50% / 0 0 90% 90%;
+         filter: blur(1px);
+         animation: flameFlickerCore 0.08s infinite alternate;
+     }
 
-      &__sub {
-          font-size: 12.5px;
-          color: rgba(255, 255, 255, 0.7);
-          line-height: 1.55;
-      }
+     .rocket-spark {
+         position: absolute;
+         width: 4px;
+         height: 4px;
+         background: #ffd700;
+         border-radius: 50%;
+         filter: blur(0.5px);
+         box-shadow: 0 0 6px #ff4500;
+         opacity: 0;
+     }
 
-      &__btn {
-          display: inline-flex;
-          align-items: center;
-          padding: 12px 22px;
-          font-size: 13px;
-          font-weight: 600;
-          text-decoration: none;
-          border-radius: 6px;
-          white-space: nowrap;
-          flex-shrink: 0;
-          border-radius: 30px;
-      }
-  }
+     .spark-1 {
+         left: 20%;
+         animation: sparkShoot 1s infinite 0.1s;
+     }
 
-  @keyframes rocketFloat {
-      0%, 100% {
-          transform: translateY(0) rotate(0deg);
-      }
-      50% {
-          transform: translateY(-10px) rotate(1.5deg);
-      }
-  }
+     .spark-2 {
+         left: 40%;
+         animation: sparkShoot 0.8s infinite 0.3s;
+     }
+
+     .spark-3 {
+         left: 60%;
+         animation: sparkShoot 1.2s infinite 0s;
+     }
+
+     .spark-4 {
+         left: 80%;
+         animation: sparkShoot 0.9s infinite 0.4s;
+     }
+
+     @media (max-width: 900px) {
+         flex-direction: column !important;
+         padding: 40px 24px !important;
+         text-align: center !important;
+         gap: 20px !important;
+         width: 100%;
+         overflow: hidden !important; // Crop rocket clipping on small viewports
+
+         &__left {
+             align-items: center !important;
+             text-align: center !important;
+         }
+
+         .sd-cta-banner .rocket-flame-wrap {
+             left: 28%;
+         }
+     }
+
+     &__content {
+         flex: 1;
+     }
+
+     &__heading {
+         font-size: 18px;
+         font-weight: 800;
+         color: #fff;
+         margin-bottom: 6px;
+         line-height: 1.3;
+
+         @media (max-width: 768px) {
+             font-size: 16px;
+         }
+     }
+
+     &__sub {
+         font-size: 12.5px;
+         color: rgba(255, 255, 255, 0.7);
+         line-height: 1.55;
+     }
+
+     &__btn {
+         display: inline-flex;
+         align-items: center;
+         padding: 12px 22px;
+         font-size: 13px;
+         font-weight: 600;
+         text-decoration: none;
+         border-radius: 6px;
+         white-space: nowrap;
+         flex-shrink: 0;
+         border-radius: 30px;
+     }
+ }
+
+ @keyframes rocketFloat {
+
+     0%,
+     100% {
+         transform: translateY(0) rotate(0deg);
+     }
+
+     50% {
+         transform: translateY(-10px) rotate(1.5deg);
+     }
+ }
+
+ @keyframes flameFlickerOuter {
+     0% {
+         transform: translateX(-50%) scale(0.95, 0.95);
+         opacity: 0.85;
+     }
+
+     100% {
+         transform: translateX(-50%) scale(1.05, 1.15);
+         opacity: 1;
+         filter: blur(4px) drop-shadow(0 0 15px rgba(255, 69, 0, 0.6));
+     }
+ }
+
+ @keyframes flameFlickerMid {
+     0% {
+         transform: translateX(-50%) scale(0.97, 0.9);
+     }
+
+     100% {
+         transform: translateX(-50%) scale(1.03, 1.1);
+         filter: blur(2.5px) drop-shadow(0 0 8px rgba(255, 165, 0, 0.8));
+     }
+ }
+
+ @keyframes flameFlickerCore {
+     0% {
+         transform: translateX(-50%) scale(0.98, 0.9);
+     }
+
+     100% {
+         transform: translateX(-50%) scale(1.02, 1.05);
+     }
+ }
+
+ @keyframes sparkShoot {
+     0% {
+         top: 0%;
+         transform: translateX(0) scale(1);
+         opacity: 1;
+     }
+
+     100% {
+         top: 100%;
+         transform: translateX(-15px) scale(0.2);
+         opacity: 0;
+     }
+ }
 
  // ── SECTION 7: Testimonials – slider with dots ─────────────────────────────
  .sd-testimonials {
@@ -4070,132 +4214,132 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
      }
 
      // ── SECTION 4: CTA Banner ────────────────────────────────────────────────
-                 .ppc-cta {
-          background: #ffffff;
-          padding: 0 0 72px;
-          position: relative;
-          overflow: hidden;
+     .ppc-cta {
+         background: #ffffff;
+         padding: 0 0 72px;
+         position: relative;
+         overflow: hidden;
 
-          @media(max-width:1024px) {
-              padding-bottom: 52px;
-          }
+         @media(max-width:1024px) {
+             padding-bottom: 52px;
+         }
 
-          @media(max-width:768px) {
-              padding-bottom: 36px;
-          }
+         @media(max-width:768px) {
+             padding-bottom: 36px;
+         }
 
-          .container {
-              position: relative;
-              z-index: 2;
-          }
+         .container {
+             position: relative;
+             z-index: 2;
+         }
 
-          &__inner {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: 40px;
-              padding: 64px 80px;
-              background: #0f1120 url('/assets/images/services/needthebackground.png') center center / cover no-repeat;
-              border-radius: 20px;
-              position: relative;
-              overflow: hidden;
+         &__inner {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             gap: 40px;
+             padding: 64px 80px;
+             background: #0f1120 url('/assets/images/services/needthebackground.png') center center / cover no-repeat;
+             border-radius: 20px;
+             position: relative;
+             overflow: hidden;
 
-              @media(max-width:1024px) {
-                  padding: 48px 32px;
-                  border-radius: 16px;
-              }
+             @media(max-width:1024px) {
+                 padding: 48px 32px;
+                 border-radius: 16px;
+             }
 
-              @media(max-width:768px) {
-                  padding: 40px 24px;
-                  flex-direction: column;
-                  text-align: center;
-                  gap: 28px;
-                  border-radius: 14px;
-              }
-          }
+             @media(max-width:768px) {
+                 padding: 40px 24px;
+                 flex-direction: column;
+                 text-align: center;
+                 gap: 28px;
+                 border-radius: 14px;
+             }
+         }
 
-          &__rocket-svg {
-              display: block;
-              margin-bottom: 14px;
+         &__rocket-svg {
+             display: block;
+             margin-bottom: 14px;
 
-              @media(max-width:768px) {
-                  margin: 0 auto 14px;
-              }
-          }
+             @media(max-width:768px) {
+                 margin: 0 auto 14px;
+             }
+         }
 
-          &__title {
-              font-size: 32px;
-              font-weight: 800;
-              color: #FFFFFF;
-              line-height: 1.28;
-              margin: 0;
-              font-family: var(--font-space-grotesk), sans-serif;
+         &__title {
+             font-size: 32px;
+             font-weight: 800;
+             color: #FFFFFF;
+             line-height: 1.28;
+             margin: 0;
+             font-family: var(--font-space-grotesk), sans-serif;
 
-              span {
-                  color: #FF5C2C;
-              }
+             span {
+                 color: #FF5C2C;
+             }
 
-              @media(max-width:1024px) {
-                  font-size: 28px;
-              }
+             @media(max-width:1024px) {
+                 font-size: 28px;
+             }
 
-              @media(max-width:768px) {
-                  font-size: 24px;
-              }
-          }
+             @media(max-width:768px) {
+                 font-size: 24px;
+             }
+         }
 
-          p {
-              font-size: 15px;
-              color: rgba(255, 255, 255, .65);
-              line-height: 1.7;
-              max-width: 340px;
-              margin-bottom: 24px;
+         p {
+             font-size: 15px;
+             color: rgba(255, 255, 255, .65);
+             line-height: 1.7;
+             max-width: 340px;
+             margin-bottom: 24px;
 
-              @media(max-width:768px) {
-                  max-width: 100%;
-              }
-          }
+             @media(max-width:768px) {
+                 max-width: 100%;
+             }
+         }
 
-          &__btn {
-              display: inline-flex;
-              align-items: center;
-              gap: 8px;
-              padding: 14px 32px;
-              background: #FF5C2C;
-              color: #FFFFFF;
-              border-radius: 100px;
-              font-size: 15px;
-              font-weight: 600;
-              text-decoration: none;
-              border: none;
-              cursor: pointer;
-              position: relative;
-              transition: background .2s ease, transform .15s ease;
-              overflow: hidden;
+         &__btn {
+             display: inline-flex;
+             align-items: center;
+             gap: 8px;
+             padding: 14px 32px;
+             background: #FF5C2C;
+             color: #FFFFFF;
+             border-radius: 100px;
+             font-size: 15px;
+             font-weight: 600;
+             text-decoration: none;
+             border: none;
+             cursor: pointer;
+             position: relative;
+             transition: background .2s ease, transform .15s ease;
+             overflow: hidden;
 
-              &:hover {
-                  background: #e04a1f;
-                  transform: scale(1.03);
-                  color: #FFFFFF;
-              }
+             &:hover {
+                 background: #e04a1f;
+                 transform: scale(1.03);
+                 color: #FFFFFF;
+             }
 
-              // pulse ring on hover
-              &::after {
-                  content: '';
-                  position: absolute;
-                  inset: 0;
-                  border-radius: 100px;
-                  border: 2px solid #FF5C2C;
-                  opacity: 0;
-                  transform: scale(1);
-                  transition: none;
-              }
+             // pulse ring on hover
+             &::after {
+                 content: '';
+                 position: absolute;
+                 inset: 0;
+                 border-radius: 100px;
+                 border: 2px solid #FF5C2C;
+                 opacity: 0;
+                 transform: scale(1);
+                 transition: none;
+             }
 
-              &:hover::after {
-                  animation: ppcPulse .6s ease-out forwards;
-              }
-          }
-      }
+             &:hover::after {
+                 animation: ppcPulse .6s ease-out forwards;
+             }
+         }
+     }
 
      // Glow orbs inside CTA
      .ppc-cta-left,
@@ -4281,1389 +4425,1496 @@ box-shadow: 0 12px 40px rgba(244, 81, 11, 0.15);
  // ═══════════════════════════════════════════════════════════════════════════
  // PAY-PER-CLICK (PPC) PAGE -- End
  // ═══════════════════════════════════════════════════════════════════════════
-  // MLM SOFTWARE DEVELOPMENT PAGE -- Start
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  .mlm-subpage-wrapper {
-      overflow: hidden;
-  }
-
-  // ── SECTION 2: WHY CHOOSE (GLOWING RINGS) ──────────────────────────────────
-  .mlm-glowing-section {
-      background: linear-gradient(135deg, #02040e 0%, #090e29 50%, #02040e 100%);
-      padding: 90px 0;
-      overflow: hidden;
-      position: relative;
-
-      @media (max-width: 768px) {
-          padding: 60px 0;
-      }
-  }
-
-  .mlm-glowing-grid {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      align-items: center;
-      gap: 50px;
-
-      @media (max-width: 1024px) {
-          grid-template-columns: 1fr;
-          gap: 40px;
-          padding: 0 20px;
-      }
-
-      @media (max-width: 768px) {
-          padding: 0;
-      }
-  }
-
-  .mlm-glowing-content {
-      text-align: left;
-
-      @media (max-width: 1024px) {
-          text-align: center;
-          
-          .sd-section-label--left {
-              justify-content: center;
-          }
-      }
-  }
-
-  .mlm-glowing-heading {
-      font-size: 38px;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.15;
-      margin-bottom: 22px;
-      letter-spacing: -0.5px;
-
-      @media (max-width: 768px) {
-          font-size: 28px;
-      }
-  }
-
-  .mlm-glowing-text {
-      font-size: 15.5px;
-      color: #b0c2f2;
-      line-height: 1.75;
-  }
-
-  .mlm-glowing-icons {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 20px;
-
-      @media (max-width: 992px) {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 25px;
-      }
-
-      @media (max-width: 480px) {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-      }
-  }
-
-  .mlm-glow-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 12px;
-      transition: transform 0.3s ease;
-
-      // Color Modifiers for Glow
-      &--blue { color: #38bdf8; }
-      &--purple { color: #c084fc; }
-      &--green { color: #34d399; }
-      &--yellow { color: #fbbf24; }
-      &--pink { color: #f472b6; }
-      &--red { color: #f87171; }
-
-      &:hover {
-          transform: translateY(-4px);
-
-          .mlm-glow-ring {
-              box-shadow: 0 0 25px currentColor, inset 0 0 10px rgba(255, 255, 255, 0.1);
-              background: rgba(255, 255, 255, 0.08);
-              transform: scale(1.08);
-          }
-
-          .mlm-glow-title {
-              color: #ffffff;
-          }
-      }
-  }
-
-  .mlm-glow-ring {
-      width: 80px;
-      height: 80px;
-      border: 2.5px solid currentColor;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.03);
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.02);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-      @media (max-width: 480px) {
-          width: 72px;
-          height: 72px;
-      }
-  }
-
-  .mlm-glow-icon {
-      font-size: 26px;
-      transition: transform 0.3s ease;
-
-      @media (max-width: 480px) {
-          font-size: 22px;
-      }
-  }
-
-  .mlm-glow-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: #a0aec0;
-      line-height: 1.35;
-      margin-top: 4px;
-      transition: color 0.25s ease;
-  }
-
-  // ── SECTION 3: AFFORDABLE PLANS (11 PLANS GRID) ────────────────────────────
-  .mlm-plans-section {
-      padding: 85px 0;
-      background: #ffffff;
-
-      @media (max-width: 768px) {
-          padding: 60px 0;
-      }
-  }
-
-  .mlm-plans-header {
-      text-align: center;
-      margin-bottom: 50px;
-  }
-
-  .mlm-plans-heading {
-      font-size: 36px;
-      font-weight: 800;
-      color: #111111;
-      line-height: 1.2;
-      margin-bottom: 12px;
-
-      @media (max-width: 768px) {
-          font-size: 28px;
-      }
-  }
-
-  .mlm-plans-subheading {
-      font-size: 15.5px;
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-  }
-
-  .mlm-plans-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-
-      @media (max-width: 1200px) {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 24px;
-      }
-
-      @media (max-width: 768px) {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-          padding: 0 15px;
-      }
-
-      @media (max-width: 480px) {
-          grid-template-columns: 1fr;
-          padding: 0;
-      }
-  }
-
-  .mlm-plan-card {
-      background: #ffffff;
-      border: 1px solid #f0e0d6;
-      border-radius: 16px;
-      padding: 32px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-
-      &:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 15px 35px rgba(244, 81, 11, 0.12);
-          border-color: #f4510b;
-
-          .mlm-plan-card__svg {
-              transform: scale(1.08);
-          }
-      }
-
-      &__icon-wrap {
-          width: 90px;
-          height: 90px;
-          margin-bottom: 22px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-      }
-
-      &__svg {
-          width: 100%;
-          height: 100%;
-          transition: transform 0.3s ease;
-      }
-
-      &__title {
-          font-size: 19px;
-          font-weight: 700;
-          color: #111111;
-          margin-bottom: 6px;
-          line-height: 1.25;
-      }
-
-      &__subtitle {
-          font-size: 13.5px;
-          color: #777777;
-          margin-bottom: 22px;
-      }
-
-      &__btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 8px 24px;
-          font-size: 13.5px;
-          font-weight: 600;
-          color: #ffffff;
-          border-radius: 30px;
-          text-decoration: none;
-          transition: all 0.25s ease;
-          width: fit-content;
-
-          // Customized Button Gradients
-          &--red {
-              background: linear-gradient(135deg, #ff7b7b 0%, #ff4d4d 100%);
-              &:hover { box-shadow: 0 4px 14px rgba(255, 77, 77, 0.4); }
-          }
-          &--green {
-              background: linear-gradient(135deg, #58d68d 0%, #2ecc71 100%);
-              &:hover { box-shadow: 0 4px 14px rgba(46, 204, 113, 0.4); }
-          }
-          &--indigo {
-              background: linear-gradient(135deg, #5dade2 0%, #2e4053 100%);
-              &:hover { box-shadow: 0 4px 14px rgba(46, 64, 83, 0.4); }
-          }
-          &--cyan {
-              background: linear-gradient(135deg, #48c9b0 0%, #1abc9c 100%);
-              &:hover { box-shadow: 0 4px 14px rgba(26, 188, 156, 0.4); }
-          }
-      }
-  }
-
-  // ── SECTION 4: CORE FEATURES GRID (8 CARDS) ────────────────────────────────
-  .mlm-features-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 26px;
-      margin-top: 20px;
-
-      @media (max-width: 1200px) {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 24px;
-      }
-
-      @media (max-width: 768px) {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-          padding: 0 15px;
-      }
-
-      @media (max-width: 480px) {
-          grid-template-columns: 1fr;
-          padding: 0;
-      }
-  }
-
-  .mlm-feature-card {
-      background: #ffffff;
-      border: 1px solid #f0e0d6;
-      border-radius: 16px;
-      padding: 35px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: all 0.3s ease;
-
-      &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 10px 30px rgba(244, 81, 11, 0.08);
-          border-color: #f4510b;
-
-          .mlm-feature-card__circle {
-              background: #f4510b;
-          }
-
-          .mlm-feature-card__icon {
-              color: #ffffff;
-              transform: scale(1.1);
-          }
-      }
-
-      &__circle {
-          width: 90px;
-          height: 90px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #fff2eb 0%, #ffe8d6 100%);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 22px;
-          transition: all 0.3s ease;
-      }
-
-      &__title {
-          font-size: 19px;
-          font-weight: 700;
-          color: #111111;
-          margin-bottom: 10px;
-          line-height: 1.25;
-      }
-
-      &__desc {
-          font-size: 13.5px;
-          color: #666;
-          line-height: 1.6;
-          margin-bottom: 18px;
-          flex-grow: 1;
-      }
-
-      &__link {
-          font-size: 13.5px;
-          font-weight: 600;
-          color: #f4510b;
-          text-decoration: none;
-          transition: color 0.2s ease;
-
-          &:hover {
-              color: #111111;
-          }
-      }
-  }
-
-  // ── SECTION 7: TESTIMONIALS (2 COLUMNS) ────────────────────────────────────
-  .mlm-testimonials-container {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      align-items: center;
-      gap: 50px;
-
-      @media (max-width: 1024px) {
-          grid-template-columns: 1fr;
-          gap: 40px;
-      }
-  }
-
-  .mlm-testimonials-header {
-      text-align: left;
-
-      @media (max-width: 1024px) {
-          text-align: center;
-          .sd-section-label--left {
-              justify-content: center;
-          }
-      }
-  }
-
-  .mlm-testimonials-heading {
-      font-size: 38px;
-      font-weight: 800;
-      color: #111111;
-      line-height: 1.15;
-      margin-bottom: 18px;
-
-      @media (max-width: 768px) {
-          font-size: 28px;
-      }
-  }
-
-  .mlm-testimonials-subtext {
-      font-size: 15.5px;
-      color: #555;
-      line-height: 1.7;
-  }
-
-  .mlm-testimonials-slider-box {
-      width: 100%;
-      overflow: hidden;
-  }
-
-  // ── SECTION 8: BOTTOM CTA BANNER ──────────────────────────────────────────
-  .mlm-cta-banner-section {
-      padding: 60px 0 100px;
-      background: #ffffff;
-
-      @media (max-width: 768px) {
-          padding: 40px 0 70px;
-      }
-  }
-
-  .mlm-cta-banner-card {
-      background: linear-gradient(135deg, #070f2d 0%, #152252 50%, #070f2d 100%);
-      border-radius: 24px;
-      padding: 50px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      box-shadow: 0 15px 45px rgba(7, 15, 45, 0.2);
-
-      @media (max-width: 900px) {
-          flex-direction: column;
-          text-align: center;
-          padding: 40px 30px;
-          gap: 30px;
-      }
-  }
-
-  .mlm-cta-banner-content {
-      flex-grow: 1;
-      text-align: left;
-
-      @media (max-width: 900px) {
-          text-align: center;
-      }
-  }
-
-  .mlm-cta-banner-title {
-      font-size: 32px;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.2;
-      margin-bottom: 12px;
-
-      @media (max-width: 768px) {
-          font-size: 24px;
-      }
-  }
-
-  .mlm-cta-banner-desc {
-      font-size: 15px;
-      color: #cad3f0;
-      line-height: 1.6;
-      max-width: 600px;
-  }
-
-  .mlm-cta-banner-btn-wrap {
-      flex-shrink: 0;
-  }
-
-  .mlm-cta-banner-btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 15px 35px;
-      font-size: 15px;
-      font-weight: 700;
-      color: #ffffff;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 20px rgba(244, 81, 11, 0.3);
-
-      &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 30px rgba(244, 81, 11, 0.5);
-      }
-
-      @media (max-width: 480px) {
-          padding: 12px 24px;
-          font-size: 14px;
-      }
-  }
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // MLM SOFTWARE DEVELOPMENT PAGE -- End
-
-  
-
-  // ── MLM PREMIUM WHITE HERO STYLING ─────────────────────────────────────────
-  .mlm-hero {
-      background: #ffffff !important;
-      padding: 120px 0 60px !important;
-      position: relative;
-      overflow: hidden;
-
-      @media (max-width: 1024px) {
-          padding: 100px 0 50px !important;
-      }
-
-      @media (max-width: 768px) {
-          padding: 90px 0 40px !important;
-      }
-
-      &__breadcrumb {
-          color: #888888 !important;
-
-          a {
-              color: #555555 !important;
-
-              &:hover {
-                  color: #f4510b !important;
-              }
-          }
-          span {
-              color: #bbbbbb !important;
-          }
-      }
-
-      &__label {
-          color: #f4510b !important;
-      }
-
-      &__title {
-          color: #111111 !important;
-          
-          &--accent {
-              color: #f4510b !important;
-          }
-      }
-
-      &__description {
-          color: #555555 !important;
-      }
-
-      &__actions {
-          @media (max-width: 768px) {
-              flex-direction: row !important;
-              align-items: center !important;
-              justify-content: flex-start !important;
-              gap: 14px !important;
-          }
-      }
-
-      &__btn {
-          &--outline {
-              background: transparent !important;
-              color: #111111 !important;
-              border: 2.5px solid rgba(0, 0, 0, 0.15) !important;
-
-              &:hover {
-                  border-color: #111111 !important;
-                  background: rgba(0, 0, 0, 0.04) !important;
-                  color: #111111 !important;
-              }
-          }
-      }
-
-      &__visual {
-          position: relative !important;
-          overflow: visible !important;
-      }
-  }
-
-  // ── Floating Glowing Rings around Laptop Mockup ────────────────────────────
-  .mlm-hero-floating {
-      position: absolute !important;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      border: 2px solid currentColor;
-      background: rgba(255, 255, 255, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 17px;
-      z-index: 10;
-      box-shadow: 0 0 15px currentColor;
-      animation: mlmBob 4s ease-in-out infinite;
-
-      // Color placements
-      &--purple {
-          color: #c084fc;
-          top: 25%;
-          left: 10%;
-          animation-delay: 0s;
-      }
-      &--red {
-          color: #f87171;
-          bottom: 25%;
-          left: 2%;
-          animation-delay: 1.2s;
-      }
-      &--orange {
-          color: #fbbf24;
-          top: 30%;
-          right: 3%;
-          animation-delay: 2.4s;
-      }
-
-      @media (max-width: 768px) {
-          width: 38px;
-          height: 38px;
-          font-size: 14px;
-      }
-  }
-
-  @keyframes mlmBob {
-      0%, 100% {
-          transform: translateY(0);
-      }
-      50% {
-          transform: translateY(-10px);
-      }
-  }
-
-  // ── Four Icon features inline ──────────────────────────────────────────────
-  .mlm-hero-features-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px 28px;
-      margin-bottom: 35px;
-      text-align: left;
-
-      .mlm-hero-feat {
-          display: flex;
-          align-items: center;
-          gap: 9px;
-          font-size: 13.5px;
-          font-weight: 500;
-          color: #555555;
-
-          &-icon {
-              font-size: 15px;
-              flex-shrink: 0;
-
-              &--orange { color: #f4510b; }
-              &--blue { color: #3498db; }
-              &--teal { color: #1abc9c; }
-              &--purple { color: #9b59b6; }
-          }
-      }
-  }
-
-  // ── Integrated White Glass Stats Box (Bottom of Hero) ──────────────────────
-  .mlm-hero-stats-box {
-      background: #ffffff !important;
-      border: 1px solid #f0e0d6 !important;
-      border-radius: 20px;
-      padding: 26px 40px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      width: 100%;
-      box-shadow: 0 10px 30px rgba(244, 81, 11, 0.06) !important;
-
-      @media (max-width: 1024px) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 30px 20px;
-          padding: 24px 30px;
-      }
-
-      @media (max-width: 480px) {
-          grid-template-columns: 1fr;
-          gap: 20px;
-          padding: 20px;
-          text-align: center;
-          
-          .mlm-hero-stat-item {
-              flex-direction: column;
-              align-items: center;
-              text-align: center;
-          }
-          
-          .mlm-hero-stat-text {
-              align-items: center;
-          }
-      }
-  }
-
-  .mlm-hero-stat-item {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-  }
-
-  .mlm-hero-stat-icon-wrap {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      border: 2px solid currentColor;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 19px;
-      flex-shrink: 0;
-      box-shadow: 0 0 15px currentColor;
-
-      &--purple { color: #c084fc; }
-      &--green { color: #34d399; }
-      &--blue { color: #38bdf8; }
-      &--yellow { color: #fbbf24; }
-  }
-
-  .mlm-hero-stat-text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .mlm-hero-stat-val {
-      color: #111111 !important;
-      font-size: 26px;
-      font-weight: 800;
-      line-height: 1.15;
-  }
-
-  .mlm-hero-stat-lbl {
-      color: #666666 !important;
-      font-size: 13px;
-      font-weight: 500;
-      margin-top: 2px;
-  }
-
-
-  // ── MLM GLOW & NETWORK BACKGROUND ANIMATIONS ──────────────────────────────
-  .mlm-hero-bg-glow {
-      position: absolute !important;
-      width: 350px !important;
-      height: 350px !important;
-      border-radius: 50% !important;
-      filter: blur(60px) !important;
-      background: radial-gradient(circle, rgba(244, 81, 11, 0.12) 0%, transparent 70%) !important;
-      top: 10% !important;
-      left: 10% !important;
-      z-index: 1 !important;
-      pointer-events: none !important;
-      animation: rotateGlow 15s linear infinite !important;
-  }
-
-  .mlm-hero-bg-glow-secondary {
-      position: absolute !important;
-      width: 300px !important;
-      height: 300px !important;
-      border-radius: 50% !important;
-      filter: blur(50px) !important;
-      background: radial-gradient(circle, rgba(155, 89, 182, 0.08) 0%, transparent 70%) !important;
-      bottom: 10% !important;
-      right: 10% !important;
-      z-index: 1 !important;
-      pointer-events: none !important;
-      animation: rotateGlow 12s linear infinite reverse !important;
-  }
-
-  @keyframes rotateGlow {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-  }
-
-  .mlm-hero-network-svg {
-      position: absolute !important;
-      width: 100% !important;
-      height: 100% !important;
-      top: 0 !important;
-      left: 0 !important;
-      z-index: 2 !important;
-      pointer-events: none !important;
-
-      path {
-          animation: dashMove 2.5s linear infinite !important;
-      }
-  }
-
-  @keyframes dashMove {
-      to {
-          stroke-dashoffset: -20;
-      }
-  }
-
-  .mlm-hero__img {
-      position: relative !important;
-      z-index: 5 !important;
-  }
-
-  // Refine positioning for 4 floating MLM bubbles - Balanced 2 Left & 2 Right
-  .mlm-hero-floating {
-      position: absolute !important;
-      width: 46px !important;
-      height: 46px !important;
-      border-radius: 50% !important;
-      border: 2px solid currentColor !important;
-      background: rgba(255, 255, 255, 0.95) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 17px !important;
-      z-index: 10 !important;
-      box-shadow: 0 0 15px currentColor !important;
-      animation: mlmBob 4s ease-in-out infinite !important;
-
-      &--red {
-          color: #ff4d4d !important;
-          top: 25% !important;
-          left: 12% !important;
-          right: auto !important;
-          bottom: auto !important;
-          animation-delay: 0.8s !important;
-      }
-      &--orange {
-          color: #f4510b !important;
-          bottom: 22% !important;
-          left: 3% !important;
-          right: auto !important;
-          top: auto !important;
-          animation-delay: 1.6s !important;
-      }
-      &--purple {
-          color: #9b59b6 !important;
-          top: 28% !important;
-          right: 3% !important;
-          left: auto !important;
-          bottom: auto !important;
-          animation-delay: 0s !important;
-      }
-      &--blue {
-          color: #3498db !important;
-          bottom: 18% !important;
-          right: 12% !important;
-          left: auto !important;
-          top: auto !important;
-          animation-delay: 3.2s !important;
-      }
-  }
-
-
-  // ── MLM HERO PULSING CONCENTRIC RADAR RIPPLES ──────────────────────────────
-  .mlm-hero-radar-ripple {
-      position: absolute !important;
-      width: 440px !important;
-      height: 440px !important;
-      border-radius: 50% !important;
-      border: 1.5px solid rgba(244, 81, 11, 0.12) !important;
-      top: 15% !important;
-      left: 20% !important;
-      z-index: 2 !important;
-      pointer-events: none !important;
-      transform-origin: center !important;
-      animation: radarPulse 4.5s cubic-bezier(0.1, 0.8, 0.3, 1) infinite !important;
-
-      &--1 { animation-delay: 0s !important; }
-      &--2 { animation-delay: 1.5s !important; }
-      &--3 { animation-delay: 3s !important; }
-
-      @media (max-width: 1024px) {
-          width: 360px !important;
-          height: 360px !important;
-          left: 15% !important;
-      }
-
-      @media (max-width: 768px) {
-          width: 280px !important;
-          height: 280px !important;
-          left: 10% !important;
-      }
-  }
-
-  @keyframes radarPulse {
-      0% {
-          transform: scale(0.5);
-          opacity: 0.9;
-      }
-      50% {
-          opacity: 0.4;
-      }
-      100% {
-          transform: scale(1.35);
-          opacity: 0;
-      }
-  }
-
-@keyframes flowLine {
-    0% {
-        left: -20%;
-    }
-    100% {
-        left: 120%;
-    }
-}
-
-  /* Lock body scroll when modal is active */
-  body.mlm-modal-open {
-      overflow: hidden !important;
-  }
-
-  /* ── PLAN DETAIL POPUP MODAL STYLES (Task 1) ───────────────────────── */
-  .mlm-modal-overlay {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      background: rgba(10, 10, 15, 0.65) !important;
-      backdrop-filter: blur(12px) !important;
-      -webkit-backdrop-filter: blur(12px) !important;
-      z-index: 9999999 !important; // Force modal overlay above all elements
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 24px !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      animation: mlmModalFadeIn 0.3s ease-out forwards !important;
-  }
-
-  .mlm-modal-card {
-      // ── Premium Glassmorphism Modal Card ──
-      background: rgba(255, 255, 255, 0.92) !important;
-      backdrop-filter: blur(24px) saturate(180%) !important;
-      -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-      border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
-      border-radius: 28px !important;
-      width: 100% !important;
-      max-width: 900px !important;
-      box-shadow:
-          0 32px 80px rgba(0, 0, 0, 0.22),
-          0 8px 24px rgba(244, 81, 11, 0.08),
-          inset 0 1px 0 rgba(255, 255, 255, 0.9),
-          inset 0 -1px 0 rgba(0, 0, 0, 0.04) !important;
-      position: relative !important;
-      overflow: hidden !important;
-      padding: 42px !important;
-      z-index: 10000000 !important;
-      display: block !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      animation: mlmModalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-
-      // Subtle top shimmer line
-      &::before {
-          content: '' !important;
-          position: absolute !important;
-          top: 0 !important;
-          left: 0 !important;
-          right: 0 !important;
-          height: 3px !important;
-          background: linear-gradient(90deg, #f4510b, #22c55e, #f4510b) !important;
-          border-radius: 28px 28px 0 0 !important;
-      }
-
-      // Decorative glow orb top-right
-      &::after {
-          content: '' !important;
-          position: absolute !important;
-          top: -60px !important;
-          right: -60px !important;
-          width: 200px !important;
-          height: 200px !important;
-          background: radial-gradient(circle, rgba(34, 197, 94, 0.07) 0%, transparent 70%) !important;
-          pointer-events: none !important;
-          border-radius: 50% !important;
-      }
-
-      @media (max-width: 768px) {
-          padding: 32px 24px !important;
-          border-radius: 20px !important;
-          max-height: 90vh !important;
-          overflow-y: auto !important;
-      }
-  }
-
-  .mlm-modal-close {
-      position: absolute !important;
-      top: 24px !important;
-      right: 24px !important;
-      width: 38px !important;
-      height: 38px !important;
-      border-radius: 50% !important;
-      background: rgba(244, 81, 11, 0.08) !important;
-      border: none !important;
-      color: #f4510b !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 18px !important;
-      cursor: pointer !important;
-      transition: all 0.25s ease !important;
-      z-index: 10000010 !important;
-
-      &:hover {
-          background: #f4510b !important;
-          color: #ffffff !important;
-          transform: rotate(90deg) !important;
-      }
-  }
-
-  .mlm-modal-grid {
-      display: grid !important;
-      grid-template-columns: 38% 62% !important;
-      gap: 40px !important;
-      align-items: start !important;
-
-      @media (max-width: 768px) {
-          grid-template-columns: 1fr !important;
-          gap: 30px !important;
-      }
-  }
-
-  .mlm-modal-left {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      text-align: center !important;
-      border-right: 1px solid rgba(244, 81, 11, 0.1) !important;
-      padding-right: 20px !important;
-
-      @media (max-width: 768px) {
-          border-right: none !important;
-          border-bottom: 1px solid rgba(244, 81, 11, 0.1) !important;
-          padding-right: 0 !important;
-          padding-bottom: 24px !important;
-      }
-  }
-
-  .mlm-modal-icon-container {
-      width: 150px !important;
-      height: 150px !important;
-      border-radius: 24px !important;
-      background: linear-gradient(135deg, #fffaf6 0%, #fff2eb 100%) !important;
-      border-left: 5px solid #f4510b !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      margin-bottom: 24px !important;
-      box-shadow: 0 10px 25px rgba(244, 81, 11, 0.08) !important;
-
-      .mlm-plan-card__svg {
-          transform: none !important; // Override conflicting inline transform scale
-          max-width: 80% !important;
-          max-height: 80% !important;
-          object-fit: contain !important;
-      }
-  }
-
-  .mlm-modal-title {
-      font-size: 26px !important;
-      font-weight: 800 !important;
-      color: #111111 !important;
-      line-height: 1.2 !important;
-      margin-bottom: 8px !important;
-  }
-
-  .mlm-modal-subtitle {
-      font-size: 14px !important;
-      font-weight: 600 !important;
-      color: #777777 !important;
-      text-transform: uppercase !important;
-      letter-spacing: 1.5px !important;
-      margin-bottom: 24px !important;
-  }
-
-  .mlm-modal-features {
-      width: 100% !important;
-      text-align: left !important;
-  }
-
-  .mlm-modal-section-title {
-      font-size: 15px !important;
-      font-weight: 700 !important;
-      color: #111111 !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.8px !important;
-      margin-bottom: 14px !important;
-      display: flex !important;
-      align-items: center !important;
-      gap: 8px !important;
-  }
-
-  .mlm-modal-features-list {
-      display: flex !important;
-      flex-wrap: wrap !important;
-      gap: 8px !important;
-  }
-
-  .mlm-modal-feature-badge {
-      display: inline-flex !important;
-      align-items: center !important;
-      gap: 6px !important;
-      // ── Green glassmorphism badge ──
-      background: rgba(34, 197, 94, 0.08) !important;
-      border: 1px solid rgba(34, 197, 94, 0.25) !important;
-      border-radius: 30px !important;
-      padding: 6px 14px !important;
-      font-size: 12.5px !important;
-      font-weight: 600 !important;
-      color: #15803d !important;
-      backdrop-filter: blur(8px) !important;
-      -webkit-backdrop-filter: blur(8px) !important;
-      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255,255,255,0.6) !important;
-      transition: all 0.25s ease !important;
-
-      i {
-          font-size: 13px !important;
-          color: #22c55e !important; // ✅ Green tick mark
-          filter: drop-shadow(0 0 3px rgba(34, 197, 94, 0.4)) !important;
-      }
-
-      &:hover {
-          background: rgba(34, 197, 94, 0.14) !important;
-          border-color: rgba(34, 197, 94, 0.4) !important;
-          transform: translateY(-1px) !important;
-      }
-  }
-
-  .mlm-modal-right {
-      display: flex !important;
-      flex-direction: column !important;
-      text-align: left !important;
-  }
-
-  .mlm-modal-desc {
-      font-size: 15.5px !important;
-      line-height: 1.75 !important;
-      color: #4a4a4a !important;
-  }
-
-  .mlm-modal-benefits-list {
-      list-style: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 16px !important;
-
-      @media (max-width: 600px) {
-          grid-template-columns: 1fr !important;
-          gap: 12px !important;
-      }
-
-      li {
-          display: flex !important;
-          align-items: flex-start !important;
-          gap: 10px !important;
-          font-size: 14px !important;
-          line-height: 1.5 !important;
-          color: #555555 !important;
-
-          i {
-              font-size: 15px !important;
-              margin-top: 2px !important;
-              flex-shrink: 0 !important;
-          }
-
-          span {
-              font-weight: 500 !important;
-          }
-      }
-  }
-
-  .mlm-modal-actions {
-      margin-top: 36px !important;
-      border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
-      padding-top: 28px !important;
-      display: flex !important;
-      justify-content: flex-end !important;
-
-      @media (max-width: 768px) {
-          margin-top: 24px !important;
-          padding-top: 20px !important;
-          justify-content: center !important;
-      }
-  }
-
-  .mlm-modal-action-btn {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 13px 32px !important;
-      font-size: 14.5px !important;
-      font-weight: 700 !important;
-      color: #ffffff !important;
-      border-radius: 30px !important;
-      text-decoration: none !important;
-      transition: all 0.3s ease !important;
-      box-shadow: 0 8px 20px rgba(244, 81, 11, 0.2) !important;
-
-      &:hover {
-          transform: translateY(-2px) !important;
-          box-shadow: 0 12px 25px rgba(244, 81, 11, 0.35) !important;
-      }
-  }
-
-  @keyframes mlmModalFadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-  }
-
-  @keyframes mlmModalSlideUp {
-      from {
-          opacity: 0;
-          transform: translateY(40px) scale(0.96);
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-      }
-  }
-
-  /* ── PLANS & FEATURES RESPONSIVE MOBILE GRIDS (Task 3 & 4) ─────────── */
-  @media (max-width: 768px) {
-      .mlm-plans-grid {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 14px !important;
-          padding: 0 12px !important;
-      }
-
-      .mlm-features-grid {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 14px !important;
-          padding: 0 12px !important;
-      }
-  }
-
-  @media (max-width: 480px) {
-      .mlm-plans-grid {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 10px !important;
-          padding: 0 !important;
-      }
-
-      .mlm-plan-card {
-          padding: 20px 12px !important;
-          border-radius: 12px !important;
-
-          &__icon-wrap {
-              width: 72px !important;
-              height: 72px !important;
-              margin-bottom: 14px !important;
-          }
-
-          &__title {
-              font-size: 15px !important;
-              margin-bottom: 4px !important;
-          }
-
-          &__subtitle {
-              font-size: 11px !important;
-              margin-bottom: 14px !important;
-          }
-
-          &__btn {
-              padding: 6px 14px !important;
-              font-size: 11.5px !important;
-          }
-      }
-
-      .mlm-features-grid {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 10px !important;
-          padding: 0 !important;
-      }
-
-      .mlm-feature-card {
-          padding: 20px 12px !important;
-          border-radius: 12px !important;
-
-          &__circle {
-              width: 60px !important;
-              height: 60px !important;
-              margin-bottom: 14px !important;
-          }
-
-          &__title {
-              font-size: 15px !important;
-              margin-bottom: 6px !important;
-          }
-
-          &__desc {
-              font-size: 11px !important;
-              margin-bottom: 12px !important;
-          }
-
-          &__link {
-              font-size: 11.5px !important;
-          }
-      }
-  }
-
-  /* ── HERO STATS ROW LAYOUT FOR MOBILE (Task 5) ──────────────────────── */
-  @media (max-width: 768px) {
-      .mlm-hero-stats-box {
-          display: grid !important;
-          grid-template-columns: repeat(4, 1fr) !important;
-          gap: 12px !important;
-          padding: 20px 12px !important;
-          margin-top: 40px !important;
-
-          .mlm-hero-stat-item {
-              flex-direction: column !important;
-              align-items: center !important;
-              text-align: center !important;
-              gap: 8px !important;
-          }
-
-          .mlm-hero-stat-icon-wrap {
-              width: 42px !important;
-              height: 42px !important;
-              font-size: 15px !important;
-          }
-
-          .mlm-hero-stat-text {
-              align-items: center !important;
-          }
-
-          .mlm-hero-stat-val {
-              font-size: 19px !important;
-          }
-
-          .mlm-hero-stat-lbl {
-              font-size: 10px !important;
-              margin-top: 2px !important;
-              line-height: 1.25 !important;
-              white-space: normal !important;
-          }
-      }
-  }
-
-  @media (max-width: 480px) {
-      .mlm-hero-stats-box {
-          grid-template-columns: repeat(4, 1fr) !important;
-          gap: 8px !important;
-          padding: 16px 8px !important;
-          border-radius: 16px !important;
-
-          .mlm-hero-stat-item {
-              gap: 6px !important;
-          }
-
-          .mlm-hero-stat-icon-wrap {
-              width: 34px !important;
-              height: 34px !important;
-              font-size: 13px !important;
-          }
-
-          .mlm-hero-stat-val {
-              font-size: 15px !important;
-          }
-
-          .mlm-hero-stat-lbl {
-              font-size: 8.5px !important;
-              margin-top: 1px !important;
-              line-height: 1.2 !important;
-          }
-      }
-  }
+ // MLM SOFTWARE DEVELOPMENT PAGE -- Start
+ // ═══════════════════════════════════════════════════════════════════════════
+
+ .mlm-subpage-wrapper {
+     overflow: hidden;
+ }
+
+ // ── SECTION 2: WHY CHOOSE (GLOWING RINGS) ──────────────────────────────────
+ .mlm-glowing-section {
+     background: linear-gradient(135deg, #02040e 0%, #090e29 50%, #02040e 100%);
+     padding: 90px 0;
+     overflow: hidden;
+     position: relative;
+
+     @media (max-width: 768px) {
+         padding: 60px 0;
+     }
+ }
+
+ .mlm-glowing-grid {
+     display: grid;
+     grid-template-columns: 40% 60%;
+     align-items: center;
+     gap: 50px;
+
+     @media (max-width: 1024px) {
+         grid-template-columns: 1fr;
+         gap: 40px;
+         padding: 0 20px;
+     }
+
+     @media (max-width: 768px) {
+         padding: 0;
+     }
+ }
+
+ .mlm-glowing-content {
+     text-align: left;
+
+     @media (max-width: 1024px) {
+         text-align: center;
+
+         .sd-section-label--left {
+             justify-content: center;
+         }
+     }
+ }
+
+ .mlm-glowing-heading {
+     font-size: 38px;
+     font-weight: 800;
+     color: #ffffff;
+     line-height: 1.15;
+     margin-bottom: 22px;
+     letter-spacing: -0.5px;
+
+     @media (max-width: 768px) {
+         font-size: 28px;
+     }
+ }
+
+ .mlm-glowing-text {
+     font-size: 15.5px;
+     color: #b0c2f2;
+     line-height: 1.75;
+ }
+
+ .mlm-glowing-icons {
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     gap: 20px;
+
+     @media (max-width: 992px) {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 25px;
+     }
+
+     @media (max-width: 480px) {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 20px;
+     }
+ }
+
+ .mlm-glow-card {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     gap: 12px;
+     transition: transform 0.3s ease;
+
+     // Color Modifiers for Glow
+     &--blue {
+         color: #38bdf8;
+     }
+
+     &--purple {
+         color: #c084fc;
+     }
+
+     &--green {
+         color: #34d399;
+     }
+
+     &--yellow {
+         color: #fbbf24;
+     }
+
+     &--pink {
+         color: #f472b6;
+     }
+
+     &--red {
+         color: #f87171;
+     }
+
+     &:hover {
+         transform: translateY(-4px);
+
+         .mlm-glow-ring {
+             box-shadow: 0 0 25px currentColor, inset 0 0 10px rgba(255, 255, 255, 0.1);
+             background: rgba(255, 255, 255, 0.08);
+             transform: scale(1.08);
+         }
+
+         .mlm-glow-title {
+             color: #ffffff;
+         }
+     }
+ }
+
+ .mlm-glow-ring {
+     width: 80px;
+     height: 80px;
+     border: 2.5px solid currentColor;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: rgba(255, 255, 255, 0.03);
+     box-shadow: 0 0 12px rgba(255, 255, 255, 0.02);
+     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+     @media (max-width: 480px) {
+         width: 72px;
+         height: 72px;
+     }
+ }
+
+ .mlm-glow-icon {
+     font-size: 26px;
+     transition: transform 0.3s ease;
+
+     @media (max-width: 480px) {
+         font-size: 22px;
+     }
+ }
+
+ .mlm-glow-title {
+     font-size: 13px;
+     font-weight: 600;
+     color: #a0aec0;
+     line-height: 1.35;
+     margin-top: 4px;
+     transition: color 0.25s ease;
+ }
+
+ // ── SECTION 3: AFFORDABLE PLANS (11 PLANS GRID) ────────────────────────────
+ .mlm-plans-section {
+     padding: 85px 0;
+     background: #ffffff;
+
+     @media (max-width: 768px) {
+         padding: 60px 0;
+     }
+ }
+
+ .mlm-plans-header {
+     text-align: center;
+     margin-bottom: 50px;
+ }
+
+ .mlm-plans-heading {
+     font-size: 36px;
+     font-weight: 800;
+     color: #111111;
+     line-height: 1.2;
+     margin-bottom: 12px;
+
+     @media (max-width: 768px) {
+         font-size: 28px;
+     }
+ }
+
+ .mlm-plans-subheading {
+     font-size: 15.5px;
+     color: #666;
+     max-width: 600px;
+     margin: 0 auto;
+     line-height: 1.6;
+ }
+
+ .mlm-plans-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 28px;
+
+     @media (max-width: 1200px) {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 24px;
+     }
+
+     @media (max-width: 768px) {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 20px;
+         padding: 0 15px;
+     }
+
+     @media (max-width: 480px) {
+         grid-template-columns: 1fr;
+         padding: 0;
+     }
+ }
+
+ .mlm-plan-card {
+     background: #ffffff;
+     border: 1px solid #f0e0d6;
+     border-radius: 16px;
+     padding: 32px 24px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+
+     &:hover {
+         transform: translateY(-6px);
+         box-shadow: 0 15px 35px rgba(244, 81, 11, 0.12);
+         border-color: #f4510b;
+
+         .mlm-plan-card__svg {
+             transform: scale(1.08);
+         }
+     }
+
+     &__icon-wrap {
+         width: 90px;
+         height: 90px;
+         margin-bottom: 22px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+     }
+
+     &__svg {
+         width: 100%;
+         height: 100%;
+         transition: transform 0.3s ease;
+     }
+
+     &__title {
+         font-size: 19px;
+         font-weight: 700;
+         color: #111111;
+         margin-bottom: 6px;
+         line-height: 1.25;
+     }
+
+     &__subtitle {
+         font-size: 13.5px;
+         color: #777777;
+         margin-bottom: 22px;
+     }
+
+     &__btn {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         padding: 8px 24px;
+         font-size: 13.5px;
+         font-weight: 600;
+         color: #ffffff;
+         border-radius: 30px;
+         text-decoration: none;
+         transition: all 0.25s ease;
+         width: fit-content;
+
+         // Customized Button Gradients
+         &--red {
+             background: linear-gradient(135deg, #ff7b7b 0%, #ff4d4d 100%);
+
+             &:hover {
+                 box-shadow: 0 4px 14px rgba(255, 77, 77, 0.4);
+             }
+         }
+
+         &--green {
+             background: linear-gradient(135deg, #58d68d 0%, #2ecc71 100%);
+
+             &:hover {
+                 box-shadow: 0 4px 14px rgba(46, 204, 113, 0.4);
+             }
+         }
+
+         &--indigo {
+             background: linear-gradient(135deg, #5dade2 0%, #2e4053 100%);
+
+             &:hover {
+                 box-shadow: 0 4px 14px rgba(46, 64, 83, 0.4);
+             }
+         }
+
+         &--cyan {
+             background: linear-gradient(135deg, #48c9b0 0%, #1abc9c 100%);
+
+             &:hover {
+                 box-shadow: 0 4px 14px rgba(26, 188, 156, 0.4);
+             }
+         }
+     }
+ }
+
+ // ── SECTION 4: CORE FEATURES GRID (8 CARDS) ────────────────────────────────
+ .mlm-features-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 26px;
+     margin-top: 20px;
+
+     @media (max-width: 1200px) {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 24px;
+     }
+
+     @media (max-width: 768px) {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 20px;
+         padding: 0 15px;
+     }
+
+     @media (max-width: 480px) {
+         grid-template-columns: 1fr;
+         padding: 0;
+     }
+ }
+
+ .mlm-feature-card {
+     background: #ffffff;
+     border: 1px solid #f0e0d6;
+     border-radius: 16px;
+     padding: 35px 24px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     transition: all 0.3s ease;
+
+     &:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 30px rgba(244, 81, 11, 0.08);
+         border-color: #f4510b;
+
+         .mlm-feature-card__circle {
+             background: #f4510b;
+         }
+
+         .mlm-feature-card__icon {
+             color: #ffffff;
+             transform: scale(1.1);
+         }
+     }
+
+     &__circle {
+         width: 90px;
+         height: 90px;
+         border-radius: 50%;
+         background: linear-gradient(135deg, #fff2eb 0%, #ffe8d6 100%);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-bottom: 22px;
+         transition: all 0.3s ease;
+     }
+
+     &__title {
+         font-size: 19px;
+         font-weight: 700;
+         color: #111111;
+         margin-bottom: 10px;
+         line-height: 1.25;
+     }
+
+     &__desc {
+         font-size: 13.5px;
+         color: #666;
+         line-height: 1.6;
+         margin-bottom: 18px;
+         flex-grow: 1;
+     }
+
+     &__link {
+         font-size: 13.5px;
+         font-weight: 600;
+         color: #f4510b;
+         text-decoration: none;
+         transition: color 0.2s ease;
+
+         &:hover {
+             color: #111111;
+         }
+     }
+ }
+
+ // ── SECTION 7: TESTIMONIALS (2 COLUMNS) ────────────────────────────────────
+ .mlm-testimonials-container {
+     display: grid;
+     grid-template-columns: 40% 60%;
+     align-items: center;
+     gap: 50px;
+
+     @media (max-width: 1024px) {
+         grid-template-columns: 1fr;
+         gap: 40px;
+     }
+ }
+
+ .mlm-testimonials-header {
+     text-align: left;
+
+     @media (max-width: 1024px) {
+         text-align: center;
+
+         .sd-section-label--left {
+             justify-content: center;
+         }
+     }
+ }
+
+ .mlm-testimonials-heading {
+     font-size: 38px;
+     font-weight: 800;
+     color: #111111;
+     line-height: 1.15;
+     margin-bottom: 18px;
+
+     @media (max-width: 768px) {
+         font-size: 28px;
+     }
+ }
+
+ .mlm-testimonials-subtext {
+     font-size: 15.5px;
+     color: #555;
+     line-height: 1.7;
+ }
+
+ .mlm-testimonials-slider-box {
+     width: 100%;
+     overflow: hidden;
+ }
+
+ // ── SECTION 8: BOTTOM CTA BANNER ──────────────────────────────────────────
+ .mlm-cta-banner-section {
+     padding: 60px 0 100px;
+     background: #ffffff;
+
+     @media (max-width: 768px) {
+         padding: 40px 0 70px;
+     }
+ }
+
+ .mlm-cta-banner-card {
+     background: linear-gradient(135deg, #070f2d 0%, #152252 50%, #070f2d 100%);
+     border-radius: 24px;
+     padding: 50px 60px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 40px;
+     box-shadow: 0 15px 45px rgba(7, 15, 45, 0.2);
+
+     @media (max-width: 900px) {
+         flex-direction: column;
+         text-align: center;
+         padding: 40px 30px;
+         gap: 30px;
+     }
+ }
+
+ .mlm-cta-banner-content {
+     flex-grow: 1;
+     text-align: left;
+
+     @media (max-width: 900px) {
+         text-align: center;
+     }
+ }
+
+ .mlm-cta-banner-title {
+     font-size: 32px;
+     font-weight: 800;
+     color: #ffffff;
+     line-height: 1.2;
+     margin-bottom: 12px;
+
+     @media (max-width: 768px) {
+         font-size: 24px;
+     }
+ }
+
+ .mlm-cta-banner-desc {
+     font-size: 15px;
+     color: #cad3f0;
+     line-height: 1.6;
+     max-width: 600px;
+ }
+
+ .mlm-cta-banner-btn-wrap {
+     flex-shrink: 0;
+ }
+
+ .mlm-cta-banner-btn {
+     display: inline-flex;
+     align-items: center;
+     padding: 15px 35px;
+     font-size: 15px;
+     font-weight: 700;
+     color: #ffffff;
+     border-radius: 8px;
+     text-decoration: none;
+     transition: all 0.3s ease;
+     box-shadow: 0 5px 20px rgba(244, 81, 11, 0.3);
+
+     &:hover {
+         transform: translateY(-2px);
+         box-shadow: 0 8px 30px rgba(244, 81, 11, 0.5);
+     }
+
+     @media (max-width: 480px) {
+         padding: 12px 24px;
+         font-size: 14px;
+     }
+ }
+
+ // ═══════════════════════════════════════════════════════════════════════════
+ // MLM SOFTWARE DEVELOPMENT PAGE -- End
+
+
+
+ // ── MLM PREMIUM WHITE HERO STYLING ─────────────────────────────────────────
+ .mlm-hero {
+     background: #ffffff !important;
+     padding: 180px 0 60px !important;
+     position: relative;
+     overflow: hidden;
+
+     @media (max-width: 1024px) {
+         padding: 140px 0 50px !important;
+     }
+
+     @media (max-width: 768px) {
+         padding: 110px 0 40px !important;
+     }
+
+     &__breadcrumb {
+         color: #888888 !important;
+
+         a {
+             color: #555555 !important;
+
+             &:hover {
+                 color: #f4510b !important;
+             }
+         }
+
+         span {
+             color: #bbbbbb !important;
+         }
+     }
+
+     &__label {
+         color: #f4510b !important;
+     }
+
+     &__title {
+         color: #111111 !important;
+
+         &--accent {
+             color: #f4510b !important;
+         }
+     }
+
+     &__description {
+         color: #555555 !important;
+     }
+
+     &__actions {
+         @media (max-width: 768px) {
+             flex-direction: row !important;
+             align-items: center !important;
+             justify-content: flex-start !important;
+             gap: 14px !important;
+         }
+     }
+
+     &__btn {
+         &--outline {
+             background: transparent !important;
+             color: #111111 !important;
+             border: 2.5px solid rgba(0, 0, 0, 0.15) !important;
+
+             &:hover {
+                 border-color: #111111 !important;
+                 background: rgba(0, 0, 0, 0.04) !important;
+                 color: #111111 !important;
+             }
+         }
+     }
+
+     &__visual {
+         position: relative !important;
+         overflow: visible !important;
+     }
+ }
+
+ // ── Floating Glowing Rings around Laptop Mockup ────────────────────────────
+ .mlm-hero-floating {
+     position: absolute !important;
+     width: 46px;
+     height: 46px;
+     border-radius: 50%;
+     border: 2px solid currentColor;
+     background: rgba(255, 255, 255, 0.9);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 17px;
+     z-index: 10;
+     box-shadow: 0 0 15px currentColor;
+     animation: mlmBob 4s ease-in-out infinite;
+
+     // Color placements
+     &--purple {
+         color: #c084fc;
+         top: 25%;
+         left: 10%;
+         animation-delay: 0s;
+     }
+
+     &--red {
+         color: #f87171;
+         bottom: 25%;
+         left: 2%;
+         animation-delay: 1.2s;
+     }
+
+     &--orange {
+         color: #fbbf24;
+         top: 30%;
+         right: 3%;
+         animation-delay: 2.4s;
+     }
+
+     @media (max-width: 768px) {
+         width: 38px;
+         height: 38px;
+         font-size: 14px;
+     }
+ }
+
+ @keyframes mlmBob {
+
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-10px);
+     }
+ }
+
+ // ── Four Icon features inline ──────────────────────────────────────────────
+ .mlm-hero-features-row {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 14px 28px;
+     margin-bottom: 35px;
+     text-align: left;
+
+     .mlm-hero-feat {
+         display: flex;
+         align-items: center;
+         gap: 9px;
+         font-size: 13.5px;
+         font-weight: 500;
+         color: #555555;
+
+         &-icon {
+             font-size: 15px;
+             flex-shrink: 0;
+
+             &--orange {
+                 color: #f4510b;
+             }
+
+             &--blue {
+                 color: #3498db;
+             }
+
+             &--teal {
+                 color: #1abc9c;
+             }
+
+             &--purple {
+                 color: #9b59b6;
+             }
+         }
+     }
+ }
+
+ // ── Integrated White Glass Stats Box (Bottom of Hero) ──────────────────────
+ .mlm-hero-stats-box {
+     background: #ffffff !important;
+     border: 1px solid #f0e0d6 !important;
+     border-radius: 20px;
+     padding: 26px 40px;
+     margin-top: 60px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 20px;
+     width: 100%;
+     box-shadow: 0 10px 30px rgba(244, 81, 11, 0.06) !important;
+
+     @media (max-width: 1024px) {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 30px 20px;
+         padding: 24px 30px;
+     }
+
+     @media (max-width: 480px) {
+         grid-template-columns: 1fr;
+         gap: 20px;
+         padding: 20px;
+         text-align: center;
+
+         .mlm-hero-stat-item {
+             flex-direction: column;
+             align-items: center;
+             text-align: center;
+         }
+
+         .mlm-hero-stat-text {
+             align-items: center;
+         }
+     }
+ }
+
+ .mlm-hero-stat-item {
+     display: flex;
+     align-items: center;
+     gap: 18px;
+ }
+
+ .mlm-hero-stat-icon-wrap {
+     width: 52px;
+     height: 52px;
+     border-radius: 50%;
+     border: 2px solid currentColor;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 19px;
+     flex-shrink: 0;
+     box-shadow: 0 0 15px currentColor;
+
+     &--purple {
+         color: #c084fc;
+     }
+
+     &--green {
+         color: #34d399;
+     }
+
+     &--blue {
+         color: #38bdf8;
+     }
+
+     &--yellow {
+         color: #fbbf24;
+     }
+ }
+
+ .mlm-hero-stat-text {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+
+ .mlm-hero-stat-val {
+     color: #111111 !important;
+     font-size: 26px;
+     font-weight: 800;
+     line-height: 1.15;
+ }
+
+ .mlm-hero-stat-lbl {
+     color: #666666 !important;
+     font-size: 13px;
+     font-weight: 500;
+     margin-top: 2px;
+ }
+
+
+ // ── MLM GLOW & NETWORK BACKGROUND ANIMATIONS ──────────────────────────────
+ .mlm-hero-bg-glow {
+     position: absolute !important;
+     width: 350px !important;
+     height: 350px !important;
+     border-radius: 50% !important;
+     filter: blur(60px) !important;
+     background: radial-gradient(circle, rgba(244, 81, 11, 0.12) 0%, transparent 70%) !important;
+     top: 10% !important;
+     left: 10% !important;
+     z-index: 1 !important;
+     pointer-events: none !important;
+     animation: rotateGlow 15s linear infinite !important;
+ }
+
+ .mlm-hero-bg-glow-secondary {
+     position: absolute !important;
+     width: 300px !important;
+     height: 300px !important;
+     border-radius: 50% !important;
+     filter: blur(50px) !important;
+     background: radial-gradient(circle, rgba(155, 89, 182, 0.08) 0%, transparent 70%) !important;
+     bottom: 10% !important;
+     right: 10% !important;
+     z-index: 1 !important;
+     pointer-events: none !important;
+     animation: rotateGlow 12s linear infinite reverse !important;
+ }
+
+ @keyframes rotateGlow {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ .mlm-hero-network-svg {
+     position: absolute !important;
+     width: 100% !important;
+     height: 100% !important;
+     top: 0 !important;
+     left: 0 !important;
+     z-index: 2 !important;
+     pointer-events: none !important;
+
+     path {
+         animation: dashMove 2.5s linear infinite !important;
+     }
+ }
+
+ @keyframes dashMove {
+     to {
+         stroke-dashoffset: -20;
+     }
+ }
+
+ .mlm-hero__img {
+     position: relative !important;
+     z-index: 5 !important;
+ }
+
+ // Refine positioning for 4 floating MLM bubbles - Balanced 2 Left & 2 Right
+ .mlm-hero-floating {
+     position: absolute !important;
+     width: 46px !important;
+     height: 46px !important;
+     border-radius: 50% !important;
+     border: 2px solid currentColor !important;
+     background: rgba(255, 255, 255, 0.95) !important;
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     font-size: 17px !important;
+     z-index: 10 !important;
+     box-shadow: 0 0 15px currentColor !important;
+     animation: mlmBob 4s ease-in-out infinite !important;
+
+     &--red {
+         color: #ff4d4d !important;
+         top: 25% !important;
+         left: 12% !important;
+         right: auto !important;
+         bottom: auto !important;
+         animation-delay: 0.8s !important;
+     }
+
+     &--orange {
+         color: #f4510b !important;
+         bottom: 22% !important;
+         left: 3% !important;
+         right: auto !important;
+         top: auto !important;
+         animation-delay: 1.6s !important;
+     }
+
+     &--purple {
+         color: #9b59b6 !important;
+         top: 28% !important;
+         right: 3% !important;
+         left: auto !important;
+         bottom: auto !important;
+         animation-delay: 0s !important;
+     }
+
+     &--blue {
+         color: #3498db !important;
+         bottom: 18% !important;
+         right: 12% !important;
+         left: auto !important;
+         top: auto !important;
+         animation-delay: 3.2s !important;
+     }
+ }
+
+
+ // ── MLM HERO PULSING CONCENTRIC RADAR RIPPLES ──────────────────────────────
+ .mlm-hero-radar-ripple {
+     position: absolute !important;
+     width: 440px !important;
+     height: 440px !important;
+     border-radius: 50% !important;
+     border: 1.5px solid rgba(244, 81, 11, 0.12) !important;
+     top: 15% !important;
+     left: 20% !important;
+     z-index: 2 !important;
+     pointer-events: none !important;
+     transform-origin: center !important;
+     animation: radarPulse 4.5s cubic-bezier(0.1, 0.8, 0.3, 1) infinite !important;
+
+     &--1 {
+         animation-delay: 0s !important;
+     }
+
+     &--2 {
+         animation-delay: 1.5s !important;
+     }
+
+     &--3 {
+         animation-delay: 3s !important;
+     }
+
+     @media (max-width: 1024px) {
+         width: 360px !important;
+         height: 360px !important;
+         left: 15% !important;
+     }
+
+     @media (max-width: 768px) {
+         width: 280px !important;
+         height: 280px !important;
+         left: 10% !important;
+     }
+ }
+
+ @keyframes radarPulse {
+     0% {
+         transform: scale(0.5);
+         opacity: 0.9;
+     }
+
+     50% {
+         opacity: 0.4;
+     }
+
+     100% {
+         transform: scale(1.35);
+         opacity: 0;
+     }
+ }
+
+ @keyframes flowLine {
+     0% {
+         left: -20%;
+     }
+
+     100% {
+         left: 120%;
+     }
+ }
+
+ /* Lock body scroll when modal is active */
+ body.mlm-modal-open {
+     overflow: hidden !important;
+ }
+
+ /* ── PLAN DETAIL POPUP MODAL STYLES (Task 1) ───────────────────────── */
+ .mlm-modal-overlay {
+     position: fixed !important;
+     top: 0 !important;
+     left: 0 !important;
+     width: 100% !important;
+     height: 100% !important;
+     background: rgba(10, 10, 15, 0.65) !important;
+     backdrop-filter: blur(12px) !important;
+     -webkit-backdrop-filter: blur(12px) !important;
+     z-index: 9999999 !important; // Force modal overlay above all elements
+     display: flex !important;
+     align-items: flex-start !important; // Align elements starting from top
+     justify-content: center !important;
+     padding: 40px 24px !important; // Increase padding-top for breathing space
+     overflow-y: auto !important; // Scroll on overlay
+     opacity: 1 !important;
+     visibility: visible !important;
+     animation: mlmModalFadeIn 0.3s ease-out forwards !important;
+
+     @media (max-width: 768px) {
+         padding: 20px 12px !important;
+     }
+ }
+
+ .mlm-modal-card {
+     // ── Premium Glassmorphism Modal Card ──
+     background: rgba(255, 255, 255, 0.92) !important;
+     backdrop-filter: blur(24px) saturate(180%) !important;
+     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+     border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+     border-radius: 28px !important;
+     width: 100% !important;
+     max-width: 900px !important;
+     box-shadow:
+         0 32px 80px rgba(0, 0, 0, 0.22),
+         0 8px 24px rgba(244, 81, 11, 0.08),
+         inset 0 1px 0 rgba(255, 255, 255, 0.9),
+         inset 0 -1px 0 rgba(0, 0, 0, 0.04) !important;
+     position: relative !important;
+     margin: auto !important; // Center horizontally and vertically in overlay
+     overflow: visible !important; // Let content render outside max-height boundary
+     padding: 42px !important;
+     z-index: 10000000 !important;
+     display: block !important;
+     opacity: 1 !important;
+     visibility: visible !important;
+     animation: mlmModalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+
+     // Subtle top shimmer line
+     &::before {
+         content: '' !important;
+         display: block !important;
+         position: absolute !important;
+         top: 0 !important;
+         left: 0 !important;
+         width: 100% !important;
+         height: 3px !important;
+         border-radius: 28px 28px 0 0 !important;
+         z-index: 10 !important; // Force render on top of columns
+     }
+
+     // Decorative glow orb top-right
+     &::after {
+         content: '' !important;
+         position: absolute !important;
+         top: -60px !important;
+         right: -60px !important;
+         width: 200px !important;
+         height: 200px !important;
+         background: radial-gradient(circle, rgba(34, 197, 94, 0.07) 0%, transparent 70%) !important;
+         pointer-events: none !important;
+         border-radius: 50% !important;
+     }
+
+     @media (max-width: 768px) {
+         padding: 32px 24px !important;
+         border-radius: 20px !important;
+         margin: 0 auto !important; // Scroll naturally without constraint
+         max-height: none !important;
+         overflow-y: visible !important;
+     }
+
+     @media (max-width: 480px) {
+         padding: 24px 16px !important;
+         border-radius: 16px !important;
+     }
+ }
+
+ .mlm-modal-close {
+     position: absolute !important;
+     top: 24px !important;
+     right: 24px !important;
+     width: 38px !important;
+     height: 38px !important;
+     border-radius: 50% !important;
+     background: rgba(244, 81, 11, 0.08) !important;
+     border: none !important;
+     color: #f4510b !important;
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     font-size: 18px !important;
+     cursor: pointer !important;
+     transition: all 0.25s ease !important;
+     z-index: 10000010 !important;
+
+     &:hover {
+         background: #f4510b !important;
+         color: #ffffff !important;
+         transform: rotate(90deg) !important;
+     }
+ }
+
+ .mlm-modal-grid {
+     display: grid !important;
+     grid-template-columns: 38% 62% !important;
+     gap: 40px !important;
+     align-items: start !important;
+
+     @media (max-width: 768px) {
+         grid-template-columns: 1fr !important;
+         gap: 30px !important;
+     }
+ }
+
+ .mlm-modal-left {
+     display: flex !important;
+     flex-direction: column !important;
+     align-items: center !important;
+     text-align: center !important;
+     border-right: 1px solid rgba(244, 81, 11, 0.1) !important;
+     padding-right: 20px !important;
+
+     @media (max-width: 768px) {
+         border-right: none !important;
+         border-bottom: 1px solid rgba(244, 81, 11, 0.1) !important;
+         padding-right: 0 !important;
+         padding-bottom: 24px !important;
+     }
+ }
+
+ .mlm-modal-icon-container {
+     width: 150px !important;
+     height: 150px !important;
+     border-radius: 24px !important;
+     background: linear-gradient(135deg, #fffaf6 0%, #fff2eb 100%) !important;
+     border-left: 5px solid #f4510b !important;
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     margin-bottom: 24px !important;
+     box-shadow: 0 10px 25px rgba(244, 81, 11, 0.08) !important;
+
+     .mlm-plan-card__svg {
+         transform: none !important; // Override conflicting inline transform scale
+         max-width: 80% !important;
+         max-height: 80% !important;
+         object-fit: contain !important;
+     }
+ }
+
+ .mlm-modal-title {
+     font-size: 26px !important;
+     font-weight: 800 !important;
+     color: #111111 !important;
+     line-height: 1.2 !important;
+     margin-bottom: 8px !important;
+ }
+
+ .mlm-modal-subtitle {
+     font-size: 14px !important;
+     font-weight: 600 !important;
+     color: #777777 !important;
+     text-transform: uppercase !important;
+     letter-spacing: 1.5px !important;
+     margin-bottom: 24px !important;
+ }
+
+ .mlm-modal-features {
+     width: 100% !important;
+     text-align: left !important;
+ }
+
+ .mlm-modal-section-title {
+     font-size: 15px !important;
+     font-weight: 700 !important;
+     color: #111111 !important;
+     text-transform: uppercase !important;
+     letter-spacing: 0.8px !important;
+     margin-bottom: 14px !important;
+     display: flex !important;
+     align-items: center !important;
+     gap: 8px !important;
+ }
+
+ .mlm-modal-features-list {
+     display: flex !important;
+     flex-wrap: wrap !important;
+     gap: 8px !important;
+ }
+
+ .mlm-modal-feature-badge {
+     display: inline-flex !important;
+     align-items: center !important;
+     gap: 6px !important;
+     // ── Green glassmorphism badge ──
+     background: rgba(34, 197, 94, 0.08) !important;
+     border: 1px solid rgba(34, 197, 94, 0.25) !important;
+     border-radius: 30px !important;
+     padding: 6px 14px !important;
+     font-size: 12.5px !important;
+     font-weight: 600 !important;
+     color: #15803d !important;
+     backdrop-filter: blur(8px) !important;
+     -webkit-backdrop-filter: blur(8px) !important;
+     box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+     transition: all 0.25s ease !important;
+
+     i {
+         font-size: 13px !important;
+         color: #22c55e !important; // ✅ Green tick mark
+         filter: drop-shadow(0 0 3px rgba(34, 197, 94, 0.4)) !important;
+     }
+
+     &:hover {
+         background: rgba(34, 197, 94, 0.14) !important;
+         border-color: rgba(34, 197, 94, 0.4) !important;
+         transform: translateY(-1px) !important;
+     }
+ }
+
+ .mlm-modal-right {
+     display: flex !important;
+     flex-direction: column !important;
+     text-align: left !important;
+     padding-left: 10px !important;
+     padding-right: 20px !important;
+     padding-top: 10px !important;
+
+     @media (max-width: 768px) {
+         padding-left: 0 !important;
+         padding-right: 0 !important;
+         padding-top: 0 !important;
+     }
+ }
+
+ .mlm-modal-desc {
+     font-size: 15.5px !important;
+     line-height: 1.75 !important;
+     color: #4a4a4a !important;
+ }
+
+ .mlm-modal-benefits-list {
+     list-style: none !important;
+     padding: 0 !important;
+     margin: 0 !important;
+     display: grid !important;
+     grid-template-columns: repeat(2, 1fr) !important;
+     gap: 16px !important;
+
+     @media (max-width: 600px) {
+         grid-template-columns: 1fr !important;
+         gap: 12px !important;
+     }
+
+     li {
+         display: flex !important;
+         align-items: flex-start !important;
+         gap: 10px !important;
+         font-size: 14px !important;
+         line-height: 1.5 !important;
+         color: #555555 !important;
+
+         i {
+             font-size: 15px !important;
+             margin-top: 2px !important;
+             flex-shrink: 0 !important;
+         }
+
+         span {
+             font-weight: 500 !important;
+         }
+     }
+ }
+
+ .mlm-modal-actions {
+     margin-top: 36px !important;
+     border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+     padding-top: 28px !important;
+     display: flex !important;
+     justify-content: center !important;
+
+     @media (max-width: 768px) {
+         margin-top: 24px !important;
+         padding-top: 20px !important;
+     }
+ }
+
+ .mlm-modal-action-btn {
+     display: inline-flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     padding: 13px 32px !important;
+     font-size: 14.5px !important;
+     font-weight: 700 !important;
+     color: #ffffff !important;
+     border-radius: 30px !important;
+     text-decoration: none !important;
+     transition: all 0.3s ease !important;
+     box-shadow: 0 8px 20px rgba(244, 81, 11, 0.2) !important;
+
+     &:hover {
+         transform: translateY(-2px) !important;
+         box-shadow: 0 12px 25px rgba(244, 81, 11, 0.35) !important;
+     }
+ }
+
+ @keyframes mlmModalFadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @keyframes mlmModalSlideUp {
+     from {
+         opacity: 0;
+         transform: translateY(40px) scale(0.96);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0) scale(1);
+     }
+ }
+
+ /* ── PLANS & FEATURES RESPONSIVE MOBILE GRIDS (Task 3 & 4) ─────────── */
+ @media (max-width: 768px) {
+     .mlm-plans-grid {
+         grid-template-columns: repeat(2, 1fr) !important;
+         gap: 14px !important;
+         padding: 0 12px !important;
+     }
+
+     .mlm-features-grid {
+         grid-template-columns: repeat(2, 1fr) !important;
+         gap: 14px !important;
+         padding: 0 12px !important;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .mlm-plans-grid {
+         grid-template-columns: repeat(2, 1fr) !important;
+         gap: 10px !important;
+         padding: 0 !important;
+     }
+
+     .mlm-plan-card {
+         padding: 20px 12px !important;
+         border-radius: 12px !important;
+
+         &__icon-wrap {
+             width: 72px !important;
+             height: 72px !important;
+             margin-bottom: 14px !important;
+         }
+
+         &__title {
+             font-size: 15px !important;
+             margin-bottom: 4px !important;
+         }
+
+         &__subtitle {
+             font-size: 11px !important;
+             margin-bottom: 14px !important;
+         }
+
+         &__btn {
+             padding: 6px 14px !important;
+             font-size: 11.5px !important;
+         }
+     }
+
+     .mlm-features-grid {
+         grid-template-columns: repeat(2, 1fr) !important;
+         gap: 10px !important;
+         padding: 0 !important;
+     }
+
+     .mlm-feature-card {
+         padding: 20px 12px !important;
+         border-radius: 12px !important;
+
+         &__circle {
+             width: 60px !important;
+             height: 60px !important;
+             margin-bottom: 14px !important;
+         }
+
+         &__title {
+             font-size: 15px !important;
+             margin-bottom: 6px !important;
+         }
+
+         &__desc {
+             font-size: 11px !important;
+             margin-bottom: 12px !important;
+         }
+
+         &__link {
+             font-size: 11.5px !important;
+         }
+     }
+ }
+
+ /* ── HERO STATS ROW LAYOUT FOR MOBILE (Task 5) ──────────────────────── */
+ @media (max-width: 768px) {
+     .mlm-hero-stats-box {
+         display: grid !important;
+         grid-template-columns: repeat(4, 1fr) !important;
+         gap: 12px !important;
+         padding: 20px 12px !important;
+         margin-top: 40px !important;
+
+         .mlm-hero-stat-item {
+             flex-direction: column !important;
+             align-items: center !important;
+             text-align: center !important;
+             gap: 8px !important;
+         }
+
+         .mlm-hero-stat-icon-wrap {
+             width: 42px !important;
+             height: 42px !important;
+             font-size: 15px !important;
+         }
+
+         .mlm-hero-stat-text {
+             align-items: center !important;
+         }
+
+         .mlm-hero-stat-val {
+             font-size: 19px !important;
+         }
+
+         .mlm-hero-stat-lbl {
+             font-size: 10px !important;
+             margin-top: 2px !important;
+             line-height: 1.25 !important;
+             white-space: normal !important;
+         }
+     }
+ }
+
+ @media (max-width: 480px) {
+     .mlm-hero-stats-box {
+         grid-template-columns: repeat(4, 1fr) !important;
+         gap: 8px !important;
+         padding: 16px 8px !important;
+         border-radius: 16px !important;
+
+         .mlm-hero-stat-item {
+             gap: 6px !important;
+         }
+
+         .mlm-hero-stat-icon-wrap {
+             width: 34px !important;
+             height: 34px !important;
+             font-size: 13px !important;
+         }
+
+         .mlm-hero-stat-val {
+             font-size: 15px !important;
+         }
+
+         .mlm-hero-stat-lbl {
+             font-size: 8.5px !important;
+             margin-top: 1px !important;
+             line-height: 1.2 !important;
+         }
+     }
+ }

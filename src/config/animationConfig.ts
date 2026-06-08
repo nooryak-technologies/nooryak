@@ -53,6 +53,8 @@ import { bounceAnimation, textBounceAnimation } from "@/utils/titleAnimation";
 // Each value is an array of animation functions to run on that route
 
 export const animationConfig: Record<string, (() => void)[]> = {
+    // MLM software development page
+    "/services/submenu/mlm": [animationParagraph, splitTextAnimation],
     //home page animation
     "/": [funfactPanelAnimation, buttonBounceAnimation, servicePanelAnimation, textBounceAnimation, animationParagraph, bounceAnimation, textInvertAnim1, videoAnimation, panelAnimation],
     //design studio page

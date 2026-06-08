@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import '@/app/services/submenu.scss';
 import { Images } from '@/utils/Images';
+import AnimatedCounter from '@/components/counter/AnimatedCounter';
 
 // Define Interface Types for Plans
 interface PlanCard {
@@ -415,13 +416,13 @@ export default function MLMDevelopment() {
 
           <div className="sd-hero__inner">
             <div className="sd-hero__content">
-              <p className="sd-hero__label mlm-hero__label">MLM SOFTWARE SOLUTION</p>
-              <h1 className="sd-hero__title mlm-hero__title">
+              <p className="sd-hero__label mlm-hero__label tp-char-animation">MLM SOFTWARE SOLUTION</p>
+              <h1 className="sd-hero__title mlm-hero__title tp-split-text tp-split-up">
                 Power Your Network.<br />
                 Grow Your Business.<br />
                 <span className="sd-hero__title--accent mlm-hero__title--accent">With MLM Software.</span>
               </h1>
-              <p className="sd-hero__description mlm-hero__description">
+              <p className="sd-hero__description mlm-hero__description tp_fade_anim" data-fade-from="bottom" data-delay="0.2">
                 We build secure, scalable, and feature-rich MLM software solutions that help you manage your network, automate operations, and maximize growth.
               </p>
 
@@ -453,7 +454,7 @@ export default function MLMDevelopment() {
               </div>
             </div>
 
-            <div className="sd-hero__visual mlm-hero__visual">
+            <div className="sd-hero__visual mlm-hero__visual tp_fade_anim" data-fade-from="right" data-delay="0.3">
               {/* Left Side Elements */}
               <div className="mlm-hero-floating mlm-hero-floating--red" title="Real-Time Earnings">
                 <i className="fa-solid fa-indian-rupee-sign" />
@@ -474,14 +475,15 @@ export default function MLMDevelopment() {
             </div>
           </div>
 
-          {/* ── INTEGRATED HERO STATS BAR (GLASSMORPHISM CONTAINER) ─────────── */}
-          <div className="mlm-hero-stats-box">
+          <div className="mlm-hero-stats-box tp_fade_anim" data-fade-from="bottom" data-delay="0.1">
             <div className="mlm-hero-stat-item">
               <div className="mlm-hero-stat-icon-wrap mlm-hero-stat-icon-wrap--purple">
                 <i className="fa-solid fa-rocket" />
               </div>
               <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">150+</span>
+                <span className="mlm-hero-stat-val">
+                  <AnimatedCounter min={0} max={150} />+
+                </span>
                 <span className="mlm-hero-stat-lbl">Projects Delivered</span>
               </div>
             </div>
@@ -491,7 +493,9 @@ export default function MLMDevelopment() {
                 <i className="fa-solid fa-face-smile" />
               </div>
               <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">98%</span>
+                <span className="mlm-hero-stat-val">
+                  <AnimatedCounter min={0} max={98} />%
+                </span>
                 <span className="mlm-hero-stat-lbl">Client Satisfaction</span>
               </div>
             </div>
@@ -501,7 +505,9 @@ export default function MLMDevelopment() {
                 <i className="fa-solid fa-users" />
               </div>
               <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">50M+</span>
+                <span className="mlm-hero-stat-val">
+                  <AnimatedCounter min={0} max={50} />M+
+                </span>
                 <span className="mlm-hero-stat-lbl">Users Impacted</span>
               </div>
             </div>
@@ -511,7 +517,9 @@ export default function MLMDevelopment() {
                 <i className="fa-solid fa-award" />
               </div>
               <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">10+</span>
+                <span className="mlm-hero-stat-val">
+                  <AnimatedCounter min={0} max={10} />+
+                </span>
                 <span className="mlm-hero-stat-lbl">Years of Experience</span>
               </div>
             </div>
@@ -523,20 +531,20 @@ export default function MLMDevelopment() {
       <section className="mlm-plans-section">
         <div className="container">
           <div className="mlm-plans-header">
-            <p className="sd-section-label">
+            <p className="sd-section-label tp-char-animation">
               <span className="sd-section-label__line" />
               AFFORDABLE MLM SOFTWARE PROVIDER
               <span className="sd-section-label__line" />
             </p>
-            <h2 className="mlm-plans-heading">Best MLM Software Company in Chennai</h2>
-            <p className="mlm-plans-subheading">
+            <h2 className="mlm-plans-heading tp-split-text tp-split-up">Best MLM Software Company in Chennai</h2>
+            <p className="mlm-plans-subheading tp_fade_anim" data-fade-from="bottom">
               Affordable MLM Software Provider for Direct Selling Business
             </p>
           </div>
 
           <div className="mlm-plans-grid">
             {mlmPlans.map((plan, i) => (
-              <div key={i} className="mlm-plan-card">
+              <div key={i} className="mlm-plan-card tp_fade_anim" data-fade-from="bottom" data-delay={0.1 + (i % 4) * 0.15}>
                 <div className="mlm-plan-card__icon-wrap">
                   {plan.iconSvg}
                 </div>
@@ -562,17 +570,17 @@ export default function MLMDevelopment() {
           <div className="mlm-glowing-grid">
             {/* Left Content */}
             <div className="mlm-glowing-content">
-              <p className="sd-section-label sd-section-label--left" style={{ color: '#ff6b2b' }}>
+              <p className="sd-section-label sd-section-label--left tp-char-animation" style={{ color: '#ff6b2b' }}>
                 <span className="sd-section-label__line" style={{ background: '#ff6b2b' }} />
                 WHY CHOOSE NOORYAK MLM SOFTWARE?
               </p>
-              <h2 className="mlm-glowing-heading">Why Businesses Trust Our MLM Solutions</h2>
-              <p className="mlm-glowing-text">
+              <h2 className="mlm-glowing-heading tp-split-text tp-split-up">Why Businesses Trust Our MLM Solutions</h2>
+              <p className="mlm-glowing-text tp_fade_anim" data-fade-from="bottom" data-delay="0.15">
                 We deliver reliable, scalable, and result-oriented MLM software to help your business grow and succeed.
               </p>
             </div>
             {/* Right Glowing Icons Row */}
-            <div className="mlm-glowing-icons">
+            <div className="mlm-glowing-icons tp_fade_anim" data-fade-from="bottom" data-delay="0.3">
               <div className="mlm-glow-card mlm-glow-card--blue">
                 <div className="mlm-glow-ring">
                   <i className="fa-solid fa-code mlm-glow-icon" />
@@ -618,88 +626,80 @@ export default function MLMDevelopment() {
       <section className="sd-services" style={{ background: '#fcfcfc' }}>
         <div className="container">
           <div className="sd-services__header">
-            <p className="sd-section-label">
+            <p className="sd-section-label tp-char-animation">
               <span className="sd-section-label__line" />
               COMPLETE MLM SOFTWARE SOLUTIONS
               <span className="sd-section-label__line" />
             </p>
-            <h2 className="sd-services__heading">Everything You Need to Run a Successful MLM Business</h2>
-            <p className="sd-services__subheading">
+            <h2 className="sd-services__heading tp-split-text tp-split-up">Everything You Need to Run a Successful MLM Business</h2>
+            <p className="sd-services__subheading tp_fade_anim" data-fade-from="bottom">
               Our MLM software comes with all the essential features to manage your network, distributors, payouts, and business operations effortlessly.
             </p>
           </div>
 
           <div className="mlm-features-grid">
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.1">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/plan_management.png" alt="Plan Management" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">Plan Management</h3>
               <p className="mlm-feature-card__desc">Create & manage compensation plans with ease.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
 
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.25">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/user_management.png" alt="User Management" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">User Management</h3>
               <p className="mlm-feature-card__desc">Manage distributors, members, and their hierarchies.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
 
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.4">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/payout_management.png" alt="Payout Management" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">Payout Management</h3>
               <p className="mlm-feature-card__desc">Automate payouts & track real-time commissions.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
 
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.55">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/wallet-managements.png" alt="Wallet Management" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">Wallet Management</h3>
               <p className="mlm-feature-card__desc">Manage E-wallets, transactions, and withdrawals.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
 
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.1">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/genology_view.png" alt="Genealogy View" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">Genealogy View</h3>
               <p className="mlm-feature-card__desc">Visualize your downline structure in real-time.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
 
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.25">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/report.png" alt="Reports & Analytics" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">Reports & Analytics</h3>
               <p className="mlm-feature-card__desc">Powerful analytics to track performance & growth.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
 
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.4">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/ecommerce.png" alt="E-Commerce" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">E-Commerce</h3>
               <p className="mlm-feature-card__desc">Integrated shopping & product management system.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
 
-            <div className="mlm-feature-card">
+            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.55">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/support_system.png" alt="Support System" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
               <h3 className="mlm-feature-card__title">Support System</h3>
               <p className="mlm-feature-card__desc">Built-in support tools for your members' queries.</p>
-              <Link href="/contact" className="mlm-feature-card__link">Learn More →</Link>
             </div>
           </div>
         </div>
@@ -802,12 +802,12 @@ export default function MLMDevelopment() {
           <div className="mlm-testimonials-container">
             {/* Left Column Header Info */}
             <div className="mlm-testimonials-header">
-              <p className="sd-section-label sd-section-label--left">
+              <p className="sd-section-label sd-section-label--left tp-char-animation">
                 <span className="sd-section-label__line" />
                 WHAT OUR CLIENTS SAY
               </p>
-              <h2 className="mlm-testimonials-heading">Trusted by MLM Businesses Worldwide</h2>
-              <p className="mlm-testimonials-subtext">
+              <h2 className="mlm-testimonials-heading tp-split-text tp-split-up">Trusted by MLM Businesses Worldwide</h2>
+              <p className="mlm-testimonials-subtext tp_fade_anim" data-fade-from="bottom">
                 We take pride in helping businesses achieve success with our reliable and scalable MLM software solutions.
               </p>
               <Link href="/contact" className="gra_btn sd-hero__btn" style={{ marginTop: '24px', display: 'inline-flex' }}>
@@ -899,7 +899,7 @@ export default function MLMDevelopment() {
       {/* ── SECTION 7: BOTTOM CTA BANNER ────────────────────────────────── */}
       <section className="mlm-cta-banner-section" style={{ paddingBottom: '70px' }}>
         <div className="container">
-          <div className="sd-cta-banner" style={{ padding: '40px 50px', borderRadius: '24px', overflow: 'visible' }}>
+          <div className="sd-cta-banner tp_fade_anim" data-fade-from="bottom" style={{ padding: '40px 50px', borderRadius: '24px', overflow: 'visible' }}>
             <div className="sd-cta-banner__left">
               <div className="sd-cta-banner__content">
                 <h3 className="sd-cta-banner__heading" style={{ fontSize: '32px', marginBottom: '12px', lineHeight: '1.2' }}>Ready to Launch Your MLM Business?</h3>
@@ -912,15 +912,28 @@ export default function MLMDevelopment() {
               </Link>
             </div>
             <div className="sd-cta-banner__right">
-              <Image
-                src="/assets/images/services/orange_rocket_cta.png?v=2"
-                alt="Rocket Blasting Off"
-                className="sd-cta-banner__rocket"
-                width={300}
-                height={300}
-                unoptimized
-                style={{ objectFit: 'contain' }}
-              />
+              <div className="sd-cta-banner__rocket-wrap">
+                {/* Rocket engine fire & flame effect */}
+                <div className="rocket-flame-wrap">
+                  <div className="rocket-flame-outer"></div>
+                  <div className="rocket-flame-mid"></div>
+                  <div className="rocket-flame-core"></div>
+                  <div className="rocket-spark spark-1"></div>
+                  <div className="rocket-spark spark-2"></div>
+                  <div className="rocket-spark spark-3"></div>
+                  <div className="rocket-spark spark-4"></div>
+                </div>
+
+                <Image
+                  src="/assets/images/services/orange_rocket_cta.png?v=2"
+                  alt="Rocket Blasting Off"
+                  className="sd-cta-banner__rocket"
+                  width={300}
+                  height={300}
+                  unoptimized
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -939,7 +952,7 @@ export default function MLMDevelopment() {
               <button className="mlm-modal-close" onClick={() => setSelectedPlan(null)} aria-label="Close modal">
                 <i className="fa-solid fa-xmark" />
               </button>
-              
+
               <div className="mlm-modal-grid">
                 <div className="mlm-modal-left">
                   <div className="mlm-modal-icon-container" style={{ borderLeftColor: selectedPlan.color }}>
@@ -947,7 +960,7 @@ export default function MLMDevelopment() {
                   </div>
                   <h3 className="mlm-modal-title">{selectedPlan.title}</h3>
                   <p className="mlm-modal-subtitle">{selectedPlan.subtitle}</p>
-                  
+
                   <div className="mlm-modal-features">
                     <h4 className="mlm-modal-section-title">Core Systems Included:</h4>
                     <div className="mlm-modal-features-list">
@@ -964,7 +977,7 @@ export default function MLMDevelopment() {
                 <div className="mlm-modal-right">
                   <h4 className="mlm-modal-section-title">Plan Overview</h4>
                   <p className="mlm-modal-desc">{details.description}</p>
-                  
+
                   <h4 className="mlm-modal-section-title" style={{ marginTop: '24px' }}>Strategic Business Advantages</h4>
                   <ul className="mlm-modal-benefits-list">
                     {details.benefits.map((benefit, idx) => (
@@ -976,9 +989,14 @@ export default function MLMDevelopment() {
                   </ul>
 
                   <div className="mlm-modal-actions">
-                    <Link href="/contact" className={`mlm-modal-action-btn ${selectedPlan.btnClass}`}>
+                    <a
+                      href={`https://wa.me/916374913298?text=${encodeURIComponent(`hai i want to know more about ${selectedPlan.title.toLowerCase()}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`mlm-modal-action-btn ${selectedPlan.btnClass}`}
+                    >
                       Get Started with {selectedPlan.title} →
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

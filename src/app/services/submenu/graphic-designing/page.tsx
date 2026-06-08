@@ -64,6 +64,138 @@ function SectionHeader({
   );
 }
 
+interface ShowcaseType {
+  image: string;
+  title: string;
+  beforeLabel: string;
+  afterLabel: string;
+}
+
+function BeforeAfterSlider({ showcase }: { showcase: ShowcaseType }) {
+  const [sliderPos, setSliderPos] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleMove = (clientX: number) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+    setSliderPos(percentage);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+    handleMove(e.clientX);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    handleMove(e.touches[0].clientX);
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      handleMove(e.clientX);
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isDragging) return;
+      handleMove(e.touches[0].clientX);
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+      window.addEventListener('touchmove', handleTouchMove, { passive: true });
+      window.addEventListener('touchend', handleMouseUp);
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleMouseUp);
+    };
+  }, [isDragging]);
+
+  return (
+    <div className="gdesign-showcase-card">
+      <div
+        ref={containerRef}
+        className="gdesign-before-after-slider"
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
+      >
+        {/* Before Layer (Background) */}
+        <div className="slider-layer-before">
+          <Image
+            src={showcase.image}
+            alt="Before"
+            width={640}
+            height={440}
+            className="gdesign-showcase-img-before"
+            priority={false}
+          />
+        </div>
+
+        {/* After Layer (Foreground, clipped) */}
+        <div
+          className="slider-layer-after"
+          style={{ clipPath: `inset(0 0 0 ${sliderPos}%)` }}
+        >
+          <Image
+            src={showcase.image}
+            alt="After"
+            width={640}
+            height={440}
+            className="gdesign-showcase-img-after"
+            priority={false}
+          />
+        </div>
+
+        {/* Handle line & button */}
+        <div
+          className={`slider-handle ${isDragging ? 'dragging' : ''}`}
+          style={{ left: `${sliderPos}%` }}
+        >
+          <div className="slider-handle-button">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{ display: 'block' }}
+            >
+              <path d="m8 18-6-6 6-6" />
+              <path d="m16 6 6 6-6 6" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Badges */}
+        <span className="slider-badge badge-before">
+          {showcase.beforeLabel}
+        </span>
+        <span className="slider-badge badge-after">
+          {showcase.afterLabel}
+        </span>
+      </div>
+      <h4>{showcase.title}</h4>
+    </div>
+  );
+}
+
 export default function GraphicDesigningPage() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [visibleServicesCount, setVisibleServicesCount] = useState(8);
@@ -247,24 +379,7 @@ export default function GraphicDesigningPage() {
 
             <div className="gdesign-showcase-grid">
               {GDShowcases.map((showcase) => (
-                <div className="gdesign-showcase-card" key={showcase.title}>
-                  <div className="gdesign-showcase-imgWrap">
-                    <Image
-                      src={showcase.image}
-                      alt={`${showcase.title} Before and After Showcase`}
-                      width={320}
-                      height={220}
-                      className="gdesign-showcase-img"
-                    />
-                    <span className="gdesign-showcase-badge badge-before">
-                      {showcase.beforeLabel}
-                    </span>
-                    <span className="gdesign-showcase-badge badge-after">
-                      {showcase.afterLabel}
-                    </span>
-                  </div>
-                  <h4>{showcase.title}</h4>
-                </div>
+                <BeforeAfterSlider key={showcase.title} showcase={showcase} />
               ))}
             </div>
           </div>

@@ -911,47 +911,144 @@
 			}
 		}
 
-		.gdesign-showcase-imgWrap {
+		.gdesign-before-after-slider {
 			position: relative;
+			width: 100%;
 			aspect-ratio: 1.45 / 1;
 			border-radius: 14px;
 			border: 1px solid var(--gd-line);
 			overflow: hidden;
 			transition: all 0.3s ease;
 			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
-		}
+			user-select: none;
+			-webkit-user-select: none;
 
-		.gdesign-showcase-img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			display: block;
-		}
+			&:hover {
+				transform: scale(1.02);
+				box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+				border-color: rgba(255, 106, 36, 0.3);
+			}
 
-		/* Before/After tag pills */
-		.gdesign-showcase-badge {
-			position: absolute;
-			top: 12px;
-			font-size: 11px;
-			font-weight: 700;
-			text-transform: uppercase;
-			padding: 4px 10px;
-			border-radius: 20px;
-			color: #fff;
-			letter-spacing: 0.5px;
-			z-index: 2;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		}
+			.slider-layer-before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				z-index: 1;
 
-		.badge-before {
-			left: 12px;
-			background: rgba(17, 24, 39, 0.85);
-			border: 1px solid rgba(255, 255, 255, 0.15);
-		}
+				.gdesign-showcase-img-before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 200% !important;
+					height: 100% !important;
+					object-fit: cover;
+					pointer-events: none;
+				}
+			}
 
-		.badge-after {
-			right: 12px;
-			background: var(--gd-orange);
+			.slider-layer-after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				z-index: 2;
+				will-change: clip-path;
+
+				.gdesign-showcase-img-after {
+					position: absolute;
+					top: 0;
+					left: -100% !important;
+					width: 200% !important;
+					height: 100% !important;
+					object-fit: cover;
+					pointer-events: none;
+				}
+			}
+
+			.slider-handle {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background: #ffffff;
+				z-index: 10;
+				cursor: ew-resize;
+				transform: translateX(-50%);
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: -2px;
+					right: -2px;
+					background: rgba(255, 106, 36, 0.3);
+					box-shadow: 0 0 10px rgba(255, 106, 36, 0.7);
+					opacity: 0;
+					transition: opacity 0.2s ease;
+				}
+
+				&:hover::before,
+				&.dragging::before {
+					opacity: 1;
+				}
+
+				.slider-handle-button {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 38px;
+					height: 38px;
+					border-radius: 50%;
+					background: #ffffff;
+					border: 2px solid var(--gd-orange);
+					box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: var(--gd-orange);
+					transition: background-color 0.2s, transform 0.2s, color 0.2s;
+
+					&:hover,
+					.slider-handle.dragging & {
+						background: var(--gd-orange);
+						color: #ffffff;
+						transform: translate(-50%, -50%) scale(1.08);
+					}
+				}
+			}
+
+			.slider-badge {
+				position: absolute;
+				top: 12px;
+				font-size: 11px;
+				font-weight: 700;
+				text-transform: uppercase;
+				padding: 4px 10px;
+				border-radius: 20px;
+				color: #fff;
+				letter-spacing: 0.5px;
+				z-index: 5;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+				pointer-events: none;
+			}
+
+			.badge-before {
+				left: 12px;
+				background: rgba(17, 24, 39, 0.85);
+				border: 1px solid rgba(255, 255, 255, 0.15);
+			}
+
+			.badge-after {
+				right: 12px;
+				background: var(--gd-orange);
+			}
 		}
 
 		.gdesign-showcase-card h4 {
@@ -968,9 +1065,11 @@
 		background: #0b0e1a;
 		padding: 64px 0 60px;
 		border-top: 1px solid rgba(255, 255, 255, 0.04);
-
-		/* Subtle grid lines overlay */
 		position: relative;
+
+		.gdesign-title {
+			color: #ffffff !important;
+		}
 
 		&::before {
 			content: '';
