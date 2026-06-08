@@ -65,7 +65,8 @@ function SectionHeader({
 }
 
 interface ShowcaseType {
-  image: string;
+  beforeImage: string;
+  afterImage: string;
   title: string;
   beforeLabel: string;
   afterLabel: string;
@@ -135,13 +136,12 @@ function BeforeAfterSlider({ showcase }: { showcase: ShowcaseType }) {
       >
         {/* Before Layer (Background) */}
         <div className="slider-layer-before">
-          <Image
-            src={showcase.image}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={showcase.beforeImage}
             alt="Before"
-            width={640}
-            height={440}
             className="gdesign-showcase-img-before"
-            priority={false}
+            draggable={false}
           />
         </div>
 
@@ -150,13 +150,12 @@ function BeforeAfterSlider({ showcase }: { showcase: ShowcaseType }) {
           className="slider-layer-after"
           style={{ clipPath: `inset(0 0 0 ${sliderPos}%)` }}
         >
-          <Image
-            src={showcase.image}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={showcase.afterImage}
             alt="After"
-            width={640}
-            height={440}
             className="gdesign-showcase-img-after"
-            priority={false}
+            draggable={false}
           />
         </div>
 
@@ -488,7 +487,7 @@ export default function GraphicDesigningPage() {
             {/* Works Grid */}
             <div className={`gdesign-portfolio-grid ${activeCategory === 'All' ? 'gdesign-portfolio-grid--masonry' : ''}`}>
               {filteredPortfolio.map((item, index) => {
-                const isTall = activeCategory === 'All' && (index === 0 || index === 1);
+                const isTall = !!item.isTall;
                 return (
                   <article 
                     className={`gdesign-portfolio-card ${isTall ? 'gdesign-portfolio-card--tall' : 'gdesign-portfolio-card--short'}`} 

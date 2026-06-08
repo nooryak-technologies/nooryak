@@ -86,25 +86,29 @@ export const GDExpertise = {
 // ── Before/After Showcases ────────────────────────
 export const GDShowcases = [
   {
-    image: "/assets/images/services/gdesign_showcase1.png",
+    beforeImage: "/assets/images/services/gdesign_showcase1_before.png",
+    afterImage: "/assets/images/services/gdesign_showcase1_after.png",
     title: "Logo & Brand Identity",
     beforeLabel: "Before",
     afterLabel: "After",
   },
   {
-    image: "/assets/images/services/gdesign_showcase2.png",
+    beforeImage: "/assets/images/services/gdesign_showcase2_before.png",
+    afterImage: "/assets/images/services/gdesign_showcase2_after.png",
     title: "Packaging Design",
     beforeLabel: "Before",
     afterLabel: "After",
   },
   {
-    image: "/assets/images/services/gdesign_showcase3.png",
+    beforeImage: "/assets/images/services/gdesign_showcase3_before.png",
+    afterImage: "/assets/images/services/gdesign_showcase3_after.png",
     title: "Social Media Design",
     beforeLabel: "Before",
     afterLabel: "After",
   },
   {
-    image: "/assets/images/services/gdesign_showcase4.png",
+    beforeImage: "/assets/images/services/gdesign_showcase4_before.png",
+    afterImage: "/assets/images/services/gdesign_showcase4_after.png",
     title: "Web UI Design",
     beforeLabel: "Before",
     afterLabel: "After",
@@ -128,11 +132,13 @@ export const GDPortfolio = [
     image: "/assets/images/services/icons/left-containerimg1.png",
     title: "Luxury Brand Identity",
     category: "Branding",
+    isTall: true,
   },
   {
     image: "/assets/images/services/icons/left-side-img2.png",
     title: "Organic Skincare Packaging",
     category: "Packaging",
+    isTall: true,
   },
   {
     image: "/assets/images/services/icons/rightsideimg3.png",
