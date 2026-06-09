@@ -31,18 +31,18 @@ const headerMenuData: MenuItem[] = [
         title: "Web Development",
         link: "/services/submenu/web-development",
         megaMenu: [
-          { title: "Web Developer", link: "/404" },
-          { title: "Website Development", link: "/404" },
-          { title: "WordPress Website", link: "/404" },
-          { title: "Ecommerce Website", link: "/404" },
-          { title: "Shopify Website", link: "/404" },
-          { title: "WooCommerce Website", link: "/404" },
-          { title: "PHP Web Development", link: "/404" },
-          { title: "React Web Development", link: "/404" },
-          { title: "Ecommerce Development", link: "/404" },
-          { title: "Shopify Development", link: "/404" },
-          { title: "Custom Website Development", link: "/404" },
-          { title: "Website Design and Development", link: "/404" }
+          { title: "Web Developer", link: "/services/submenu/web-development/web-developer" },
+          { title: "Website Development", link: "/services/submenu/web-development/website-development" },
+          { title: "WordPress Website", link: "/services/submenu/web-development/wordpress-website" },
+          { title: "Ecommerce Website", link: "/services/submenu/web-development/ecommerce-website" },
+          { title: "Shopify Website", link: "/services/submenu/web-development/shopify-website" },
+          { title: "WooCommerce Website", link: "/services/submenu/web-development/woocommerce-website" },
+          { title: "PHP Web Development", link: "/services/submenu/web-development/php-web-development" },
+          { title: "React Web Development", link: "/services/submenu/web-development/react-web-development" },
+          { title: "Ecommerce Development", link: "/services/submenu/web-development/ecommerce-development" },
+          { title: "Shopify Development", link: "/services/submenu/web-development/shopify-development" },
+          { title: "Custom Website Development", link: "/services/submenu/web-development/custom-website-development" },
+          { title: "Website Design and Development", link: "/services/submenu/web-development/website-design-and-development" }
         ]
       },
       {
@@ -50,27 +50,27 @@ const headerMenuData: MenuItem[] = [
         link: "/services/submenu/app-development",
         pluseIncon: true,
         megaMenu: [
-          { title: "Android Application", link: "/404" },
-          { title: "IOS Application", link: "/404" },
-          { title: "React Native", link: "/404" },
-          { title: "Flutter App Development", link: "/404" },
+          { title: "Android Application", link: "/services/submenu/app-development/android-application" },
+          { title: "IOS Application", link: "/services/submenu/app-development/ios-application" },
+          { title: "React Native", link: "/services/submenu/app-development/react-native" },
+          { title: "Flutter App Development", link: "/services/submenu/app-development/flutter-app-development" },
           {
             heading: "Pay-Per-Click (PPC)",
             title: "",
             link: "/services/submenu/ppc"
           },
-          { title: "Google Ads", link: "/404" },
-          { title: "Facebook Ads", link: "/404" },
-          { title: "Display Advertising", link: "/404" },
-          { title: "Remarketing Campaigns", link: "/404" },
+          { title: "Google Ads", link: "/services/submenu/ppc/google-ads" },
+          { title: "Facebook Ads", link: "/services/submenu/ppc/facebook-ads" },
+          { title: "Display Advertising", link: "/services/submenu/ppc/display-advertising" },
+          { title: "Remarketing Campaigns", link: "/services/submenu/ppc/remarketing-campaigns" },
 
           {
             heading: "Software Development",
             title: "",
             link: "/services/submenu/software-development"
           },
-          { title: "Software Development", link: "/services/submenu/software-development" },
-          { title: "AI Automations", link: "/404" },
+          { title: "Software Development", link: "/services/submenu/software-development/software-development" },
+          { title: "AI Automations", link: "/services/submenu/software-development/ai-automations" },
           { title: "MLM Software Development", link: "/services/submenu/mlm" },
         ]
       },
@@ -79,19 +79,16 @@ const headerMenuData: MenuItem[] = [
         link: "/services/submenu/digital-marketing",
         pluseIncon: true,
         megaMenu: [
-          { title: "Search Engine Optimization", link: "/404" },
-          { title: "Search Engine Marketing", link: "/404" },
+          { title: "Search Engine Optimization", link: "/services/submenu/digital-marketing/search-engine-optimization" },
+          { title: "Search Engine Marketing", link: "/services/submenu/digital-marketing/search-engine-marketing" },
           { title: "Social Media Marketing", link: "/services/submenu/social-media-marketing" },
-          { title: "SMS Marketing", link: "/404" },
-          { title: "Facebook Marketing", link: "/404" },
-          { title: "Content Marketing", link: "/404" },
-          { title: "On-Page Optimization", link: "/404" },
-          { title: "Off-Page Optimization", link: "/404" },
-          { title: "Technical SEO", link: "/404" },
-          { title: "Branding", link: "/404" },
-
-
-
+          { title: "SMS Marketing", link: "/services/submenu/digital-marketing/sms-marketing" },
+          { title: "Facebook Marketing", link: "/services/submenu/digital-marketing/facebook-marketing" },
+          { title: "Content Marketing", link: "/services/submenu/digital-marketing/content-marketing" },
+          { title: "On-Page Optimization", link: "/services/submenu/digital-marketing/on-page-optimization" },
+          { title: "Off-Page Optimization", link: "/services/submenu/digital-marketing/off-page-optimization" },
+          { title: "Technical SEO", link: "/services/submenu/digital-marketing/technical-seo" },
+          { title: "Branding", link: "/services/submenu/digital-marketing/branding" },
         ]
       },
       {
@@ -99,22 +96,22 @@ const headerMenuData: MenuItem[] = [
         link: "/services/submenu/social-media-marketing",
         pluseIncon: true,
         megaMenu: [
-          { title: "Facebook Marketing", link: "/404" },
-          { title: "Instagram Marketing", link: "/404" },
-          { title: "Youtube Marketing", link: "/404" },
-          { title: "LinkedIn Marketing", link: "/404" },
-          { title: "Twitter Marketing", link: "/404" },
-          { title: "Social Media Advertising", link: "/404" },
-          { title: "Social Media Post Scheduling", link: "/404" },
+          { title: "Facebook Marketing", link: "/services/submenu/social-media-marketing/facebook-marketing" },
+          { title: "Instagram Marketing", link: "/services/submenu/social-media-marketing/instagram-marketing" },
+          { title: "Youtube Marketing", link: "/services/submenu/social-media-marketing/youtube-marketing" },
+          { title: "LinkedIn Marketing", link: "/services/submenu/social-media-marketing/linkedin-marketing" },
+          { title: "Twitter Marketing", link: "/services/submenu/social-media-marketing/twitter-marketing" },
+          { title: "Social Media Advertising", link: "/services/submenu/social-media-marketing/social-media-advertising" },
+          { title: "Social Media Post Scheduling", link: "/services/submenu/social-media-marketing/social-media-post-scheduling" },
 
           {
             heading: "Local SEO",
             title: "",
             link: "/services/submenu/local-seo"
           },
-          { title: "Google My Business Ranking", link: "/404" },
-          { title: "Local Directory Listings", link: "/404" },
-          { title: "Local SEO Tools", link: "/404" },
+          { title: "Google My Business Ranking", link: "/services/submenu/local-seo/google-my-business-ranking" },
+          { title: "Local Directory Listings", link: "/services/submenu/local-seo/local-directory-listings" },
+          { title: "Local SEO Tools", link: "/services/submenu/local-seo/local-seo-tools" },
         ]
       },
 
@@ -123,19 +120,19 @@ const headerMenuData: MenuItem[] = [
         link: "/services/submenu/graphic-designing",
         pluseIncon: true,
         megaMenu: [
-          { title: "Logo Designs", link: "/404" },
-          { title: "Package Designs", link: "/404" },
-          { title: "Social Media Designs", link: "/404" },
-          { title: "Brochure Designs", link: "/404" },
-          { title: "Pamphlet Designs", link: "/404" },
-          { title: "Website Banners", link: "/404" },
-          { title: "Banner Designs", link: "/404" },
-          { title: "2D & 3D Designs", link: "/404" },
-          { title: "Standee Designs", link: "/404" },
-          { title: "Creative Business Card designs", link: "/404" },
-          { title: "Annual report design", link: "/404" },
-          { title: "End to End Event designs", link: "/404" },
-          { title: "CSR Report design", link: "/404" }
+          { title: "Logo Designs", link: "/services/submenu/graphic-designing/logo-designs" },
+          { title: "Package Designs", link: "/services/submenu/graphic-designing/package-designs" },
+          { title: "Social Media Designs", link: "/services/submenu/graphic-designing/social-media-designs" },
+          { title: "Brochure Designs", link: "/services/submenu/graphic-designing/brochure-designs" },
+          { title: "Pamphlet Designs", link: "/services/submenu/graphic-designing/pamphlet-designs" },
+          { title: "Website Banners", link: "/services/submenu/graphic-designing/website-banners" },
+          { title: "Banner Designs", link: "/services/submenu/graphic-designing/banner-designs" },
+          { title: "2D & 3D Designs", link: "/services/submenu/graphic-designing/2d-and-3d-designs" },
+          { title: "Standee Designs", link: "/services/submenu/graphic-designing/standee-designs" },
+          { title: "Creative Business Card designs", link: "/services/submenu/graphic-designing/creative-business-card-designs" },
+          { title: "Annual report design", link: "/services/submenu/graphic-designing/annual-report-design" },
+          { title: "End to End Event designs", link: "/services/submenu/graphic-designing/end-to-end-event-designs" },
+          { title: "CSR Report design", link: "/services/submenu/graphic-designing/csr-report-design" }
         ]
       },
       {
@@ -143,13 +140,13 @@ const headerMenuData: MenuItem[] = [
         link: "/services/submenu/graphic-designing",
         pluseIncon: true,
         megaMenu: [
-          { title: "Strategy Report Design", link: "/404" },
-          { title: "Catalogue Designs", link: "/404" },
-          { title: "Menu Designs", link: "/404" },
-          { title: "Marriage Card designs", link: "/404" },
-          { title: "Hoarding/billboard designs", link: "/404" },
-          { title: "Illustrations", link: "/404" },
-          { title: "Branding", link: "/404" },
+          { title: "Strategy Report Design", link: "/services/submenu/graphic-designing/strategy-report-design" },
+          { title: "Catalogue Designs", link: "/services/submenu/graphic-designing/catalogue-designs" },
+          { title: "Menu Designs", link: "/services/submenu/graphic-designing/menu-designs" },
+          { title: "Marriage Card designs", link: "/services/submenu/graphic-designing/marriage-card-designs" },
+          { title: "Hoarding/billboard designs", link: "/services/submenu/graphic-designing/hoarding-billboard-designs" },
+          { title: "Illustrations", link: "/services/submenu/graphic-designing/illustrations" },
+          { title: "Branding", link: "/services/submenu/graphic-designing/branding" },
 
           {
             heading: "Video Editing",
@@ -157,10 +154,10 @@ const headerMenuData: MenuItem[] = [
             link: "/services/submenu/video-editing"
           },
 
-          { title: "Reel Videos", link: "/404" },
-          { title: "Model Shoot Videos", link: "/404" },
-          { title: "RealEstate Drone Shots", link: "/404" },
-          { title: "Custom Videos", link: "/404" }
+          { title: "Reel Videos", link: "/services/submenu/video-editing/reel-videos" },
+          { title: "Model Shoot Videos", link: "/services/submenu/video-editing/model-shoot-videos" },
+          { title: "RealEstate Drone Shots", link: "/services/submenu/video-editing/realestate-drone-shots" },
+          { title: "Custom Videos", link: "/services/submenu/video-editing/custom-videos" }
         ]
       },
 

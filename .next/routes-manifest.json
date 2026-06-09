@@ -93,6 +93,15 @@
         "nxtPtype": "nxtPtype"
       },
       "namedRegex": "^/services/submenu/(?<nxtPtype>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/services/submenu/[type]/[subcategory]",
+      "regex": "^/services/submenu/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPtype": "nxtPtype",
+        "nxtPsubcategory": "nxtPsubcategory"
+      },
+      "namedRegex": "^/services/submenu/(?<nxtPtype>[^/]+?)/(?<nxtPsubcategory>[^/]+?)(?:/)?$"
     }
   ],
   "staticRoutes": [

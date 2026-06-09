@@ -60,7 +60,7 @@ export const servicesDataWeb = [
     title: "Web Developer",
     description:
       "Hire skilled web developers to build fast, secure, and scalable web solutions.",
-    link: "#",
+    link: "/services/submenu/web-development/web-developer",
   },
   {
     id: 2,
@@ -69,7 +69,7 @@ export const servicesDataWeb = [
     title: "Website Development",
     description:
       "Custom websites designed to represent your brand and convert visitors into customers.",
-    link: "#",
+    link: "/services/submenu/web-development/website-development",
   },
   {
     id: 3,
@@ -78,7 +78,7 @@ export const servicesDataWeb = [
     title: "WordPress Website",
     description:
       "Powerful, flexible, and SEO-friendly WordPress websites tailored to your needs.",
-    link: "#",
+    link: "/services/submenu/web-development/wordpress-website",
   },
   {
     id: 4,
@@ -87,7 +87,7 @@ export const servicesDataWeb = [
     title: "Ecommerce Website",
     description:
       "Sell online with high-performance eCommerce websites that drive results.",
-    link: "#",
+    link: "/services/submenu/web-development/ecommerce-website",
   },
   {
     id: 5,
@@ -96,7 +96,7 @@ export const servicesDataWeb = [
     title: "Shopify Website",
     description:
       "Professional Shopify stores designed to grow your online business.",
-    link: "#",
+    link: "/services/submenu/web-development/shopify-website",
   },
   {
     id: 6,
@@ -105,7 +105,7 @@ export const servicesDataWeb = [
     title: "WooCommerce Website",
     description:
       "Custom WooCommerce solutions that make managing your store effortless.",
-    link: "#",
+    link: "/services/submenu/web-development/woocommerce-website",
   },
   {
     id: 7,
@@ -114,7 +114,7 @@ export const servicesDataWeb = [
     title: "PHP Web Development",
     description:
       "Robust, secure, and dynamic web applications built with PHP expertise.",
-    link: "#",
+    link: "/services/submenu/web-development/php-web-development",
   },
   {
     id: 8,
@@ -123,7 +123,7 @@ export const servicesDataWeb = [
     title: "React Web Development",
     description:
       "Fast, interactive, and modern web apps built with the power of React.js.",
-    link: "#",
+    link: "/services/submenu/web-development/react-web-development",
   },
   {
     id: 9,
@@ -132,7 +132,7 @@ export const servicesDataWeb = [
     title: "Custom Website Development",
     description:
       "Tailored web solutions built from scratch to match your business goals.",
-    link: "#",
+    link: "/services/submenu/web-development/custom-website-development",
   },
   {
     id: 10,
@@ -141,7 +141,25 @@ export const servicesDataWeb = [
     title: "Shopify Development",
     description:
       "Professional Shopify stores designed to grow your online business.",
-    link: "#",
+    link: "/services/submenu/web-development/shopify-development",
+  },
+  {
+    id: 11,
+    images: Images.shoppingcart.src,
+    iconBg: "#f4510b",
+    title: "Ecommerce Development",
+    description:
+      "Advanced eCommerce development to optimize conversions, cart management, and payment integrations.",
+    link: "/services/submenu/web-development/ecommerce-development",
+  },
+  {
+    id: 12,
+    images: Images.customwebsite.src,
+    iconBg: "#f4510b",
+    title: "Website Design and Development",
+    description:
+      "Complete design-to-deployment solutions combining UI excellence with backend reliability.",
+    link: "/services/submenu/web-development/website-design-and-development",
   },
 ];
 
