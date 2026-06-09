@@ -90,13 +90,13 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-network-wired", text: "Scalable Solutions" },
         { icon: "fa-solid fa-truck-delivery", text: "On-Time Delivery" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer.png"
     },
     about: {
       label: "ABOUT WEB DEVELOPER",
       title: "Turning Ideas Into Powerful Web Solutions",
       description: "Our web developers craft custom websites and web applications using the latest technologies, ensuring speed, security, scalability, and exceptional performance.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/web_developer2.png",
       features: [
         { icon: "fa-solid fa-shield-halved", title: "Clean Code", description: "Quality code that is maintainable, scalable, and standardized." },
         { icon: "fa-solid fa-users", title: "User Focused", description: "Design & develop tailored to deliver the absolute best user experience." },
@@ -127,7 +127,7 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         "Scalable & Secure Architecture",
         "Dedicated Support & Ongoing Maintenance"
       ],
-      videoThumbnail: "/assets/images/services/software_development.jpg",
+      videoThumbnail: "/assets/images/services/submenu/web_developer3.png",
       stats: [
         { value: "100+", label: "Projects Delivered" },
         { value: "50+", label: "Happy Clients" },

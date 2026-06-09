@@ -155,10 +155,14 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 /* ══════════════ SECTION 1: HERO ══════════════ */
 .subcat-hero {
   position: relative;
-  padding: 130px 0 70px 0;
+  padding: 120px 0 60px 0;
   background: radial-gradient(circle at 80% 20%, rgba(244, 81, 11, 0.05) 0%, transparent 50%),
               radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.03) 0%, transparent 50%),
               #f8f9fa;
+
+  @media (max-width: 768px) {
+    padding: 100px 0 40px 0;
+  }
 
   .breadcrumb-nav {
     display: flex;
@@ -292,9 +296,13 @@ $font-family: 'Inter', 'Outfit', sans-serif;
   .hero-visual {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
+
+    @media (max-width: 992px) {
+      justify-content: center;
+    }
 
     .img-wrap {
       position: relative;
@@ -403,8 +411,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 2: ABOUT ══════════════ */
 .subcat-about {
-  padding: 90px 0;
+  padding: 60px 0;
   background-color: $color-bg-page;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   .about-grid {
     display: grid;
@@ -532,8 +544,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 3: OFFERINGS ══════════════ */
 .subcat-offerings {
-  padding: 90px 0;
+  padding: 60px 0;
   background-color: #f8f9fa;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   .offerings-head {
     text-align: center;
@@ -646,8 +662,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 4: WHY CHOOSE ══════════════ */
 .subcat-whychoose {
-  padding: 95px 0;
+  padding: 60px 0;
   background-color: $color-bg-page;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   .why-three-col-grid {
     display: grid;
@@ -836,8 +856,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 5: TECHNOLOGIES ══════════════ */
 .subcat-tech {
-  padding: 50px 0;
+  padding: 60px 0;
   background-color: $color-bg-page;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   .tech-container-dark {
     background: linear-gradient(145deg, #0f172a 0%, #030712 100%);
@@ -943,8 +967,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 6: PROCESS ══════════════ */
 .subcat-process {
-  padding: 90px 0;
+  padding: 60px 0;
   background-color: $color-bg-page;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   .process-head {
     text-align: center;
@@ -1044,8 +1072,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 7: RECENT WORK ══════════════ */
 .subcat-work {
-  padding: 90px 0;
+  padding: 60px 0;
   background-color: #f8f9fa;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   .work-head {
     text-align: center;
@@ -1164,8 +1196,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 8: FAQ & TESTIMONIAL SPLIT ══════════════ */
 .subcat-split {
-  padding: 95px 0;
+  padding: 60px 0;
   background-color: $color-bg-page;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 
   .split-grid {
     display: grid;
@@ -1348,8 +1384,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 /* ══════════════ SECTION 9: FINAL CTA (MLM STYLE) ══════════════ */
 .subcat-cta {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: $color-bg-page;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
 }
 
 .sd-cta-banner {

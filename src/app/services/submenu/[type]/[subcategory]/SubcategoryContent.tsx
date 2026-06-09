@@ -198,36 +198,14 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
 
             {/* Right Column Visual */}
             <div className="hero-visual">
-              <div className="img-wrap">
-                <Image
-                  src={data.hero.image}
-                  alt={subcategoryTitle}
-                  width={560}
-                  height={500}
-                  className="hero-img"
-                  priority
-                />
-                
-                {/* Floating Badges */}
-                <div className="floating-badge html5" title="HTML5">
-                  <i className="fa-brands fa-html5" />
-                </div>
-                <div className="floating-badge css3" title="CSS3">
-                  <i className="fa-brands fa-css3-alt" />
-                </div>
-                <div className="floating-badge js" title="JavaScript">
-                  <i className="fa-brands fa-js" />
-                </div>
-                <div className="floating-badge react" title="React">
-                  <i className="fa-brands fa-react" />
-                </div>
-                <div className="floating-badge nodejs" title="Node.js">
-                  <i className="fa-brands fa-node-js" />
-                </div>
-                <div className="floating-badge php" title="PHP">
-                  <i className="fa-brands fa-php" />
-                </div>
-              </div>
+              <Image
+                src={data.hero.image}
+                alt={subcategoryTitle}
+                width={560}
+                height={500}
+                className="hero-img"
+                priority
+              />
             </div>
           </div>
         </div>
