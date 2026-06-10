@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { subcategoryDataMap, SubcategoryData } from './subcategory.data';
+import { subcategoryFloatingBadgesMap } from './subcategory.badges';
 import SubcategoryContent from './SubcategoryContent';
 
 interface Props {
@@ -49,6 +50,7 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
         { icon: 'fa-solid fa-truck-delivery', text: 'On-Time Delivery' },
       ],
       image: '/assets/images/services/submenu/web_developer_hero.png',
+      floatingBadges: subcategoryFloatingBadgesMap[normSubcat] ?? [],
     },
     about: {
       label: `ABOUT ${subcategoryTitle.toUpperCase()}`,
