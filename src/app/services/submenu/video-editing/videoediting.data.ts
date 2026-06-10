@@ -153,14 +153,14 @@ export const VEPortfolio = [
 
 // ── Tools ─────────────────────────────────────────────────────────────────
 export const VETools = [
-  { icon: "/assets/images/services/icons/premiere.png?v=2",     label: "Premiere Pro",   customClass: "tool-pr" },
-  { icon: "/assets/images/services/icons/after_effect.png?v=2", label: "After Effects",  customClass: "tool-ae" },
-  { icon: "/assets/images/services/icons/davinci.svg?v=2",       label: "DaVinci Resolve",customClass: "tool-da" },
-  { icon: "/assets/images/services/icons/photoshop.png?v=2",    label: "Photoshop",      customClass: "tool-ps" },
-  { icon: "/assets/images/services/icons/audition.svg?v=2",      label: "Audition",       customClass: "tool-au" },
-  { icon: "/assets/images/services/icons/blender_icon.png?v=2", label: "Blender",        customClass: "tool-bl" },
-  { icon: "/assets/images/services/icons/finalcut.svg?v=2",      label: "Final Cut Pro",  customClass: "tool-fc" },
-  { icon: "/assets/images/services/icons/mediaencoder.svg?v=2",  label: "Media Encoder",  customClass: "tool-me" },
+  { icon: "/assets/images/services/icons/premiere.png",     label: "Premiere Pro",   customClass: "tool-pr" },
+  { icon: "/assets/images/services/icons/after_effect.png", label: "After Effects",  customClass: "tool-ae" },
+  { icon: "/assets/images/services/icons/davinci.svg",       label: "DaVinci Resolve",customClass: "tool-da" },
+  { icon: "/assets/images/services/icons/photoshop.png",    label: "Photoshop",      customClass: "tool-ps" },
+  { icon: "/assets/images/services/icons/audition.svg",      label: "Audition",       customClass: "tool-au" },
+  { icon: "/assets/images/services/icons/blender_icon.png", label: "Blender",        customClass: "tool-bl" },
+  { icon: "/assets/images/services/icons/finalcut.svg",      label: "Final Cut Pro",  customClass: "tool-fc" },
+  { icon: "/assets/images/services/icons/mediaencoder.svg",  label: "Media Encoder",  customClass: "tool-me" },
 ];
 
 // ── Reviews ───────────────────────────────────────────────────────────────

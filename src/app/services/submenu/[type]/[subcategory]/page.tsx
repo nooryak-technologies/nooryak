@@ -9,18 +9,22 @@ interface Props {
 
 function capitalize(str: string): string {
   return str
+    .replace(/_/g, '-')
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
 
 function getOrCreateSubcategoryData(subcategory: string, type: string): SubcategoryData {
-  if (subcategoryDataMap[subcategory]) {
-    return subcategoryDataMap[subcategory];
+  const normSubcat = subcategory.replace(/_/g, '-');
+  const normType = type.replace(/_/g, '-');
+  
+  if (subcategoryDataMap[normSubcat]) {
+    return subcategoryDataMap[normSubcat];
   }
 
-  const subcategoryTitle = capitalize(subcategory);
-  const categoryTitle = capitalize(type);
+  const subcategoryTitle = capitalize(normSubcat);
+  const categoryTitle = capitalize(normType);
 
   return {
     meta: {
@@ -44,7 +48,7 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
         { icon: 'fa-solid fa-network-wired', text: 'Scalable Solutions' },
         { icon: 'fa-solid fa-truck-delivery', text: 'On-Time Delivery' },
       ],
-      image: '/assets/images/services/webdevelopment.png',
+      image: '/assets/images/services/submenu/web_developer_hero.png',
     },
     about: {
       label: `ABOUT ${subcategoryTitle.toUpperCase()}`,
@@ -141,7 +145,9 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
 // Generate Dynamic SEO Metadata on the Server
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { type, subcategory } = await params;
-  const data = getOrCreateSubcategoryData(subcategory, type);
+  const normSubcat = subcategory.replace(/_/g, '-');
+  const normType = type.replace(/_/g, '-');
+  const data = getOrCreateSubcategoryData(normSubcat, normType);
   return {
     title: data.meta.title,
     description: data.meta.description,
@@ -151,9 +157,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Dynamic Server Page Component
 export default async function SubcategoryPage({ params }: Props) {
   const { type, subcategory } = await params;
-  const data = getOrCreateSubcategoryData(subcategory, type);
+  const normSubcat = subcategory.replace(/_/g, '-');
+  const normType = type.replace(/_/g, '-');
+  const data = getOrCreateSubcategoryData(normSubcat, normType);
 
   return (
-    <SubcategoryContent data={data} type={type} subcategory={subcategory} />
+    <SubcategoryContent data={data} type={normType} subcategory={normSubcat} />
   );
 }

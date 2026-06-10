@@ -153,9 +153,9 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
   const ctaTitleSuffix = qIndex !== -1 ? data.cta.title.substring(qIndex) : '';
 
   return (
-    <main className="subcat-page">
+    <main className={`subcat-page subcat-page--${subcategory}`}>
       {/* ──────────────── HERO SECTION ──────────────── */}
-      <section className="subcat-hero">
+      <section className={`subcat-hero subcat-hero--${subcategory}`}>
         <div className="container">
           <div className="hero-grid">
             {/* Left Column Copy */}
@@ -206,6 +206,20 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
                 className="hero-img"
                 priority
               />
+              {data.hero.floatingBadges && data.hero.floatingBadges.map((badge, index) => (
+                <div 
+                  className={`floating-badge slot-${index + 1}`} 
+                  style={{ 
+                    color: badge.color, 
+                    borderColor: badge.borderColor 
+                  } as React.CSSProperties} 
+                  key={index}
+                >
+                  {badge.label && <span className="badge-label">{badge.label}</span>}
+                  <i className={badge.iconClass} />
+                  <span className="badge-name">{badge.name}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

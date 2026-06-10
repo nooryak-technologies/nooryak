@@ -245,7 +245,7 @@ export default function VideoEditingPage() {
                 >
                   <div className="ve-portfolio-card__img-wrap">
                     <img
-                      src={`${item.image}?v=2`}
+                      src={item.image}
                       alt={item.title}
                       className="ve-portfolio-card__img"
                     />
@@ -362,7 +362,7 @@ export default function VideoEditingPage() {
               {/* Left visual column */}
               <div className="ve-cta__visual">
                 <img
-                  src="/assets/images/services/footer.png?v=2"
+                  src="/assets/images/services/footer.png"
                   alt="Let's Create Videos"
                   className="ve-cta__img"
                 />

@@ -925,7 +925,7 @@ export default function MLMDevelopment() {
                 </div>
 
                 <Image
-                  src="/assets/images/services/orange_rocket_cta.png?v=2"
+                  src="/assets/images/services/orange_rocket_cta.png"
                   alt="Rocket Blasting Off"
                   className="sd-cta-banner__rocket"
                   width={300}

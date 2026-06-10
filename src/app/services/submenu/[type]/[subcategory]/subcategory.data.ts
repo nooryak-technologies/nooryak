@@ -13,6 +13,13 @@ export interface SubcategoryData {
     buttons: { text: string; link: string; type: "primary" | "secondary" }[];
     features: { icon: string; text: string }[];
     image: string;
+    floatingBadges?: {
+      name: string;
+      label?: string;
+      iconClass: string;
+      color: string;
+      borderColor: string;
+    }[];
   };
   about: {
     label: string;
@@ -90,7 +97,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-network-wired", text: "Scalable Solutions" },
         { icon: "fa-solid fa-truck-delivery", text: "On-Time Delivery" }
       ],
-      image: "/assets/images/services/submenu/web_developer.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "HTML 5", label: "HTML", iconClass: "fa-brands fa-html5", color: "#e34f26", borderColor: "rgba(227, 79, 38, 0.4)" },
+        { name: "CSS 3", label: "CSS", iconClass: "fa-brands fa-css3-alt", color: "#1572b6", borderColor: "rgba(21, 114, 182, 0.4)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "Node.js", iconClass: "fa-brands fa-node-js", color: "#339933", borderColor: "rgba(51, 153, 51, 0.4)" },
+        { name: "PHP", iconClass: "fa-brands fa-php", color: "#777bb4", borderColor: "rgba(119, 123, 180, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT WEB DEVELOPER",
@@ -209,7 +224,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-bolt", text: "Instant Loading Speeds" },
         { icon: "fa-solid fa-award", text: "Premium Brand Aesthetics" }
       ],
-      image: "/assets/images/services/submenu/website_development2.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "HTML 5", label: "HTML", iconClass: "fa-brands fa-html5", color: "#e34f26", borderColor: "rgba(227, 79, 38, 0.4)" },
+        { name: "CSS 3", label: "CSS", iconClass: "fa-brands fa-css3-alt", color: "#1572b6", borderColor: "rgba(21, 114, 182, 0.4)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "Next.js", iconClass: "fa-solid fa-n", color: "#000000", borderColor: "rgba(0, 0, 0, 0.2)" },
+        { name: "Figma", iconClass: "fa-brands fa-figma", color: "#f24e1e", borderColor: "rgba(242, 78, 30, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT WEBSITE DEVELOPMENT",
@@ -321,7 +344,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-shield", text: "Highly Secure Setup" },
         { icon: "fa-solid fa-pen-to-square", text: "Easy Page Builders" }
       ],
-      image: "/assets/images/services/submenu/wordpress_2.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "WordPress", iconClass: "fa-brands fa-wordpress", color: "#21759b", borderColor: "rgba(33, 117, 155, 0.4)" },
+        { name: "PHP", iconClass: "fa-brands fa-php", color: "#777bb4", borderColor: "rgba(119, 123, 180, 0.4)" },
+        { name: "Elementor", iconClass: "fa-brands fa-elementor", color: "#92003b", borderColor: "rgba(146, 0, 59, 0.4)" },
+        { name: "HTML 5", label: "HTML", iconClass: "fa-brands fa-html5", color: "#e34f26", borderColor: "rgba(227, 79, 38, 0.4)" },
+        { name: "CSS 3", label: "CSS", iconClass: "fa-brands fa-css3-alt", color: "#1572b6", borderColor: "rgba(21, 114, 182, 0.4)" },
+        { name: "MySQL", iconClass: "fa-solid fa-database", color: "#00758f", borderColor: "rgba(0, 117, 143, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT WORDPRESS WEBSITE",
@@ -433,7 +464,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-chart-line", text: "Sales Analytics Dashboard" },
         { icon: "fa-solid fa-truck-ramp-box", text: "Stock Tracking & Shipping" }
       ],
-      image: "/assets/images/services/submenu/ecommerce_1.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "Shopify", iconClass: "fa-brands fa-shopify", color: "#7ab55c", borderColor: "rgba(122, 181, 92, 0.4)" },
+        { name: "Woo", iconClass: "fa-brands fa-wordpress", color: "#96588a", borderColor: "rgba(150, 88, 138, 0.4)" },
+        { name: "Stripe", iconClass: "fa-brands fa-stripe", color: "#635bff", borderColor: "rgba(99, 91, 255, 0.4)" },
+        { name: "PayPal", iconClass: "fa-brands fa-paypal", color: "#003087", borderColor: "rgba(0, 48, 135, 0.4)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "Node.js", iconClass: "fa-brands fa-node-js", color: "#339933", borderColor: "rgba(51, 153, 51, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT ECOMMERCE WEBSITES",
@@ -545,7 +584,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-puzzle-piece", text: "App Setup & Integration" },
         { icon: "fa-solid fa-gauge-high", text: "Fast loading Shopify Sections" }
       ],
-      image: "/assets/images/services/submenu/shopify.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "Shopify", iconClass: "fa-brands fa-shopify", color: "#7ab55c", borderColor: "rgba(122, 181, 92, 0.4)" },
+        { name: "Liquid", iconClass: "fa-solid fa-droplet", color: "#008df2", borderColor: "rgba(0, 141, 242, 0.4)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "GraphQL", iconClass: "fa-solid fa-circle-nodes", color: "#e10098", borderColor: "rgba(225, 0, 152, 0.4)" },
+        { name: "CSS 3", label: "CSS", iconClass: "fa-brands fa-css3-alt", color: "#1572b6", borderColor: "rgba(21, 114, 182, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT SHOPIFY WEBSITE",
@@ -657,7 +704,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-gears", text: "Flexible Custom Integrations" },
         { icon: "fa-solid fa-gauge", text: "Optimized Database Queries" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "WordPress", iconClass: "fa-brands fa-wordpress", color: "#21759b", borderColor: "rgba(33, 117, 155, 0.4)" },
+        { name: "Woo", iconClass: "fa-brands fa-wordpress", color: "#96588a", borderColor: "rgba(150, 88, 138, 0.4)" },
+        { name: "PHP", iconClass: "fa-brands fa-php", color: "#777bb4", borderColor: "rgba(119, 123, 180, 0.4)" },
+        { name: "MySQL", iconClass: "fa-solid fa-database", color: "#00758f", borderColor: "rgba(0, 117, 143, 0.4)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" },
+        { name: "Stripe", iconClass: "fa-brands fa-stripe", color: "#635bff", borderColor: "rgba(99, 91, 255, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT WOOCCOMMERCE WEBSITE",
@@ -769,7 +824,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-shield-halved", text: "Secure Framework Coding" },
         { icon: "fa-solid fa-code-merge", text: "Custom REST APIs & Integrations" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "PHP", iconClass: "fa-brands fa-php", color: "#777bb4", borderColor: "rgba(119, 123, 180, 0.4)" },
+        { name: "Laravel", iconClass: "fa-brands fa-laravel", color: "#ff2d20", borderColor: "rgba(255, 45, 32, 0.4)" },
+        { name: "MySQL", iconClass: "fa-solid fa-database", color: "#00758f", borderColor: "rgba(0, 117, 143, 0.4)" },
+        { name: "HTML 5", label: "HTML", iconClass: "fa-brands fa-html5", color: "#e34f26", borderColor: "rgba(227, 79, 38, 0.4)" },
+        { name: "CSS 3", label: "CSS", iconClass: "fa-brands fa-css3-alt", color: "#1572b6", borderColor: "rgba(21, 114, 182, 0.4)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" }
+      ]
     },
     about: {
       label: "ABOUT PHP DEVELOPMENT",
@@ -881,7 +944,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-wind", text: "Tailwind CSS Styling" },
         { icon: "fa-solid fa-mobile-screen", text: "Responsive Component Architecture" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "Next.js", iconClass: "fa-solid fa-n", color: "#000000", borderColor: "rgba(0, 0, 0, 0.2)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" },
+        { name: "Node.js", iconClass: "fa-brands fa-node-js", color: "#339933", borderColor: "rgba(51, 153, 51, 0.4)" },
+        { name: "Tailwind", iconClass: "fa-solid fa-wind", color: "#38bdf8", borderColor: "rgba(56, 189, 248, 0.4)" },
+        { name: "HTML 5", label: "HTML", iconClass: "fa-brands fa-html5", color: "#e34f26", borderColor: "rgba(227, 79, 38, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT REACT DEVELOPMENT",
@@ -993,7 +1064,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-arrow-up-wide-short", text: "Optimized Database Queries" },
         { icon: "fa-solid fa-sync", text: "Real-Time Stock Updates" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "Shopify", iconClass: "fa-brands fa-shopify", color: "#7ab55c", borderColor: "rgba(122, 181, 92, 0.4)" },
+        { name: "Woo", iconClass: "fa-brands fa-wordpress", color: "#96588a", borderColor: "rgba(150, 88, 138, 0.4)" },
+        { name: "Stripe", iconClass: "fa-brands fa-stripe", color: "#635bff", borderColor: "rgba(99, 91, 255, 0.4)" },
+        { name: "PayPal", iconClass: "fa-brands fa-paypal", color: "#003087", borderColor: "rgba(0, 48, 135, 0.4)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "Node.js", iconClass: "fa-brands fa-node-js", color: "#339933", borderColor: "rgba(51, 153, 51, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT ECOMMERCE DEVELOPMENT",
@@ -1105,7 +1184,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-gears", text: "Secure Payment Gateway Nodes" },
         { icon: "fa-solid fa-rocket", text: "Optimized Speed configurations" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "Shopify", iconClass: "fa-brands fa-shopify", color: "#7ab55c", borderColor: "rgba(122, 181, 92, 0.4)" },
+        { name: "Liquid", iconClass: "fa-solid fa-droplet", color: "#008df2", borderColor: "rgba(0, 141, 242, 0.4)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "GraphQL", iconClass: "fa-solid fa-circle-nodes", color: "#e10098", borderColor: "rgba(225, 0, 152, 0.4)" },
+        { name: "CSS 3", label: "CSS", iconClass: "fa-brands fa-css3-alt", color: "#1572b6", borderColor: "rgba(21, 114, 182, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT SHOPIFY DEVELOPMENT",
@@ -1217,7 +1304,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-bolt", text: "Maximum Page Performance" },
         { icon: "fa-solid fa-code-fork", text: "API First Architectures" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "Next.js", iconClass: "fa-solid fa-n", color: "#000000", borderColor: "rgba(0, 0, 0, 0.2)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "Node.js", iconClass: "fa-brands fa-node-js", color: "#339933", borderColor: "rgba(51, 153, 51, 0.4)" },
+        { name: "Postgres", iconClass: "fa-solid fa-database", color: "#336791", borderColor: "rgba(51, 103, 145, 0.4)" },
+        { name: "GraphQL", iconClass: "fa-solid fa-circle-nodes", color: "#e10098", borderColor: "rgba(225, 0, 152, 0.4)" },
+        { name: "Docker", iconClass: "fa-brands fa-docker", color: "#2496ed", borderColor: "rgba(36, 150, 237, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT CUSTOM WEBSITES",
@@ -1329,7 +1424,15 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-search", text: "Technical SEO Integrated" },
         { icon: "fa-solid fa-award", text: "Complete Brand Optimization" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/web_developer_hero.png",
+      floatingBadges: [
+        { name: "Figma", iconClass: "fa-brands fa-figma", color: "#f24e1e", borderColor: "rgba(242, 78, 30, 0.4)" },
+        { name: "React", iconClass: "fa-brands fa-react", color: "#00d8ff", borderColor: "rgba(0, 216, 255, 0.4)" },
+        { name: "HTML 5", label: "HTML", iconClass: "fa-brands fa-html5", color: "#e34f26", borderColor: "rgba(227, 79, 38, 0.4)" },
+        { name: "CSS 3", label: "CSS", iconClass: "fa-brands fa-css3-alt", color: "#1572b6", borderColor: "rgba(21, 114, 182, 0.4)" },
+        { name: "JS", iconClass: "fa-brands fa-js", color: "#f7df1e", borderColor: "rgba(247, 223, 30, 0.5)" },
+        { name: "WordPress", iconClass: "fa-brands fa-wordpress", color: "#21759b", borderColor: "rgba(33, 117, 155, 0.4)" }
+      ]
     },
     about: {
       label: "ABOUT DESIGN & DEVELOPMENT",

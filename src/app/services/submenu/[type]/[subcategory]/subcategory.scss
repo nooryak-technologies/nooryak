@@ -160,6 +160,42 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.03) 0%, transparent 50%),
     #f8f9fa;
 
+  @media (min-width: 993px) {
+    .hero-grid {
+      grid-template-columns: 680px 1fr;
+      margin-left: -21px;
+      margin-right: -36px;
+    }
+    .hero-visual {
+      justify-content: flex-end;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-img {
+      max-width: none;
+      width: 100%;
+      border-radius: 20px 0 0 20px;
+      object-fit: cover;
+      transform: scale(1.1);
+      transform-origin: right center;
+      margin-right: -40px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .hero-grid {
+      margin-left: calc((100vw - 1280px) / -2 - 25px);
+      margin-right: calc((100vw - 1280px) / -2 - 40px);
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .hero-grid {
+      margin-left: calc((100vw - 1350px) / -2 - 33px);
+      margin-right: calc((100vw - 1350px) / -2 - 48px);
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 100px 0 40px 0;
   }
@@ -196,7 +232,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 650px 1fr;
     gap: 60px;
     align-items: center;
 
@@ -333,70 +369,99 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     // Technology Floating Badges
     .floating-badge {
       position: absolute;
-      width: 54px;
-      height: 54px;
+      width: 75px;
+      height: 75px;
       background: #ffffff;
-      border-radius: 50%;
+      border-radius: 12px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 4px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
       border: 2px solid #e2e8f0;
       z-index: 10;
-      font-size: 24px;
+      font-size: 26px;
       transition: transform 0.3s ease;
+
+      .badge-label {
+        font-size: 9px;
+        font-weight: 800;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1;
+      }
+
+      .badge-name {
+        font-size: 9px;
+        font-weight: 800;
+        color: #1e293b;
+        letter-spacing: 0.5px;
+        line-height: 1;
+      }
+
+      @media (max-width: 768px) {
+        width: 58px;
+        height: 58px;
+        font-size: 20px;
+        gap: 2px;
+
+        .badge-label, .badge-name {
+          font-size: 7.5px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+        gap: 1px;
+
+        .badge-label, .badge-name {
+          display: none;
+        }
+      }
 
       &:hover {
         transform: scale(1.15) !important;
         z-index: 20;
       }
 
-      // Positions around the image
-      &.html5 {
-        top: 8%;
-        left: -5%;
-        border-color: rgba(227, 79, 38, 0.4);
-        color: #e34f26;
+      // Positions around the image (inset to stay visible on screen)
+      &.slot-1 {
+        top: 12%;
+        left: 8%;
         animation: floatAnim1 5s ease-in-out infinite;
       }
 
-      &.css3 {
-        top: 4%;
-        right: -3%;
-        border-color: rgba(21, 114, 182, 0.4);
-        color: #1572b6;
+      &.slot-2 {
+        top: 6%;
+        right: 18%;
         animation: floatAnim2 6s ease-in-out infinite 0.5s;
       }
 
-      &.js {
-        top: 36%;
-        right: -8%;
-        border-color: rgba(247, 223, 30, 0.5);
-        color: #f7df1e;
+      &.slot-3 {
+        top: 34%;
+        right: 8%;
         animation: floatAnim3 5.5s ease-in-out infinite 1s;
       }
 
-      &.react {
-        bottom: 25%;
-        right: -3%;
-        border-color: rgba(0, 216, 255, 0.4);
-        color: #00d8ff;
+      &.slot-4 {
+        bottom: 28%;
+        right: 14%;
         animation: floatAnim1 5.8s ease-in-out infinite 1.5s;
       }
 
-      &.nodejs {
-        bottom: 4%;
-        right: 18%;
-        border-color: rgba(51, 153, 51, 0.4);
-        color: #339933;
+      &.slot-5 {
+        bottom: 6%;
+        right: 28%;
         animation: floatAnim2 6.2s ease-in-out infinite 2s;
       }
 
-      &.php {
-        bottom: 18%;
-        left: -3%;
-        border-color: rgba(119, 123, 180, 0.4);
-        color: #777bb4;
+      &.slot-6 {
+        bottom: 24%;
+        left: 10%;
         animation: floatAnim3 5.2s ease-in-out infinite 2.5s;
       }
     }
