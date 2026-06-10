@@ -31,12 +31,16 @@ const HomeMainHeader = () => {
 
                     {/* Right */}
                     <div className="rights">
-                        <Link href="/notfound" className="header-btn">
+                        <button
+                            type="button"
+                            className="header-btn"
+                            onClick={() => window.dispatchEvent(new Event('openEnquiryForm'))}
+                        >
                             <span className="btn-text">Start a Project</span>
                             <span className="btn-icon">
                                 <ArrowSvg />
                             </span>
-                        </Link>
+                        </button>
 
                         {/* Mobile */}
                         <button

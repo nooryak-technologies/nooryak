@@ -32,6 +32,14 @@ export default function EnquiryForm() {
         };
     }, [closing]);
 
+    // Listen for global 'openEnquiryForm' custom event (fired by buttons anywhere on the page)
+    useEffect(() => {
+        const listener = () => handleOpen();
+        window.addEventListener('openEnquiryForm', listener);
+        return () => window.removeEventListener('openEnquiryForm', listener);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const handleOpen = () => {
         setClosing(false);
         setOpen(true);

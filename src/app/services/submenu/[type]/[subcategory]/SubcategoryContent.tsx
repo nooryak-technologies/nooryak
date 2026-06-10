@@ -168,22 +168,35 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
               <p className="hero-desc">{data.hero.description}</p>
 
               <div className="hero-actions">
-                {data.hero.buttons.map((btn, index) => (
-                  <Link
-                    key={index}
-                    href={btn.link}
-                    className={btn.type === 'primary' ? 'btn-primary' : 'btn-secondary'}
-                  >
-                    {btn.text}
-                    {btn.type === 'primary' ? (
-                      <i className="fa-solid fa-arrow-right" style={{ marginLeft: '8px' }} />
-                    ) : (
-                      btn.text.toLowerCase().includes("call") ? (
+                {data.hero.buttons.map((btn, index) => {
+                  // "Schedule a Call" → direct phone dial
+                  if (btn.text.toLowerCase().includes('schedule') || btn.text.toLowerCase().includes('call')) {
+                    return (
+                      <a
+                        key={index}
+                        href="tel:6374913298"
+                        className="btn-secondary"
+                      >
+                        {btn.text}
                         <i className="fa-solid fa-phone" style={{ marginLeft: '8px', fontSize: '12px' }} />
-                      ) : null
-                    )}
-                  </Link>
-                ))}
+                      </a>
+                    );
+                  }
+                  // Primary buttons ("Start Your Project", etc.) → open enquiry form
+                  return (
+                    <button
+                      key={index}
+                      type="button"
+                      className={btn.type === 'primary' ? 'btn-primary' : 'btn-secondary'}
+                      onClick={() => window.dispatchEvent(new Event('openEnquiryForm'))}
+                    >
+                      {btn.text}
+                      {btn.type === 'primary' && (
+                        <i className="fa-solid fa-arrow-right" style={{ marginLeft: '8px' }} />
+                      )}
+                    </button>
+                  );
+                })}
               </div>
 
               <div className="hero-badges">
@@ -318,9 +331,13 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
               </div>
 
               <div className="why-action">
-                <Link href="/contact" className="btn-primary">
+                <button
+                  type="button"
+                  className="btn-primary"
+                  onClick={() => window.dispatchEvent(new Event('openEnquiryForm'))}
+                >
                   Let's Build Your Website <i className="fa-solid fa-arrow-right" style={{ marginLeft: '8px' }} />
-                </Link>
+                </button>
               </div>
             </div>
 
@@ -588,12 +605,21 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
               <h2 className="sd-cta-banner__heading">{data.cta.title}</h2>
               <p className="sd-cta-banner__sub">{data.cta.description}</p>
               <div style={{ marginTop: '24px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <Link href={data.cta.btnLink} className="btn-primary" style={{ borderRadius: '30px', padding: '12px 28px' }}>
+                <button
+                  type="button"
+                  className="btn-primary"
+                  style={{ borderRadius: '30px', padding: '12px 28px' }}
+                  onClick={() => window.dispatchEvent(new Event('openEnquiryForm'))}
+                >
                   {data.cta.btnText} <i className="fa-solid fa-arrow-right" style={{ marginLeft: '6px' }} />
-                </Link>
-                <Link href="/contact" className="btn-secondary" style={{ borderRadius: '30px', background: '#ffffff', color: '#0f172a', border: '1px solid #ffffff', padding: '12px 28px' }}>
+                </button>
+                <a
+                  href="tel:6374913298"
+                  className="btn-secondary"
+                  style={{ borderRadius: '30px', background: '#ffffff', color: '#0f172a', border: '1px solid #ffffff', padding: '12px 28px' }}
+                >
                   <i className="fa-solid fa-phone" style={{ marginRight: '8px' }} /> Talk to Expert
-                </Link>
+                </a>
               </div>
             </div>
             <div className="sd-cta-banner__right">
