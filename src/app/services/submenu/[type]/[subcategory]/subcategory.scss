@@ -157,8 +157,8 @@ $font-family: 'Inter', 'Outfit', sans-serif;
   position: relative;
   padding: 120px 0 60px 0;
   background: radial-gradient(circle at 80% 20%, rgba(244, 81, 11, 0.05) 0%, transparent 50%),
-              radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.03) 0%, transparent 50%),
-              #f8f9fa;
+    radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.03) 0%, transparent 50%),
+    #f8f9fa;
 
   @media (max-width: 768px) {
     padding: 100px 0 40px 0;
@@ -178,7 +178,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       color: $color-text-secondary;
       transition: $transition-smooth;
       text-decoration: none;
-      
+
       &:hover {
         color: $color-brand;
       }
@@ -196,7 +196,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 600px 1fr;
     gap: 60px;
     align-items: center;
 
@@ -315,11 +315,19 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     }
 
     .hero-img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 650px;
       height: auto;
       border-radius: 20px;
-      object-fit: cover;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+      object-fit: contain;
+
+      @media (max-width: 992px) {
+        max-width: 500px;
+      }
+
+      @media (max-width: 576px) {
+        max-width: 100%;
+      }
     }
 
     // Technology Floating Badges
@@ -397,16 +405,39 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 // Floating animations
 @keyframes floatAnim1 {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(3deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
 }
+
 @keyframes floatAnim2 {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(-3deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-3deg);
+  }
 }
+
 @keyframes floatAnim3 {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(2deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
 }
 
 /* ══════════════ SECTION 2: ABOUT ══════════════ */
@@ -435,7 +466,6 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 
     .about-img {
       width: 100%;
@@ -477,6 +507,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
+
     @media (max-width: 576px) {
       grid-template-columns: 1fr;
       gap: 16px;
@@ -507,14 +538,17 @@ $font-family: 'Inter', 'Outfit', sans-serif;
         background: rgba(244, 81, 11, 0.08);
         color: #f4510b;
       }
+
       &.card-color-blue {
         background: rgba(14, 165, 233, 0.08);
         color: #0ea5e9;
       }
+
       &.card-color-green {
         background: rgba(34, 197, 94, 0.08);
         color: #22c55e;
       }
+
       &.card-color-purple {
         background: rgba(168, 85, 247, 0.08);
         color: #a855f7;
@@ -568,10 +602,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
     @media (max-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
+
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
       gap: 16px;
@@ -605,12 +641,29 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       opacity: 0;
     }
 
-    &.border-color-orange::before { background: #f4510b; }
-    &.border-color-blue::before { background: #0ea5e9; }
-    &.border-color-orange-red::before { background: #ff4500; }
-    &.border-color-purple::before { background: #a855f7; }
-    &.border-color-green::before { background: #22c55e; }
-    &.border-color-red::before { background: #ef4444; }
+    &.border-color-orange::before {
+      background: #f4510b;
+    }
+
+    &.border-color-blue::before {
+      background: #0ea5e9;
+    }
+
+    &.border-color-orange-red::before {
+      background: #ff4500;
+    }
+
+    &.border-color-purple::before {
+      background: #a855f7;
+    }
+
+    &.border-color-green::before {
+      background: #22c55e;
+    }
+
+    &.border-color-red::before {
+      background: #ef4444;
+    }
 
     .offering-icon-box {
       width: 46px;
@@ -677,6 +730,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
     @media (max-width: 1100px) {
       grid-template-columns: 1.1fr 0.9fr;
+
       .why-stats-col {
         grid-column: span 2;
         display: grid;
@@ -687,10 +741,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+
       .why-stats-col {
         grid-column: span 1;
         grid-template-columns: 1fr;
       }
+
       .why-video-col {
         display: flex;
         justify-content: center;
@@ -806,14 +862,17 @@ $font-family: 'Inter', 'Outfit', sans-serif;
         background: rgba(244, 81, 11, 0.08);
         color: #f4510b;
       }
+
       &.stat-color-blue .stat-icon-wrap {
         background: rgba(14, 165, 233, 0.08);
         color: #0ea5e9;
       }
+
       &.stat-color-green .stat-icon-wrap {
         background: rgba(34, 197, 94, 0.08);
         color: #22c55e;
       }
+
       &.stat-color-purple .stat-icon-wrap {
         background: rgba(168, 85, 247, 0.08);
         color: #a855f7;
@@ -826,6 +885,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
           margin-bottom: 2px;
           color: $color-text-primary;
         }
+
         p {
           font-size: 13px;
           color: $color-text-secondary;
@@ -846,9 +906,11 @@ $font-family: 'Inter', 'Outfit', sans-serif;
   0% {
     box-shadow: 0 0 0 0 rgba(244, 81, 11, 0.5);
   }
+
   70% {
     box-shadow: 0 0 0 15px rgba(244, 81, 11, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(244, 81, 11, 0);
   }
@@ -904,6 +966,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
+
     @media (max-width: 576px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -991,8 +1054,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     @media (max-width: 992px) {
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      .step-connector { display: none !important; }
+
+      .step-connector {
+        display: none !important;
+      }
     }
+
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
     }
@@ -1096,6 +1163,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
+
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
       gap: 20px;
@@ -1133,9 +1201,17 @@ $font-family: 'Inter', 'Outfit', sans-serif;
           border-radius: 50%;
           display: inline-block;
 
-          &.dot-red { background: #ff5f56; }
-          &.dot-yellow { background: #ffbd2e; }
-          &.dot-green { background: #27c93f; }
+          &.dot-red {
+            background: #ff5f56;
+          }
+
+          &.dot-yellow {
+            background: #ffbd2e;
+          }
+
+          &.dot-green {
+            background: #27c93f;
+          }
         }
       }
 
@@ -1264,6 +1340,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
       .author-meta {
         flex-grow: 1;
+
         .author-name {
           font-size: 16px;
           font-weight: 700;
@@ -1271,6 +1348,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
           margin-bottom: 2px;
           color: $color-text-primary;
         }
+
         .author-role {
           font-size: 13px;
           color: $color-text-secondary;
@@ -1394,8 +1472,8 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 
 .sd-cta-banner {
   background: radial-gradient(circle at 10% 20%, rgba(244, 81, 11, 0.15), rgba(0, 0, 0, 0) 40%),
-              radial-gradient(circle at 90% 80%, rgba(244, 81, 11, 0.12), rgba(0, 0, 0, 0) 40%),
-              linear-gradient(135deg, #0b0b0f 0%, #12121a 50%, #0b0b0f 100%);
+    radial-gradient(circle at 90% 80%, rgba(244, 81, 11, 0.12), rgba(0, 0, 0, 0) 40%),
+    linear-gradient(135deg, #0b0b0f 0%, #12121a 50%, #0b0b0f 100%);
   border-radius: 20px;
   padding: 40px 60px;
   display: flex;
@@ -1544,33 +1622,83 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     opacity: 0;
   }
 
-  .spark-1 { left: 20%; animation: sparkShoot 1s infinite 0.1s; }
-  .spark-2 { left: 40%; animation: sparkShoot 0.8s infinite 0.3s; }
-  .spark-3 { left: 60%; animation: sparkShoot 1.2s infinite 0s; }
-  .spark-4 { left: 80%; animation: sparkShoot 0.9s infinite 0.4s; }
+  .spark-1 {
+    left: 20%;
+    animation: sparkShoot 1s infinite 0.1s;
+  }
+
+  .spark-2 {
+    left: 40%;
+    animation: sparkShoot 0.8s infinite 0.3s;
+  }
+
+  .spark-3 {
+    left: 60%;
+    animation: sparkShoot 1.2s infinite 0s;
+  }
+
+  .spark-4 {
+    left: 80%;
+    animation: sparkShoot 0.9s infinite 0.4s;
+  }
 }
 
 @keyframes rocketFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(1.5deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
 }
 
 @keyframes flameFlickerOuter {
-  0% { transform: translateX(-50%) scale(0.95, 0.95); opacity: 0.85; }
-  100% { transform: translateX(-50%) scale(1.05, 1.15); opacity: 1; filter: blur(4px) drop-shadow(0 0 15px rgba(255, 69, 0, 0.6)); }
+  0% {
+    transform: translateX(-50%) scale(0.95, 0.95);
+    opacity: 0.85;
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1.05, 1.15);
+    opacity: 1;
+    filter: blur(4px) drop-shadow(0 0 15px rgba(255, 69, 0, 0.6));
+  }
 }
 
 @keyframes flameFlickerMid {
-  0% { transform: translateX(-50%) scale(0.97, 0.9); }
-  100% { transform: translateX(-50%) scale(1.03, 1.1); filter: blur(2.5px) drop-shadow(0 0 8px rgba(255, 165, 0, 0.8)); }
+  0% {
+    transform: translateX(-50%) scale(0.97, 0.9);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1.03, 1.1);
+    filter: blur(2.5px) drop-shadow(0 0 8px rgba(255, 165, 0, 0.8));
+  }
 }
 
 @keyframes flameFlickerCore {
-  0% { transform: translateX(-50%) scale(0.98, 0.9); }
-  100% { transform: translateX(-50%) scale(1.02, 1.05); }
+  0% {
+    transform: translateX(-50%) scale(0.98, 0.9);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1.02, 1.05);
+  }
 }
 
 @keyframes sparkShoot {
-  0% { top: 0%; transform: translateX(0) scale(1); opacity: 1; }
-  100% { top: 100%; transform: translateX(-15px) scale(0.2); opacity: 0; }
+  0% {
+    top: 0%;
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    transform: translateX(-15px) scale(0.2);
+    opacity: 0;
+  }
 }

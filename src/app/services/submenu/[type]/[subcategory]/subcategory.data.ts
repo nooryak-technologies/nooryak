@@ -209,13 +209,13 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-bolt", text: "Instant Loading Speeds" },
         { icon: "fa-solid fa-award", text: "Premium Brand Aesthetics" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/website_development2.png"
     },
     about: {
       label: "ABOUT WEBSITE DEVELOPMENT",
       title: "Crafting High-Performance Websites",
       description: "Our approach integrates aesthetic UI/UX design with reliable web technologies. We don't just build sites; we craft business platforms that scale with your growth.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/website_development.png",
       features: [
         { icon: "fa-solid fa-crop", title: "Custom Layouts", description: "Design tailormade for your company's branding and color schemes." },
         { icon: "fa-solid fa-gauge", title: "Core Web Vitals", description: "Highly optimized to achieve high ratings on Google PageSpeed Insights." },
@@ -321,13 +321,13 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-shield", text: "Highly Secure Setup" },
         { icon: "fa-solid fa-pen-to-square", text: "Easy Page Builders" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/wordpress_2.png"
     },
     about: {
       label: "ABOUT WORDPRESS WEBSITE",
       title: "Why Choose Custom WordPress?",
       description: "WordPress powers over 40% of the web due to its flexibility. We avoid heavy pre-made themes, coding clean and lightweight WordPress sites that are secure and highly visible on search engines.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/wordpress.png",
       features: [
         { icon: "fa-solid fa-pencil", title: "Easy CMS Control", description: "Manage blogs, updates, and layouts easily without typing code." },
         { icon: "fa-solid fa-plug", title: "Infinite Integrations", description: "Connect CRMs, email tools, payments, and analytical trackers." },
@@ -433,13 +433,13 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-chart-line", text: "Sales Analytics Dashboard" },
         { icon: "fa-solid fa-truck-ramp-box", text: "Stock Tracking & Shipping" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/ecommerce_1.png"
     },
     about: {
       label: "ABOUT ECOMMERCE WEBSITES",
       title: "Turning Visitors Into Loyal Customers",
       description: "An online store must load fast, look premium, and make buying effortless. We combine product-centric UX, quick-fill checkout pipelines, and mobile layouts to increase order value and decrease cart abandonment.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/ecommerce_2.png",
       features: [
         { icon: "fa-solid fa-bolt", title: "1-Second Load Times", description: "Fast load times prevent customers from bouncing to competitors." },
         { icon: "fa-solid fa-mobile", title: "Mobile Shop First", description: "More than 70% of traffic is mobile. We design mobile layouts first." },
@@ -545,13 +545,13 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
         { icon: "fa-solid fa-puzzle-piece", text: "App Setup & Integration" },
         { icon: "fa-solid fa-gauge-high", text: "Fast loading Shopify Sections" }
       ],
-      image: "/assets/images/services/webdevelopment.png"
+      image: "/assets/images/services/submenu/shopify.png"
     },
     about: {
       label: "ABOUT SHOPIFY WEBSITE",
       title: "Maximize Shopify Capabilities",
       description: "While basic templates look cookie-cutter, we code custom Shopify layouts that look premium and load instantly. We build headless Shopify solutions or write clean custom Liquid files to help your brand stand out.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/shopify.png",
       features: [
         { icon: "fa-solid fa-code", title: "Custom Liquid Theme", description: "Clean theme styling tailored specifically to match your UI/UX designs." },
         { icon: "fa-solid fa-cubes", title: "Shopify App Setup", description: "Configuring CRM, reviews, upsell, and loyalty applications." },

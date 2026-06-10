@@ -201,7 +201,7 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
               <Image
                 src={data.hero.image}
                 alt={subcategoryTitle}
-                width={560}
+                width={750}
                 height={500}
                 className="hero-img"
                 priority
@@ -221,7 +221,7 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
                 src={data.about.image}
                 alt={data.about.title}
                 width={540}
-                height={420}
+                height={360}
                 className="about-img"
               />
             </div>
