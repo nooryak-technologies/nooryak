@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { subcategoryDataMap, SubcategoryData } from './subcategory.data';
 import { subcategoryFloatingBadgesMap } from './subcategory.badges';
 import SubcategoryContent from './SubcategoryContent';
-import { getSubcategoryTechStack } from './subcategory.tech';
+import { getSubcategoryTechStack, getSubcategoryAboutImage } from './subcategory.tech';
 
 interface Props {
   params: Promise<{ type: string; subcategory: string }>;
@@ -154,6 +154,12 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
     label: 'TECHNOLOGIES WE USE',
     title: 'Powered By Modern Technical Stack',
     items: getSubcategoryTechStack(normSubcat),
+  };
+
+  // Override about image with dynamic/explicit image based on subcategory
+  data.about = {
+    ...data.about,
+    image: getSubcategoryAboutImage(normSubcat),
   };
 
   return data;

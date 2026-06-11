@@ -166,17 +166,20 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       margin-left: -21px;
       margin-right: -36px;
     }
+
     .hero-visual {
       justify-content: flex-end;
       width: 100%;
       height: 100%;
     }
+
     .hero-visual-inner {
       width: 100%;
       height: 100%;
       max-width: none;
       display: block;
     }
+
     .hero-img {
       max-width: none;
       width: 100%;
@@ -240,34 +243,44 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     display: grid;
     grid-template-columns: 650px 1fr;
     gap: 60px;
-    align-items: center;
 
     @media (max-width: 992px) {
       display: flex !important;
       flex-direction: column !important;
-      gap: 30px !important;
+      gap: 0px !important;
 
       .hero-copy {
         display: contents !important;
       }
 
-      .hero-eyebrow { order: 1 !important; }
-      .hero-title { order: 2 !important; }
-      .hero-desc { order: 3 !important; }
-      .hero-visual { 
-        order: 4 !important; 
+      .hero-eyebrow {
+        order: 1 !important;
+      }
+
+      .hero-title {
+        order: 2 !important;
+      }
+
+      .hero-desc {
+        order: 3 !important;
+      }
+
+      .hero-visual {
+        order: 4 !important;
         margin-bottom: 24px !important;
         width: 100% !important;
       }
-      .hero-actions { 
-        order: 5 !important; 
+
+      .hero-actions {
+        order: 5 !important;
         margin-bottom: 24px !important;
         width: 100% !important;
         justify-content: center !important;
         display: flex !important;
       }
-      .hero-badges { 
-        order: 6 !important; 
+
+      .hero-badges {
+        order: 6 !important;
         border-top: none !important;
         padding-top: 10px !important;
         margin-top: 0 !important;
@@ -311,7 +324,18 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     }
 
     @media (max-width: 768px) {
-      font-size: 34px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+
+  }
+
+
+  @media (max-width: 768px) {
+
+    .subcat-hero .hero-title {
+      margin-bottom: 8px;
     }
   }
 
@@ -440,7 +464,8 @@ $font-family: 'Inter', 'Outfit', sans-serif;
         font-size: 20px;
         gap: 2px;
 
-        .badge-label, .badge-name {
+        .badge-label,
+        .badge-name {
           font-size: 7.5px;
         }
       }
@@ -451,7 +476,8 @@ $font-family: 'Inter', 'Outfit', sans-serif;
         font-size: 16px;
         gap: 1px;
 
-        .badge-label, .badge-name {
+        .badge-label,
+        .badge-name {
           display: none;
         }
       }
@@ -607,7 +633,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     }
 
     @media (max-width: 576px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
   }
@@ -1338,9 +1364,11 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     &.badge-color-0 {
       background-color: #2563eb; // Royal blue
     }
+
     &.badge-color-1 {
       background-color: #16a34a; // Emerald green
     }
+
     &.badge-color-2 {
       background-color: #7c3aed; // Purple/indigo
     }

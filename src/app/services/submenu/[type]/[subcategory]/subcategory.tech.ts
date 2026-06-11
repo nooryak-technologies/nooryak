@@ -316,3 +316,143 @@ export function getSubcategoryTechStack(subcategory: string): TechItem[] {
     { name: 'WordPress', icon: '' },
   ];
 }
+
+export function getSubcategoryAboutImage(subcategory: string): string {
+  const norm = subcategory.toLowerCase()
+    .replace(/_/g, '-')
+    .replace(/\//g, '-')
+    .replace(/&/g, '-')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  if (norm === 'google-ads') {
+    return '/assets/images/services/submenu/google_ads.png';
+  }
+  if (norm === 'facebook-ads') {
+    return '/assets/images/services/submenu/facebook_ads.png';
+  }
+  if (norm === 'display-advertising') {
+    return '/assets/images/services/submenu/display_advertising.png';
+  }
+  if (norm === 'remarketing-campaigns') {
+    return '/assets/images/services/submenu/remarketing_campaigns.png';
+  }
+  if (norm === 'ai-automations' || norm === 'ai-automation') {
+    return '/assets/images/services/submenu/ai_automation.png';
+  }
+  if (
+    norm === 'search-engine-optimization' ||
+    norm === 'on-page-optimization' ||
+    norm === 'technical-seo' ||
+    norm === 'local-seo-tools' ||
+    norm === 'google-my-business-ranking' ||
+    norm === 'local-directory-listings'
+  ) {
+    return '/assets/images/services/submenu/seo_optimization.png';
+  }
+  if (norm === 'search-engine-marketing' || norm === 'off-page-optimization') {
+    return '/assets/images/services/submenu/seo_marketing.png';
+  }
+  if (
+    norm === 'social-media-marketing' ||
+    norm === 'social-media-advertising' ||
+    norm === 'social-media-post-scheduling'
+  ) {
+    return '/assets/images/services/submenu/socialmedia_marketing.png';
+  }
+  if (norm === 'sms-marketing') {
+    return '/assets/images/services/submenu/sms_marketing.png';
+  }
+  if (
+    norm === 'facebook-marketing' ||
+    norm === 'instagram-marketing' ||
+    norm === 'youtube-marketing' ||
+    norm === 'linkedin-marketing' ||
+    norm === 'twitter-marketing'
+  ) {
+    return '/assets/images/services/submenu/facebook_marketing.png';
+  }
+  if (norm === 'content-marketing') {
+    return '/assets/images/services/submenu/content_marketing.png';
+  }
+
+  // Fallbacks:
+  // Android Application
+  if (norm === 'android-application') {
+    return '/assets/images/services/submenu/android_development.png';
+  }
+  // iOS Application
+  if (norm === 'ios-application') {
+    return '/assets/images/services/submenu/ios_development.png';
+  }
+  // React Native
+  if (norm === 'react-native') {
+    return '/assets/images/services/submenu/reactnative_development.png';
+  }
+  // Flutter App Development
+  if (norm === 'flutter-app-development') {
+    return '/assets/images/services/submenu/flutter_development.png';
+  }
+  // Web development:
+  if (
+    norm === 'web-developer' ||
+    norm === 'website-development' ||
+    norm === 'custom-website-development' ||
+    norm === 'website-design-and-development'
+  ) {
+    return '/assets/images/services/submenu/custom_webdevelopment.png';
+  }
+  if (norm === 'wordpress-website') {
+    return '/assets/images/services/submenu/wordpress_about.png';
+  }
+  if (
+    norm === 'ecommerce-website' ||
+    norm === 'woocommerce-website' ||
+    norm === 'ecommerce-development'
+  ) {
+    return '/assets/images/services/submenu/ecommerce_about.png';
+  }
+  if (norm === 'shopify-website' || norm === 'shopify-development') {
+    return '/assets/images/services/submenu/shopify.png';
+  }
+  if (norm === 'php-web-development') {
+    return '/assets/images/services/submenu/php_webdevelopment.png';
+  }
+  if (norm === 'react-web-development') {
+    return '/assets/images/services/submenu/reactjs_development.png';
+  }
+
+  // Graphic Design:
+  if (
+    norm.includes('design') ||
+    norm.includes('banner') ||
+    norm.includes('card') ||
+    norm.includes('event') ||
+    norm.includes('report') ||
+    norm.includes('catalogue') ||
+    norm.includes('menu') ||
+    norm.includes('marriage') ||
+    norm.includes('billboard') ||
+    norm.includes('illustration')
+  ) {
+    return '/assets/images/services/submenu/graphic_design_about.png';
+  }
+
+  // Branding:
+  if (norm === 'branding') {
+    return '/assets/images/services/submenu/graphic_design_about.png';
+  }
+
+  // Software Dev:
+  if (norm === 'software-development' || norm.includes('mlm')) {
+    return '/assets/images/services/submenu/software_development_about.png';
+  }
+
+  // Video Editing:
+  if (norm.includes('video') || norm.includes('shoot') || norm.includes('drone')) {
+    return '/assets/images/services/submenu/video_editing_about.png';
+  }
+
+  return '/assets/images/services/submenu/software_development_about.png';
+}
