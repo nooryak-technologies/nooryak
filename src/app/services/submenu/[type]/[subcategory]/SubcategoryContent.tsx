@@ -55,6 +55,157 @@ const renderTechIcon = (name: string, fallbackColor: string, fontAwesomeIcon: st
   );
 };
 
+const getSubcategoryVideoImage = (subcategory: string): string => {
+  const norm = subcategory.toLowerCase()
+    .replace(/_/g, '-')
+    .replace(/\//g, '-')
+    .replace(/&/g, '-')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  // Exact mappings for subcategories with dedicated assets
+  const exactMaps: Record<string, string> = {
+    // Web Development / Design
+    'web-developer': '/assets/images/services/submenu/web_development_video.png',
+    'website-development': '/assets/images/services/submenu/web_development_video.png',
+    'wordpress-website': '/assets/images/services/submenu/web_development_video.png',
+    'ecommerce-website': '/assets/images/services/submenu/web_development_video.png',
+    'shopify-website': '/assets/images/services/submenu/web_development_video.png',
+    'woocommerce-website': '/assets/images/services/submenu/web_development_video.png',
+    'php-web-development': '/assets/images/services/submenu/web_development_video.png',
+    'react-web-development': '/assets/images/services/submenu/web_development_video.png',
+    'ecommerce-development': '/assets/images/services/submenu/web_development_video.png',
+    'shopify-development': '/assets/images/services/submenu/web_development_video.png',
+    'custom-website-development': '/assets/images/services/submenu/web_development_video.png',
+    'website-design-and-development': '/assets/images/services/submenu/web_development_video.png',
+
+    // Mobile App Development
+    'android-application': '/assets/images/services/submenu/app_development_video.png',
+    'ios-application': '/assets/images/services/submenu/app_development_video.png',
+    'react-native': '/assets/images/services/submenu/app_development_video.png',
+    'flutter-app-development': '/assets/images/services/submenu/app_development_video.png',
+
+    // PPC / Ads
+    'google-ads': '/assets/images/services/submenu/ppc_video.png',
+    'facebook-ads': '/assets/images/services/submenu/ppc_video.png',
+    'display-advertising': '/assets/images/services/submenu/ppc_video.png',
+    'remarketing-campaigns': '/assets/images/services/submenu/ppc_video.png',
+    'social-media-advertising': '/assets/images/services/submenu/ppc_video.png',
+
+    // Search Engine Optimization (SEO)
+    'search-engine-optimization': '/assets/images/services/submenu/seo_video.png',
+    'search-engine-marketing': '/assets/images/services/submenu/seo_video.png',
+    'on-page-optimization': '/assets/images/services/submenu/seo_video.png',
+    'off-page-optimization': '/assets/images/services/submenu/seo_video.png',
+    'technical-seo': '/assets/images/services/submenu/seo_video.png',
+
+    // Social Media Marketing & SMS & Content Marketing
+    'social-media-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'sms-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'facebook-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'content-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'instagram-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'youtube-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'linkedin-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'twitter-marketing': '/assets/images/services/submenu/social_media_video.png',
+    'social-media-post-scheduling': '/assets/images/services/submenu/social_media_video.png',
+
+    // Local SEO
+    'google-my-business-ranking': '/assets/images/services/submenu/local_seo_video.png',
+    'local-directory-listings': '/assets/images/services/submenu/local_seo_video.png',
+    'local-seo-tools': '/assets/images/services/submenu/local_seo_video.png',
+
+    // Software Development & AI Automations & MLM
+    'software-development': '/assets/images/services/submenu/software_dev_video.png',
+    'ai-automations': '/assets/images/services/submenu/software_dev_video.png',
+    'mlm-software-development': '/assets/images/services/submenu/software_dev_video.png',
+
+    // Video Editing & Production
+    'reel-videos': '/assets/images/services/submenu/video_editing_video.png',
+    'model-shoot-videos': '/assets/images/services/submenu/video_editing_video.png',
+    'realestate-drone-shots': '/assets/images/services/submenu/video_editing_video.png',
+    'custom-videos': '/assets/images/services/submenu/video_editing_video.png',
+
+    // Branding
+    'branding': '/assets/images/services/submenu/branding_video.png',
+
+    // Graphic Design
+    'logo-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'package-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'social-media-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'brochure-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'pamphlet-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'website-banners': '/assets/images/services/submenu/graphic_design_video.png',
+    'banner-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    '2d-3d-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    '2d-&-3d-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    '2d-and-3d-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'standee-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'creative-business-card-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'annual-report-design': '/assets/images/services/submenu/graphic_design_video.png',
+    'end-to-end-event-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'csr-report-design': '/assets/images/services/submenu/graphic_design_video.png',
+    'strategy-report-design': '/assets/images/services/submenu/graphic_design_video.png',
+    'catalogue-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'menu-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'marriage-card-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'hoarding-billboard-designs': '/assets/images/services/submenu/graphic_design_video.png',
+    'hoarding-billboard': '/assets/images/services/submenu/graphic_design_video.png',
+    'hoarding-billboard-design': '/assets/images/services/submenu/graphic_design_video.png',
+    'illustrations': '/assets/images/services/submenu/graphic_design_video.png',
+  };
+
+  if (exactMaps[norm]) {
+    return exactMaps[norm];
+  }
+
+  // Graphic Designing & Branding Pattern Matching
+  if (
+    norm.includes('design') ||
+    norm.includes('branding') ||
+    norm.includes('banner') ||
+    norm.includes('card') ||
+    norm.includes('event') ||
+    norm.includes('report') ||
+    norm.includes('catalogue') ||
+    norm.includes('menu') ||
+    norm.includes('marriage') ||
+    norm.includes('billboard') ||
+    norm.includes('illustration')
+  ) {
+    return '/assets/images/services/submenu/graphic_design_video.png';
+  }
+
+  // SEO & Optimization Pattern Matching
+  if (norm.includes('seo') || norm.includes('optimization') || norm.includes('ranking') || norm.includes('listing')) {
+    return '/assets/images/services/submenu/seo_video.png';
+  }
+
+  // PPC & Ads & Advertising Pattern Matching
+  if (norm.includes('ads') || norm.includes('advertising') || norm.includes('campaign')) {
+    return '/assets/images/services/submenu/ppc_video.png';
+  }
+
+  // Video Editing Pattern Matching
+  if (norm.includes('video') || norm.includes('shoot') || norm.includes('drone')) {
+    return '/assets/images/services/submenu/video_editing_video.png';
+  }
+
+  // Social Media & SMS & Content Marketing Pattern Matching
+  if (norm.includes('marketing') || norm.includes('sms') || norm.includes('social-media') || norm.includes('scheduling')) {
+    return '/assets/images/services/submenu/social_media_video.png';
+  }
+
+  // Software & AI & MLM Pattern Matching
+  if (norm.includes('software') || norm.includes('automation') || norm.includes('mlm')) {
+    return '/assets/images/services/submenu/software_dev_video.png';
+  }
+
+  // Default fallback
+  return '/assets/images/services/submenu/software_dev_video.png';
+};
+
 interface Props {
   data: SubcategoryData;
   type: string;
@@ -211,28 +362,30 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
 
             {/* Right Column Visual */}
             <div className="hero-visual">
-              <Image
-                src={data.hero.image}
-                alt={subcategoryTitle}
-                width={750}
-                height={500}
-                className="hero-img"
-                priority
-              />
-              {data.hero.floatingBadges && data.hero.floatingBadges.map((badge, index) => (
-                <div 
-                  className={`floating-badge slot-${index + 1}`} 
-                  style={{ 
-                    color: badge.color, 
-                    borderColor: badge.borderColor 
-                  } as React.CSSProperties} 
-                  key={index}
-                >
-                  {badge.label && <span className="badge-label">{badge.label}</span>}
-                  <i className={badge.iconClass} />
-                  <span className="badge-name">{badge.name}</span>
-                </div>
-              ))}
+              <div className="hero-visual-inner">
+                <Image
+                  src={data.hero.image}
+                  alt={subcategoryTitle}
+                  width={750}
+                  height={500}
+                  className="hero-img"
+                  priority
+                />
+                {data.hero.floatingBadges && data.hero.floatingBadges.map((badge, index) => (
+                  <div 
+                    className={`floating-badge slot-${index + 1}`} 
+                    style={{ 
+                      color: badge.color, 
+                      borderColor: badge.borderColor 
+                    } as React.CSSProperties} 
+                    key={index}
+                  >
+                    {badge.label && <span className="badge-label">{badge.label}</span>}
+                    <i className={badge.iconClass} />
+                    <span className="badge-name">{badge.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -345,15 +498,12 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
             <div className="why-video-col">
               <div className="video-wrap">
                 <Image
-                  src={data.whyChoose.videoThumbnail}
+                  src={getSubcategoryVideoImage(subcategory)}
                   alt="Why Choose Nooryak Technologies"
                   width={400}
                   height={500}
                   className="why-video-img"
                 />
-                <div className="play-btn-pulse">
-                  <i className="fa-solid fa-play" aria-label="Play video" />
-                </div>
               </div>
             </div>
 
@@ -424,12 +574,96 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
                 } else if (name.toLowerCase().includes("wordpress")) {
                   fontAwesomeIcon = "fa-brands fa-wordpress";
                   iconColor = "#21759b";
-                } else if (name.toLowerCase().includes("mysql")) {
+                } else if (name.toLowerCase().includes("mysql") || name.toLowerCase().includes("database") || name.toLowerCase().includes("sql")) {
                   fontAwesomeIcon = "fa-solid fa-database";
                   iconColor = "#00758f";
                 } else if (name.toLowerCase().includes("next")) {
                   fontAwesomeIcon = "fa-solid fa-n";
                   iconColor = "#ffffff";
+                } else if (name.toLowerCase().includes("kotlin")) {
+                  fontAwesomeIcon = "fa-brands fa-android";
+                  iconColor = "#7f52ff";
+                } else if (name.toLowerCase().includes("android")) {
+                  fontAwesomeIcon = "fa-brands fa-android";
+                  iconColor = "#3ddc84";
+                } else if (name.toLowerCase().includes("swift")) {
+                  fontAwesomeIcon = "fa-brands fa-swift";
+                  iconColor = "#f05138";
+                } else if (name.toLowerCase().includes("apple") || name.toLowerCase().includes("ios") || name.toLowerCase().includes("xcode")) {
+                  fontAwesomeIcon = "fa-brands fa-apple";
+                  iconColor = "#ffffff";
+                } else if (name.toLowerCase().includes("flutter")) {
+                  fontAwesomeIcon = "fa-solid fa-mobile-screen-button";
+                  iconColor = "#02569b";
+                } else if (name.toLowerCase().includes("dart")) {
+                  fontAwesomeIcon = "fa-solid fa-feather";
+                  iconColor = "#00b4ab";
+                } else if (name.toLowerCase().includes("shopify")) {
+                  fontAwesomeIcon = "fa-brands fa-shopify";
+                  iconColor = "#96bf48";
+                } else if (name.toLowerCase().includes("woocommerce")) {
+                  fontAwesomeIcon = "fa-solid fa-cart-shopping";
+                  iconColor = "#96588a";
+                } else if (name.toLowerCase().includes("python")) {
+                  fontAwesomeIcon = "fa-brands fa-python";
+                  iconColor = "#3776ab";
+                } else if (name.toLowerCase().includes("openai") || name.toLowerCase().includes("ai") || name.toLowerCase().includes("gpt")) {
+                  fontAwesomeIcon = "fa-solid fa-robot";
+                  iconColor = "#10a37f";
+                } else if (name.toLowerCase().includes("google") || name.toLowerCase().includes("analytics") || name.toLowerCase().includes("search console") || name.toLowerCase().includes("ads")) {
+                  fontAwesomeIcon = "fa-brands fa-google";
+                  iconColor = "#4285f4";
+                } else if (name.toLowerCase().includes("facebook") || name.toLowerCase().includes("instagram") || name.toLowerCase().includes("meta")) {
+                  fontAwesomeIcon = "fa-brands fa-meta";
+                  iconColor = "#0ea5e9";
+                } else if (name.toLowerCase().includes("buffer") || name.toLowerCase().includes("hootsuite") || name.toLowerCase().includes("scheduling")) {
+                  fontAwesomeIcon = "fa-solid fa-clock-rotate-left";
+                  iconColor = "#00b5ad";
+                } else if (name.toLowerCase().includes("semrush") || name.toLowerCase().includes("ahrefs") || name.toLowerCase().includes("seo") || name.toLowerCase().includes("pagespeed")) {
+                  fontAwesomeIcon = "fa-solid fa-magnifying-glass-chart";
+                  iconColor = "#ff642d";
+                } else if (name.toLowerCase().includes("photoshop")) {
+                  fontAwesomeIcon = "fa-solid fa-image";
+                  iconColor = "#31a8ff";
+                } else if (name.toLowerCase().includes("illustrator")) {
+                  fontAwesomeIcon = "fa-solid fa-bezier-curve";
+                  iconColor = "#ff9a00";
+                } else if (name.toLowerCase().includes("indesign")) {
+                  fontAwesomeIcon = "fa-solid fa-book-open";
+                  iconColor = "#ff1cec";
+                } else if (name.toLowerCase().includes("figma")) {
+                  fontAwesomeIcon = "fa-brands fa-figma";
+                  iconColor = "#f24e1e";
+                } else if (name.toLowerCase().includes("canva")) {
+                  fontAwesomeIcon = "fa-solid fa-wand-magic-sparkles";
+                  iconColor = "#00c4cc";
+                } else if (name.toLowerCase().includes("premiere")) {
+                  fontAwesomeIcon = "fa-solid fa-video";
+                  iconColor = "#ea77ff";
+                } else if (name.toLowerCase().includes("effects")) {
+                  fontAwesomeIcon = "fa-solid fa-circle-play";
+                  iconColor = "#ea77ff";
+                } else if (name.toLowerCase().includes("resolve") || name.toLowerCase().includes("davinci")) {
+                  fontAwesomeIcon = "fa-solid fa-compact-disc";
+                  iconColor = "#1188ff";
+                } else if (name.toLowerCase().includes("drone") || name.toLowerCase().includes("dji")) {
+                  fontAwesomeIcon = "fa-solid fa-helicopter";
+                  iconColor = "#ff4400";
+                } else if (name.toLowerCase().includes("git")) {
+                  fontAwesomeIcon = "fa-brands fa-git-alt";
+                  iconColor = "#f05032";
+                } else if (name.toLowerCase().includes("docker")) {
+                  fontAwesomeIcon = "fa-brands fa-docker";
+                  iconColor = "#2496ed";
+                } else if (name.toLowerCase().includes("tailwind")) {
+                  fontAwesomeIcon = "fa-solid fa-wind";
+                  iconColor = "#38bdf8";
+                } else if (name.toLowerCase().includes("typescript")) {
+                  fontAwesomeIcon = "fa-solid fa-code";
+                  iconColor = "#3178c6";
+                } else if (name.toLowerCase().includes("java")) {
+                  fontAwesomeIcon = "fa-brands fa-java";
+                  iconColor = "#007396";
                 }
                 
                 return (

@@ -485,7 +485,7 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "ABOUT ECOMMERCE WEBSITES",
       title: "Turning Visitors Into Loyal Customers",
       description: "An online store must load fast, look premium, and make buying effortless. We combine product-centric UX, quick-fill checkout pipelines, and mobile layouts to increase order value and decrease cart abandonment.",
-      image: "/assets/images/services/submenu/ecommerce_2.png",
+      image: "/assets/images/services/submenu/ecommerce.png",
       features: [
         { icon: "fa-solid fa-bolt", title: "1-Second Load Times", description: "Fast load times prevent customers from bouncing to competitors." },
         { icon: "fa-solid fa-mobile", title: "Mobile Shop First", description: "More than 70% of traffic is mobile. We design mobile layouts first." },
@@ -854,7 +854,7 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "ABOUT PHP DEVELOPMENT",
       title: "Robust Backends Driving Modern Applications",
       description: "PHP runs over 78% of the web. We build clean, modular, and maintainable PHP web backends. Using the Laravel MVC framework, we ensure your business application has a fast database structure and secure API communication.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/php_webdevelopment.png",
       features: [
         { icon: "fa-solid fa-network-wired", title: "Laravel Framework", description: "Use modern MVC principles for maintainable, clean application logic." },
         { icon: "fa-solid fa-shield", title: "SQL Injection Guard", description: "Hardened controllers built to prevent database injections and script attacks." },
@@ -977,7 +977,7 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "ABOUT REACT DEVELOPMENT",
       title: "State-of-the-Art Interactive User Interfaces",
       description: "Modern users expect instant interactions. We build React frontends using reusable component systems. By utilizing Next.js, we deliver Server-Side Rendering (SSR) to ensure your app loads instantly and ranks high on Google.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/reactjs_development.png",
       features: [
         { icon: "fa-solid fa-box", title: "Modular Components", description: "Write reusable React components, keeping files clean and upgrades simple." },
         { icon: "fa-solid fa-gauge-high", title: "SSR & Static Generation", description: "Use Next.js for server-side pre-rendering, achieving instant initial paints." },
@@ -1100,7 +1100,7 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "ABOUT ECOMMERCE DEVELOPMENT",
       title: "Advanced Retail Solutions",
       description: "We don't use slow templates. We write custom API frameworks, database queries, and storefront assets to ensure your retail operations remain online during peak holiday traffic.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/ecommerce.png",
       features: [
         { icon: "fa-solid fa-bolt", title: "Instant Page Loads", description: "Keep load times under 2 seconds to retain customers and sales." },
         { icon: "fa-solid fa-shield-halved", title: "Fully Compliant Code", description: "PCI-DSS security compliance, secure checkout encryption, and SSL." },
@@ -1223,7 +1223,7 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "ABOUT SHOPIFY DEVELOPMENT",
       title: "Custom Coded Shopify Solutions",
       description: "Avoid heavy, slow pre-made Shopify themes. We build lightweight Liquid templates or headless React frontends that load fast and rank well on search engines.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/shopify.png",
       features: [
         { icon: "fa-solid fa-code", title: "Custom Liquid Theme", description: "Bespoke Online Store 2.0 sections built to match your design styles." },
         { icon: "fa-solid fa-plug", title: "App Syncing", description: "Configure review tools, upsell funnels, and CRM trackers." },
@@ -1346,7 +1346,7 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "ABOUT CUSTOM WEBSITES",
       title: "No Templates. No Constraints.",
       description: "Standard CMS platforms fail when handling complex database relationships or custom user flows. We build custom websites from the ground up, utilizing modern React frontends and secure backend APIs to match your exact business rules.",
-      image: "/assets/images/services/softwaredevelopment.png",
+      image: "/assets/images/services/submenu/custom_webdevelopment.png",
       features: [
         { icon: "fa-solid fa-layer-group", title: "Custom Architecture", description: "Databases, server controllers, and layouts designed specifically for you." },
         { icon: "fa-solid fa-lock", title: "Hardened Security", description: "Encryption, secure cookie variables, JWT tokens, and SQL guards." },

@@ -171,6 +171,12 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       width: 100%;
       height: 100%;
     }
+    .hero-visual-inner {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      display: block;
+    }
     .hero-img {
       max-width: none;
       width: 100%;
@@ -237,8 +243,38 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     align-items: center;
 
     @media (max-width: 992px) {
-      grid-template-columns: 1fr;
-      gap: 50px;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 30px !important;
+
+      .hero-copy {
+        display: contents !important;
+      }
+
+      .hero-eyebrow { order: 1 !important; }
+      .hero-title { order: 2 !important; }
+      .hero-desc { order: 3 !important; }
+      .hero-visual { 
+        order: 4 !important; 
+        margin-bottom: 24px !important;
+        width: 100% !important;
+      }
+      .hero-actions { 
+        order: 5 !important; 
+        margin-bottom: 24px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        display: flex !important;
+      }
+      .hero-badges { 
+        order: 6 !important; 
+        border-top: none !important;
+        padding-top: 10px !important;
+        margin-top: 0 !important;
+        width: 100% !important;
+        justify-content: center !important;
+        display: flex !important;
+      }
     }
   }
 
@@ -339,31 +375,28 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     @media (max-width: 992px) {
       justify-content: center;
     }
+  }
 
-    .img-wrap {
-      position: relative;
-      width: 100%;
-      max-width: 460px;
-      aspect-ratio: 1 / 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .hero-visual-inner {
+    position: relative;
+    display: inline-block;
+    max-width: 650px;
+    width: 100%;
+
+    @media (max-width: 992px) {
+      max-width: 500px;
+    }
+
+    @media (max-width: 576px) {
+      max-width: 100%;
     }
 
     .hero-img {
       width: 100%;
-      max-width: 650px;
       height: auto;
       border-radius: 20px;
       object-fit: contain;
-
-      @media (max-width: 992px) {
-        max-width: 500px;
-      }
-
-      @media (max-width: 576px) {
-        max-width: 100%;
-      }
+      display: block;
     }
 
     // Technology Floating Badges
@@ -432,37 +465,37 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       &.slot-1 {
         top: 12%;
         left: 8%;
-        animation: floatAnim1 5s ease-in-out infinite;
+        animation: floatAnim1 2.5s ease-in-out infinite;
       }
 
       &.slot-2 {
         top: 6%;
         right: 18%;
-        animation: floatAnim2 6s ease-in-out infinite 0.5s;
+        animation: floatAnim2 3s ease-in-out infinite 0.25s;
       }
 
       &.slot-3 {
         top: 34%;
         right: 8%;
-        animation: floatAnim3 5.5s ease-in-out infinite 1s;
+        animation: floatAnim3 2.7s ease-in-out infinite 0.5s;
       }
 
       &.slot-4 {
         bottom: 28%;
         right: 14%;
-        animation: floatAnim1 5.8s ease-in-out infinite 1.5s;
+        animation: floatAnim1 2.9s ease-in-out infinite 0.75s;
       }
 
       &.slot-5 {
         bottom: 6%;
         right: 28%;
-        animation: floatAnim2 6.2s ease-in-out infinite 2s;
+        animation: floatAnim2 3.1s ease-in-out infinite 1s;
       }
 
       &.slot-6 {
         bottom: 24%;
         left: 10%;
-        animation: floatAnim3 5.2s ease-in-out infinite 2.5s;
+        animation: floatAnim3 2.6s ease-in-out infinite 1.25s;
       }
     }
   }
@@ -813,8 +846,8 @@ $font-family: 'Inter', 'Outfit', sans-serif;
       }
 
       .why-video-col {
-        display: flex;
-        justify-content: center;
+        justify-self: center;
+        width: 100%;
       }
     }
   }
