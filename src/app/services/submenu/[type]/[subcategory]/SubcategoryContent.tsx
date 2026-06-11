@@ -363,6 +363,12 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
             {/* Right Column Visual */}
             <div className="hero-visual">
               <div className="hero-visual-inner">
+                <div className="hero-orbit-wrap">
+                  <div className="orbit-ring ring-1" />
+                  <div className="orbit-ring ring-2" />
+                  <div className="orbit-ring ring-3" />
+                  <div className="orbit-glow" />
+                </div>
                 <Image
                   src={data.hero.image}
                   alt={subcategoryTitle}

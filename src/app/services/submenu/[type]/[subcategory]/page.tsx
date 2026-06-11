@@ -52,9 +52,11 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
           { icon: 'fa-solid fa-truck-delivery', text: 'On-Time Delivery' },
         ],
         image: ['android-application', 'ios-application', 'react-native', 'flutter-app-development'].includes(normSubcat.toLowerCase())
-          ? '/assets/images/services/submenu/heobanner_App.png'
+          ? '/assets/images/services/submenu/app_herobanner.png'
           : '/assets/images/services/submenu/web_developer_hero.png',
-        floatingBadges: subcategoryFloatingBadgesMap[normSubcat] ?? [],
+        floatingBadges: ['android-application', 'ios-application', 'react-native', 'flutter-app-development'].includes(normSubcat.toLowerCase())
+          ? []
+          : (subcategoryFloatingBadgesMap[normSubcat] ?? []),
       },
       about: {
         label: `ABOUT ${subcategoryTitle.toUpperCase()}`,
