@@ -180,10 +180,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "RECENT WORK",
       title: "Our Latest Web Development Projects",
       items: [
-        { title: "E-Commerce Platform", tech: "Shopify, React, Node.js", image: "/assets/images/services/ecommerce_screenshot.png", link: "/portfolio" },
-        { title: "Corporate Website", tech: "WordPress, PHP, MySQL", image: "/assets/images/services/corporate_screenshot.png", link: "/portfolio" },
-        { title: "SaaS Dashboard", tech: "React, Next.js, Node.js", image: "/assets/images/services/saas_screenshot.png", link: "/portfolio" },
-        { title: "Healthcare Website", tech: "WordPress, PHP", image: "/assets/images/services/healthcare_screenshot.png", link: "/portfolio" }
+        { title: "E-Commerce Platform", tech: "Shopify, React, Node.js", image: "/assets/images/services/submenu/Project/Project_1.png", link: "/portfolio" },
+        { title: "Corporate Website", tech: "WordPress, PHP, MySQL", image: "/assets/images/services/submenu/Project/Project_2.png", link: "/portfolio" },
+        { title: "SaaS Dashboard", tech: "React, Next.js, Node.js", image: "/assets/images/services/submenu/Project/Project_3.png", link: "/portfolio" },
+        { title: "Healthcare Portal", tech: "WordPress, PHP", image: "/assets/images/services/submenu/Project/Project_4.png", link: "/portfolio" },
+        { title: "Real Estate Website", tech: "Next.js, Node.js", image: "/assets/images/services/submenu/Project/Project_5.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -304,8 +305,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "PORTFOLIO",
       title: "Featured Website Launches",
       items: [
-        { title: "B2B SaaS Hub", tech: "Next.js, Tailwind, Node.js", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Financial Portal", tech: "React, Express, PostgreSQL", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "B2B SaaS Hub", tech: "Next.js, Tailwind, Node.js", image: "/assets/images/services/submenu/Project/Project_6.png", link: "/portfolio" },
+        { title: "Financial Portal", tech: "React, Express, PostgreSQL", image: "/assets/images/services/submenu/Project/Project_7.png", link: "/portfolio" },
+        { title: "Tech Startup Site", tech: "Next.js, Framer Motion", image: "/assets/images/services/submenu/Project/Project_8.png", link: "/portfolio" },
+        { title: "Agency Portfolio", tech: "WordPress, Elementor", image: "/assets/images/services/submenu/Project/Project_9.png", link: "/portfolio" },
+        { title: "E-Learning Platform", tech: "React, Node.js, MongoDB", image: "/assets/images/services/submenu/Project/Project_10.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -424,8 +428,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "FEATURED WORDPRESS WORK",
       title: "Real WordPress Success Stories",
       items: [
-        { title: "Tech Blog Portal", tech: "Gutenberg, PHP, Tailwind CSS", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Real Estate Website", tech: "WordPress, ACF Pro, Leaflet API", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "Tech Blog Portal", tech: "Gutenberg, PHP, Tailwind CSS", image: "/assets/images/services/submenu/Project/Project_1.png", link: "/portfolio" },
+        { title: "Real Estate Website", tech: "WordPress, ACF Pro, Leaflet API", image: "/assets/images/services/submenu/Project/Project_2.png", link: "/portfolio" },
+        { title: "News Portal", tech: "WordPress, PHP, MySQL", image: "/assets/images/services/submenu/Project/Project_3.png", link: "/portfolio" },
+        { title: "Restaurant Website", tech: "Elementor, PHP", image: "/assets/images/services/submenu/Project/Project_4.png", link: "/portfolio" },
+        { title: "Business Directory", tech: "WordPress, Custom Widgets", image: "/assets/images/services/submenu/Project/Project_5.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -544,8 +551,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "FEATURED STORES",
       title: "Storefronts Driving Sales",
       items: [
-        { title: "Apparel Brand Store", tech: "Shopify, Custom Liquid, React", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Organic Cosmetics Store", tech: "WooCommerce, Elementor, PHP", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "Apparel Brand Store", tech: "Shopify, Custom Liquid, React", image: "/assets/images/services/submenu/Project/Project_6.png", link: "/portfolio" },
+        { title: "Organic Cosmetics Store", tech: "WooCommerce, Elementor, PHP", image: "/assets/images/services/submenu/Project/Project_7.png", link: "/portfolio" },
+        { title: "Electronics Shop", tech: "WooCommerce, Custom PHP", image: "/assets/images/services/submenu/Project/Project_8.png", link: "/portfolio" },
+        { title: "Furniture Outlet", tech: "Shopify, Liquid, JS", image: "/assets/images/services/submenu/Project/Project_9.png", link: "/portfolio" },
+        { title: "Sports Gear Store", tech: "WooCommerce, React, Node.js", image: "/assets/images/services/submenu/Project/Project_10.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -664,8 +674,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "FEATURED STORES",
       title: "Custom Shopify Implementations",
       items: [
-        { title: "Home Decor Outlet", tech: "Liquid 2.0, Tailwind, AlpineJS", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Headless Apparel Shop", tech: "Next.js, Shopify Storefront API", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "Home Decor Outlet", tech: "Liquid 2.0, Tailwind, AlpineJS", image: "/assets/images/services/submenu/Project/Project_1.png", link: "/portfolio" },
+        { title: "Headless Apparel Shop", tech: "Next.js, Shopify Storefront API", image: "/assets/images/services/submenu/Project/Project_2.png", link: "/portfolio" },
+        { title: "Jewelry Brand Store", tech: "Shopify Liquid, Custom JS", image: "/assets/images/services/submenu/Project/Project_3.png", link: "/portfolio" },
+        { title: "Pet Supplies Shop", tech: "Shopify, AlpineJS, Tailwind", image: "/assets/images/services/submenu/Project/Project_4.png", link: "/portfolio" },
+        { title: "Gourmet Foods Store", tech: "Shopify OS 2.0, React", image: "/assets/images/services/submenu/Project/Project_5.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -784,8 +797,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "FEATURED STORES",
       title: "Stores Driving Conversions",
       items: [
-        { title: "Organic Coffee Shop", tech: "WooCommerce, Nginx, Tailwind", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Auto Parts Depot", tech: "WordPress, MySQL, Custom Import", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "Organic Coffee Shop", tech: "WooCommerce, Nginx, Tailwind", image: "/assets/images/services/submenu/Project/Project_6.png", link: "/portfolio" },
+        { title: "Auto Parts Depot", tech: "WordPress, MySQL, Custom Import", image: "/assets/images/services/submenu/Project/Project_7.png", link: "/portfolio" },
+        { title: "Bakery Online Store", tech: "WooCommerce, PHP, Elementor", image: "/assets/images/services/submenu/Project/Project_8.png", link: "/portfolio" },
+        { title: "Home Appliances Shop", tech: "WooCommerce, Advanced Custom Fields", image: "/assets/images/services/submenu/Project/Project_9.png", link: "/portfolio" },
+        { title: "Fashion Boutique", tech: "WooCommerce, Tailwind, JS", image: "/assets/images/services/submenu/Project/Project_10.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -904,8 +920,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "RECENT DEPLOYMENTS",
       title: "Custom PHP Case Studies",
       items: [
-        { title: "B2B Client Dashboard", tech: "Laravel, VueJS, PostgreSQL", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "School ERP System", tech: "Laravel, PHP, MySQL", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "B2B Client Dashboard", tech: "Laravel, VueJS, PostgreSQL", image: "/assets/images/services/submenu/Project/Project_1.png", link: "/portfolio" },
+        { title: "School ERP System", tech: "Laravel, PHP, MySQL", image: "/assets/images/services/submenu/Project/Project_2.png", link: "/portfolio" },
+        { title: "Hotel Booking System", tech: "PHP, Laravel, MySQL", image: "/assets/images/services/submenu/Project/Project_3.png", link: "/portfolio" },
+        { title: "Hospital Management Portal", tech: "PHP, CodeIgniter, Bootstrap", image: "/assets/images/services/submenu/Project/Project_4.png", link: "/portfolio" },
+        { title: "Logistics Tracking App", tech: "Laravel, REST API, React", image: "/assets/images/services/submenu/Project/Project_5.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -1024,8 +1043,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "PORTFOLIO",
       title: "Stunning React Interfaces",
       items: [
-        { title: "Fintech Dashboard", tech: "React.js, Zustand, ChartJS", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Healthcare Platform UI", tech: "Next.js, Tailwind, TypeScript", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "Fintech Dashboard", tech: "React.js, Zustand, ChartJS", image: "/assets/images/services/submenu/Project/Project_6.png", link: "/portfolio" },
+        { title: "Healthcare Platform UI", tech: "Next.js, Tailwind, TypeScript", image: "/assets/images/services/submenu/Project/Project_7.png", link: "/portfolio" },
+        { title: "Job Portal App", tech: "React, Node.js, PostgreSQL", image: "/assets/images/services/submenu/Project/Project_8.png", link: "/portfolio" },
+        { title: "Real Estate Listing App", tech: "Next.js, Google Maps API", image: "/assets/images/services/submenu/Project/Project_9.png", link: "/portfolio" },
+        { title: "Event Booking Platform", tech: "React, Redux, Firebase", image: "/assets/images/services/submenu/Project/Project_10.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -1144,8 +1166,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "PORTFOLIO",
       title: "Bespoke eCommerce Sites",
       items: [
-        { title: "Bespoke Fashion Hub", tech: "Next.js, Tailwind, Node.js", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Direct-to-Consumer Cosmetics", tech: "Shopify Custom Liquid, React", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "Bespoke Fashion Hub", tech: "Next.js, Tailwind, Node.js", image: "/assets/images/services/submenu/Project/Project_1.png", link: "/portfolio" },
+        { title: "Direct-to-Consumer Cosmetics", tech: "Shopify Custom Liquid, React", image: "/assets/images/services/submenu/Project/Project_2.png", link: "/portfolio" },
+        { title: "Grocery Delivery App", tech: "React, Node.js, Stripe", image: "/assets/images/services/submenu/Project/Project_3.png", link: "/portfolio" },
+        { title: "Multi-Vendor Marketplace", tech: "Laravel, Vue.js, MySQL", image: "/assets/images/services/submenu/Project/Project_4.png", link: "/portfolio" },
+        { title: "Luxury Watch Store", tech: "Next.js, Shopify API", image: "/assets/images/services/submenu/Project/Project_5.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -1264,8 +1289,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "FEATURED STORES",
       title: "Custom Shopify Launches",
       items: [
-        { title: "Gourmet Foods Store", tech: "Liquid 2.0, Tailwind, AlpineJS", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Bespoke Skincare Hub", tech: "Next.js, Shopify Storefront API", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "Gourmet Foods Store", tech: "Liquid 2.0, Tailwind, AlpineJS", image: "/assets/images/services/submenu/Project/Project_6.png", link: "/portfolio" },
+        { title: "Bespoke Skincare Hub", tech: "Next.js, Shopify Storefront API", image: "/assets/images/services/submenu/Project/Project_7.png", link: "/portfolio" },
+        { title: "Tech Gadgets Store", tech: "Shopify Liquid, Custom JS", image: "/assets/images/services/submenu/Project/Project_8.png", link: "/portfolio" },
+        { title: "Baby Products Shop", tech: "Shopify, AlpineJS, CSS", image: "/assets/images/services/submenu/Project/Project_9.png", link: "/portfolio" },
+        { title: "Craft Supplies Hub", tech: "Shopify OS 2.0, Tailwind", image: "/assets/images/services/submenu/Project/Project_10.png", link: "/portfolio" }
       ]
     },
     reviews: [
@@ -1384,8 +1412,11 @@ export const subcategoryDataMap: Record<string, SubcategoryData> = {
       label: "CASE STUDIES",
       title: "Advanced Custom Apps Deployed",
       items: [
-        { title: "B2B Logistics Portal", tech: "React, Node.js, PostgreSQL", image: "/assets/images/services/software_development.jpg", link: "/portfolio" },
-        { title: "Healthcare CRM Platform", tech: "Next.js, Express, MongoDB", image: "/assets/images/services/software_development.jpg", link: "/portfolio" }
+        { title: "B2B Logistics Portal", tech: "React, Node.js, PostgreSQL", image: "/assets/images/services/submenu/Project/Project_1.png", link: "/portfolio" },
+        { title: "Healthcare CRM Platform", tech: "Next.js, Express, MongoDB", image: "/assets/images/services/submenu/Project/Project_2.png", link: "/portfolio" },
+        { title: "Legal Case Manager", tech: "React, Node.js, MySQL", image: "/assets/images/services/submenu/Project/Project_3.png", link: "/portfolio" },
+        { title: "Education Dashboard", tech: "Next.js, TypeScript, PostgreSQL", image: "/assets/images/services/submenu/Project/Project_4.png", link: "/portfolio" },
+        { title: "Finance Analytics App", tech: "React, ChartJS, Node.js", image: "/assets/images/services/submenu/Project/Project_5.png", link: "/portfolio" }
       ]
     },
     reviews: [

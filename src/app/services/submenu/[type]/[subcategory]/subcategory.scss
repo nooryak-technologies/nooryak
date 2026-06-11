@@ -1217,115 +1217,219 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &__sub {
+      font-size: 15px;
+      color: $color-text-secondary;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
   }
 
   .work-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
-    @media (max-width: 1100px) {
+    @media (max-width: 900px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 576px) {
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 16px;
     }
   }
 
+  // ── Premium Project Card with Image Scroll & Dual Action Buttons ────────────────
   .work-card-premium {
-    background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #cbd5e1;
-    transition: $transition-smooth;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    border: 1.5px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    background: #ffffff;
+    position: relative;
     display: flex;
     flex-direction: column;
 
-    .browser-mockup {
-      display: flex;
-      flex-direction: column;
-      background: #ffffff;
-      border-bottom: 1px solid #cbd5e1;
-      overflow: hidden;
+    &:hover {
+      box-shadow: 0 16px 36px rgba(244, 81, 11, 0.12);
+      border-color: $color-brand;
+      transform: translateY(-5px);
 
-      .browser-header {
-        background: #f1f5f9;
-        padding: 8px 12px;
-        display: flex;
-        gap: 6px;
-        align-items: center;
-        border-bottom: 1px solid #cbd5e1;
-
-        .dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          display: inline-block;
-
-          &.dot-red {
-            background: #ff5f56;
-          }
-
-          &.dot-yellow {
-            background: #ffbd2e;
-          }
-
-          &.dot-green {
-            background: #27c93f;
-          }
-        }
-      }
-
-      .work-img-wrap {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        overflow: hidden;
-        position: relative;
-
-        .work-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
+      .work-scroll-inner {
+        // scroll the full screenshot upward — smooth slow scroll effect
+        transform: translateY(calc(-100% + 240px));
       }
     }
 
-    .work-details {
-      padding: 18px;
-      text-align: left;
-
-      .work-tech {
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: $color-brand;
-        letter-spacing: 1px;
-        margin-bottom: 6px;
-        display: block;
+    @media (max-width: 600px) {
+      &:hover .work-scroll-inner {
+        transform: translateY(calc(-100% + 200px)) !important;
       }
+    }
+  }
 
-      h4 {
-        font-size: 15px;
-        font-weight: 800;
-        color: $color-text-primary;
-        margin: 0;
-        line-height: 1.3;
-      }
+  // ── Viewport window ────────────────────────────────────────────────
+  .work-scroll-wrap {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    background: #f1f5f9;
+    cursor: pointer;
+
+    @media (max-width: 600px) {
+      height: 200px;
+    }
+  }
+
+  // ── Tag Badge overlay on top-left of image ────────────────────────
+  .work-card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 9px;
+    font-weight: 800;
+    color: #ffffff;
+    padding: 4px 9px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 5;
+    pointer-events: none;
+
+    &.badge-color-0 {
+      background-color: #2563eb; // Royal blue
+    }
+    &.badge-color-1 {
+      background-color: #16a34a; // Emerald green
+    }
+    &.badge-color-2 {
+      background-color: #7c3aed; // Purple/indigo
+    }
+  }
+
+  // ── Scrolling image inside the viewport ────────────────────────────
+  .work-scroll-inner {
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+
+    .work-scroll-img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  // ── Card Details footer block ─────────────────────────────────────
+  .work-card-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #ffffff;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .work-card-tech {
+    font-size: 11px;
+    font-weight: 700;
+    color: $color-brand;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .work-card-title {
+    font-size: 15.5px;
+    font-weight: 800;
+    color: $color-text-primary;
+    line-height: 1.35;
+    margin: 0 0 16px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 44px; // Uniform title height to align action rows perfectly
+  }
+
+  // ── Card Actions dual buttons ─────────────────────────────────────
+  .work-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    width: 100%;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  .btn-live-preview {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 12px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #475569;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    i {
+      font-size: 12px;
     }
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-      border-color: rgba(244, 81, 11, 0.25);
+      background: #f8fafc;
+      color: $color-text-primary;
+      border-color: #94a3b8;
+    }
+  }
 
-      .browser-mockup .work-img-wrap .work-img {
-        transform: scale(1.04);
-      }
+  .btn-purchase {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 12px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #ffffff;
+    background: $color-brand;
+    border: 1px solid $color-brand;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    i {
+      font-size: 11px;
+    }
+
+    &:hover {
+      background: $color-brand-hover;
+      border-color: $color-brand-hover;
+      box-shadow: 0 4px 10px rgba(244, 81, 11, 0.2);
     }
   }
 
@@ -1334,6 +1438,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     margin-top: 50px;
   }
 }
+
 
 /* ══════════════ SECTION 8: FAQ & TESTIMONIAL SPLIT ══════════════ */
 .subcat-split {

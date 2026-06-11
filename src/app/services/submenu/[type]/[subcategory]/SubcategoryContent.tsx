@@ -482,33 +482,42 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
             <div className="work-head">
               <span className="section-label">{data.recentWork.label}</span>
               <h2 className="section-title">{data.recentWork.title}</h2>
+              <p className="work-head__sub">Hover over a project to explore our work in detail</p>
             </div>
 
             <div className="work-grid">
-              {data.recentWork.items.map((project, index) => (
-                <div className="work-card-premium" key={index}>
-                  <div className="browser-mockup">
-                    <div className="browser-header">
-                      <span className="dot dot-red" />
-                      <span className="dot dot-yellow" />
-                      <span className="dot dot-green" />
+              {data.recentWork.items.map((project, index) => {
+                const firstTech = project.tech ? project.tech.split(',')[0].trim() : 'Project';
+                return (
+                  <div className="work-card-premium" key={index}>
+                    <div className="work-scroll-wrap">
+                      <div className="work-scroll-inner">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="work-scroll-img"
+                        />
+                      </div>
+                      <span className={`work-card-badge badge-color-${index % 3}`}>
+                        {firstTech}
+                      </span>
                     </div>
-                    <div className="work-img-wrap">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={560}
-                        height={350}
-                        className="work-img"
-                      />
+                    <div className="work-card-details">
+                      <p className="work-card-tech">{project.tech}</p>
+                      <h4 className="work-card-title" title={project.title}>{project.title}</h4>
+                      <div className="work-card-actions">
+                        <Link href={project.link || "/portfolio"} className="btn-live-preview">
+                          <i className="fa-regular fa-eye" /> Live Preview
+                        </Link>
+                        <Link href={project.link || "/portfolio"} className="btn-purchase">
+                          View Project <i className="fa-solid fa-arrow-up-right-from-square" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                  <div className="work-details">
-                    <span className="work-tech">{project.tech}</span>
-                    <h4>{project.title}</h4>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="work-action-row">

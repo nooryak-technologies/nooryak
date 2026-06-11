@@ -123,8 +123,11 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
       label: 'RECENT WORK',
       title: `Our Latest ${subcategoryTitle} Projects`,
       items: [
-        { title: `${subcategoryTitle} Project`, tech: 'React, Next.js, Node.js', image: '/assets/images/services/software_development.jpg', link: '/portfolio' },
-        { title: `Enterprise Portal`, tech: 'Next.js, Python, PostgreSQL', image: '/assets/images/services/software_development.jpg', link: '/portfolio' },
+        { title: `${subcategoryTitle} Project`, tech: 'React, Next.js, Node.js', image: '/assets/images/services/submenu/Project/Project_1.png', link: '/portfolio' },
+        { title: `Enterprise Portal`, tech: 'Next.js, Python, PostgreSQL', image: '/assets/images/services/submenu/Project/Project_2.png', link: '/portfolio' },
+        { title: `Digital Platform`, tech: 'React, Node.js, MySQL', image: '/assets/images/services/submenu/Project/Project_3.png', link: '/portfolio' },
+        { title: `Business App`, tech: 'Next.js, TypeScript, MongoDB', image: '/assets/images/services/submenu/Project/Project_4.png', link: '/portfolio' },
+        { title: `Web Solution`, tech: 'PHP, Laravel, MySQL', image: '/assets/images/services/submenu/Project/Project_5.png', link: '/portfolio' },
       ],
     },
     reviews: [
