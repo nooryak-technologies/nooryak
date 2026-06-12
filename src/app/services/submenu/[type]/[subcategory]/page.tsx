@@ -53,8 +53,35 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
         ],
         image: ['android-application', 'ios-application', 'react-native', 'flutter-app-development'].includes(normSubcat.toLowerCase())
           ? '/assets/images/services/submenu/app_herobanner.png'
-          : '/assets/images/services/submenu/web_developer_hero.png',
-        floatingBadges: ['android-application', 'ios-application', 'react-native', 'flutter-app-development'].includes(normSubcat.toLowerCase())
+          : (normSubcat.toLowerCase() === 'software-development' || normSubcat.toLowerCase() === 'softwaredevelopment')
+            ? '/assets/images/services/submenu/software_developmen.png'
+            : (normType.toLowerCase() === 'ppc' || normSubcat.toLowerCase() === 'ppc')
+              ? '/assets/images/services/submenu/ppc_image.png'
+              : (normSubcat.toLowerCase() === 'ai-automations' || normSubcat.toLowerCase() === 'ai-automation')
+                ? '/assets/images/services/submenu/ai_automation.png'
+                : (normType.toLowerCase() === 'digital-marketing' || normType.toLowerCase() === 'digital_marketing')
+                  ? '/assets/images/services/submenu/digital_marketing.png'
+                  : (normType.toLowerCase() === 'social-media-marketing' || normType.toLowerCase() === 'social_media_marketing')
+                    ? '/assets/images/services/submenu/social_mediamarketing.png'
+                    : (normType.toLowerCase() === 'local-seo' || normType.toLowerCase() === 'local_seo')
+                      ? '/assets/images/services/submenu/local_seo.png'
+                      : (normType.toLowerCase() === 'graphic-designing' || normType.toLowerCase() === 'graphic_designing')
+                        ? '/assets/images/services/submenu/graphic_designing.png'
+                        : (normType.toLowerCase() === 'video-editing' || normType.toLowerCase() === 'video_editing')
+                          ? '/assets/images/services/submenu/video_editing.png'
+                          : '/assets/images/services/submenu/web_developer_hero.png',
+        floatingBadges: [
+          'android-application',
+          'ios-application',
+          'react-native',
+          'flutter-app-development',
+          'google-ads',
+          'facebook-ads',
+          'display-advertising',
+          'remarketing-campaigns',
+          'software-development',
+          'ai-automations'
+        ].includes(normSubcat.toLowerCase())
           ? []
           : (subcategoryFloatingBadgesMap[normSubcat] ?? []),
       },
@@ -163,6 +190,43 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
     ...data.about,
     image: getSubcategoryAboutImage(normSubcat),
   };
+
+  // Override hero image if specific subcategories/categories
+  const subcatLower = normSubcat.toLowerCase();
+  const typeLower = normType.toLowerCase();
+  if (subcatLower === 'software-development' || subcatLower === 'softwaredevelopment') {
+    data.hero.image = '/assets/images/services/submenu/software_developmen.png';
+  } else if (typeLower === 'ppc' || subcatLower === 'ppc') {
+    data.hero.image = '/assets/images/services/submenu/ppc_image.png';
+  } else if (subcatLower === 'ai-automations' || subcatLower === 'ai-automation') {
+    data.hero.image = '/assets/images/services/submenu/ai_automation.png';
+  } else if (typeLower === 'digital-marketing' || typeLower === 'digital_marketing') {
+    data.hero.image = '/assets/images/services/submenu/digital_marketing.png';
+  } else if (typeLower === 'social-media-marketing' || typeLower === 'social_media_marketing') {
+    data.hero.image = '/assets/images/services/submenu/social_mediamarketing.png';
+  } else if (typeLower === 'local-seo' || typeLower === 'local_seo') {
+    data.hero.image = '/assets/images/services/submenu/local_seo.png';
+  } else if (typeLower === 'graphic-designing' || typeLower === 'graphic_designing') {
+    data.hero.image = '/assets/images/services/submenu/graphic_designing.png';
+  } else if (typeLower === 'video-editing' || typeLower === 'video_editing') {
+    data.hero.image = '/assets/images/services/submenu/video_editing.png';
+  }
+
+  // Override floating badges if specific subcategories
+  if ([
+    'android-application',
+    'ios-application',
+    'react-native',
+    'flutter-app-development',
+    'google-ads',
+    'facebook-ads',
+    'display-advertising',
+    'remarketing-campaigns',
+    'software-development',
+    'ai-automations'
+  ].includes(subcatLower)) {
+    data.hero.floatingBadges = [];
+  }
 
   return data;
 }

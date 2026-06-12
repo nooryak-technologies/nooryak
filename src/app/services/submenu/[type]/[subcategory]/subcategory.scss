@@ -285,7 +285,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
         padding-top: 10px !important;
         margin-top: 0 !important;
         width: 100% !important;
-        justify-content: center !important;
+        // justify-content: center !important;
         display: flex !important;
       }
     }
@@ -733,7 +733,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
     }
 
     @media (max-width: 480px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
   }
@@ -1940,6 +1940,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
 .subcat-page--react-native,
 .subcat-page--flutter-app-development {
   .subcat-hero {
+
     // Reduce mockup sizing on desktop and mobile
     .hero-img {
       max-height: 520px !important;
@@ -1999,6 +2000,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
         min-width: 450px;
         min-height: 450px;
       }
+
       @media (max-width: 576px) {
         min-width: 320px;
         min-height: 320px;
@@ -2009,7 +2011,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
         border-radius: 50%;
         transform-style: preserve-3d;
         filter: drop-shadow(0 0 5px rgba(244, 81, 11, 0.55));
-        
+
         &.ring-1 {
           width: 480px;
           height: 480px;
@@ -2020,6 +2022,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
             width: 380px;
             height: 380px;
           }
+
           @media (max-width: 576px) {
             width: 290px;
             height: 290px;
@@ -2036,6 +2039,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
             width: 300px;
             height: 300px;
           }
+
           @media (max-width: 576px) {
             width: 230px;
             height: 230px;
@@ -2052,6 +2056,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
             width: 230px;
             height: 230px;
           }
+
           @media (max-width: 576px) {
             width: 170px;
             height: 170px;
@@ -2073,6 +2078,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
           height: 270px;
           filter: blur(28px);
         }
+
         @media (max-width: 576px) {
           width: 190px;
           height: 190px;
@@ -2087,6 +2093,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
   0% {
     transform: rotate(0deg) rotateX(65deg) rotateY(15deg);
   }
+
   100% {
     transform: rotate(360deg) rotateX(65deg) rotateY(15deg);
   }
@@ -2096,6 +2103,7 @@ $font-family: 'Inter', 'Outfit', sans-serif;
   0% {
     transform: rotate(360deg) rotateX(55deg) rotateY(-20deg);
   }
+
   100% {
     transform: rotate(0deg) rotateX(55deg) rotateY(-20deg);
   }
