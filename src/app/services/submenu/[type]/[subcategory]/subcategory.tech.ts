@@ -341,37 +341,63 @@ export function getSubcategoryAboutImage(subcategory: string): string {
   if (norm === 'ai-automations' || norm === 'ai-automation') {
     return '/assets/images/services/submenu/ai_automation.png';
   }
-  if (
-    norm === 'search-engine-optimization' ||
-    norm === 'on-page-optimization' ||
-    norm === 'technical-seo' ||
-    norm === 'local-seo-tools' ||
-    norm === 'google-my-business-ranking' ||
-    norm === 'local-directory-listings'
-  ) {
+
+  // Exact mappings for the requested 14 subcategories:
+  if (norm === 'on-page-optimization') {
+    return '/assets/images/services/submenu/on_page_optimization.png';
+  }
+  if (norm === 'off-page-optimization') {
+    return '/assets/images/services/submenu/off_page_optimization.png';
+  }
+  if (norm === 'technical-seo') {
+    return '/assets/images/services/submenu/technical_seo.png';
+  }
+  if (norm === 'branding' || norm === 'brand') {
+    return '/assets/images/services/submenu/brand.png';
+  }
+  if (norm === 'facebook-marketing') {
+    return '/assets/images/services/submenu/facebook_marketing2.png';
+  }
+  if (norm === 'instagram-marketing') {
+    return '/assets/images/services/submenu/instagram_marketing.png';
+  }
+  if (norm === 'youtube-marketing') {
+    return '/assets/images/services/submenu/youtube_marketing.png';
+  }
+  if (norm === 'linkedin-marketing') {
+    return '/assets/images/services/submenu/linkedin_marketing.png';
+  }
+  if (norm === 'twitter-marketing') {
+    return '/assets/images/services/submenu/twitter_marketing.png';
+  }
+  if (norm === 'social-media-advertising') {
+    return '/assets/images/services/submenu/social_media_marketing.png';
+  }
+  if (norm === 'social-media-post-scheduling' || norm === 'social-media-sheduling') {
+    return '/assets/images/services/submenu/social_media_sheduling.png';
+  }
+  if (norm === 'google-my-business-ranking' || norm === 'google-mybusinessranking') {
+    return '/assets/images/services/submenu/google_mybusinessranking.png';
+  }
+  if (norm === 'local-directory-listings' || norm === 'local-directory-listing') {
+    return '/assets/images/services/submenu/local_directory_listing.png';
+  }
+  if (norm === 'local-seo-tools') {
+    return '/assets/images/services/submenu/local_seo_tools.png';
+  }
+
+  // Remaining generic SEO / marketing mappings:
+  if (norm === 'search-engine-optimization') {
     return '/assets/images/services/submenu/seo_optimization.png';
   }
-  if (norm === 'search-engine-marketing' || norm === 'off-page-optimization') {
+  if (norm === 'search-engine-marketing') {
     return '/assets/images/services/submenu/seo_marketing.png';
   }
-  if (
-    norm === 'social-media-marketing' ||
-    norm === 'social-media-advertising' ||
-    norm === 'social-media-post-scheduling'
-  ) {
+  if (norm === 'social-media-marketing') {
     return '/assets/images/services/submenu/socialmedia_marketing.png';
   }
   if (norm === 'sms-marketing') {
     return '/assets/images/services/submenu/sms_marketing.png';
-  }
-  if (
-    norm === 'facebook-marketing' ||
-    norm === 'instagram-marketing' ||
-    norm === 'youtube-marketing' ||
-    norm === 'linkedin-marketing' ||
-    norm === 'twitter-marketing'
-  ) {
-    return '/assets/images/services/submenu/facebook_marketing.png';
   }
   if (norm === 'content-marketing') {
     return '/assets/images/services/submenu/content_marketing.png';
@@ -440,8 +466,8 @@ export function getSubcategoryAboutImage(subcategory: string): string {
   }
 
   // Branding:
-  if (norm === 'branding') {
-    return '/assets/images/services/submenu/graphic_design_about.png';
+  if (norm === 'branding' || norm === 'brand') {
+    return '/assets/images/services/submenu/brand.png';
   }
 
   // Software Dev:
