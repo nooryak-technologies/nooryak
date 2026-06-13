@@ -82,19 +82,19 @@ const ContactFormArea = () => {
                                 <span className="orange-dot">•</span>
                                 <span className="kicker-text">CONTACT US</span>
                             </div>
-                            
+
                             <h1 className="contact-heading mb-25">
                                 We'd Love to Hear <br />
                                 From <span className="highlight-orange">You</span>
                             </h1>
-                            
+
                             <p className="contact-description mb-40">
                                 Have a project in mind or need expert advice? Our team is ready to
                                 help you bring your ideas to life. Get in touch with us today!
                             </p>
-                            
+
                             <div className="contact-cards-grid mb-40">
-                                <div className="row g-4">
+                                <div className="row g-2">
                                     {/* Card 1: Call Us */}
                                     <div className="col-lg-3 col-6">
                                         <div className="info-card">
@@ -106,7 +106,7 @@ const ContactFormArea = () => {
                                             <p className="card-note">Mon - Sat 10:00 AM - 7:00 PM</p>
                                         </div>
                                     </div>
-                                    
+
                                     {/* Card 2: Email Us */}
                                     <div className="col-lg-3 col-6">
                                         <div className="info-card">
@@ -118,7 +118,7 @@ const ContactFormArea = () => {
                                             <p className="card-note">We reply within 24 hours</p>
                                         </div>
                                     </div>
-                                    
+
                                     {/* Card 3: Visit Us */}
                                     <div className="col-lg-3 col-6">
                                         <div className="info-card">
@@ -131,7 +131,7 @@ const ContactFormArea = () => {
                                             </p>
                                         </div>
                                     </div>
-                                    
+
                                     {/* Card 4: Business Hours */}
                                     <div className="col-lg-3 col-6">
                                         <div className="info-card">
@@ -153,90 +153,90 @@ const ContactFormArea = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {/* Map Box */}
                             <div className="contact-map-container">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6042264474518!2d80.27275357507806!3d13.060845387262779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526703186886ef%3A0xc96617a758dc125a!2sNOORYAK%20TECHNOLOGIES%20Website%20Development%20Company%20Chennai!5e0!3m2!1sen!2sin!4v1774884227172!5m2!1sen!2sin" 
-                                    width="100%" 
-                                    height="320" 
-                                    style={{ border: 0 }} 
-                                    loading="lazy" 
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6042264474518!2d80.27275357507806!3d13.060845387262779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526703186886ef%3A0xc96617a758dc125a!2sNOORYAK%20TECHNOLOGIES%20Website%20Development%20Company%20Chennai!5e0!3m2!1sen!2sin!4v1774884227172!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="320"
+                                    style={{ border: 0 }}
+                                    loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
                             </div>
                         </div>
                     </div>
-                    
+
                     {/* Right Column: Send Us a Message Card */}
                     <div className="col-lg-6 col-12">
                         <div className="contact-form-card">
                             <h2 className="form-title">Send Us a Message</h2>
                             <p className="form-subtitle">Fill out the form below and we'll get back to you shortly.</p>
-                            
+
                             <form onSubmit={handleSubmit} className="custom-form">
                                 <div className="row g-4">
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
                                             <label>Full Name <span className="required-asterisk">*</span></label>
-                                            <input 
-                                                name="name" 
-                                                type="text" 
-                                                placeholder="Enter your full name" 
-                                                value={formData.name} 
-                                                onChange={handleChange} 
-                                                required 
+                                            <input
+                                                name="name"
+                                                type="text"
+                                                placeholder="Enter your full name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                required
                                             />
                                         </div>
                                     </div>
-                                    
+
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
                                             <label>Email Address <span className="required-asterisk">*</span></label>
-                                            <input 
-                                                name="email" 
-                                                type="email" 
-                                                placeholder="Enter your email address" 
-                                                value={formData.email} 
-                                                onChange={handleChange} 
-                                                required 
+                                            <input
+                                                name="email"
+                                                type="email"
+                                                placeholder="Enter your email address"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                required
                                             />
                                         </div>
                                     </div>
-                                    
+
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
                                             <label>Company</label>
-                                            <input 
-                                                name="company" 
-                                                type="text" 
-                                                placeholder="Enter your company name" 
-                                                value={formData.company} 
-                                                onChange={handleChange} 
+                                            <input
+                                                name="company"
+                                                type="text"
+                                                placeholder="Enter your company name"
+                                                value={formData.company}
+                                                onChange={handleChange}
                                             />
                                         </div>
                                     </div>
-                                    
+
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
                                             <label>Phone Number</label>
-                                            <input 
-                                                name="phone" 
-                                                type="tel" 
-                                                placeholder="Enter your phone number" 
-                                                value={formData.phone} 
-                                                onChange={handleChange} 
+                                            <input
+                                                name="phone"
+                                                type="tel"
+                                                placeholder="Enter your phone number"
+                                                value={formData.phone}
+                                                onChange={handleChange}
                                             />
                                         </div>
                                     </div>
-                                    
+
                                     <div className="col-12">
                                         <div className="form-field">
                                             <label>Services Interested In</label>
                                             <div className="select-wrapper">
-                                                <select 
-                                                    name="service" 
-                                                    value={formData.service} 
+                                                <select
+                                                    name="service"
+                                                    value={formData.service}
                                                     onChange={handleChange}
                                                 >
                                                     <option value="" disabled>Select a service</option>
@@ -253,27 +253,27 @@ const ContactFormArea = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="col-12">
                                         <div className="form-field">
                                             <label>How Can We Help You? <span className="required-asterisk">*</span></label>
-                                            <textarea 
-                                                name="message" 
-                                                placeholder="Tell us about your project or requirement..." 
-                                                value={formData.message} 
-                                                onChange={handleChange} 
+                                            <textarea
+                                                name="message"
+                                                placeholder="Tell us about your project or requirement..."
+                                                value={formData.message}
+                                                onChange={handleChange}
                                                 required
                                             ></textarea>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="col-12 mt-4">
                                         <button className="submit-btn" type="submit" disabled={loading}>
                                             <span>{loading ? 'Sending...' : 'Send Message'}</span>
                                             <ArrowRight size={18} className="btn-arrow" />
                                         </button>
                                     </div>
-                                    
+
                                     <div className="col-12 mt-3 text-center">
                                         <div className="privacy-badge d-flex align-items-center justify-content-center">
                                             <ShieldCheck size={16} className="privacy-icon me-2" />
