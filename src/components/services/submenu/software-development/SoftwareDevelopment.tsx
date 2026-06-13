@@ -100,7 +100,7 @@ export default function SoftwareDevelopment() {
 
           <div className="sd-services__grid">
             {sdDualServices.map((svc, i) => (
-              <div key={i} className="sd-service-card">
+              <Link key={i} href={svc.link} className="sd-service-card">
                 {/* Image LEFT */}
                 <div className="sd-service-card__image-wrap">
                   <Image src={svc.image} alt={svc.title} className="sd-service-card__img" />
@@ -122,11 +122,11 @@ export default function SoftwareDevelopment() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={svc.link} className="sd-service-card__link">
+                  <span className="sd-service-card__link">
                     {svc.linkText}&nbsp;→
-                  </Link>
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -406,8 +406,8 @@ export default function SubcategoryContent({ data, type, subcategory }: Props) {
               <Image
                 src={data.about.image}
                 alt={data.about.title}
-                width={800}
-                height={600}
+                width={1536}
+                height={1024}
                 className="about-img"
               />
             </div>

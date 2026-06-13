@@ -14,17 +14,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ image, title, description, link }: ServiceCardProps) => (
-  // <div className="service-card">
-  //   <div className="service-card__icon-wrap" >
-  //     <img src={image} alt={title} width={50} height={50} />
-  //   </div>
-  //   <h3 className="service-card__title">{title}</h3>
-  //   <p className="service-card__description">{description}</p>
-  //   <Link href={link} className="service-card__link">
-  //     Learn More &nbsp;→
-  //   </Link>
-  // </div>
-  <div className="service-card">
+  <Link href={link} className="service-card">
     <div className="service-card__inner">
       <div className="service-card__icon-wrap">
         <img src={image} alt={title} />
@@ -33,11 +23,11 @@ const ServiceCard = ({ image, title, description, link }: ServiceCardProps) => (
       <h3 className="service-card__title">{title}</h3>
       <p className="service-card__description">{description}</p>
 
-      <Link href={link} className="service-card__link">
+      <span className="service-card__link">
         Learn More
-      </Link>
+      </span>
     </div>
-  </div>
+  </Link>
 );
 
 // ── ServicesSection (page) ─────────────────────────────────────────────────

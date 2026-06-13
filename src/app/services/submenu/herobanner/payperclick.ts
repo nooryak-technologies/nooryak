@@ -33,28 +33,28 @@ export const PPCServices = [
     title: "Google Ads",
     description:
       "Drive qualified traffic and leads with high-performing Google Search, Shopping, and Performance Max campaigns.",
-    link: "#",
+    link: "/services/submenu/ppc/google-ads",
   },
   {
     platform: "facebook",
     title: "Facebook Ads",
     description:
       "Reach and engage your ideal audience on Facebook & Instagram with ROI-focused ad campaigns.",
-    link: "#",
+    link: "/services/submenu/ppc/facebook-ads",
   },
   {
     platform: "display",
     title: "Display Advertising",
     description:
       "Promote your brand across top websites and reach potential customers with targeted display ads.",
-    link: "#",
+    link: "/services/submenu/ppc/display-advertising",
   },
   {
     platform: "remarketing",
     title: "Remarketing Campaigns",
     description:
       "Re-engage visitors and boost conversions with smart remarketing and retargeting strategies.",
-    link: "#",
+    link: "/services/submenu/ppc/remarketing-campaigns",
   },
 ];
 

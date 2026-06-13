@@ -34,7 +34,7 @@ export const VEServices = [
     bg: "rgba(229,62,62,0.08)",
     title: "YouTube Video Editing",
     description: "High-quality edits that keep your audience watching and coming back.",
-    link: "/404",
+    link: "/services/submenu/video-editing/custom-videos",
   },
   {
     icon: "fa-solid fa-mobile-screen-button",
@@ -42,7 +42,7 @@ export const VEServices = [
     bg: "rgba(49,130,206,0.08)",
     title: "Short Form Video Editing",
     description: "Dynamic Shorts, TikToks – fast-paced edits that grab attention instantly.",
-    link: "/404",
+    link: "/services/submenu/video-editing/reel-videos",
   },
   {
     icon: "fa-solid fa-briefcase",
@@ -50,7 +50,7 @@ export const VEServices = [
     bg: "rgba(56,161,105,0.08)",
     title: "Corporate Video Editing",
     description: "Polished videos for business, training, presentations, and brand storytelling.",
-    link: "/404",
+    link: "/services/submenu/video-editing/custom-videos",
   },
   {
     icon: "fa-solid fa-camera",
@@ -58,7 +58,7 @@ export const VEServices = [
     bg: "rgba(128,90,213,0.08)",
     title: "Vlog Editing",
     description: "Engaging vlog edits with smooth cuts, transitions, and effects.",
-    link: "/404",
+    link: "/services/submenu/video-editing/custom-videos",
   },
   {
     icon: "fa-solid fa-layer-group",
@@ -66,7 +66,7 @@ export const VEServices = [
     bg: "rgba(221,107,32,0.08)",
     title: "Motion Graphics & Titles",
     description: "Dynamic animations, lower thirds, intros, and creative titles.",
-    link: "/404",
+    link: "/services/submenu/video-editing/custom-videos",
   },
   {
     icon: "fa-solid fa-palette",
@@ -74,7 +74,7 @@ export const VEServices = [
     bg: "rgba(213,63,140,0.08)",
     title: "Color Grading",
     description: "Cinematic color correction and grading for a professional look.",
-    link: "/404",
+    link: "/services/submenu/video-editing/model-shoot-videos",
   },
 ];
 
@@ -87,7 +87,7 @@ export const VEAllServices = [
     bg: "rgba(43,108,176,0.08)",
     title: "Ad & Promo Videos",
     description: "Compelling promotional content designed to convert viewers into customers.",
-    link: "/404",
+    link: "/services/submenu/video-editing/custom-videos",
   },
   {
     icon: "fa-solid fa-music",
@@ -95,7 +95,7 @@ export const VEAllServices = [
     bg: "rgba(192,86,33,0.08)",
     title: "Podcast Video Editing",
     description: "Clean cuts, visuals, and captions that elevate your podcast video content.",
-    link: "/404",
+    link: "/services/submenu/video-editing/custom-videos",
   },
 ];
 

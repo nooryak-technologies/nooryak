@@ -38,56 +38,56 @@ export const LSEOServices = [
     title: "Google Business Profile Optimization",
     description:
       "Optimize your Google listing for maximum local visibility to attract more nearby customers.",
-    link: "#",
+    link: "/services/submenu/local-seo/google-my-business-ranking",
   },
   {
     icon: "/assets/images/services/icons/search.png",
     title: "Local Keyword Research",
     description:
       "Target high-intent local search keywords that bring nearby customers ready to convert.",
-    link: "#",
+    link: "/services/submenu/local-seo/local-seo-tools",
   },
   {
     icon: "/assets/images/services/icons/googlemapseo.png",
     title: "Google Maps SEO",
     description:
       "Improve rankings in Google Map Pack and local search results to dominate your area.",
-    link: "#",
+    link: "/services/submenu/local-seo/google-my-business-ranking",
   },
   {
     icon: "/assets/images/services/icons/seo.png",
     title: "Local Citations Building",
     description:
       "Build accurate business listings across trusted local directories and platforms.",
-    link: "#",
+    link: "/services/submenu/local-seo/local-directory-listings",
   },
   {
     icon: "/assets/images/services/icons/local_seo.png",
     title: "On-Page Local SEO",
     description:
       "Optimize website pages for city and location-based searches to rank in your area.",
-    link: "#",
+    link: "/services/submenu/local-seo/local-seo-tools",
   },
   {
     icon: "/assets/images/services/icons/reputationmanagement (1).png",
     title: "Reputation Management",
     description:
       "Increase reviews, ratings, and customer trust to boost local rankings and credibility.",
-    link: "#",
+    link: "/services/submenu/local-seo/google-my-business-ranking",
   },
   {
     icon: "/assets/images/services/icons/multilocationseo.png",
     title: "Multi-Location SEO",
     description:
       "Manage and optimize SEO for multi-business locations and franchises efficiently.",
-    link: "#",
+    link: "/services/submenu/local-seo/local-directory-listings",
   },
   {
     icon: "/assets/images/services/icons/liniking.png",
     title: "Local Link Building",
     description:
       "Build local authority through geo-relevant backlinks and partnerships.",
-    link: "#",
+    link: "/services/submenu/local-seo/local-seo-tools",
   },
 ];
 

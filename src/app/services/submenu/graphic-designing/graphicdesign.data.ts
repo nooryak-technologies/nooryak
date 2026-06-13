@@ -217,120 +217,120 @@ export const GDAllServices = [
     icon: "fa-solid fa-pen-fancy",
     title: "Logo Designs",
     description: "Unique and memorable logo designs that represent your brand identity.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/logo-designs"
   },
   {
     icon: "fa-solid fa-box",
     title: "Package Designs",
     description: "Creative packaging designs that grab attention and make your product stand out.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/package-designs"
   },
   {
     icon: "fa-solid fa-share-nodes",
     title: "Social Media Designs",
     description: "Engaging social media graphics that boost your online presence.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/social-media-designs"
   },
   {
     icon: "fa-regular fa-file-pdf",
     title: "Brochure Designs",
     description: "Professional brochures that effectively showcase your business.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/brochure-designs"
   },
   {
     icon: "fa-solid fa-paste",
     title: "Pamphlet Designs",
     description: "Informative pamphlets designed to deliver your message clearly.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/pamphlet-designs"
   },
   {
     icon: "fa-solid fa-laptop",
     title: "Website Banners",
     description: "Attractive website banners that grab attention and drive clicks.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/website-banners"
   },
   {
     icon: "fa-solid fa-rectangle-ad",
     title: "Banner Designs",
     description: "Custom banner designs for promotions and advertisements.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/banner-designs"
   },
   {
     icon: "fa-solid fa-cube",
     title: "2D & 3D Designs",
     description: "Stunning 2D and 3D designs that bring your ideas to life.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/2d-and-3d-designs"
   },
   {
     icon: "fa-solid fa-chalkboard",
     title: "Standee Designs",
     description: "Eye-catching standee designs for events and promotions.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/standee-designs"
   },
   {
     icon: "fa-solid fa-address-card",
     title: "Creative Business Card Designs",
     description: "Professional business card designs that leave a lasting impression.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/creative-business-card-designs"
   },
   {
     icon: "fa-solid fa-chart-line",
     title: "Annual Report Design",
     description: "Well-structured annual report designs that communicate success.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/annual-report-design"
   },
   {
     icon: "fa-solid fa-calendar-check",
     title: "End To End Event Designs",
     description: "Complete event branding and design solutions from start to finish.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/end-to-end-event-designs"
   },
   {
     icon: "fa-solid fa-hand-holding-heart",
     title: "CSR Report Design",
     description: "Impactful CSR report designs that highlight your social responsibility.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/csr-report-design"
   },
   {
     icon: "fa-solid fa-chess",
     title: "Strategy Report Design",
     description: "Strategic report designs that present insights effectively.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/strategy-report-design"
   },
   {
     icon: "fa-solid fa-book-open",
     title: "Catalogue Designs",
     description: "Elegant catalogue designs that showcase your products and services.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/catalogue-designs"
   },
   {
     icon: "fa-solid fa-utensils",
     title: "Menu Designs",
     description: "Creative menu designs that enhance the dining experience from start to finish.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/menu-designs"
   },
   {
     icon: "fa-solid fa-heart",
     title: "Marriage Card Designs",
     description: "Beautiful and elegant wedding card designs for your special day.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/marriage-card-designs"
   },
   {
     icon: "fa-solid fa-image",
     title: "Hoarding/Billboard Designs",
     description: "Bold and impactful hoarding designs that reach a wider audience.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/hoarding-billboard-designs"
   },
   {
     icon: "fa-solid fa-palette",
     title: "Illustrations",
     description: "Custom illustrations that add creativity to your projects.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/illustrations"
   },
   {
     icon: "fa-solid fa-lightbulb",
     title: "Branding",
     description: "Complete branding solutions to build a strong and recognizable brand.",
-    link: "/contact"
+    link: "/services/submenu/graphic-designing/branding"
   }
 ];

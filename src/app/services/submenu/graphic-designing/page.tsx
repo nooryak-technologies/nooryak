@@ -429,18 +429,18 @@ export default function GraphicDesigningPage() {
 
             <div className="gdesign-services-list">
               {GDAllServices.slice(0, visibleServicesCount).map((service, index) => (
-                <div className="gdesign-service-card" key={index}>
+                <Link href={service.link} className="gdesign-service-card" key={index}>
                   <div className="gdesign-service-card__icon-box">
                     <i className={service.icon} />
                   </div>
                   <div className="gdesign-service-card__content">
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
-                    <Link href={service.link} className="gdesign-service-card__learn-more">
+                    <span className="gdesign-service-card__learn-more">
                       Learn More <i className="fa-solid fa-arrow-right" />
-                    </Link>
+                    </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 

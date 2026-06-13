@@ -123,7 +123,7 @@ export default function LocalSEOPage() {
 
           <div className="lseo-service-grid">
             {LSEOServices.map((service) => (
-              <article className="lseo-card lseo-service-card" key={service.title}>
+              <Link href={service.link} className="lseo-card lseo-service-card" key={service.title}>
                 <div className="lseo-service-card__icon">
                   {service.icon.startsWith('/') || service.icon.includes('.') ? (
                     <Image
@@ -139,10 +139,10 @@ export default function LocalSEOPage() {
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <Link className="lseo-learn-more" href={service.link}>
+                <span className="lseo-learn-more">
                   Learn More <i className="fa-solid fa-arrow-right" />
-                </Link>
-              </article>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

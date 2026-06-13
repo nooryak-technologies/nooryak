@@ -55,7 +55,7 @@ export const servicesDataApp = [
     title: "Android Application",
     description:
       "Native Android apps built with the latest technologies for optimal performance.",
-    link: "#",
+    link: "/services/submenu/app-development/android-application",
   },
   {
     id: 2,
@@ -63,7 +63,7 @@ export const servicesDataApp = [
     title: "IOS Application",
     description:
       "Premium iOS apps designed for seamless user experience on Apple devices.",
-    link: "#",
+    link: "/services/submenu/app-development/ios-application",
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ export const servicesDataApp = [
     title: "React Native",
     description:
       "Cross-platform mobile apps built with React Native for faster development.",
-    link: "#",
+    link: "/services/submenu/app-development/react-native",
   },
   {
     id: 4,
@@ -79,7 +79,7 @@ export const servicesDataApp = [
     title: "Flutter App Development",
     description:
       "Beautiful, fast, and native-like apps built with Google's Flutter framework.",
-    link: "#",
+    link: "/services/submenu/app-development/flutter-app-development",
   },
   {
     id: 5,
@@ -87,7 +87,7 @@ export const servicesDataApp = [
     title: "Custom App Development",
     description:
       "Tailored mobile solutions built from scratch to match your business needs.",
-    link: "#",
+    link: "/services/submenu/app-development/custom-app-development",
   },
 ];
 

@@ -327,16 +327,17 @@ export default function DigitalMarketing() {
           </h2>
           <div className="dm-services__grid">
             {DMServices.map((s, i) => (
-              <div
+              <Link
                 className="dm-services__card dm-stagger dm-anim"
                 key={i}
                 data-idx={String(i)}
+                href={s.link}
               >
                 <i className={s.icon} />
                 <h3>{s.title}</h3>
                 <p>{s.description}</p>
-                <Link href={s.link}>Learn More →</Link>
-              </div>
+                <span className="dm-services__learn-more">Learn More →</span>
+              </Link>
             ))}
           </div>
         </div>

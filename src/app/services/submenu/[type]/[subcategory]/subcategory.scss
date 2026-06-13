@@ -589,25 +589,27 @@ $font-family: 'Inter', 'Outfit', sans-serif;
   .about-visual {
     position: relative;
     border-radius: 16px;
-    overflow: hidden;
+    // overflow: hidden; // Removed to prevent cropping issues
 
     .about-img {
       width: 100%;
       height: auto;
       display: block;
-      transform: scale(1.25);
-      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border-radius: 16px; // Added directly to image to keep corners rounded
+      transform: scale(1); // Set to default uncropped scale
+      transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.6s ease;
 
       @media (max-width: 768px) {
-        transform: scale(1.15);
+        transform: scale(1);
       }
     }
 
     &:hover .about-img {
-      transform: scale(1.33);
+      transform: translateY(-8px); // Lift instead of cropping zoom
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); // Premium soft shadow
 
       @media (max-width: 768px) {
-        transform: scale(1.22);
+        transform: translateY(-4px);
       }
     }
   }

@@ -277,12 +277,12 @@ export default function Payperclick() {
           </div>
           <div className="ppc-services__grid">
             {PPCServices.map((s, i) => (
-              <div key={i} className="ppc-svc-card">
+              <Link key={i} href={s.link} className="ppc-svc-card">
                 <div className="ppc-svc-card__icon"><PlatformIcon platform={s.platform}/></div>
                 <h3 className="ppc-svc-card__title">{s.title}</h3>
                 <p className="ppc-svc-card__desc">{s.description}</p>
-                <Link href={s.link} className="ppc-svc-card__link">Learn More&nbsp;&#8594;</Link>
-              </div>
+                <span className="ppc-svc-card__link">Learn More&nbsp;&#8594;</span>
+              </Link>
             ))}
           </div>
         </div>

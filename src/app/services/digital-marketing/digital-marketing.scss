@@ -324,6 +324,8 @@
     }
 
     &__card {
+      text-decoration: none;
+      color: inherit;
       background: #ffffff;
       border: 1px solid #E8E8E8;
       border-radius: 12px;
@@ -355,7 +357,7 @@
         margin: 0 0 16px;
       }
 
-      a {
+      .dm-services__learn-more {
         font-size: 13px;
         font-weight: 600;
         color: #FF6B2B;

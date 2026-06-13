@@ -218,7 +218,7 @@ export default function SocialMediaMarketingPage() {
 
           <div className="smm-service-grid">
             {SMServices.map((service) => (
-              <article className="smm-card smm-service-card" key={service.title}>
+              <Link href={service.link} className="smm-card smm-service-card" key={service.title}>
                 <div className="smm-service-card__icon">
                   <Image
                     src={serviceIcons[service.platform] ?? '/assets/images/services/icons/social/ads.svg'}
@@ -230,7 +230,7 @@ export default function SocialMediaMarketingPage() {
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

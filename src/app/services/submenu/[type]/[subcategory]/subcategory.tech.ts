@@ -342,7 +342,83 @@ export function getSubcategoryAboutImage(subcategory: string): string {
     return '/assets/images/services/submenu/ai_automation.png';
   }
 
-  // Exact mappings for the requested 14 subcategories:
+  // Graphic Design explicit subcategory mappings:
+  if (norm === 'logo-designs') {
+    return '/assets/images/services/submenu/logo_design.png';
+  }
+  if (norm === 'package-designs') {
+    return '/assets/images/services/submenu/Package_design.png';
+  }
+  if (norm === 'social-media-designs') {
+    return '/assets/images/services/submenu/social_media_design.png';
+  }
+  if (norm === 'brochure-designs') {
+    return '/assets/images/services/submenu/business_solution_catalogue.png';
+  }
+  if (norm === 'pamphlet-designs') {
+    return '/assets/images/services/submenu/Pamplet_design.png';
+  }
+  if (norm === 'website-banners') {
+    return '/assets/images/services/submenu/website_banner_design.png';
+  }
+  if (norm === 'banner-designs') {
+    return '/assets/images/services/submenu/website_banner_design.png';
+  }
+  if (norm === '2d-3d-designs' || norm === '2d-&-3d-designs' || norm === '2d-and-3d-designs') {
+    return '/assets/images/services/submenu/2d_3d.png';
+  }
+  if (norm === 'standee-designs') {
+    return '/assets/images/services/submenu/standee_design.jpeg';
+  }
+  if (norm === 'creative-business-card-designs') {
+    return '/assets/images/services/submenu/business_card_design.png';
+  }
+  if (norm === 'annual-report-design') {
+    return '/assets/images/services/submenu/annaul_report.png';
+  }
+  if (norm === 'end-to-end-event-designs') {
+    return '/assets/images/services/submenu/endtoend_event.png';
+  }
+  if (norm === 'csr-report-design') {
+    return '/assets/images/services/submenu/csr_report.png';
+  }
+  if (norm === 'strategy-report-design' || norm === 'rategy-report-design') {
+    return '/assets/images/services/submenu/strategy_report.png';
+  }
+  if (norm === 'catalogue-designs') {
+    return '/assets/images/services/submenu/business_solution_catalogue.png';
+  }
+  if (norm === 'menu-designs') {
+    return '/assets/images/services/submenu/menu_card_design.png';
+  }
+  if (norm === 'marriage-card-designs') {
+    return '/assets/images/services/submenu/marriage_card.png';
+  }
+  if (norm === 'hoarding-billboard-designs') {
+    return '/assets/images/services/submenu/bill_board.png';
+  }
+  if (norm === 'illustrations') {
+    return '/assets/images/services/submenu/illustration.png';
+  }
+  if (norm === 'branding' || norm === 'brand') {
+    return '/assets/images/services/submenu/brand.png';
+  }
+
+  // Video Editing explicit subcategory mappings:
+  if (norm === 'reel-videos') {
+    return '/assets/images/services/submenu/reels_video.png';
+  }
+  if (norm === 'model-shoot-videos') {
+    return '/assets/images/services/submenu/model_shoot_videos.png';
+  }
+  if (norm === 'realestate-drone-shots') {
+    return '/assets/images/services/submenu/drone_shot_videos.png';
+  }
+  if (norm === 'custom-videos') {
+    return '/assets/images/services/submenu/custom_video.png';
+  }
+
+  // Local SEO & Optimization mappings:
   if (norm === 'on-page-optimization') {
     return '/assets/images/services/submenu/on_page_optimization.png';
   }
@@ -351,9 +427,6 @@ export function getSubcategoryAboutImage(subcategory: string): string {
   }
   if (norm === 'technical-seo') {
     return '/assets/images/services/submenu/technical_seo.png';
-  }
-  if (norm === 'branding' || norm === 'brand') {
-    return '/assets/images/services/submenu/brand.png';
   }
   if (norm === 'facebook-marketing') {
     return '/assets/images/services/submenu/facebook_marketing2.png';
@@ -377,7 +450,7 @@ export function getSubcategoryAboutImage(subcategory: string): string {
     return '/assets/images/services/submenu/social_media_sheduling.png';
   }
   if (norm === 'google-my-business-ranking' || norm === 'google-mybusinessranking') {
-    return '/assets/images/services/submenu/google_mybusinessranking.png';
+    return '/assets/images/services/submenu/google_my_business_ranking.png';
   }
   if (norm === 'local-directory-listings' || norm === 'local-directory-listing') {
     return '/assets/images/services/submenu/local_directory_listing.png';
@@ -449,7 +522,7 @@ export function getSubcategoryAboutImage(subcategory: string): string {
     return '/assets/images/services/submenu/reactjs_development.png';
   }
 
-  // Graphic Design:
+  // Graphic Design generic fallback:
   if (
     norm.includes('design') ||
     norm.includes('banner') ||
@@ -465,7 +538,7 @@ export function getSubcategoryAboutImage(subcategory: string): string {
     return '/assets/images/services/submenu/graphic_design_about.png';
   }
 
-  // Branding:
+  // Branding generic fallback:
   if (norm === 'branding' || norm === 'brand') {
     return '/assets/images/services/submenu/brand.png';
   }
@@ -475,7 +548,7 @@ export function getSubcategoryAboutImage(subcategory: string): string {
     return '/assets/images/services/submenu/software_development_about.png';
   }
 
-  // Video Editing:
+  // Video Editing generic fallback:
   if (norm.includes('video') || norm.includes('shoot') || norm.includes('drone')) {
     return '/assets/images/services/submenu/video_editing_about.png';
   }
