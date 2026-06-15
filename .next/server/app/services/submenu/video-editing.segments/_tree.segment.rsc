@@ -3,8 +3,8 @@
 :HL["/_next/static/css/50bb590860b7046f.css","style"]
 :HL["/_next/static/css/451a7a5aca3d86c3.css","style"]
 :HL["/_next/static/css/931170e285fb5809.css","style"]
-:HL["/_next/static/css/d6c1e874dc242272.css","style"]
+:HL["/_next/static/css/a65e51fc8df6a215.css","style"]
 :HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css","style"]
 :HL["/_next/static/css/3e7e9cd9c47f1d68.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"submenu","param":null,"prefetchHints":0,"slots":{"children":{"name":"video-editing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"ozxi5KbvY8krM4Jw8z2c1"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"submenu","param":null,"prefetchHints":0,"slots":{"children":{"name":"video-editing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"mBR4iMnJ20waU89z5aetT"}
