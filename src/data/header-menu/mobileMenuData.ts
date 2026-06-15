@@ -190,7 +190,7 @@ const mobileMenuData: MenuItem[] = [
     { id: 6, title: "Careers", link: "/404", megaMenu: false },
     { id: 7, title: "Clients", link: "/404", megaMenu: false },
     { id: 8, title: "Blog", link: "/404", megaMenu: false },
-    { id: 9, title: "Contact", link: "/404", megaMenu: false }
+    { id: 9, title: "Contact", link: "/contact", megaMenu: false }
 ];
 
 export default mobileMenuData;

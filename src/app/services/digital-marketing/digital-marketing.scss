@@ -318,8 +318,9 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @media (max-width: 480px) {
-        grid-template-columns: 1fr;
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
       }
     }
 
@@ -909,8 +910,9 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @media (max-width: 480px) {
-        grid-template-columns: 1fr;
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
       }
     }
 
@@ -966,7 +968,7 @@
     padding: 64px 0;
 
     @media (max-width: 768px) {
-      padding: 48px 0;
+      padding: 0 0;
     }
 
     &__box {

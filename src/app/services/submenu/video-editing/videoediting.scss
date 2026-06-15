@@ -32,10 +32,10 @@
 
   /* ── Section padding ── */
   .ve-section {
-    padding: 72px 0;
+    padding: 40px 0;
 
     @media (max-width: 768px) {
-      padding: 52px 0;
+      padding: 25px 0;
     }
   }
 
@@ -533,8 +533,9 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      @media (max-width: 580px) {
-        grid-template-columns: 1fr;
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
       }
     }
 
@@ -605,7 +606,7 @@
   ══════════════════════════════════════════════════════════════════════ */
   .ve-portfolio {
     background: #ffffff;
-    padding: 72px 0 80px;
+    padding: 40px 0 45px;
     border-top: 1px solid var(--ve-line);
 
     .ve-portfolio__header {
@@ -755,7 +756,7 @@
   ══════════════════════════════════════════════════════════════════════ */
   .ve-tools {
     background: #ffffff;
-    padding: 72px 0;
+    padding: 40px 0;
     border-top: 1px solid var(--ve-line);
 
     .ve-tools__row {
@@ -966,7 +967,7 @@
   ══════════════════════════════════════════════════════════════════════ */
   .ve-cta {
     background: #ffffff;
-    padding: 56px 0 80px;
+    padding: 35px 0 45px;
     position: relative;
 
     .ve-cta__inner {

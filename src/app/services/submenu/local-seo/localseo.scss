@@ -53,7 +53,7 @@
 
 	/* ─── Section layout ─── */
 	.lseo-section {
-		padding: 62px 0;
+		padding: 35px 0;
 	}
 
 	.lseo-section__head {
@@ -451,8 +451,9 @@
 				grid-template-columns: repeat(2, minmax(0, 1fr));
 			}
 
-			@media (max-width: 640px) {
-				grid-template-columns: 1fr;
+			@media (max-width: 767px) {
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
 			}
 		}
 
@@ -550,8 +551,9 @@
 				grid-template-columns: repeat(2, minmax(0, 1fr));
 			}
 
-			@media (max-width: 480px) {
-				grid-template-columns: 1fr;
+			@media (max-width: 767px) {
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
 			}
 		}
 
@@ -727,7 +729,7 @@
 	}
 
 	.lseo-dark-wrap {
-		padding: 60px 0;
+		padding: 35px 0;
 	}
 
 	/* ═══════════════════════════════════════
@@ -735,7 +737,7 @@
 	══════════════════════════════════════════ */
 	.lseo-process {
 		background: var(--lseo-soft);
-		padding: 62px 0;
+		padding: 35px 0;
 
 		.lseo-process-row {
 			display: grid;
@@ -754,9 +756,9 @@
 				gap: 16px;
 			}
 
-			@media (max-width: 580px) {
-				grid-template-columns: 1fr;
-				gap: 16px;
+			@media (max-width: 767px) {
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
 			}
 		}
 
@@ -869,7 +871,7 @@
 	   INDUSTRIES SECTION
 	══════════════════════════════════════════ */
 	.lseo-industries {
-		padding: 62px 0;
+		padding: 35px 0;
 
 		.lseo-industry-grid {
 			display: grid;
@@ -936,7 +938,7 @@
 	══════════════════════════════════════════ */
 	.lseo-cta {
 		background: #fff;
-		padding: 60px 0;
+		padding: 35px 0;
 
 		.lseo-cta__banner {
 			display: flex;

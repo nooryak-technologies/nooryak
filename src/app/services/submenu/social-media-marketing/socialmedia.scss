@@ -1387,9 +1387,9 @@
 			}
 		}
 
-		@media (max-width: 400px) {
+		@media (max-width: 767px) {
 			.smm-service-grid {
-				grid-template-columns: 1fr;
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 	}
@@ -1414,9 +1414,9 @@
 			}
 		}
 
-		@media (max-width: 400px) {
+		@media (max-width: 767px) {
 			.smm-why-grid {
-				grid-template-columns: 1fr;
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 	}
@@ -1430,7 +1430,7 @@
 			}
 		}
 
-		@media (max-width: 640px) {
+		@media (max-width: 767px) {
 			.smm-process-row {
 				grid-template-columns: 1fr 1fr;
 				gap: 16px;
@@ -1498,9 +1498,9 @@
 			}
 		}
 
-		@media (max-width: 400px) {
+		@media (max-width: 767px) {
 			.smm-results__metrics-grid {
-				grid-template-columns: 1fr;
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 	}
@@ -1526,9 +1526,9 @@
 			}
 		}
 
-		@media (max-width: 400px) {
+		@media (max-width: 767px) {
 			.smm-industry-grid {
-				grid-template-columns: 1fr;
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 	}
