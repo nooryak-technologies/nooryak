@@ -1357,6 +1357,14 @@
      text-transform: uppercase;
      color: #f4510b;
      margin-bottom: 14px;
+     white-space: nowrap;
+
+     // Prevent GSAP SplitText character wrapping within words
+     div,
+     span {
+         white-space: nowrap !important;
+         display: inline-block !important;
+     }
 
      &__line {
          display: block;
@@ -1364,6 +1372,7 @@
          height: 1.5px;
          background: #f4510b;
          border-radius: 2px;
+         flex-shrink: 0;
      }
 
      &--left {
@@ -1371,6 +1380,16 @@
 
          @media (max-width: 900px) {
              justify-content: center;
+         }
+     }
+
+     @media (max-width: 768px) {
+         font-size: 9.5px;
+         gap: 6px;
+         letter-spacing: 1.5px;
+
+         .sd-section-label__line {
+             width: 16px;
          }
      }
  }
@@ -3214,7 +3233,7 @@
          }
 
          &__m-chg.up {
-             color: #22c55e;
+             color: #f4510b;
          }
 
          &__m-chg.down {
@@ -4728,10 +4747,10 @@
          }
 
          &--green {
-             background: linear-gradient(135deg, #58d68d 0%, #2ecc71 100%);
+             background: linear-gradient(135deg, #f78d58 0%, #f4510b 100%);
 
              &:hover {
-                 box-shadow: 0 4px 14px rgba(46, 204, 113, 0.4);
+                 box-shadow: 0 4px 14px rgba(244, 81, 11, 0.4);
              }
          }
 
@@ -5017,6 +5036,7 @@
 
      &__title {
          color: #111111 !important;
+         font-size: 52px !important;
 
          &--accent {
              color: #f4510b !important;
@@ -5025,6 +5045,7 @@
 
      &__description {
          color: #555555 !important;
+         font-size: 18px !important;
      }
 
      &__actions {
@@ -5081,7 +5102,7 @@
      }
 
      &--red {
-         color: #f87171;
+         color: #f4510b;
          bottom: 25%;
          left: 2%;
          animation-delay: 1.2s;
@@ -5138,15 +5159,15 @@
              }
 
              &--blue {
-                 color: #3498db;
+                 color: #f4510b;
              }
 
              &--teal {
-                 color: #1abc9c;
+                 color: #f4510b;
              }
 
              &--purple {
-                 color: #9b59b6;
+                 color: #f4510b;
              }
          }
      }
@@ -5210,19 +5231,19 @@
      box-shadow: 0 0 15px currentColor;
 
      &--purple {
-         color: #c084fc;
+         color: #f4510b;
      }
 
      &--green {
-         color: #34d399;
+         color: #f4510b;
      }
 
      &--blue {
-         color: #38bdf8;
+         color: #f4510b;
      }
 
      &--yellow {
-         color: #fbbf24;
+         color: #f4510b;
      }
  }
 
@@ -5328,7 +5349,7 @@
      animation: mlmBob 4s ease-in-out infinite !important;
 
      &--red {
-         color: #ff4d4d !important;
+         color: #f4510b !important;
          top: 25% !important;
          left: 12% !important;
          right: auto !important;
@@ -5346,7 +5367,7 @@
      }
 
      &--purple {
-         color: #9b59b6 !important;
+         color: #f4510b !important;
          top: 28% !important;
          right: 3% !important;
          left: auto !important;
@@ -5355,7 +5376,7 @@
      }
 
      &--blue {
-         color: #3498db !important;
+         color: #f4510b !important;
          bottom: 18% !important;
          right: 12% !important;
          left: auto !important;
@@ -5505,7 +5526,7 @@
          right: -60px !important;
          width: 200px !important;
          height: 200px !important;
-         background: radial-gradient(circle, rgba(34, 197, 94, 0.07) 0%, transparent 70%) !important;
+         background: radial-gradient(circle, rgba(244, 81, 11, 0.07) 0%, transparent 70%) !important;
          pointer-events: none !important;
          border-radius: 50% !important;
      }
@@ -5641,28 +5662,28 @@
      display: inline-flex !important;
      align-items: center !important;
      gap: 6px !important;
-     // ── Green glassmorphism badge ──
-     background: rgba(34, 197, 94, 0.08) !important;
-     border: 1px solid rgba(34, 197, 94, 0.25) !important;
+     // ── Orange glassmorphism badge ──
+     background: rgba(244, 81, 11, 0.08) !important;
+     border: 1px solid rgba(244, 81, 11, 0.25) !important;
      border-radius: 30px !important;
      padding: 6px 14px !important;
      font-size: 12.5px !important;
      font-weight: 600 !important;
-     color: #15803d !important;
+     color: #f4510b !important;
      backdrop-filter: blur(8px) !important;
      -webkit-backdrop-filter: blur(8px) !important;
-     box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+     box-shadow: 0 2px 8px rgba(244, 81, 11, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
      transition: all 0.25s ease !important;
 
      i {
          font-size: 13px !important;
-         color: #22c55e !important; // ✅ Green tick mark
-         filter: drop-shadow(0 0 3px rgba(34, 197, 94, 0.4)) !important;
+         color: #f4510b !important; // ✅ Green tick mark
+         filter: drop-shadow(0 0 3px rgba(244, 81, 11, 0.4)) !important;
      }
 
      &:hover {
          background: rgba(34, 197, 94, 0.14) !important;
-         border-color: rgba(34, 197, 94, 0.4) !important;
+         border-color: rgba(244, 81, 11, 0.4) !important;
          transform: translateY(-1px) !important;
      }
  }
@@ -5772,6 +5793,1214 @@
      to {
          opacity: 1;
          transform: translateY(0) scale(1);
+     }
+ }
+
+ /* ── INTERACTIVE MLM ECOSYSTEM & HOW WE WORK PROCESS STYLES ───────────────── */
+
+ /* 1. Ecosystem Section */
+ .mlm-ecosystem-section {
+     background: #ffffff;
+     padding: 100px 0;
+     overflow: hidden;
+
+     @media (max-width: 768px) {
+         padding: 0px 0;
+     }
+
+     .mlm-ecosystem-header {
+         text-align: center;
+         max-width: 800px;
+         margin: 0 auto 50px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .high-fidelity-badge {
+             font-size: 11px;
+             font-weight: 800;
+             color: #f4510b;
+             background: #fef4f0;
+             border: 1px solid #fde0d2;
+             padding: 6px 16px;
+             border-radius: 99px;
+             letter-spacing: 1px;
+             text-transform: uppercase;
+             display: inline-block;
+             margin-bottom: 20px;
+         }
+
+         .mlm-ecosystem-title {
+             font-size: clamp(30px, 4.2vw, 44px);
+             font-weight: 800;
+             color: #0d1220;
+             line-height: 1.15;
+             margin-bottom: 20px;
+         }
+
+         .mlm-ecosystem-desc {
+             font-size: 16px;
+             color: #5f6674;
+             line-height: 1.65;
+         }
+     }
+
+     /* Tabs Controls */
+     .mlm-eco-tabs {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 12px;
+         flex-wrap: wrap;
+         margin-bottom: 40px;
+
+         .mlm-eco-tab-btn {
+             background: #ffffff;
+             border: 1px solid #e2e8f0;
+             padding: 12px 22px;
+             border-radius: 12px;
+             font-size: 14.5px;
+             font-weight: 700;
+             color: #475569;
+             cursor: pointer;
+             display: inline-flex;
+             align-items: center;
+             gap: 10px;
+             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+             i {
+                 font-size: 15px;
+                 color: #64748b;
+                 transition: color 0.3s ease;
+             }
+
+             &:hover {
+                 border-color: #f4510b;
+                 color: #f4510b;
+
+                 i {
+                     color: #f4510b;
+                 }
+             }
+
+             &.active {
+                 background: #f4510b;
+                 border-color: #f4510b;
+                 color: #ffffff;
+                 box-shadow: 0 8px 20px rgba(244, 81, 11, 0.24);
+
+                 i {
+                     color: #ffffff;
+                 }
+             }
+         }
+     }
+
+     /* Tab Box Content */
+     .mlm-eco-content-box {
+         background: #f8fafc;
+         border: 1px solid #e2e8f0;
+         border-radius: 28px;
+         padding: 40px;
+         min-height: 480px;
+         box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.01), 0 10px 30px rgba(0, 0, 0, 0.02);
+
+         @media (max-width: 768px) {
+             padding: 24px 16px;
+             border-radius: 20px;
+         }
+     }
+
+     /* Tab 1: Member Dashboard */
+     .mlm-widget-dashboard {
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+     }
+
+     .mlm-widget-grid {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 20px;
+
+         @media (max-width: 1024px) {
+             grid-template-columns: repeat(2, 1fr);
+         }
+
+         @media (max-width: 640px) {
+             grid-template-columns: 1fr;
+         }
+     }
+
+     .mlm-widget-card {
+         background: #ffffff;
+         border: 1px solid #e2e8f0;
+         border-radius: 16px;
+         padding: 24px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+
+         .widget-label {
+             font-size: 11px;
+             font-weight: 700;
+             color: #64748b;
+             letter-spacing: 1px;
+         }
+
+         .widget-val {
+             font-size: 26px;
+             font-weight: 800;
+             color: #0f172a;
+             line-height: 1.1;
+         }
+
+         .widget-trend {
+             font-size: 13px;
+             font-weight: 700;
+             display: inline-flex;
+             align-items: center;
+             gap: 6px;
+
+             &.green {
+                 color: #f4510b;
+             }
+
+             &.blue {
+                 color: #3b82f6;
+             }
+
+             &.grey {
+                 color: #64748b;
+                 font-weight: 500;
+             }
+         }
+     }
+
+     .mlm-ledger-box {
+         background: #ffffff;
+         border: 1px solid #e2e8f0;
+         border-radius: 18px;
+         padding: 28px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+
+         .ledger-header {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             margin-bottom: 24px;
+             flex-wrap: wrap;
+             gap: 12px;
+
+             h4 {
+                 font-size: 14px;
+                 font-weight: 800;
+                 color: #0f172a;
+                 margin: 0;
+                 letter-spacing: 0.5px;
+             }
+
+             .status-badge {
+                 font-size: 12px;
+                 font-weight: 700;
+                 color: #f4510b;
+                 background: #fef4f0;
+                 padding: 4px 12px;
+                 border-radius: 100px;
+                 display: inline-flex;
+                 align-items: center;
+                 gap: 6px;
+
+                 .pulse-dot {
+                     width: 8px;
+                     height: 8px;
+                     border-radius: 50%;
+                     background: #f4510b;
+                     display: inline-block;
+                     animation: dotPulse 2s infinite;
+                 }
+             }
+         }
+
+         .ledger-rows {
+             display: flex;
+             flex-direction: column;
+             gap: 16px;
+         }
+
+         .ledger-row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding-bottom: 16px;
+             border-bottom: 1px solid #f1f5f9;
+
+             &:last-child {
+                 border-bottom: none;
+                 padding-bottom: 0;
+             }
+
+             @media (max-width: 640px) {
+                 flex-direction: column;
+                 align-items: flex-start;
+                 gap: 12px;
+             }
+         }
+
+         .row-left {
+             display: flex;
+             align-items: center;
+             gap: 16px;
+
+             .circle-icon {
+                 width: 44px;
+                 height: 44px;
+                 border-radius: 50%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 font-weight: 800;
+                 font-size: 12px;
+                 flex-shrink: 0;
+
+                 &.green {
+                     background: #fef4f0;
+                     color: #f4510b;
+                 }
+
+                 &.blue {
+                     background: #fef4f0;
+                     color: #f4510b;
+                 }
+
+                 &.purple {
+                     background: #faf5ff;
+                     color: #a855f7;
+                 }
+             }
+
+             h5 {
+                 font-size: 14.5px;
+                 font-weight: 700;
+                 color: #0f172a;
+                 margin: 0 0 4px;
+             }
+
+             p {
+                 font-size: 12px;
+                 color: #64748b;
+                 margin: 0;
+             }
+         }
+
+         .row-right {
+             display: flex;
+             flex-direction: column;
+             align-items: flex-end;
+             text-align: right;
+
+             @media (max-width: 640px) {
+                 align-items: flex-start;
+                 text-align: left;
+                 padding-left: 60px;
+             }
+
+             .amount {
+                 font-size: 15px;
+                 font-weight: 800;
+                 margin-bottom: 4px;
+
+                 &.positive {
+                     color: #f4510b;
+                 }
+
+                 &.negative {
+                     color: #ef4444;
+                 }
+             }
+
+             .time {
+                 font-size: 11px;
+                 color: #94a3b8;
+             }
+         }
+     }
+
+     @keyframes dotPulse {
+         0% {
+             transform: scale(0.95);
+             box-shadow: 0 0 0 0 rgba(244, 81, 11, 0.7);
+         }
+
+         70% {
+             transform: scale(1);
+             box-shadow: 0 0 0 6px rgba(244, 81, 11, 0);
+         }
+
+         100% {
+             transform: scale(0.95);
+             box-shadow: 0 0 0 0 rgba(244, 81, 11, 0);
+         }
+     }
+
+     /* Tab 2: Genealogy Tree */
+     .mlm-widget-genealogy {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .genealogy-subtitle {
+             font-size: 11px;
+             font-weight: 800;
+             color: #64748b;
+             letter-spacing: 1px;
+             margin-bottom: 40px;
+             text-align: center;
+         }
+
+         .tree-container {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             width: 100%;
+             max-width: 600px;
+             position: relative;
+         }
+
+         .tree-node {
+             position: relative;
+             z-index: 2;
+             width: 170px;
+             text-align: center;
+
+             .node-content {
+                 background: #ffffff;
+                 border: 2px solid #e2e8f0;
+                 border-radius: 12px;
+                 padding: 12px 14px;
+                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+                 transition: transform 0.3s ease;
+
+                 h4 {
+                     font-size: 13.5px;
+                     font-weight: 700;
+                     margin: 0 0 4px;
+                     color: #1e293b;
+                 }
+
+                 p {
+                     font-size: 11px;
+                     color: #64748b;
+                     margin: 0;
+                 }
+
+                 &.blue {
+                     border-color: #f4510b;
+                     background: #fef4f0;
+
+                     h4 {
+                         color: #f4510b;
+                     }
+                 }
+
+                 &.green {
+                     border-color: #f4510b;
+
+                     h4 {
+                         color: #f4510b;
+                     }
+
+                     .node-stats {
+                         font-size: 10px;
+                         font-weight: 700;
+                         color: #f4510b;
+                         margin-top: 4px;
+                     }
+                 }
+
+                 &.grey {
+                     border-color: #cbd5e1;
+
+                     h4 {
+                         color: #475569;
+                     }
+                 }
+
+                 &.red {
+                     border-color: #ef4444;
+                     background: #fef2f2;
+
+                     h4 {
+                         color: #dc2626;
+                     }
+                 }
+             }
+
+             .node-badge-bottom {
+                 position: absolute;
+                 bottom: -10px;
+                 left: 50%;
+                 transform: translateX(-50%);
+                 background: #f4510b;
+                 color: #ffffff;
+                 width: 20px;
+                 height: 20px;
+                 border-radius: 50%;
+                 font-size: 10px;
+                 font-weight: 800;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 border: 2px solid #ffffff;
+                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+             }
+         }
+
+         .tree-connector-row {
+             width: 100%;
+             height: 40px;
+             margin: -2px 0;
+             position: relative;
+             z-index: 1;
+
+             .connector-svg {
+                 display: block;
+                 width: 100%;
+                 height: 100%;
+             }
+         }
+
+         .tree-level-row {
+             display: flex;
+             justify-content: space-between;
+             width: 100%;
+             gap: 20px;
+
+             &.level-2 {
+                 gap: 12px;
+                 margin-top: 0;
+
+                 .tree-node {
+                     width: 100px;
+
+                     .node-content {
+                         padding: 8px 10px;
+
+                         h4 {
+                             font-size: 11.5px;
+                         }
+
+                         p {
+                             font-size: 9.5px;
+                         }
+                     }
+                 }
+             }
+         }
+
+         .tree-branch {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             flex: 1;
+         }
+     }
+
+     /* Tab 3: Income Analytics */
+     .mlm-widget-analytics {
+         .analytics-grid {
+             display: grid;
+             grid-template-columns: 1.2fr 0.8fr;
+             gap: 30px;
+
+             @media (max-width: 768px) {
+                 grid-template-columns: 1fr;
+             }
+         }
+
+         .analytics-chart-box,
+         .analytics-table-box {
+             background: #ffffff;
+             border: 1px solid #e2e8f0;
+             border-radius: 18px;
+             padding: 28px;
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+         }
+
+         .chart-box-header {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             margin-bottom: 30px;
+             flex-wrap: wrap;
+             gap: 10px;
+
+             h4 {
+                 font-size: 13.5px;
+                 font-weight: 800;
+                 color: #0f172a;
+                 margin: 0;
+             }
+
+             .audit-badge {
+                 font-size: 11px;
+                 font-weight: 800;
+                 color: #f4510b;
+                 background: #fef4f0;
+                 padding: 4px 12px;
+                 border-radius: 100px;
+             }
+         }
+
+         .growth-chart {
+             height: 240px;
+             display: flex;
+             align-items: flex-end;
+             width: 100%;
+             border-bottom: 2px solid #e2e8f0;
+             padding-bottom: 12px;
+         }
+
+         .chart-bars {
+             display: flex;
+             justify-content: space-between;
+             align-items: flex-end;
+             width: 100%;
+             height: 100%;
+             padding: 0 10px;
+         }
+
+         .chart-bar-col {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             width: 14%;
+             height: 100%;
+             justify-content: flex-end;
+             position: relative;
+
+             .bar-val-height {
+                 width: 100%;
+                 background: #cbd5e1;
+                 border-radius: 6px 6px 0 0;
+                 transition: height 1s ease-in-out;
+             }
+
+             .bar-label {
+                 font-size: 12px;
+                 font-weight: 600;
+                 color: #64748b;
+                 margin-top: 12px;
+             }
+
+             &.active {
+                 .bar-val-height {
+                     background: #f4510b;
+                 }
+
+                 .bar-label {
+                     color: #f4510b;
+                     font-weight: 700;
+                 }
+
+                 .highlight-tag {
+                     position: absolute;
+                     top: -32px;
+                     background: #f4510b;
+                     color: #ffffff;
+                     font-size: 11px;
+                     font-weight: 800;
+                     padding: 3px 8px;
+                     border-radius: 6px;
+                     box-shadow: 0 4px 8px rgba(244, 81, 11, 0.2);
+
+                     &::after {
+                         content: '';
+                         position: absolute;
+                         bottom: -4px;
+                         left: 50%;
+                         transform: translateX(-50%);
+                         border-width: 4px 4px 0;
+                         border-style: solid;
+                         border-color: #f4510b transparent transparent;
+                     }
+                 }
+             }
+         }
+
+         .analytics-table-box {
+             display: flex;
+             flex-direction: column;
+             gap: 20px;
+
+             h4 {
+                 font-size: 13.5px;
+                 font-weight: 800;
+                 color: #0f172a;
+                 margin: 0;
+             }
+         }
+
+         .yield-table {
+             display: flex;
+             flex-direction: column;
+             gap: 12px;
+
+             .table-row {
+                 display: flex;
+                 justify-content: space-between;
+                 padding-bottom: 12px;
+                 border-bottom: 1px solid #f1f5f9;
+
+                 &:last-child {
+                     border-bottom: none;
+                     padding-bottom: 0;
+                 }
+             }
+
+             .metric-label {
+                 font-size: 13.5px;
+                 color: #64748b;
+             }
+
+             .metric-value {
+                 font-size: 14.5px;
+                 font-weight: 800;
+                 color: #0f172a;
+
+                 &.green {
+                     color: #f4510b;
+                 }
+             }
+         }
+
+         .export-ledger-btn {
+             background: #f4510b;
+             color: #ffffff;
+             font-weight: 700;
+             font-size: 14px;
+             padding: 12px 20px;
+             border: none;
+             border-radius: 100px;
+             cursor: pointer;
+             box-shadow: 0 4px 14px rgba(244, 81, 11, 0.2);
+             transition: all 0.3s ease;
+             text-align: center;
+             margin-top: auto;
+
+             &:hover {
+                 background: #d84300;
+                 transform: translateY(-2px);
+             }
+         }
+     }
+
+     /* Tab 4: Admin Controls */
+     .mlm-widget-admin {
+         .admin-widgets-grid {
+             display: grid;
+             grid-template-columns: repeat(3, 1fr);
+             gap: 24px;
+
+             @media (max-width: 1024px) {
+                 grid-template-columns: 1fr;
+             }
+         }
+
+         .admin-card {
+             background: #ffffff;
+             border: 1px solid #e2e8f0;
+             border-radius: 18px;
+             padding: 24px;
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+             display: flex;
+             flex-direction: column;
+             gap: 20px;
+
+             h4 {
+                 font-size: 13px;
+                 font-weight: 800;
+                 color: #64748b;
+                 letter-spacing: 0.5px;
+                 margin: 0;
+             }
+         }
+
+         .toggle-list {
+             display: flex;
+             flex-direction: column;
+             gap: 16px;
+         }
+
+         .toggle-row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+
+             span {
+                 font-size: 13.5px;
+                 font-weight: 600;
+                 color: #1e293b;
+             }
+
+             .ios-toggle {
+                 width: 44px;
+                 height: 24px;
+                 border-radius: 99px;
+                 background: #cbd5e1;
+                 position: relative;
+                 cursor: pointer;
+                 transition: background-color 0.3s ease;
+
+                 .toggle-handle {
+                     width: 20px;
+                     height: 20px;
+                     border-radius: 50%;
+                     background: #ffffff;
+                     position: absolute;
+                     top: 2px;
+                     left: 2px;
+                     transition: transform 0.3s ease;
+                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                 }
+
+                 &.active {
+                     background-color: #f4510b;
+
+                     .toggle-handle {
+                         transform: translateX(20px);
+                     }
+                 }
+             }
+         }
+
+         .api-list {
+             display: flex;
+             flex-direction: column;
+             gap: 14px;
+         }
+
+         .api-row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding-bottom: 12px;
+             border-bottom: 1px solid #f1f5f9;
+
+             &:last-child {
+                 border-bottom: none;
+             }
+
+             span {
+                 font-size: 13.5px;
+                 font-weight: 600;
+                 color: #1e293b;
+             }
+
+             .api-status {
+                 font-size: 12px;
+                 font-weight: 700;
+                 color: #f4510b;
+                 background: #fef4f0;
+                 padding: 2px 10px;
+                 border-radius: 100px;
+                 display: inline-flex;
+                 align-items: center;
+                 gap: 4px;
+             }
+
+             &.scale-threshold {
+                 flex-direction: column;
+                 align-items: flex-start;
+                 gap: 6px;
+                 border-bottom: none;
+
+                 .scale-label {
+                     color: #64748b;
+                     font-weight: 500;
+                 }
+
+                 .scale-value {
+                     font-size: 14px;
+                     font-weight: 700;
+                     color: #f4510b;
+                 }
+             }
+         }
+
+         .console-output {
+             background: #0f172a;
+             border-radius: 12px;
+             padding: 16px;
+             min-height: 110px;
+             display: flex;
+             flex-direction: column;
+             gap: 6px;
+
+             p {
+                 margin: 0;
+                 line-height: 1.4;
+             }
+
+             code {
+                 color: #38bdf8;
+                 font-family: Consolas, monospace;
+                 font-size: 12px;
+             }
+         }
+
+         .sandbox-btn {
+             background: #334155;
+             color: #ffffff;
+             font-weight: 700;
+             font-size: 13px;
+             padding: 10px 16px;
+             border: none;
+             border-radius: 8px;
+             cursor: pointer;
+             text-align: center;
+             transition: background-color 0.2s ease;
+
+             &:hover {
+                 background: #1e293b;
+             }
+         }
+     }
+
+     /* Tab 5: Mobile App Preview */
+     .mlm-widget-mobile {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+
+         .iphone-frame {
+             width: 280px;
+             height: 540px;
+             border: 10px solid #1e293b;
+             border-radius: 40px;
+             background: #1e293b;
+             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+             overflow: hidden;
+             position: relative;
+         }
+
+         .iphone-screen {
+             width: 100%;
+             height: 100%;
+             background: #f8fafc;
+             display: flex;
+             flex-direction: column;
+             position: relative;
+         }
+
+         .iphone-status-bar {
+             height: 28px;
+             padding: 0 20px;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             font-size: 11px;
+             font-weight: 700;
+             color: #000000;
+             background: #ffffff;
+
+             .status-icons {
+                 display: flex;
+                 gap: 4px;
+             }
+         }
+
+         .iphone-app-header {
+             background: #ffffff;
+             padding: 10px 16px;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             border-bottom: 1px solid #f1f5f9;
+
+             h4 {
+                 font-size: 13.5px;
+                 font-weight: 800;
+                 color: #0f172a;
+                 margin: 0;
+             }
+
+             i {
+                 font-size: 14px;
+                 color: #64748b;
+             }
+         }
+
+         .iphone-app-content {
+             padding: 16px;
+             display: flex;
+             flex-direction: column;
+             gap: 12px;
+             flex: 1;
+             overflow-y: auto;
+         }
+
+         .app-card {
+             background: #ffffff;
+             border-radius: 12px;
+             padding: 14px;
+             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+             border: 1px solid #e2e8f0;
+             display: flex;
+             flex-direction: column;
+             gap: 6px;
+
+             .app-card-label {
+                 font-size: 10px;
+                 color: #94a3b8;
+                 font-weight: 700;
+             }
+
+             .app-card-val {
+                 font-size: 18px;
+                 font-weight: 800;
+                 color: #0f172a;
+                 margin: 0;
+             }
+
+             .app-card-trend {
+                 font-size: 10px;
+                 font-weight: 700;
+                 color: #f4510b;
+             }
+         }
+
+         .app-progress-bar-wrap {
+             width: 100%;
+             height: 6px;
+             background: #f1f5f9;
+             border-radius: 100px;
+             overflow: hidden;
+             margin-top: 4px;
+
+             .app-progress-bar {
+                 height: 100%;
+                 background: #f4510b;
+                 border-radius: 100px;
+             }
+         }
+
+         .app-card-grid {
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             gap: 8px;
+         }
+
+         .app-mini-card {
+             background: #ffffff;
+             border: 1px solid #e2e8f0;
+             border-radius: 10px;
+             padding: 10px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             text-align: center;
+             gap: 6px;
+
+             i {
+                 font-size: 15px;
+                 color: #f4510b;
+             }
+
+             span {
+                 font-size: 9.5px;
+                 font-weight: 700;
+                 color: #475569;
+             }
+         }
+     }
+ }
+
+ /* 2. Process Section ("How We Work") */
+ .mlm-work-section {
+     background: #ffffff;
+     padding: 100px 0;
+     overflow: hidden;
+
+     @media (max-width: 768px) {
+         padding: 60px 0;
+     }
+
+     .mlm-work-header {
+         text-align: center;
+         max-width: 700px;
+         margin: 0 auto 60px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .mlm-work-badge {
+             font-size: 11px;
+             font-weight: 800;
+             color: #f4510b;
+             background: #fef4f0;
+             padding: 6px 14px;
+             border-radius: 99px;
+             letter-spacing: 1px;
+             display: inline-block;
+             margin-bottom: 16px;
+         }
+
+         .mlm-work-title {
+             font-size: clamp(32px, 4.5vw, 48px);
+             font-weight: 900;
+             color: #111111;
+             margin-bottom: 16px;
+         }
+
+         .mlm-work-desc {
+             font-size: 15px;
+             color: #555555;
+             line-height: 1.6;
+         }
+     }
+
+     .mlm-work-timeline-container {
+         position: relative;
+         width: 100%;
+         margin-top: 20px;
+     }
+
+     .mlm-work-timeline-line {
+         position: absolute;
+         top: 20px;
+         left: 12.5%;
+         right: 12.5%;
+         height: 3px;
+         background: #e2e8f0;
+         z-index: 1;
+
+         &::after {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             height: 100%;
+             background: #f4510b;
+             width: 0%;
+             transition: width 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+         }
+     }
+
+     &--active {
+         .mlm-work-timeline-line::after {
+             width: 100%;
+         }
+     }
+
+     .mlm-work-grid {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 24px;
+         position: relative;
+         z-index: 2;
+
+         @media (max-width: 992px) {
+             grid-template-columns: repeat(2, 1fr);
+             gap: 40px 24px;
+
+             .mlm-work-timeline-line {
+                 display: none;
+             }
+         }
+
+         @media (max-width: 640px) {
+             grid-template-columns: 1fr;
+             gap: 32px;
+         }
+     }
+
+     .mlm-work-card-wrapper {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         position: relative;
+     }
+
+     .mlm-work-badge-num {
+         width: 38px;
+         height: 38px;
+         border-radius: 50%;
+         background: #f4510b;
+         color: #ffffff;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: 800;
+         font-size: 13.5px;
+         border: 4px solid #ffffff;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+         margin-bottom: 24px;
+         position: relative;
+         z-index: 3;
+         transition: transform 0.3s ease;
+     }
+
+     .mlm-work-card {
+         background: #ffffff;
+         border: 1px solid #fef4f0;
+         border-radius: 16px;
+         padding: 32px 24px;
+         text-align: center;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         flex-grow: 1;
+         width: 100%;
+
+         &:hover {
+             transform: translateY(-8px);
+             box-shadow: 0 20px 40px rgba(244, 81, 11, 0.08);
+             border-color: rgba(244, 81, 11, 0.2);
+
+             .mlm-work-icon-wrap {
+                 transform: scale(1.1);
+                 background: #f4510b;
+                 color: #ffffff;
+             }
+
+             +.mlm-work-badge-num {
+                 transform: scale(1.1);
+             }
+         }
+
+         .mlm-work-icon-wrap {
+             width: 56px;
+             height: 56px;
+             border-radius: 14px;
+             background: #fef4f0;
+             color: #f4510b;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 22px;
+             margin-bottom: 20px;
+             transition: all 0.3s ease;
+         }
+
+         h3 {
+             font-size: 18px;
+             font-weight: 700;
+             color: #111111;
+             margin: 0 0 12px;
+         }
+
+         p {
+             font-size: 13.5px;
+             color: #555555;
+             line-height: 1.6;
+             margin: 0;
+         }
      }
  }
 
@@ -5922,3 +7151,774 @@
          }
      }
  }
+
+ /* ── NEW HERO BANNER (WHITE BACKGROUND, ORANGE COLOR FORMAT) ── */
+ .mlm-hero-new {
+     position: relative;
+     background: #ffffff;
+     padding: 120px 0 60px;
+     overflow: hidden;
+     font-family: 'Inter', sans-serif;
+
+     @media (max-width: 992px) {
+         padding: 80px 0 40px;
+     }
+
+     .mlm-hero-new__inner {
+         display: grid;
+         grid-template-columns: 1.15fr 0.85fr;
+         gap: 40px;
+         align-items: center;
+
+         @media (max-width: 992px) {
+             grid-template-columns: 1fr;
+             gap: 32px;
+         }
+     }
+
+     .mlm-hero-new__content {
+         @media (max-width: 768px) {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             text-align: center;
+         }
+     }
+
+     .mlm-hero-new__badge {
+         display: inline-flex;
+         align-items: center;
+         gap: 8px;
+         font-size: 11.5px;
+         font-weight: 800;
+         color: #f4510b;
+         background: #fef4f0;
+         border: 1px solid #fde0d2;
+         padding: 6px 16px;
+         border-radius: 100px;
+         margin-bottom: 24px;
+         text-transform: uppercase;
+         letter-spacing: 0.5px;
+
+         .bullet {
+             width: 6.5px;
+             height: 6.5px;
+             border-radius: 50%;
+             background: #f4510b;
+             display: inline-block;
+             animation: blink-dot 2s infinite ease-in-out;
+         }
+
+         @media (max-width: 768px) {
+             margin: 0 auto 20px;
+         }
+     }
+
+     .mlm-hero-new__title {
+         font-size: clamp(24px, 3.5vw, 36px);
+         font-weight: 900;
+         line-height: 1.15;
+         color: #0f172a;
+         margin-bottom: 20px;
+         letter-spacing: -0.5px;
+
+         .accent {
+             color: #f4510b;
+         }
+
+         @media (max-width: 768px) {
+             text-align: center;
+             font-size: 26px;
+             margin-bottom: 16px;
+         }
+     }
+
+     .mlm-hero-new__desc {
+         font-size: 13.5px;
+         line-height: 1.65;
+         color: #475569;
+         margin-bottom: 30px;
+         max-width: 620px;
+
+         strong {
+             color: #0f172a;
+             font-weight: 700;
+         }
+
+         @media (max-width: 768px) {
+             text-align: center;
+             margin: 0 auto 24px;
+         }
+     }
+
+     .mlm-hero-new__services {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 14px;
+         margin-bottom: 30px;
+
+         @media (max-width: 768px) {
+             justify-content: center;
+             gap: 10px;
+             margin-bottom: 24px;
+         }
+
+         .service-pill {
+             display: flex;
+             align-items: center;
+             gap: 12px;
+             padding: 8px 16px;
+             border-radius: 100px;
+             border: 1.5px solid;
+             background: #ffffff;
+
+             @media (max-width: 768px) {
+                 flex: 0 1 calc(50% - 6px);
+                 justify-content: center;
+                 padding: 8px 12px;
+                 box-sizing: border-box;
+
+                 .pill-text span {
+                     display: none !important;
+                 }
+
+                 .pill-text h4 {
+                     font-size: 11px !important;
+                     margin: 0 !important;
+                 }
+
+                 .pill-icon {
+                     font-size: 12px !important;
+                 }
+             }
+
+             @media (max-width: 480px) {
+                 &.purple-pill {
+                     flex: 0 1 100%;
+                 }
+             }
+
+             .pill-icon {
+                 font-size: 14px;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+             }
+
+             .pill-text {
+                 h4 {
+                     font-size: 12.5px;
+                     font-weight: 800;
+                     color: #0f172a;
+                     margin: 0 0 2px;
+                 }
+
+                 span {
+                     font-size: 10px;
+                     color: #64748b;
+                     font-weight: 500;
+                 }
+             }
+
+             &.green-pill {
+                 background: #ecfdf5;
+                 border-color: rgba(16, 185, 129, 0.25);
+
+                 .pill-icon {
+                     color: #10b981;
+                 }
+             }
+
+             &.orange-pill {
+                 background: #fef4f0;
+                 border-color: #fde0d2;
+
+                 .pill-icon {
+                     color: #f4510b;
+                 }
+             }
+
+             &.dark-pill {
+                 background: #f8fafc;
+                 border-color: #e2e8f0;
+
+                 .pill-icon {
+                     color: #475569;
+                 }
+             }
+
+             &.purple-pill {
+                 background: #faf5ff;
+                 border-color: #f3e8ff;
+
+                 .pill-icon {
+                     color: #a855f7;
+                 }
+             }
+         }
+     }
+
+     .mlm-hero-new__stats {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 16px;
+         margin-bottom: 30px;
+
+         @media (max-width: 768px) {
+             gap: 10px;
+             margin-bottom: 24px;
+         }
+
+         .stat-card {
+             padding: 10px 16px;
+             border-radius: 16px;
+             border: 1.5px solid;
+             text-align: center;
+
+             @media (max-width: 768px) {
+                 padding: 12px 8px;
+                 border-radius: 12px;
+             }
+
+             h3 {
+                 font-size: 22px;
+                 font-weight: 900;
+                 margin: 0 0 4px;
+
+                 @media (max-width: 768px) {
+                     font-size: 18px;
+                 }
+             }
+
+             span {
+                 font-size: 11px;
+                 font-weight: 700;
+                 color: #64748b;
+
+                 @media (max-width: 768px) {
+                     font-size: 9.5px;
+                 }
+             }
+
+             &.green-border {
+                 background: #ecfdf5;
+                 border-color: rgba(16, 185, 129, 0.25);
+
+                 h3 {
+                     color: #10b981;
+                 }
+             }
+
+             &.orange-border {
+                 background: #fef4f0;
+                 border-color: #fde0d2;
+
+                 h3 {
+                     color: #f4510b;
+                 }
+             }
+
+             &.dark-border {
+                 background: #f8fafc;
+                 border-color: #e2e8f0;
+
+                 h3 {
+                     color: #0f172a;
+                 }
+             }
+
+             &.purple-border {
+                 background: #faf5ff;
+                 border-color: #f3e8ff;
+
+                 h3 {
+                     color: #a855f7;
+                 }
+             }
+         }
+     }
+
+     .mlm-hero-new__checklist {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 10px 24px;
+         margin-bottom: 36px;
+
+         @media (max-width: 768px) {
+             justify-content: center;
+             gap: 8px 16px;
+             margin-bottom: 30px;
+         }
+
+         span {
+             font-size: 12.0px;
+             font-weight: 700;
+             color: #475569;
+             display: inline-flex;
+             align-items: center;
+             gap: 6px;
+
+             i {
+                 color: #10b981;
+                 font-size: 12px;
+             }
+
+             @media (max-width: 768px) {
+                 font-size: 11.5px;
+             }
+         }
+     }
+
+     .mlm-hero-new__actions {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 14px;
+         align-items: center;
+
+         @media (max-width: 768px) {
+             flex-direction: column;
+             width: 100%;
+             gap: 12px;
+         }
+
+         .btn-filled {
+             background: #f4510b;
+             color: #ffffff;
+             font-size: 15px;
+             font-weight: 700;
+             padding: 14px 32px;
+             border-radius: 100px;
+             text-decoration: none;
+             box-shadow: 0 8px 20px rgba(244, 81, 11, 0.2);
+             transition: all 0.3s ease;
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+
+             @media (max-width: 768px) {
+                 width: 100%;
+                 padding: 14px 20px;
+                 box-sizing: border-box;
+             }
+
+             &:hover {
+                 background: #d84300;
+                 transform: translateY(-2px);
+                 box-shadow: 0 12px 25px rgba(244, 81, 11, 0.35);
+             }
+
+             &.btn-green {
+                 background: #10b981;
+                 box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+
+                 &:hover {
+                     background: #059669;
+                     box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
+                 }
+             }
+         }
+
+         .btn-outline {
+             border: 2px solid #0f172a;
+             color: #0f172a;
+             font-size: 15px;
+             font-weight: 700;
+             padding: 12px 30px;
+             border-radius: 100px;
+             text-decoration: none;
+             display: inline-flex;
+             align-items: center;
+             justify-content: center;
+             gap: 8px;
+             transition: all 0.3s ease;
+
+             @media (max-width: 768px) {
+                 width: 100%;
+                 padding: 14px 20px;
+                 box-sizing: border-box;
+             }
+
+             &:hover {
+                 background: #0f172a;
+                 color: #ffffff;
+                 transform: translateY(-2px);
+             }
+         }
+     }
+
+     .mlm-hero-new__visual {
+         position: relative;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         min-height: 400px;
+
+         @media (max-width: 992px) {
+             display: none;
+         }
+
+         .mlm-hero-new__img {
+             width: 100%;
+             height: auto;
+             object-fit: contain;
+             animation: floatUpDown 4s ease-in-out infinite;
+         }
+     }
+ }
+
+ /* ── WHY CHOOSE US (GRID COMPONENT) ── */
+ .mlm-choose-section {
+     background: #ffffff;
+     padding: 100px 0;
+
+     @media (max-width: 768px) {
+         padding: 60px 0;
+     }
+
+     .mlm-choose-header {
+         text-align: center;
+         max-width: 720px;
+         margin: 0 auto 18px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .mlm-choose-badge {
+             font-size: 11px;
+             font-weight: 800;
+             color: #f4510b;
+             background: #fef4f0;
+             border: 1px solid #fde0d2;
+             padding: 6px 16px;
+             border-radius: 100px;
+             letter-spacing: 0.5px;
+             display: inline-block;
+             margin-bottom: 20px;
+             text-transform: uppercase;
+         }
+
+         .mlm-choose-title {
+             font-size: clamp(30px, 4.5vw, 42px);
+             font-weight: 900;
+             color: #0f172a;
+             line-height: 1.2;
+             margin-bottom: 20px;
+         }
+
+         .mlm-choose-desc {
+             font-size: 15.5px;
+             color: #475569;
+             line-height: 1.6;
+         }
+     }
+
+     .mlm-choose-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 24px;
+
+         @media (max-width: 992px) {
+             grid-template-columns: repeat(2, 1fr);
+         }
+
+         @media (max-width: 640px) {
+             grid-template-columns: 1fr 1fr;
+         }
+     }
+
+     .mlm-choose-card {
+         background: #ffffff;
+         border: 1px solid #e2e8f0;
+         border-radius: 16px;
+         padding: 32px 24px;
+         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+         &:hover {
+             transform: translateY(-6px);
+             box-shadow: 0 20px 40px rgba(244, 81, 11, 0.06);
+             border-color: rgba(244, 81, 11, 0.2);
+         }
+
+         .card-icon {
+             width: 48px;
+             height: 48px;
+             border-radius: 10px;
+             background: #fef4f0;
+             color: #f4510b;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 20px;
+             margin-bottom: 20px;
+         }
+
+         h3 {
+             font-size: 18px;
+             font-weight: 700;
+             color: #0f172a;
+             margin: 0 0 12px;
+         }
+
+         p {
+             font-size: 14px;
+             color: #475569;
+             line-height: 1.6;
+             margin: 0;
+         }
+     }
+ }
+
+ /* ── SECURE & RELIABLE MLM SOFTWARE (DARK BACKGROUND) ── */
+ .mlm-security-section {
+     background: #0f172a;
+     padding: 100px 0;
+
+     @media (max-width: 768px) {
+         padding: 60px 0;
+     }
+
+     .mlm-security-header {
+         text-align: center;
+         max-width: 720px;
+         margin: 0 auto 56px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .mlm-security-badge {
+             font-size: 11px;
+             font-weight: 800;
+             color: #f4510b;
+             background: rgba(244, 81, 11, 0.15);
+             border: 1px solid rgba(244, 81, 11, 0.3);
+             padding: 6px 16px;
+             border-radius: 100px;
+             letter-spacing: 0.5px;
+             display: inline-block;
+             margin-bottom: 20px;
+             text-transform: uppercase;
+         }
+
+         .mlm-security-title {
+             font-size: clamp(30px, 4.5vw, 42px);
+             font-weight: 900;
+             color: #ffffff;
+             line-height: 1.2;
+             margin-bottom: 20px;
+         }
+
+         .mlm-security-desc {
+             font-size: 15.5px;
+             color: #94a3b8;
+             line-height: 1.6;
+         }
+     }
+
+     .mlm-security-grid {
+         display: grid;
+         grid-template-columns: repeat(5, 1fr);
+         gap: 16px;
+
+         @media (max-width: 1024px) {
+             grid-template-columns: repeat(3, 1fr);
+         }
+
+         @media (max-width: 768px) {
+             grid-template-columns: 1fr 1fr;
+         }
+
+         @media (max-width: 480px) {
+             grid-template-columns: 1fr 1fr;
+         }
+     }
+
+     .mlm-security-card {
+         background: #1e293b;
+         border: 1px solid #334155;
+         border-radius: 14px;
+         padding: 28px 20px;
+         text-align: center;
+         transition: all 0.3s ease;
+
+         @media (max-width: 768px) {
+             padding: 20px 14px;
+         }
+
+         &:hover {
+             transform: translateY(-4px);
+             border-color: #f4510b;
+             box-shadow: 0 10px 25px rgba(244, 81, 11, 0.15);
+         }
+
+         .card-icon {
+             width: 48px;
+             height: 48px;
+             border-radius: 50%;
+             background: rgba(244, 81, 11, 0.15);
+             color: #f4510b;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 20px;
+             margin: 0 auto 20px;
+         }
+
+         h3 {
+             font-size: 16px;
+             font-weight: 700;
+             color: #ffffff;
+             margin: 0 0 10px;
+         }
+
+         p {
+             font-size: 13.5px;
+             color: #94a3b8;
+             line-height: 1.5;
+             margin: 0;
+         }
+     }
+ }
+
+ /* ── NEW PROCESS SECTION (6-STEP GRID COMPONENT) ── */
+ .mlm-process-new {
+     background: #ffffff;
+     padding: 100px 0;
+
+     @media (max-width: 768px) {
+         padding: 0px 0;
+     }
+
+     .mlm-process-new__header {
+         text-align: center;
+         max-width: 720px;
+         margin: 0 auto 0px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .mlm-process-new__badge {
+             font-size: 11px;
+             font-weight: 800;
+             color: #8b5cf6;
+             background: #f5f3ff;
+             border: 1px solid #ddd6fe;
+             padding: 6px 16px;
+             border-radius: 100px;
+             letter-spacing: 0.5px;
+             display: inline-block;
+             margin-bottom: 20px;
+             text-transform: uppercase;
+         }
+
+         .mlm-process-new__title {
+             font-size: clamp(30px, 4.5vw, 42px);
+             font-weight: 900;
+             color: #0f172a;
+             line-height: 1.2;
+             margin-bottom: 20px;
+         }
+
+         .mlm-process-new__desc {
+             font-size: 15.5px;
+             color: #475569;
+             line-height: 1.6;
+         }
+     }
+
+     .mlm-process-new__grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 24px;
+
+         @media (max-width: 992px) {
+             grid-template-columns: repeat(2, 1fr);
+         }
+
+         @media (max-width: 768px) {
+             grid-template-columns: 1fr 1fr;
+             gap: 16px;
+         }
+
+         @media (max-width: 640px) {
+             grid-template-columns: 1fr 1fr;
+             gap: 12px;
+         }
+
+         @media (max-width: 480px) {
+             grid-template-columns: 1fr 1fr;
+             gap: 10px;
+         }
+     }
+
+     .mlm-process-new__card {
+         background: #ffffff;
+         border: 1.5px solid #f1f5f9;
+         border-radius: 16px;
+         padding: 32px 24px;
+         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+         @media (max-width: 768px) {
+             padding: 20px 16px;
+             border-radius: 12px;
+         }
+
+         &:hover {
+             transform: translateY(-6px);
+             box-shadow: 0 20px 40px rgba(244, 81, 11, 0.06);
+             border-color: rgba(244, 81, 11, 0.2);
+         }
+
+         .card-top-row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             margin-bottom: 24px;
+         }
+
+         .card-num {
+             font-size: 36px;
+             font-weight: 800;
+             color: #f4510b;
+             line-height: 1;
+         }
+
+         .card-icon {
+             width: 44px;
+             height: 44px;
+             border-radius: 8px;
+             background: #fef4f0;
+             color: #f4510b;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 18px;
+         }
+
+         h3 {
+             font-size: 18px;
+             font-weight: 700;
+             color: #0f172a;
+             margin: 0 0 12px;
+         }
+
+         p {
+             font-size: 14.5px;
+             color: #475569;
+             line-height: 1.6;
+             margin: 0;
+         }
+     }
+ }
+
+@keyframes blink-dot {
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 0.6;
+        box-shadow: 0 0 0 0 rgba(244, 81, 11, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        box-shadow: 0 0 0 5px rgba(244, 81, 11, 0);
+    }
+}

@@ -202,6 +202,12 @@ export default function MLMDevelopment() {
   const processRef = useRef<HTMLDivElement>(null);
   const [processActive, setProcessActive] = useState(false);
 
+  // Ecosystem widgets navigation and admin controls states
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'genealogy' | 'analytics' | 'admin' | 'mobile'>('dashboard');
+  const [autoPairLimit, setAutoPairLimit] = useState(true);
+  const [tdsAutoDeduction, setTdsAutoDeduction] = useState(true);
+  const [impsPayoutLock, setImpsPayoutLock] = useState(true);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -301,7 +307,7 @@ export default function MLMDevelopment() {
       subtitle: "MLM Software",
       btnText: "Know More",
       btnLink: "/contact",
-      color: "#2ecc71",
+      color: "#f4510b",
       btnClass: "mlm-plan-card__btn--green",
       iconSvg: (
         <Image src="/assets/images/services/icons/mlm_software_icon/binary_plan.png" alt="Binary Plan" className="mlm-plan-card__svg" width={90} height={90} style={{ objectFit: 'contain', transform: 'scale(1.45)', transition: 'transform 0.3s ease' }} />
@@ -334,7 +340,7 @@ export default function MLMDevelopment() {
       subtitle: "MLM Software",
       btnText: "Know More",
       btnLink: "/contact",
-      color: "#2ecc71",
+      color: "#f4510b",
       btnClass: "mlm-plan-card__btn--green",
       iconSvg: (
         <Image src="/assets/images/services/icons/mlm_software_icon/Matrix Plan.png" alt="Matrix Plan" className="mlm-plan-card__svg" width={90} height={90} style={{ objectFit: 'contain', transform: 'scale(1.45)', transition: 'transform 0.3s ease' }} />
@@ -410,118 +416,107 @@ export default function MLMDevelopment() {
 
   return (
     <div className="mlm-subpage-wrapper">
-      {/* ── SECTION 1: DARK PREMIUM HERO BANNER ───────────────────────────── */}
-      <section className="sd-hero mlm-hero">
+      {/* ── NEW HERO BANNER (WHITE BACKGROUND, ORANGE COLOR FORMAT) ───────────────── */}
+      <section className="mlm-hero-new">
         <div className="container">
-
-          <div className="sd-hero__inner">
-            <div className="sd-hero__content">
-              <p className="sd-hero__label mlm-hero__label tp-char-animation">MLM SOFTWARE SOLUTION</p>
-              <h1 className="sd-hero__title mlm-hero__title tp-split-text tp-split-up">
-                Power Your Network.<br />
-                Grow Your Business.<br />
-                <span className="sd-hero__title--accent mlm-hero__title--accent">With MLM Software.</span>
+          <div className="mlm-hero-new__inner">
+            <div className="mlm-hero-new__content">
+              {/* Badge */}
+              <div className="mlm-hero-new__badge">
+                <span className="bullet" /> #1 Software Development Company in Chennai
+              </div>
+              
+              {/* Heading */}
+              <h1 className="mlm-hero-new__title">
+                MLM Software &amp; <span className="accent">Crypto Exchange</span> Development Company
               </h1>
-              <p className="sd-hero__description mlm-hero__description tp_fade_anim" data-fade-from="bottom" data-delay="0.2">
-                We build secure, scalable, and feature-rich MLM software solutions that help you manage your network, automate operations, and maximize growth.
+              
+              {/* Description */}
+              <p className="mlm-hero-new__desc">
+                India's leading software development company specializing in <strong>MLM Software</strong>, <strong>Cryptocurrency Exchange Platforms</strong>, and <strong>Blockchain Solutions</strong>. We build secure, scalable systems that power thousands of businesses worldwide.
               </p>
-
-              {/* 4 Features row with customized colored icons */}
-              <div className="mlm-hero-features-row">
-                <div className="mlm-hero-feat">
-                  <i className="fa-solid fa-shield-halved mlm-hero-feat-icon mlm-hero-feat-icon--orange" />
-                  <span>Secure & Reliable</span>
+              
+              {/* Service Pills */}
+              <div className="mlm-hero-new__services">
+                <div className="service-pill green-pill">
+                  <div className="pill-icon">
+                    <i className="fa-solid fa-sitemap" />
+                  </div>
+                  <div className="pill-text">
+                    <h4>MLM Software</h4>
+                    <span>Binary, Matrix, Unilevel, Board Plans</span>
+                  </div>
                 </div>
-                <div className="mlm-hero-feat">
-                  <i className="fa-solid fa-wallet mlm-hero-feat-icon mlm-hero-feat-icon--orange" />
-                  <span>Real-time Payouts</span>
+                <div className="service-pill orange-pill">
+                  <div className="pill-icon">
+                    <i className="fa-solid fa-wallet" />
+                  </div>
+                  <div className="pill-text">
+                    <h4>Crypto Exchange</h4>
+                    <span>CEX, DEX &amp; P2P Platforms</span>
+                  </div>
                 </div>
-                <div className="mlm-hero-feat">
-                  <i className="fa-solid fa-puzzle-piece mlm-hero-feat-icon mlm-hero-feat-icon--orange" />
-                  <span>Scalable & Flexible</span>
-                </div>
-                <div className="mlm-hero-feat">
-                  <i className="fa-solid fa-diagram-project mlm-hero-feat-icon mlm-hero-feat-icon--orange" />
-                  <span>Multi-level Management</span>
+                <div className="service-pill purple-pill">
+                  <div className="pill-icon">
+                    <i className="fa-solid fa-code" />
+                  </div>
+                  <div className="pill-text">
+                    <h4>Blockchain Development</h4>
+                    <span>Smart Contracts &amp; Web3 Apps</span>
+                  </div>
                 </div>
               </div>
-
-              {/* Buttons */}
-              <div className="sd-hero__actions mlm-hero__actions">
-                <Link href="/contact" className="gra_btn sd-hero__btn mlm-hero__btn--primary">
-                  Explore Our Solutions&nbsp;→
+              
+              {/* Stats Cards */}
+              <div className="mlm-hero-new__stats">
+                <div className="stat-card green-border">
+                  <h3><AnimatedCounter min={0} max={100} />+</h3>
+                  <span>MLM Projects</span>
+                </div>
+                <div className="stat-card orange-border">
+                  <h3><AnimatedCounter min={0} max={50} />+</h3>
+                  <span>Crypto</span>
+                </div>
+                <div className="stat-card purple-border">
+                  <h3><AnimatedCounter min={0} max={200} />+</h3>
+                  <span>Blockchain</span>
+                </div>
+              </div>
+              
+              {/* Checklist */}
+              <div className="mlm-hero-new__checklist">
+                <span><i className="fa-solid fa-check" /> 13+ Years</span>
+                <span><i className="fa-solid fa-check" /> 500+ Projects</span>
+                <span><i className="fa-solid fa-check" /> 24/7 Support</span>
+              </div>
+              
+              {/* Actions */}
+              <div className="mlm-hero-new__actions">
+                <Link href="/contact" className="btn-filled btn-green">
+                  Get Free Demo
                 </Link>
+                <a href="tel:+916374913298" className="btn-outline">
+                  <i className="fa-solid fa-phone" /> +91 63749-13298
+                </a>
               </div>
             </div>
-
-            <div className="sd-hero__visual mlm-hero__visual tp_fade_anim" data-fade-from="right" data-delay="0.3">
-              {/* Left Side Elements */}
+            
+            {/* Visual on the Right */}
+            <div className="mlm-hero-new__visual">
+              {/* Floating items */}
               <div className="mlm-hero-floating mlm-hero-floating--red" title="Real-Time Earnings">
                 <i className="fa-solid fa-indian-rupee-sign" />
               </div>
               <div className="mlm-hero-floating mlm-hero-floating--orange" title="Secure Wallet">
                 <i className="fa-solid fa-wallet" />
               </div>
-
-              {/* Right Side Elements */}
               <div className="mlm-hero-floating mlm-hero-floating--purple" title="Multi-Level Network">
                 <i className="fa-solid fa-diagram-project" />
               </div>
               <div className="mlm-hero-floating mlm-hero-floating--blue" title="E-Commerce Integration">
                 <i className="fa-solid fa-cart-shopping" />
               </div>
-
-              <Image src={Images.mlmherobanner} alt="MLM Software Solution" className="sd-hero__img mlm-hero__img" priority />
-            </div>
-          </div>
-
-          <div className="mlm-hero-stats-box tp_fade_anim" data-fade-from="bottom" data-delay="0.1">
-            <div className="mlm-hero-stat-item">
-              <div className="mlm-hero-stat-icon-wrap mlm-hero-stat-icon-wrap--purple">
-                <i className="fa-solid fa-rocket" />
-              </div>
-              <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">
-                  <AnimatedCounter min={0} max={150} />+
-                </span>
-                <span className="mlm-hero-stat-lbl">Projects Delivered</span>
-              </div>
-            </div>
-
-            <div className="mlm-hero-stat-item">
-              <div className="mlm-hero-stat-icon-wrap mlm-hero-stat-icon-wrap--green">
-                <i className="fa-solid fa-face-smile" />
-              </div>
-              <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">
-                  <AnimatedCounter min={0} max={98} />%
-                </span>
-                <span className="mlm-hero-stat-lbl">Client Satisfaction</span>
-              </div>
-            </div>
-
-            <div className="mlm-hero-stat-item">
-              <div className="mlm-hero-stat-icon-wrap mlm-hero-stat-icon-wrap--blue">
-                <i className="fa-solid fa-users" />
-              </div>
-              <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">
-                  <AnimatedCounter min={0} max={50} />M+
-                </span>
-                <span className="mlm-hero-stat-lbl">Users Impacted</span>
-              </div>
-            </div>
-
-            <div className="mlm-hero-stat-item">
-              <div className="mlm-hero-stat-icon-wrap mlm-hero-stat-icon-wrap--yellow">
-                <i className="fa-solid fa-award" />
-              </div>
-              <div className="mlm-hero-stat-text">
-                <span className="mlm-hero-stat-val">
-                  <AnimatedCounter min={0} max={10} />+
-                </span>
-                <span className="mlm-hero-stat-lbl">Years of Experience</span>
-              </div>
+              <Image src={Images.mlmherobanner} alt="MLM Software Solution" className="mlm-hero-new__img" priority />
             </div>
           </div>
         </div>
@@ -564,59 +559,453 @@ export default function MLMDevelopment() {
         </div>
       </section>
 
-      {/* ── SECTION 2: WHY CHOOSE (GLOWING RINGS) – DARK PREMIUM SECTION ──── */}
-      <section className="mlm-glowing-section">
+      {/* ── SECTION: INTERACTIVE MLM ECOSYSTEM ── */}
+      <section className="mlm-ecosystem-section">
         <div className="container">
-          <div className="mlm-glowing-grid">
-            {/* Left Content */}
-            <div className="mlm-glowing-content">
-              <p className="sd-section-label sd-section-label--left tp-char-animation" style={{ color: '#ff6b2b' }}>
-                <span className="sd-section-label__line" style={{ background: '#ff6b2b' }} />
-                WHY CHOOSE NOORYAK MLM SOFTWARE?
-              </p>
-              <h2 className="mlm-glowing-heading tp-split-text tp-split-up">Why Businesses Trust Our MLM Solutions</h2>
-              <p className="mlm-glowing-text tp_fade_anim" data-fade-from="bottom" data-delay="0.15">
-                We deliver reliable, scalable, and result-oriented MLM software to help your business grow and succeed.
-              </p>
+          <div className="mlm-ecosystem-header">
+            <span className="high-fidelity-badge">High Fidelity Interactive Preview</span>
+            <h2 className="mlm-ecosystem-title">Explore Our Enterprise MLM Software Ecosystem</h2>
+            <p className="mlm-ecosystem-desc">
+              Interact with our secure dashboard widgets, genealogy binary networks, and live financial charts.
+              Built purely in high-performance CSS &amp; vector components.
+            </p>
+          </div>
+
+          <div className="mlm-eco-tabs">
+            <button
+              onClick={() => setActiveTab('dashboard')}
+              className={`mlm-eco-tab-btn ${activeTab === 'dashboard' ? 'active' : ''}`}
+            >
+              <i className="fa-solid fa-chart-line" /> Member Dashboard
+            </button>
+            <button
+              onClick={() => setActiveTab('genealogy')}
+              className={`mlm-eco-tab-btn ${activeTab === 'genealogy' ? 'active' : ''}`}
+            >
+              <i className="fa-solid fa-sitemap" /> Genealogy Tree
+            </button>
+            <button
+              onClick={() => setActiveTab('analytics')}
+              className={`mlm-eco-tab-btn ${activeTab === 'analytics' ? 'active' : ''}`}
+            >
+              <i className="fa-solid fa-coins" /> Income Analytics
+            </button>
+            <button
+              onClick={() => setActiveTab('admin')}
+              className={`mlm-eco-tab-btn ${activeTab === 'admin' ? 'active' : ''}`}
+            >
+              <i className="fa-solid fa-sliders" /> Admin Controls
+            </button>
+            <button
+              onClick={() => setActiveTab('mobile')}
+              className={`mlm-eco-tab-btn ${activeTab === 'mobile' ? 'active' : ''}`}
+            >
+              <i className="fa-solid fa-mobile-screen-button" /> Mobile App Preview
+            </button>
+          </div>
+
+          <div className="mlm-eco-content-box">
+            {activeTab === 'dashboard' && (
+              <div className="mlm-widget-dashboard">
+                <div className="mlm-widget-grid">
+                  <div className="mlm-widget-card">
+                    <span className="widget-label">CURRENT WALLET BALANCE</span>
+                    <span className="widget-val">₹1,84,350.00</span>
+                    <span className="widget-trend green">
+                      <i className="fa-solid fa-arrow-trend-up" /> +12.4% today
+                    </span>
+                  </div>
+                  <div className="mlm-widget-card">
+                    <span className="widget-label">TOTAL DIRECT REFERRALS</span>
+                    <span className="widget-val">284 Users</span>
+                    <span className="widget-trend blue">
+                      <i className="fa-solid fa-user-plus" /> +0 new entries
+                    </span>
+                  </div>
+                  <div className="mlm-widget-card">
+                    <span className="widget-label">TOTAL LEG MATCH PAIRS</span>
+                    <span className="widget-val">1,420 Pairs</span>
+                    <span className="widget-trend green">
+                      <i className="fa-solid fa-check-double" /> Leg matched
+                    </span>
+                  </div>
+                  <div className="mlm-widget-card">
+                    <span className="widget-label">SPONSORSHIP BONUS</span>
+                    <span className="widget-val">₹48,500.00</span>
+                    <span className="widget-trend grey">Flat 10% sponsor tier</span>
+                  </div>
+                </div>
+
+                <div className="mlm-ledger-box">
+                  <div className="ledger-header">
+                    <h4>LIVE TRANSACTION LEDGER FEED</h4>
+                    <span className="status-badge">
+                      <span className="pulse-dot" /> Real-time Payouts Active
+                    </span>
+                  </div>
+                  <div className="ledger-rows">
+                    <div className="ledger-row">
+                      <div className="row-left">
+                        <div className="circle-icon green">IN</div>
+                        <div>
+                          <h5>Binary Matching Commission</h5>
+                          <p>Node ID: #843210 (Left matched Right)</p>
+                        </div>
+                      </div>
+                      <div className="row-right">
+                        <span className="amount positive">+₹4,500.00</span>
+                        <span className="time">2 mins ago</span>
+                      </div>
+                    </div>
+                    <div className="ledger-row">
+                      <div className="row-left">
+                        <div className="circle-icon blue">DS</div>
+                        <div>
+                          <h5>Direct Sponsor Payout (ID #843292)</h5>
+                          <p>Sponsor bonus for Binary entry</p>
+                        </div>
+                      </div>
+                      <div className="row-right">
+                        <span className="amount positive">+₹2,500.00</span>
+                        <span className="time">14 mins ago</span>
+                      </div>
+                    </div>
+                    <div className="ledger-row">
+                      <div className="row-left">
+                        <div className="circle-icon purple">W</div>
+                        <div>
+                          <h5>E-Wallet Auto IMPS Bank Withdrawal</h5>
+                          <p>Withdrawal to HDFC Account *9021</p>
+                        </div>
+                      </div>
+                      <div className="row-right">
+                        <span className="amount negative">-₹25,000.00</span>
+                        <span className="time">1 hour ago</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'genealogy' && (
+              <div className="mlm-widget-genealogy">
+                <p className="genealogy-subtitle">HIGH FIDELITY BINARY NETWORK HIERARCHY</p>
+                <div className="tree-container">
+                  <div className="tree-node">
+                    <div className="node-content blue">
+                      <h4>Root Admin Node</h4>
+                      <p>ID: #10001 (Active)</p>
+                    </div>
+                    <div className="node-badge-bottom">1</div>
+                  </div>
+                  
+                  <div className="tree-connector-row" style={{ width: '50%' }}>
+                    <svg className="connector-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                      <path d="M50 0 L50 20 L25 20 L25 40 M50 20 L75 20 L75 40" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
+                    </svg>
+                  </div>
+
+                  <div className="tree-level-row">
+                    <div className="tree-branch">
+                      <div className="tree-node">
+                        <div className="node-content green">
+                          <h4>Left Member</h4>
+                          <p>ID: #10002</p>
+                          <div className="node-stats">L: 420 * R: 380</div>
+                        </div>
+                      </div>
+                      <div className="tree-connector-row" style={{ width: '100%' }}>
+                        <svg className="connector-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                          <path d="M50 0 L50 20 L25 20 L25 40 M50 20 L75 20 L75 40" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
+                        </svg>
+                      </div>
+                      <div className="tree-level-row level-2">
+                        <div className="tree-node">
+                          <div className="node-content grey">
+                            <h4>Active</h4>
+                            <p>#10004</p>
+                          </div>
+                        </div>
+                        <div className="tree-node">
+                          <div className="node-content grey">
+                            <h4>Active</h4>
+                            <p>#10005</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="tree-branch">
+                      <div className="tree-node">
+                        <div className="node-content green">
+                          <h4>Right Member</h4>
+                          <p>ID: #10003</p>
+                          <div className="node-stats">L: 210 * R: 205</div>
+                        </div>
+                      </div>
+                      <div className="tree-connector-row" style={{ width: '100%' }}>
+                        <svg className="connector-svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+                          <path d="M50 0 L50 20 L25 20 L25 40 M50 20 L75 20 L75 40" fill="none" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="4 4" />
+                        </svg>
+                      </div>
+                      <div className="tree-level-row level-2">
+                        <div className="tree-node">
+                          <div className="node-content grey">
+                            <h4>Active</h4>
+                            <p>#10006</p>
+                          </div>
+                        </div>
+                        <div className="tree-node">
+                          <div className="node-content red">
+                            <h4>Inactive</h4>
+                            <p>#10007</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'analytics' && (
+              <div className="mlm-widget-analytics">
+                <div className="analytics-grid">
+                  <div className="analytics-chart-box">
+                    <div className="chart-box-header">
+                      <h4>YIELD &amp; COMMISSION GROWTH CURVE</h4>
+                      <span className="audit-badge">Monthly Audit</span>
+                    </div>
+                    <div className="growth-chart">
+                      <div className="chart-bars">
+                        <div className="chart-bar-col">
+                          <div className="bar-val-height" style={{ height: '25%' }}></div>
+                          <span className="bar-label">Jan</span>
+                        </div>
+                        <div className="chart-bar-col">
+                          <div className="bar-val-height" style={{ height: '40%' }}></div>
+                          <span className="bar-label">Feb</span>
+                        </div>
+                        <div className="chart-bar-col">
+                          <div className="bar-val-height" style={{ height: '55%' }}></div>
+                          <span className="bar-label">Mar</span>
+                        </div>
+                        <div className="chart-bar-col">
+                          <div className="bar-val-height" style={{ height: '80%' }}></div>
+                          <span className="bar-label">Apr</span>
+                        </div>
+                        <div className="chart-bar-col active">
+                          <span className="highlight-tag">₹5.2L</span>
+                          <div className="bar-val-height" style={{ height: '95%' }}></div>
+                          <span className="bar-label">May</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="analytics-table-box">
+                    <h4>COMPOUNDED YIELD METRICS</h4>
+                    <div className="yield-table">
+                      <div className="table-row">
+                        <span className="metric-label">Daily ROI Distributed</span>
+                        <span className="metric-value">₹8,42,100.00</span>
+                      </div>
+                      <div className="table-row">
+                        <span className="metric-label">Total Binary Leg Match</span>
+                        <span className="metric-value">₹14,58,000.00</span>
+                      </div>
+                      <div className="table-row">
+                        <span className="metric-label">TDS Deductions (5%)</span>
+                        <span className="metric-value green">₹1,15,005.00</span>
+                      </div>
+                      <div className="table-row">
+                        <span className="metric-label">Admin Service Charge (5%)</span>
+                        <span className="metric-value green">₹1,15,005.00</span>
+                      </div>
+                    </div>
+                    <button className="export-ledger-btn">Export Financial Ledger Demo</button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'admin' && (
+              <div className="mlm-widget-admin">
+                <div className="admin-widgets-grid">
+                  <div className="admin-card">
+                    <h4>PAYOUT CAPPINGS &amp; LOCKS</h4>
+                    <div className="toggle-list">
+                      <div className="toggle-row">
+                        <span>Auto Pair Limit matching</span>
+                        <div
+                          className={`ios-toggle ${autoPairLimit ? 'active' : ''}`}
+                          onClick={() => setAutoPairLimit(!autoPairLimit)}
+                        >
+                          <div className="toggle-handle" />
+                        </div>
+                      </div>
+                      <div className="toggle-row">
+                        <span>TDS Auto Deduction (5%)</span>
+                        <div
+                          className={`ios-toggle ${tdsAutoDeduction ? 'active' : ''}`}
+                          onClick={() => setTdsAutoDeduction(!tdsAutoDeduction)}
+                        >
+                          <div className="toggle-handle" />
+                        </div>
+                      </div>
+                      <div className="toggle-row">
+                        <span>IMPS API Payout Lock</span>
+                        <div
+                          className={`ios-toggle ${impsPayoutLock ? 'active' : ''}`}
+                          onClick={() => setImpsPayoutLock(!impsPayoutLock)}
+                        >
+                          <div className="toggle-handle" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="admin-card">
+                    <h4>APIS &amp; CONNECTED GATEWAYS</h4>
+                    <div className="api-list">
+                      <div className="api-row">
+                        <span>Bank Withdrawal API</span>
+                        <span className="api-status">
+                          <i className="fa-solid fa-circle-check" /> Razorpay Active
+                        </span>
+                      </div>
+                      <div className="api-row">
+                        <span>OTP Verification SMS</span>
+                        <span className="api-status">
+                          <i className="fa-solid fa-circle-check" /> Twilio Connected
+                        </span>
+                      </div>
+                      <div className="api-row scale-threshold">
+                        <span className="scale-label">AWS Scale Threshold</span>
+                        <span className="scale-value">Auto scale up (1M nodes)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="admin-card">
+                    <h4>LIVE NODE LATENCY FEED</h4>
+                    <div className="console-output">
+                      <code>[16:42:01] DB LOCK ACQUIRED</code>
+                      <code>[16:42:01] match matched pair node #4832</code>
+                      <code>[16:42:01] Payout success to HDFC. API 200 OK</code>
+                    </div>
+                    <button className="sandbox-btn">Launch Sandbox Console</button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'mobile' && (
+              <div className="mlm-widget-mobile">
+                <div className="iphone-frame">
+                  <div className="iphone-screen">
+                    <div className="iphone-status-bar">
+                      <span>9:41</span>
+                      <div className="status-icons">
+                        <i className="fa-solid fa-signal" />
+                        <i className="fa-solid fa-wifi" />
+                        <i className="fa-solid fa-battery-full" />
+                      </div>
+                    </div>
+                    <div className="iphone-app-header">
+                      <h4>Nooryak Pay</h4>
+                      <i className="fa-solid fa-bell" />
+                    </div>
+                    <div className="iphone-app-content">
+                      <div className="app-card">
+                        <span className="app-card-label">WALLET BALANCE</span>
+                        <h3 className="app-card-val">₹1,84,350.00</h3>
+                        <span className="app-card-trend">+12.4% today</span>
+                        <div className="app-progress-bar-wrap">
+                          <div className="app-progress-bar" style={{ width: '70%' }} />
+                        </div>
+                      </div>
+                      <div className="app-card-grid">
+                        <div className="app-mini-card">
+                          <i className="fa-solid fa-users" />
+                          <span>Referrals</span>
+                        </div>
+                        <div className="app-mini-card">
+                          <i className="fa-solid fa-wallet" />
+                          <span>Earnings</span>
+                        </div>
+                        <div className="app-mini-card">
+                          <i className="fa-solid fa-network-wired" />
+                          <span>Network</span>
+                        </div>
+                        <div className="app-mini-card">
+                          <i className="fa-solid fa-gears" />
+                          <span>Settings</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 2: WHY CHOOSE US (GRID COMPONENT) ──────────────────── */}
+      <section className="mlm-choose-section">
+        <div className="container">
+          <div className="mlm-choose-header">
+            <span className="mlm-choose-badge">Why Choose Us</span>
+            <h2 className="mlm-choose-title">Why Choose Our MLM Software Development Company in Chennai</h2>
+            <p className="mlm-choose-desc">
+              As an experienced MLM software development company in Chennai, we understand the complex needs of network marketing businesses.
+            </p>
+          </div>
+
+          <div className="mlm-choose-grid">
+            <div className="mlm-choose-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-sitemap" />
+              </div>
+              <h3>Support for All MLM Plans</h3>
+              <p>Binary, Matrix, Unilevel &amp; Hybrid Plans fully supported with custom configurations.</p>
             </div>
-            {/* Right Glowing Icons Row */}
-            <div className="mlm-glowing-icons tp_fade_anim" data-fade-from="bottom" data-delay="0.3">
-              <div className="mlm-glow-card mlm-glow-card--blue">
-                <div className="mlm-glow-ring">
-                  <i className="fa-solid fa-code mlm-glow-icon" />
-                </div>
-                <span className="mlm-glow-title">Customized Software</span>
+            <div className="mlm-choose-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-calculator" />
               </div>
-              <div className="mlm-glow-card mlm-glow-card--purple">
-                <div className="mlm-glow-ring">
-                  <i className="fa-solid fa-users-gear mlm-glow-icon" />
-                </div>
-                <span className="mlm-glow-title">MLM Expert Team</span>
+              <h3>Automated Commission System</h3>
+              <p>Automated Commission &amp; Bonus Calculations with zero errors and real-time processing.</p>
+            </div>
+            <div className="mlm-choose-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-lock" />
               </div>
-              <div className="mlm-glow-card mlm-glow-card--green">
-                <div className="mlm-glow-ring">
-                  <i className="fa-solid fa-calculator mlm-glow-icon" />
-                </div>
-                <span className="mlm-glow-title">Automatic Calculation</span>
+              <h3>Secure Member Login</h3>
+              <p>Secure Member Login System with two-factor authentication and role-based access.</p>
+            </div>
+            <div className="mlm-choose-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-money-bill-transfer" />
               </div>
-              <div className="mlm-glow-card mlm-glow-card--yellow">
-                <div className="mlm-glow-ring">
-                  <i className="fa-solid fa-tags mlm-glow-icon" />
-                </div>
-                <span className="mlm-glow-title">Best Price</span>
+              <h3>Multi-Currency Support</h3>
+              <p>Multi-Currency &amp; Multi-Language Support for global network marketing businesses.</p>
+            </div>
+            <div className="mlm-choose-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-cloud" />
               </div>
-              <div className="mlm-glow-card mlm-glow-card--pink">
-                <div className="mlm-glow-ring">
-                  <i className="fa-solid fa-clock mlm-glow-icon" />
-                </div>
-                <span className="mlm-glow-title">On Time Delivery</span>
+              <h3>Cloud-Based System</h3>
+              <p>Fast, Scalable &amp; Cloud-Based System that grows with your business.</p>
+            </div>
+            <div className="mlm-choose-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-headset" />
               </div>
-              <div className="mlm-glow-card mlm-glow-card--red">
-                <div className="mlm-glow-ring">
-                  <i className="fa-solid fa-shield-halved mlm-glow-icon" />
-                </div>
-                <span className="mlm-glow-title">No Hidden Cost</span>
-              </div>
+              <h3>Dedicated Support</h3>
+              <p>Technical Support &amp; Training to ensure smooth operations and quick issue resolution.</p>
             </div>
           </div>
         </div>
@@ -693,8 +1082,7 @@ export default function MLMDevelopment() {
               <h3 className="mlm-feature-card__title">E-Commerce</h3>
               <p className="mlm-feature-card__desc">Integrated shopping & product management system.</p>
             </div>
-
-            <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.55">
+                  <div className="mlm-feature-card tp_fade_anim" data-fade-from="bottom" data-delay="0.55">
               <div className="mlm-feature-card__circle">
                 <Image src="/assets/images/services/icons/support_system.png" alt="Support System" className="mlm-feature-card__icon" width={50} height={50} style={{ objectFit: 'contain' }} />
               </div>
@@ -705,92 +1093,133 @@ export default function MLMDevelopment() {
         </div>
       </section>
 
-      {/* ── SECTION 5: PROVEN 6-STEP MLM DEVELOPMENT PROCESS ─────────────── */}
-      <section ref={processRef} className={`sd-process ${processActive ? 'sd-process--active' : ''}`} style={{ background: '#ffffff', padding: '80px 0' }}>
+      {/* ── SECTION 5: NEW 6-STEP PROCESS GRID (Task 3) ── */}
+      <section ref={processRef} className="mlm-process-new">
         <div className="container">
-          <div className="sd-process__header">
-            <p className="sd-section-label">
-              <span className="sd-section-label__line" />
-              OUR MLM DEVELOPMENT PROCESS
-              <span className="sd-section-label__line" />
+          <div className="mlm-process-new__header">
+            <span className="mlm-process-new__badge">Our Process</span>
+            <h2 className="mlm-process-new__title">Our MLM Software Development Process</h2>
+            <p className="mlm-process-new__desc">
+              A systematic approach to building your custom MLM software solution.
             </p>
-            <h2 className="sd-process__heading">Our Proven 6-Step MLM Development Process</h2>
           </div>
 
-          <div className="sd-process__track">
-            <div className="sd-process__line" />
-
-            <div className="sd-process__steps">
-              <div className="sd-process-step">
-                <div className="sd-process-step__circle">
-                  <span className="sd-process-step__dot" />
-                  <i className="fa-solid fa-file-invoice sd-process-step__icon" />
+          <div className="mlm-process-new__grid">
+            <div className="mlm-process-new__card">
+              <div className="card-top-row">
+                <span className="card-num">01</span>
+                <div className="card-icon">
+                  <i className="fa-regular fa-comment-dots" />
                 </div>
-                <div className="sd-process-step__arrow">›</div>
-                <h4 className="sd-process-step__title">
-                  <span className="sd-process-step__number">01</span> Requirement Analysis
-                </h4>
-                <p className="sd-process-step__desc">Understanding your business goals and local requirements.</p>
               </div>
+              <h3>Requirement Discussion</h3>
+              <p>We understand your MLM business model and compensation plan requirements.</p>
+            </div>
 
-              <div className="sd-process-step">
-                <div className="sd-process-step__circle">
-                  <span className="sd-process-step__dot" />
-                  <i className="fa-solid fa-compass sd-process-step__icon" />
+            <div className="mlm-process-new__card">
+              <div className="card-top-row">
+                <span className="card-num">02</span>
+                <div className="card-icon">
+                  <i className="fa-solid fa-sitemap" />
                 </div>
-                <div className="sd-process-step__arrow">›</div>
-                <h4 className="sd-process-step__title">
-                  <span className="sd-process-step__number">02</span> Planning & Strategy
-                </h4>
-                <p className="sd-process-step__desc">Creating a roadmap and strategy for your MLM platform.</p>
               </div>
+              <h3>MLM Plan Analysis</h3>
+              <p>Detailed analysis of your MLM plan structure and commission calculations.</p>
+            </div>
 
-              <div className="sd-process-step">
-                <div className="sd-process-step__circle">
-                  <span className="sd-process-step__dot" />
-                  <i className="fa-solid fa-bezier-curve sd-process-step__icon" />
+            <div className="mlm-process-new__card">
+              <div className="card-top-row">
+                <span className="card-num">03</span>
+                <div className="card-icon">
+                  <i className="fa-solid fa-pen-nib" />
                 </div>
-                <div className="sd-process-step__arrow">›</div>
-                <h4 className="sd-process-step__title">
-                  <span className="sd-process-step__number">03</span> Design & Prototyping
-                </h4>
-                <p className="sd-process-step__desc">Designing intuitive UI/UX with interactive prototypes.</p>
               </div>
+              <h3>UI/UX Design</h3>
+              <p>Creating intuitive and user-friendly interfaces for members and admins.</p>
+            </div>
 
-              <div className="sd-process-step">
-                <div className="sd-process-step__circle">
-                  <span className="sd-process-step__dot" />
-                  <i className="fa-solid fa-laptop-code sd-process-step__icon" />
+            <div className="mlm-process-new__card">
+              <div className="card-top-row">
+                <span className="card-num">04</span>
+                <div className="card-icon">
+                  <i className="fa-solid fa-code" />
                 </div>
-                <div className="sd-process-step__arrow">›</div>
-                <h4 className="sd-process-step__title">
-                  <span className="sd-process-step__number">04</span> Development
-                </h4>
-                <p className="sd-process-step__desc">Building secure, scalable, and high-performance software.</p>
               </div>
+              <h3>Software Development</h3>
+              <p>Building your custom MLM software with robust architecture.</p>
+            </div>
 
-              <div className="sd-process-step">
-                <div className="sd-process-step__circle">
-                  <span className="sd-process-step__dot" />
-                  <i className="fa-solid fa-bug-slash sd-process-step__icon" />
+            <div className="mlm-process-new__card">
+              <div className="card-top-row">
+                <span className="card-num">05</span>
+                <div className="card-icon">
+                  <i className="fa-solid fa-user-shield" />
                 </div>
-                <div className="sd-process-step__arrow">›</div>
-                <h4 className="sd-process-step__title">
-                  <span className="sd-process-step__number">05</span> Testing & QA
-                </h4>
-                <p className="sd-process-step__desc">Rigorous testing to ensure bug-free and smooth performance.</p>
               </div>
+              <h3>Testing &amp; Security Check</h3>
+              <p>Rigorous testing and security audits before deployment.</p>
+            </div>
 
-              <div className="sd-process-step">
-                <div className="sd-process-step__circle">
-                  <span className="sd-process-step__dot" />
-                  <i className="fa-solid fa-rocket sd-process-step__icon" />
+            <div className="mlm-process-new__card">
+              <div className="card-top-row">
+                <span className="card-num">06</span>
+                <div className="card-icon">
+                  <i className="fa-solid fa-rocket" />
                 </div>
-                <h4 className="sd-process-step__title">
-                  <span className="sd-process-step__number">06</span> Deployment & Support
-                </h4>
-                <p className="sd-process-step__desc">Launching your platform and providing ongoing support.</p>
               </div>
+              <h3>Launch &amp; Training Support</h3>
+              <p>Smooth deployment with comprehensive training for your team.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION: SECURE & RELIABLE MLM SOFTWARE ─────────────────────────── */}
+      <section className="mlm-security-section">
+        <div className="container">
+          <div className="mlm-security-header">
+            <span className="mlm-security-badge">Security First</span>
+            <h2 className="mlm-security-title">Secure &amp; Reliable MLM Software</h2>
+            <p className="mlm-security-desc">
+              Security is critical for MLM businesses. Our MLM software includes enterprise-grade security features to protect your data and transactions.
+            </p>
+          </div>
+
+          <div className="mlm-security-grid">
+            <div className="mlm-security-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-shield-halved" />
+              </div>
+              <h3>SSL Encryption</h3>
+              <p>256-bit SSL encryption for all data transfers and communications.</p>
+            </div>
+            <div className="mlm-security-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-user-shield" />
+              </div>
+              <h3>Secure Admin Controls</h3>
+              <p>Multi-level admin access with complete audit trails.</p>
+            </div>
+            <div className="mlm-security-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-shield-virus" />
+              </div>
+              <h3>Fraud Detection</h3>
+              <p>Advanced fraud detection mechanisms to protect your business.</p>
+            </div>
+            <div className="mlm-security-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-database" />
+              </div>
+              <h3>Backup &amp; Data Protection</h3>
+              <p>Automated daily backups with disaster recovery systems.</p>
+            </div>
+            <div className="mlm-security-card">
+              <div className="card-icon">
+                <i className="fa-solid fa-user-gear" />
+              </div>
+              <h3>Role-Based Access</h3>
+              <p>Granular permissions based on user roles and responsibilities.</p>
             </div>
           </div>
         </div>

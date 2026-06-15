@@ -12,9 +12,9 @@
   "/api/analytics/track/route": "/api/analytics/track",
   "/api/enquiry/route": "/api/enquiry",
   "/favicon.ico/route": "/favicon.ico",
-  "/api/admin/blogs/route": "/api/admin/blogs",
-  "/api/admin/enquiries/route": "/api/admin/enquiries",
   "/api/admin/services/route": "/api/admin/services",
+  "/api/admin/enquiries/route": "/api/admin/enquiries",
+  "/api/admin/blogs/route": "/api/admin/blogs",
   "/api/admin/stats/route": "/api/admin/stats",
   "/api/blog/[slug]/route": "/api/blog/[slug]",
   "/api/services/[slug]/route": "/api/services/[slug]",
@@ -47,7 +47,7 @@
   "/services/submenu/digital-marketing/page": "/services/submenu/digital-marketing",
   "/services/submenu/mlm/page": "/services/submenu/mlm",
   "/services/submenu/ppc/page": "/services/submenu/ppc",
-  "/services/submenu/local-seo/page": "/services/submenu/local-seo",
   "/services/submenu/software-development/page": "/services/submenu/software-development",
+  "/services/submenu/local-seo/page": "/services/submenu/local-seo",
   "/services/submenu/social-media-marketing/page": "/services/submenu/social-media-marketing"
 }

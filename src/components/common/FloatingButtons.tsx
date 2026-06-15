@@ -10,8 +10,9 @@ export default function FloatingButtons() {
         href="https://wa.me/916374913298?text=Hello%20Nooryak%20Tech%2C%20I%20would%20like%20to%20discuss%20about%20your%20Digital%20Services"
         target="_blank"
         rel="noopener noreferrer"
+        className="whatsapp-float-btn"
       >
-        <img src={Images.whatsapp.src} alt="WhatsApp" />
+        <i className="fa-brands fa-whatsapp"></i>
       </a>
       <a href="tel: 6374913298" rel="nofollow" className="btn-call">
         <div className="btn-call__ico">
