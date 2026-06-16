@@ -169,7 +169,7 @@
     background: #25D366;
     color: #ffffff;
     font-size: 24px;
-    
+
     i {
       display: block;
     }
@@ -224,7 +224,7 @@
   bottom: 20px;
   left: 20px;
   box-shadow: 0 8px 10px #ff3d004d;
-  transform: rotate(90deg);
+  transform: rotate(90deg) !important;
 }
 
 .btn-call__ico {
@@ -434,6 +434,7 @@
 
 .texteditor_font {
   height: 45px;
+
   input {
     border: none !important;
   }
@@ -463,6 +464,7 @@
     pointer-events: none;
     z-index: 0;
   }
+
   &::after {
     content: '';
     position: absolute;
@@ -525,10 +527,12 @@
     z-index: 10;
     pointer-events: none;
   }
+
   &::before {
     left: 0;
     background: linear-gradient(to right, #fff8f4 0%, transparent 100%);
   }
+
   &::after {
     right: 0;
     background: linear-gradient(to left, #fff8f4 0%, transparent 100%);
@@ -552,7 +556,8 @@
   gap: 16px;
   width: max-content;
   animation: marqueeLeft 35s linear infinite;
-  padding: 8px 0 12px; /* vertical breathing room for 3D lift on hover */
+  padding: 8px 0 12px;
+  /* vertical breathing room for 3D lift on hover */
 }
 
 /* ── Single Item in track ───────────────────────────────────────────── */
@@ -597,7 +602,7 @@
     position: absolute;
     inset: 0;
     border-radius: 100px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, transparent 60%);
     pointer-events: none;
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -674,7 +679,8 @@
 
     .tp-service-capsule__img {
       transform: scale(1.12) rotate(-3deg);
-      filter: brightness(10); /* White icon on orange bg */
+      filter: brightness(10);
+      /* White icon on orange bg */
     }
 
     .tp-service-capsule__text {
@@ -691,12 +697,23 @@
 
 /* ── CSS Keyframe Animations ─────────────────────────────────────────── */
 @keyframes marqueeLeft {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-33.3333%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.3333%);
+  }
 }
+
 @keyframes marqueeRight {
-  0%   { transform: translateX(-33.3333%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-33.3333%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* ── Mobile Responsive Tweaks ───────────────────────────────────────── */
@@ -714,6 +731,7 @@
   }
 
   .tp-marquee-row {
+
     &::before,
     &::after {
       width: 60px;

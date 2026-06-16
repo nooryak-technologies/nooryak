@@ -183,7 +183,7 @@ export default function EnquiryForm() {
                                     <option value="App Development">App Development</option>
                                     <option value="Google Ads">Google Ads</option>
                                     <option value="Software Development">Software Development</option>
-                                    <option value="MLM Software">MLM Software</option>
+                                    <option value="MLM Software Development">MLM Software Development</option>
                                     <option value="Social Media Marketing">Social Media Marketing</option>
                                     <option value="Graphic Designing">Graphic Designing</option>
                                     <option value="Video Editing">Video Editing</option>

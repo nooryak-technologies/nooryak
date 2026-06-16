@@ -423,7 +423,7 @@ export default function MLMDevelopment() {
             <div className="mlm-hero-new__content">
               {/* Badge */}
               <div className="mlm-hero-new__badge">
-                <span className="bullet" /> #1 Software Development Company in Chennai
+                <span className="bullet" /> #1 MLM Soft-Development Company Chennai
               </div>
               
               {/* Heading */}
@@ -470,15 +470,15 @@ export default function MLMDevelopment() {
               {/* Stats Cards */}
               <div className="mlm-hero-new__stats">
                 <div className="stat-card green-border">
-                  <h3><AnimatedCounter min={0} max={100} />+</h3>
+                  <h3><AnimatedCounter min={0} max={100} /><span className="plus-sign">+</span></h3>
                   <span>MLM Projects</span>
                 </div>
                 <div className="stat-card orange-border">
-                  <h3><AnimatedCounter min={0} max={50} />+</h3>
+                  <h3><AnimatedCounter min={0} max={50} /><span className="plus-sign">+</span></h3>
                   <span>Crypto</span>
                 </div>
                 <div className="stat-card purple-border">
-                  <h3><AnimatedCounter min={0} max={200} />+</h3>
+                  <h3><AnimatedCounter min={0} max={200} /><span className="plus-sign">+</span></h3>
                   <span>Blockchain</span>
                 </div>
               </div>
@@ -914,7 +914,7 @@ export default function MLMDevelopment() {
                       </div>
                     </div>
                     <div className="iphone-app-header">
-                      <h4>Nooryak Pay</h4>
+                      <h4>eCOM MLM WALLET</h4>
                       <i className="fa-solid fa-bell" />
                     </div>
                     <div className="iphone-app-content">

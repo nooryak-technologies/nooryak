@@ -6306,6 +6306,64 @@
              align-items: center;
              flex: 1;
          }
+
+         @media (max-width: 768px) {
+             .tree-container > .tree-level-row {
+                 flex-direction: column;
+                 align-items: center;
+                 gap: 48px;
+             }
+
+             .tree-level-row.level-2 {
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: center;
+                 gap: 16px;
+                 width: 100%;
+             }
+
+             .tree-container > .tree-connector-row {
+                 display: none !important;
+             }
+
+             .tree-branch > .tree-connector-row {
+                 display: block;
+                 width: 100% !important;
+             }
+
+             .tree-container > .tree-node {
+                 position: relative;
+                 margin-bottom: 24px;
+
+                 &::after {
+                     content: '';
+                     position: absolute;
+                     bottom: -24px;
+                     left: 50%;
+                     transform: translateX(-50%);
+                     width: 2px;
+                     height: 24px;
+                     border-left: 2px dashed #cbd5e1;
+                     z-index: 1;
+                 }
+             }
+
+             .tree-branch:first-child {
+                 position: relative;
+
+                 &::after {
+                     content: '';
+                     position: absolute;
+                     bottom: -36px;
+                     left: 50%;
+                     transform: translateX(-50%);
+                     width: 2px;
+                     height: 36px;
+                     border-left: 2px dashed #cbd5e1;
+                     z-index: 1;
+                 }
+             }
+         }
      }
 
      /* Tab 3: Income Analytics */
@@ -7199,6 +7257,7 @@
          margin-bottom: 24px;
          text-transform: uppercase;
          letter-spacing: 0.5px;
+         white-space: nowrap;
 
          .bullet {
              width: 6.5px;
@@ -7384,6 +7443,29 @@
                  font-size: 22px;
                  font-weight: 900;
                  margin: 0 0 4px;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 gap: 2px;
+
+                 .purecounter {
+                     font-size: 32px;
+                     line-height: 1;
+
+                     @media (max-width: 768px) {
+                         font-size: 26px;
+                     }
+                 }
+
+                 .plus-sign {
+                     font-size: 20px;
+                     font-weight: 700;
+                     line-height: 1;
+
+                     @media (max-width: 768px) {
+                         font-size: 16px;
+                     }
+                 }
 
                  @media (max-width: 768px) {
                      font-size: 18px;
