@@ -6,5 +6,5 @@
 :HL["/_next/static/css/d0264c2a3dd97ec1.css","style"]
 :HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css","style"]
-:HL["/_next/static/css/3e7e9cd9c47f1d68.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"submenu","param":null,"prefetchHints":0,"slots":{"children":{"name":"graphic-designing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"3rpOxzt29J4IDjJhHwX_v"}
+:HL["/_next/static/css/4285e2d65e2ac6f2.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"submenu","param":null,"prefetchHints":0,"slots":{"children":{"name":"graphic-designing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"0e6S4Khqk5kLkllS2spH2"}

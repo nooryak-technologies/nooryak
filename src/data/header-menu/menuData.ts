@@ -192,7 +192,7 @@ const headerMenuData: MenuItem[] = [
     id: 5,
     active: true,
     title: "Portfolio",
-    link: "/404",
+    link: "/portfolio",
   },
   // Clients
   {

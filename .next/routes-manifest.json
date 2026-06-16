@@ -400,6 +400,12 @@
       "namedRegex": "^/login/LoginMain(?:/)?$"
     },
     {
+      "page": "/portfolio",
+      "regex": "^/portfolio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/portfolio(?:/)?$"
+    },
+    {
       "page": "/pricing/PricingMain",
       "regex": "^/pricing/PricingMain(?:/)?$",
       "routeKeys": {},
