@@ -8,4 +8,4 @@
 :HL["https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css","style"]
 :HL["/_next/static/css/4285e2d65e2ac6f2.css","style"]
 :HL["/assets/images/services/socialmediamarketing344.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"submenu","param":null,"prefetchHints":0,"slots":{"children":{"name":"social-media-marketing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"6SvoqY7I220OsAR7r3jQ3"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"submenu","param":null,"prefetchHints":0,"slots":{"children":{"name":"social-media-marketing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"pDMSJa2dmqbj7FCyAPMZA"}
