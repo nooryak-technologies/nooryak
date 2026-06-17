@@ -87,6 +87,14 @@
       "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/portfolio/[id]",
+      "regex": "^/portfolio/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/portfolio/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/services/submenu/[type]",
       "regex": "^/services/submenu/([^/]+?)(?:/)?$",
       "routeKeys": {

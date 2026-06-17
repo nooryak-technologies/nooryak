@@ -3,112 +3,32 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
-  LayoutGrid, 
   Globe, 
   Code, 
   Layers, 
-  IdCard, 
-  Brush 
+  Brush,
+  ShoppingBag,
+  Smartphone,
+  Cpu,
+  Video,
+  TrendingUp
 } from 'lucide-react';
 import { ArrowSvg } from '@/svg';
 
-// Custom interface for our portfolio projects
-interface Project {
-  id: number;
-  title: string;
-  category: string;
-  description: string;
-  link: string;
-  bgClass: string;
-  mockupType: 'finance' | 'furni' | 'dasho' | 'nexora' | 'melody' | 'lenscope' | 'vectra' | 'artify';
-}
-
-const projectsData: Project[] = [
-  {
-    id: 1,
-    title: 'Finace – Banking Website',
-    category: 'Web Design',
-    description: 'A modern and clean banking website designed for seamless user experience.',
-    link: '#',
-    bgClass: 'bg-lavender',
-    mockupType: 'finance'
-  },
-  {
-    id: 2,
-    title: 'Furni – E-commerce Store',
-    category: 'Web Development',
-    description: 'A fully responsive e-commerce website with smooth shopping experience.',
-    link: '#',
-    bgClass: 'bg-mint',
-    mockupType: 'furni'
-  },
-  {
-    id: 3,
-    title: 'Dasho – Dashboard UI',
-    category: 'UI/UX Design',
-    description: 'A clean dashboard UI design for analytics and data visualization.',
-    link: '#',
-    bgClass: 'bg-slate',
-    mockupType: 'dasho'
-  },
-  {
-    id: 4,
-    title: 'Nexora – Brand Identity',
-    category: 'Branding',
-    description: 'Brand identity design for a tech startup including logo and stationery.',
-    link: '#',
-    bgClass: 'bg-orange-soft',
-    mockupType: 'nexora'
-  },
-  {
-    id: 5,
-    title: 'Melody – Music App UI',
-    category: 'UI/UX Design',
-    description: 'A mobile app UI design for music streaming with modern and elegant look.',
-    link: '#',
-    bgClass: 'bg-teal',
-    mockupType: 'melody'
-  },
-  {
-    id: 6,
-    title: 'Lenscope – Photography Website',
-    category: 'Web Design',
-    description: 'A photography website design to showcase visual stories and portfolio.',
-    link: '#',
-    bgClass: 'bg-nature',
-    mockupType: 'lenscope'
-  },
-  {
-    id: 7,
-    title: 'Vectra – Brand Illustration',
-    category: 'Illustration',
-    description: 'A set of custom vector illustrations for a digital agency\'s branding.',
-    link: '#',
-    bgClass: 'bg-lavender',
-    mockupType: 'vectra'
-  },
-  {
-    id: 8,
-    title: 'Artify – Character Design',
-    category: 'Illustration',
-    description: 'Unique character illustrations for a gaming brand storyboards.',
-    link: '#',
-    bgClass: 'bg-orange-soft',
-    mockupType: 'artify'
-  }
-];
+import { Project, projectsData } from '@/data/portfolioMainData';
 
 const categories = [
-  { name: 'All Projects', icon: <LayoutGrid size={16} /> },
-  { name: 'Web Design', icon: <Globe size={16} /> },
-  { name: 'Web Development', icon: <Code size={16} /> },
-  { name: 'UI/UX Design', icon: <Layers size={16} /> },
-  { name: 'Branding', icon: <IdCard size={16} /> },
-  { name: 'Illustration', icon: <Brush size={16} /> }
+  { name: 'Graphic Designing', icon: <Brush size={16} /> },
+  { name: 'Website Development', icon: <Code size={16} /> },
+  { name: 'Ecommerce', icon: <ShoppingBag size={16} /> },
+  { name: 'Apps', icon: <Smartphone size={16} /> },
+  { name: 'Softwares', icon: <Cpu size={16} /> },
+  { name: 'Videos', icon: <Video size={16} /> },
+  { name: 'Digital Marketing', icon: <TrendingUp size={16} /> }
 ];
 
 export default function PortfolioMain() {
-  const [activeTab, setActiveTab] = useState('All Projects');
+  const [activeTab, setActiveTab] = useState('Graphic Designing');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
   const [animateGrid, setAnimateGrid] = useState(false);
 
@@ -116,11 +36,7 @@ export default function PortfolioMain() {
   useEffect(() => {
     setAnimateGrid(false);
     const timeout = setTimeout(() => {
-      if (activeTab === 'All Projects') {
-        setFilteredProjects(projectsData);
-      } else {
-        setFilteredProjects(projectsData.filter(p => p.category === activeTab));
-      }
+      setFilteredProjects(projectsData.filter(p => p.category === activeTab));
       setAnimateGrid(true);
     }, 150);
 
@@ -171,59 +87,14 @@ export default function PortfolioMain() {
               </div>
             </div>
 
-            {/* Right Mockup Images (Task 2: animations and attractive image) */}
+            {/* Right Mockup Images (Task 1 & 2) */}
             <div className="col-lg-6">
               <div className="portfolio-hero-mockups">
-                
-                {/* CSS 15" Laptop Frame */}
-                <div className="mockup-laptop-wrap">
-                  <div className="css-laptop">
-                    <div className="laptop-screen">
-                      <div className="screen-display">
-                        <div className="display-mockup-ui">
-                          <div className="ui-nav">
-                            <div className="ui-logo">NEXORA</div>
-                            <div className="ui-menu-dots">
-                              <span></span><span></span><span></span>
-                            </div>
-                          </div>
-                          <div className="ui-content">
-                            <h4>Building Digital <br />Products That <br /><span>Drive Success</span></h4>
-                            <p>Premium customized web and mobile product design tailored to business scaling.</p>
-                            <div className="ui-btn">Read Case Study</div>
-                          </div>
-                          <div className="ui-mock-right">
-                            <div className="wire-block"></div>
-                            <div className="wire-line"></div>
-                            <div className="wire-line"></div>
-                            <div className="wire-line"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="laptop-base"></div>
-                  </div>
-                </div>
-
-                {/* CSS Mobile Phone Frame */}
-                <div className="mockup-phone-wrap">
-                  <div className="css-phone">
-                    <div className="phone-screen">
-                      <div className="phone-display-content">
-                        <div className="phone-header">NEXORA</div>
-                        <div className="phone-body">
-                          <h5>Building Digital Products That Drive Success</h5>
-                          <p>We craft top-notch digital interfaces that convert users.</p>
-                        </div>
-                        <div className="phone-footer">
-                          <div className="phone-btn">Explore</div>
-                          <div className="phone-circle"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
+                <img 
+                  src="/assets/images/Portfolio/hero_bannerimg.png" 
+                  alt="Portfolio Hero Mockups" 
+                  className="hero-mockup-img"
+                />
               </div>
             </div>
 
@@ -263,94 +134,11 @@ export default function PortfolioMain() {
                     
                     {/* Visual Card Mockup Wrap */}
                     <div className={`portfolio-card-image-wrap ${project.bgClass}`}>
-                      <div className={`card-inner-mockup mock-${project.mockupType}`}>
-                        {/* Dynamic HTML Mockup renders based on type */}
-                        {project.mockupType === 'finance' && (
-                          <>
-                            <div className="fin-header">
-                              <span>FINACE</span>
-                              <span>ONLINE</span>
-                            </div>
-                            <div className="fin-circle">
-                              $24,785
-                            </div>
-                            <div className="fin-bar"></div>
-                          </>
-                        )}
-                        {project.mockupType === 'furni' && (
-                          <>
-                            <div className="furni-top">
-                              <div className="chair-shape"></div>
-                            </div>
-                            <div className="furni-bottom">
-                              <span className="furni-title">Furni Chair</span>
-                              <span className="furni-price">$299.00</span>
-                            </div>
-                          </>
-                        )}
-                        {project.mockupType === 'dasho' && (
-                          <>
-                            <div className="dash-side">
-                              <span></span><span></span><span></span>
-                            </div>
-                            <div className="dash-main">
-                              <div className="dash-header"></div>
-                              <div className="dash-cards">
-                                <div className="dash-card"></div>
-                                <div className="dash-card"></div>
-                              </div>
-                              <div className="dash-chart"></div>
-                            </div>
-                          </>
-                        )}
-                        {project.mockupType === 'nexora' && (
-                          <>
-                            <div className="nexora-folder">
-                              <span className="logo-n">N</span>
-                            </div>
-                            <div className="nexora-card">
-                              NEXORA
-                            </div>
-                          </>
-                        )}
-                        {project.mockupType === 'melody' && (
-                          <>
-                            <div className="mel-phone">
-                              <div className="mel-cover"></div>
-                              <div className="mel-controls">
-                                <span></span><span></span><span></span>
-                              </div>
-                            </div>
-                            <div className="mel-phone">
-                              <div className="mel-cover"></div>
-                              <div className="mel-controls">
-                                <span></span><span></span><span></span>
-                              </div>
-                            </div>
-                            <div className="mel-phone">
-                              <div className="mel-cover"></div>
-                              <div className="mel-controls">
-                                <span></span><span></span><span></span>
-                              </div>
-                            </div>
-                          </>
-                        )}
-                        {project.mockupType === 'lenscope' && (
-                          <>
-                            <div className="lens-top"></div>
-                            <div className="lens-bottom">
-                              <span className="lens-text"></span>
-                              <span className="lens-dot"></span>
-                            </div>
-                          </>
-                        )}
-                        {project.mockupType === 'vectra' && (
-                          <div className="vectra-circle"></div>
-                        )}
-                        {project.mockupType === 'artify' && (
-                          <div className="artify-cube"></div>
-                        )}
-                      </div>
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="card-project-img" 
+                      />
                     </div>
 
                     {/* Content */}
@@ -387,11 +175,17 @@ export default function PortfolioMain() {
         <div className="container">
           <div className="portfolio-cta-card">
             
-            <i className="fa-solid fa-star-of-david cta-decorator-star"></i>
-            
-            <div className="portfolio-cta-text">
-              <span className="subtitle">Have a project in mind?</span>
-              <h2 className="title">Let's Create Something Amazing Together!</h2>
+            <div className="cta-left-content">
+              <div className="cta-star-circle">
+                <svg className="cta-star-icon" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="#ff4a17" d="M12,2L14.8,9.2L22,12L14.8,14.8L12,22L9.2,14.8L2,12L9.2,9.2L12,2Z" />
+                </svg>
+              </div>
+              
+              <div className="portfolio-cta-text">
+                <span className="subtitle">Have a project in mind?</span>
+                <h2 className="title">Let's Create Something Amazing Together!</h2>
+              </div>
             </div>
             
             <div className="portfolio-cta-action">
