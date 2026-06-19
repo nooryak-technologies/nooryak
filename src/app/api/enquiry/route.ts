@@ -16,7 +16,12 @@ export async function POST(req: Request) {
     }
 
     // Verify token with Google
-    const secretKey = '6LciQSgtAAAAAHaHBWBlRSQ0PSwDn52EcOu-CiAH';
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    if (!secretKey) {
+      console.error('RECAPTCHA_SECRET_KEY is not defined in environment variables');
+      return NextResponse.json({ message: 'reCAPTCHA server configuration error' }, { status: 500 });
+    }
+
     const verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
 
     const verifyResponse = await fetch(verifyUrl, {

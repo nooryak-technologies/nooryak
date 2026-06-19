@@ -219,7 +219,7 @@ export default function EnquiryForm() {
                             </div>
 
                             <ReCAPTCHA
-                                sitekey="6LciQSgtAAAAAEgJHvMs3plWxdkE2LPaLerMZJsx"
+                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                                 onChange={(token) => setRecaptchaToken(token)}
                                 theme="dark"
                             />
