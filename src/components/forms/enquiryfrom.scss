@@ -87,7 +87,6 @@
     }
 
     .enquiry-panel {
-        overflow-y: auto;
         width: min(100%, 450px);
         height: 100vh;
         background: rgba(15, 23, 42, 0.85);
@@ -96,12 +95,27 @@
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         padding: 2rem;
         position: relative;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         transform: translateX(100%);
         transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
         box-shadow: -15px 0 50px rgba(0, 0, 0, 0.6);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 122, 24, 0.3);
+            border-radius: 3px;
+            &:hover {
+                background: rgba(255, 122, 24, 0.5);
+            }
+        }
 
         &.open {
             transform: translateX(0);
@@ -340,6 +354,8 @@
             transform: translateY(20px) !important;
             opacity: 0 !important;
             transition: all 0.4s ease-out !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
 
             &.open {
                 transform: translateY(0) !important;
