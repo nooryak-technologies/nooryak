@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 import "./enquiryfrom.scss";
 import { toast } from "sonner";
 import Swal from 'sweetalert2';
+import ReCAPTCHA from "../common/ReCAPTCHA";
 
 export default function EnquiryForm() {
     const [open, setOpen] = useState(false);
     const [closing, setClosing] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -47,6 +49,7 @@ export default function EnquiryForm() {
 
     const handleClose = () => {
         setClosing(true);
+        setRecaptchaToken(null);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -55,13 +58,22 @@ export default function EnquiryForm() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!recaptchaToken) {
+            toast.error('Please verify you are not a robot');
+            return;
+        }
+
         setLoading(true);
 
         try {
             const res = await fetch('/api/enquiry', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    ...formData,
+                    token: recaptchaToken
+                })
             });
 
             const data = await res.json();
@@ -82,6 +94,7 @@ export default function EnquiryForm() {
                     service: 'Digital Marketing',
                     message: ''
                 });
+                setRecaptchaToken(null);
                 handleClose();
             } else {
                 toast.error(data.message || 'Something went wrong');
@@ -205,7 +218,13 @@ export default function EnquiryForm() {
                                 <span className="bar"></span>
                             </div>
 
-                            <button type="submit" className="submit-btn" style={{ "--idx": 5 } as React.CSSProperties} disabled={loading}>
+                            <ReCAPTCHA
+                                sitekey="6LciQSgtAAAAAEgJHvMs3plWxdkE2LPaLerMZJsx"
+                                onChange={(token) => setRecaptchaToken(token)}
+                                theme="dark"
+                            />
+
+                            <button type="submit" className="submit-btn" style={{ "--idx": 5 } as React.CSSProperties} disabled={loading || !recaptchaToken}>
                                 <span>{loading ? 'Sending...' : 'Send Enquiry'}</span>
                                 <i className="fa-solid fa-paper-plane-top"></i>
                             </button>

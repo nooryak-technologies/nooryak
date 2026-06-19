@@ -5,12 +5,30 @@ import Enquiry from '@/models/Enquiry';
 export async function POST(req: Request) {
   try {
     await dbConnect();
-    const body = await req.json();
-    
-    const { name, email, company, service, message, phone } = body;
+    const { name, email, company, service, message, phone, token } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
+    }
+
+    if (!token) {
+      return NextResponse.json({ message: 'reCAPTCHA token is required' }, { status: 400 });
+    }
+
+    // Verify token with Google
+    const secretKey = '6LciQSgtAAAAAHaHBWBlRSQ0PSwDn52EcOu-CiAH';
+    const verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+
+    const verifyResponse = await fetch(verifyUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${secretKey}&response=${token}`
+    });
+
+    const verifyData = await verifyResponse.json();
+
+    if (!verifyData.success) {
+      return NextResponse.json({ message: 'reCAPTCHA verification failed' }, { status: 400 });
     }
 
     const enquiry = await Enquiry.create({

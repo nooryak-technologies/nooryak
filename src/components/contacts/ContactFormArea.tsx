@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { toast } from 'sonner';
 import Swal from 'sweetalert2';
 import { Phone, Mail, MapPin, Clock, ShieldCheck, ArrowRight, Send } from 'lucide-react';
+import ReCAPTCHA from '../common/ReCAPTCHA';
 
 const ContactFormArea = () => {
     const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const ContactFormArea = () => {
         message: ''
     });
     const [loading, setLoading] = useState(false);
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,6 +24,12 @@ const ContactFormArea = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        if (!recaptchaToken) {
+            toast.error('Please verify you are not a robot');
+            return;
+        }
+
         setLoading(true);
 
         try {
@@ -34,7 +42,8 @@ const ContactFormArea = () => {
                     company: formData.company,
                     phone: formData.phone,
                     service: formData.service || 'General Inquiry',
-                    message: formData.message
+                    message: formData.message,
+                    token: recaptchaToken
                 })
             });
 
@@ -61,6 +70,7 @@ const ContactFormArea = () => {
                     service: '',
                     message: ''
                 });
+                setRecaptchaToken(null);
             } else {
                 toast.error(data.message || 'Something went wrong');
             }
@@ -268,8 +278,16 @@ const ContactFormArea = () => {
                                         </div>
                                     </div>
 
+                                    <div className="col-12">
+                                        <ReCAPTCHA
+                                            sitekey="6LciQSgtAAAAAEgJHvMs3plWxdkE2LPaLerMZJsx"
+                                            onChange={(token) => setRecaptchaToken(token)}
+                                            theme="dark"
+                                        />
+                                    </div>
+
                                     <div className="col-12 mt-4">
-                                        <button className="submit-btn" type="submit" disabled={loading}>
+                                        <button className="submit-btn" type="submit" disabled={loading || !recaptchaToken}>
                                             <span>{loading ? 'Sending...' : 'Send Message'}</span>
                                             <ArrowRight size={18} className="btn-arrow" />
                                         </button>
