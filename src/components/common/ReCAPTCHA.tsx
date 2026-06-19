@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useMemo } from 'react';
 
 interface ReCAPTCHAProps {
   sitekey: string;
@@ -20,6 +20,7 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
   }, [onChange]);
 
   useEffect(() => {
+    console.log("reCAPTCHA component mounted. Sitekey:", sitekey);
     let active = true;
     let checkReadyInterval: NodeJS.Timeout | null = null;
 
@@ -27,18 +28,20 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
       if (!active) return;
       if (window.grecaptcha && window.grecaptcha.render && containerRef.current && widgetIdRef.current === null) {
         try {
-          // Explicitly clear inner HTML to avoid duplicate widgets if container had old stuff
           containerRef.current.innerHTML = '';
           const widgetId = window.grecaptcha.render(containerRef.current, {
             sitekey,
             theme,
             callback: (token: string) => {
+              console.log("reCAPTCHA verified successfully.");
               if (active) onChangeRef.current(token);
             },
             'expired-callback': () => {
+              console.log("reCAPTCHA expired.");
               if (active) onChangeRef.current(null);
             },
             'error-callback': () => {
+              console.log("reCAPTCHA error callback triggered.");
               if (active) onChangeRef.current(null);
             },
           });
@@ -85,6 +88,7 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
     init();
 
     return () => {
+      console.log("reCAPTCHA component unmounted or clean-up triggered.");
       active = false;
       if (checkReadyInterval) clearInterval(checkReadyInterval);
       if (widgetIdRef.current !== null && window.grecaptcha && window.grecaptcha.reset) {
@@ -98,11 +102,11 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
     };
   }, [sitekey, theme]);
 
-  return (
+  // Memoize the element so React never touches or reconciles the DOM node after initial mount
+  const recaptchaElement = useMemo(() => (
     <div 
       ref={containerRef} 
       className="g-recaptcha-container" 
-      dangerouslySetInnerHTML={{ __html: '' }}
       style={{ 
         minHeight: '78px', 
         display: 'flex', 
@@ -110,5 +114,7 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
         margin: '15px 0' 
       }} 
     />
-  );
+  ), []);
+
+  return recaptchaElement;
 }
