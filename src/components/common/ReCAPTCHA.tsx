@@ -102,6 +102,7 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
     <div 
       ref={containerRef} 
       className="g-recaptcha-container" 
+      dangerouslySetInnerHTML={{ __html: '' }}
       style={{ 
         minHeight: '78px', 
         display: 'flex', 
