@@ -6,5 +6,5 @@
 :HL["/_next/static/css/d867b7250f8709dd.css","style"]
 :HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css","style"]
-:HL["/_next/static/css/4285e2d65e2ac6f2.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"digital-marketing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"n6dhC47qhzQ1MZS6WPEdZ"}
+:HL["/_next/static/css/d4e24abf175baaa3.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"services","param":null,"prefetchHints":0,"slots":{"children":{"name":"digital-marketing","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"xYYE2F01Z8A2tniL9cRL9"}
