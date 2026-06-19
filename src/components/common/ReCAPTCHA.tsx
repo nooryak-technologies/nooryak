@@ -12,6 +12,13 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<number | null>(null);
 
+  // Keep a reference to the latest onChange callback to prevent useEffect from re-running when it changes
+  const onChangeRef = useRef(onChange);
+
+  useEffect(() => {
+    onChangeRef.current = onChange;
+  }, [onChange]);
+
   useEffect(() => {
     let active = true;
     let checkReadyInterval: NodeJS.Timeout | null = null;
@@ -26,13 +33,13 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
             sitekey,
             theme,
             callback: (token: string) => {
-              if (active) onChange(token);
+              if (active) onChangeRef.current(token);
             },
             'expired-callback': () => {
-              if (active) onChange(null);
+              if (active) onChangeRef.current(null);
             },
             'error-callback': () => {
-              if (active) onChange(null);
+              if (active) onChangeRef.current(null);
             },
           });
           widgetIdRef.current = widgetId;
@@ -89,7 +96,7 @@ export default function ReCAPTCHA({ sitekey, onChange, theme = 'dark' }: ReCAPTC
         widgetIdRef.current = null;
       }
     };
-  }, [sitekey, onChange, theme]);
+  }, [sitekey, theme]);
 
   return (
     <div 
