@@ -3,32 +3,29 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
-  Globe, 
+  Grid, 
+  Target, 
   Code, 
-  Layers, 
-  Brush,
-  ShoppingBag,
-  Smartphone,
-  Cpu,
-  Video,
-  TrendingUp
+  Smartphone, 
+  Palette,
+  Briefcase,
+  Smile,
+  Globe,
+  RefreshCw
 } from 'lucide-react';
-import { ArrowSvg } from '@/svg';
 
 import { Project, projectsData } from '@/data/portfolioMainData';
 
 const categories = [
-  { name: 'Graphic Designing', icon: <Brush size={16} /> },
-  { name: 'Website Development', icon: <Code size={16} /> },
-  { name: 'Ecommerce', icon: <ShoppingBag size={16} /> },
-  { name: 'Apps', icon: <Smartphone size={16} /> },
-  { name: 'Softwares', icon: <Cpu size={16} /> },
-  { name: 'Videos', icon: <Video size={16} /> },
-  { name: 'Digital Marketing', icon: <TrendingUp size={16} /> }
+  { name: 'All Projects', icon: <Grid size={16} /> },
+  { name: 'Digital Marketing', icon: <Target size={16} /> },
+  { name: 'Web Development', icon: <Code size={16} /> },
+  { name: 'App Development', icon: <Smartphone size={16} /> },
+  { name: 'Branding & Design', icon: <Palette size={16} /> }
 ];
 
 export default function PortfolioMain() {
-  const [activeTab, setActiveTab] = useState('Graphic Designing');
+  const [activeTab, setActiveTab] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
   const [animateGrid, setAnimateGrid] = useState(false);
 
@@ -36,17 +33,47 @@ export default function PortfolioMain() {
   useEffect(() => {
     setAnimateGrid(false);
     const timeout = setTimeout(() => {
-      setFilteredProjects(projectsData.filter(p => p.category === activeTab));
+      if (activeTab === 'All Projects') {
+        setFilteredProjects(projectsData);
+      } else {
+        setFilteredProjects(projectsData.filter(p => p.category === activeTab));
+      }
       setAnimateGrid(true);
     }, 150);
 
     return () => clearTimeout(timeout);
   }, [activeTab]);
 
+  const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
+    setActiveTab(categoryName);
+    const button = e.currentTarget;
+    button.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+  };
+
   const handleStartProjectClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new Event('openEnquiryForm'));
+    }
+  };
+
+  // Helper to get category-specific badge class
+  const getBadgeClass = (category: string) => {
+    switch (category) {
+      case 'Digital Marketing':
+        return 'badge-orange';
+      case 'Web Development':
+        return 'badge-blue';
+      case 'App Development':
+        return 'badge-purple';
+      case 'Branding & Design':
+        return 'badge-green';
+      default:
+        return 'badge-gray';
     }
   };
 
@@ -61,39 +88,65 @@ export default function PortfolioMain() {
             {/* Left Content */}
             <div className="col-lg-6">
               <div className="portfolio-hero-left">
-                <div className="my-work-tag">
-                  <span className="dot"></span>
-                  <span className="text">My Work</span>
-                </div>
+                <span className="portfolio-label-orange animate-up delay-1">OUR PORTFOLIO</span>
                 
-                <h1 className="portfolio-hero-title">
-                  My <span>Portfolio</span>
+                <h1 className="portfolio-hero-title animate-up delay-2">
+                  Our Work. <br />
+                  <span>Real Results.</span>
                 </h1>
                 
-                <p className="portfolio-hero-desc">
-                  A collection of my recent work that showcases my passion for design, development and problem solving.
+                <p className="portfolio-hero-desc animate-up delay-3">
+                  Explore our latest projects across digital marketing, web development, app development and branding. Each project reflects our commitment to quality, creativity and performance.
                 </p>
                 
-                <a 
-                  href="#" 
-                  onClick={handleStartProjectClick}
-                  className="btn-orange-premium"
-                >
-                  Let's Work Together
-                  <span className="arrow-icon">
-                    <ArrowSvg />
-                  </span>
-                </a>
+                {/* Orange Divider Line */}
+                <div className="portfolio-divider animate-up delay-3">
+                  <span className="divider-dot"></span>
+                  <span className="divider-line"></span>
+                </div>
+                
+                {/* Stats Row */}
+                <div className="portfolio-hero-stats animate-up delay-4">
+                  <div className="stat-item">
+                    <div className="stat-icon-box">
+                      <Briefcase size={18} />
+                    </div>
+                    <div className="stat-info">
+                      <span className="stat-number">138+</span>
+                      <span className="stat-label">Projects Delivered</span>
+                    </div>
+                  </div>
+                  
+                  <div className="stat-item">
+                    <div className="stat-icon-box">
+                      <Smile size={18} />
+                    </div>
+                    <div className="stat-info">
+                      <span className="stat-number">98%</span>
+                      <span className="stat-label">Client Satisfaction</span>
+                    </div>
+                  </div>
+                  
+                  <div className="stat-item">
+                    <div className="stat-icon-box">
+                      <Globe size={18} />
+                    </div>
+                    <div className="stat-info">
+                      <span className="stat-number">5+</span>
+                      <span className="stat-label">Countries Served</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Right Mockup Images (Task 1 & 2) */}
+            {/* Right Mockup Image */}
             <div className="col-lg-6">
-              <div className="portfolio-hero-mockups">
+              <div className="portfolio-hero-mockups-container animate-fade-in delay-3">
                 <img 
-                  src="/assets/images/Portfolio/hero_bannerimg.png" 
-                  alt="Portfolio Hero Mockups" 
-                  className="hero-mockup-img"
+                  src="/assets/images/Portfolio/herobanner_portfolio.png" 
+                  alt="Desktop Monitor and Mobile Phone Mockups" 
+                  className="hero-mockups-img-custom"
                 />
               </div>
             </div>
@@ -111,10 +164,12 @@ export default function PortfolioMain() {
               <li key={idx}>
                 <button
                   type="button"
-                  onClick={() => setActiveTab(cat.name)}
+                  onClick={(e) => handleTabClick(cat.name, e)}
                   className={`portfolio-tab-btn ${activeTab === cat.name ? 'active' : ''}`}
                 >
-                  {cat.icon}
+                  <span className={`tab-icon ${activeTab === cat.name ? 'icon-active' : `icon-${cat.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}`}>
+                    {cat.icon}
+                  </span>
                   {cat.name}
                 </button>
               </li>
@@ -127,13 +182,16 @@ export default function PortfolioMain() {
               {filteredProjects.map((project) => (
                 <div 
                   key={project.id} 
-                  className={`col-lg-4 col-md-6 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
+                  className={`col-lg-4 col-md-6 col-6 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
                   style={{ opacity: animateGrid ? 1 : 0 }}
                 >
                   <div className="portfolio-card">
                     
-                    {/* Visual Card Mockup Wrap */}
-                    <div className={`portfolio-card-image-wrap ${project.bgClass}`}>
+                    {/* Visual Card Image Wrap */}
+                    <div className="portfolio-card-image-wrap">
+                      <span className={`category-badge ${getBadgeClass(project.category)}`}>
+                        {project.category}
+                      </span>
                       <img 
                         src={project.image} 
                         alt={project.title} 
@@ -143,28 +201,32 @@ export default function PortfolioMain() {
 
                     {/* Content */}
                     <div className="portfolio-card-content">
-                      <div className="portfolio-card-meta">
-                        <span className="portfolio-card-category">{project.category}</span>
-                        <h4 className="portfolio-card-title">
-                          <Link href={project.link}>
-                            {project.title}
-                          </Link>
-                        </h4>
-                        <p className="portfolio-card-desc">{project.description}</p>
-                      </div>
+                      <h4 className="portfolio-card-title">
+                        <Link href={project.link}>
+                          {project.title}
+                        </Link>
+                      </h4>
+                      <p className="portfolio-card-desc">{project.description}</p>
                       
-                      <div className="portfolio-card-footer">
-                        <Link href={project.link} className="arrow-btn-circle">
-                          <ArrowSvg />
+                      <div className="portfolio-card-footer-custom">
+                        <Link href={project.link} className="view-case-study-link">
+                          View Case Study <span className="arrow-right">→</span>
                         </Link>
                       </div>
-
                     </div>
 
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Load More Button */}
+          <div className="load-more-container">
+            <button className="btn-load-more">
+              Load More Projects
+              <RefreshCw size={16} className="refresh-icon" />
+            </button>
           </div>
 
         </div>
@@ -176,29 +238,33 @@ export default function PortfolioMain() {
           <div className="portfolio-cta-card">
             
             <div className="cta-left-content">
-              <div className="cta-star-circle">
-                <svg className="cta-star-icon" viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="#ff4a17" d="M12,2L14.8,9.2L22,12L14.8,14.8L12,22L9.2,14.8L2,12L9.2,9.2L12,2Z" />
-                </svg>
-              </div>
-              
-              <div className="portfolio-cta-text">
-                <span className="subtitle">Have a project in mind?</span>
-                <h2 className="title">Let's Create Something Amazing Together!</h2>
-              </div>
+              <span className="cta-label-orange">HAVE A PROJECT IN MIND?</span>
+              <h2 className="cta-title">
+                Let's Build Something <br />
+                <span>Amazing Together.</span>
+              </h2>
             </div>
             
-            <div className="portfolio-cta-action">
-              <a 
-                href="#"
-                onClick={handleStartProjectClick}
-                className="btn-orange-premium"
-              >
-                Let's Talk
-                <span className="arrow-icon">
-                  <ArrowSvg />
-                </span>
-              </a>
+            <div className="cta-right-content">
+              <p className="cta-description">
+                We're excited to hear about your ideas and help you turn them into powerful digital solutions.
+              </p>
+              <div className="cta-actions">
+                <a 
+                  href="#"
+                  onClick={handleStartProjectClick}
+                  className="btn-cta-orange"
+                >
+                  Start a Project
+                  <span className="arrow-icon">
+                    →
+                  </span>
+                </a>
+                <a href="/contact" className="btn-cta-outline">
+                  <span className="phone-icon">📞</span>
+                  Contact Us
+                </a>
+              </div>
             </div>
 
           </div>

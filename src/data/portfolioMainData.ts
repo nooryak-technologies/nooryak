@@ -16,247 +16,189 @@ export interface Project {
     type: 'reel' | 'video';
     title: string;
   }[];
+  // Rich details fields
+  subtitle?: string;
+  detailHeroImage?: string;
+  scrollImage?: string;
+  technologies?: { name: string; iconType: string }[];
+  overview?: string;
+  features?: string[];
+  metaGrid?: { label: string; value: string; iconType: string }[];
+  screenshots?: string[];
+  results?: { value: string; label: string; iconType: string }[];
 }
 
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: 'Nexora – Brand Identity',
-    category: 'Graphic Designing',
-    description: 'Brand identity design for a tech startup including logo and stationery.',
+    title: 'Social Media Campaign for E-Commerce Brand',
+    category: 'Digital Marketing',
+    description: 'Increased engagement by 320% and boosted sales through targeted ad campaigns.',
     link: '/portfolio/1',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/brand_identity.png',
-    client: 'Nexora Tech',
-    date: 'Jan 2026',
-    services: 'Brand Identity, Logo Design, Stationery',
-    projectUrl: 'https://nexora.io',
-    gallery: [
-      '/assets/images/Portfolio/brand_identity.png',
-      '/assets/images/Portfolio/vector_illustration.png',
-      '/assets/images/Portfolio/character_design.png',
-      '/assets/images/Portfolio/seo_campaign.png'
-    ]
+    image: '/assets/images/Portfolio/portfolio_social_media.png',
+    client: 'E-Shop International',
+    date: 'Mar 2026',
+    services: 'Social Media Marketing, Paid Ads',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_social_media.png']
   },
   {
     id: 2,
-    title: 'Vectra – Brand Illustration',
-    category: 'Graphic Designing',
-    description: 'A set of custom vector illustrations for a digital agency\'s branding.',
+    title: 'Travel & Tourism Website',
+    category: 'Web Development',
+    description: 'Modern, responsive website with booking system and CMS for easy content management.',
     link: '/portfolio/2',
-    bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/vector_illustration.png',
-    client: 'Vectra Agency',
+    bgClass: 'bg-nature',
+    image: '/assets/images/Portfolio/portfolio_travel_website.png',
+    client: 'TravelGo Holidays',
     date: 'Feb 2026',
-    services: 'Vector Illustration, Visual Identity',
-    projectUrl: 'https://vectra.agency',
+    services: 'Web Design, Next.js Development, CMS Integration',
+    projectUrl: 'https://nooryak.com',
     gallery: [
-      '/assets/images/Portfolio/vector_illustration.png',
-      '/assets/images/Portfolio/brand_identity.png',
-      '/assets/images/Portfolio/character_design.png',
-      '/assets/images/Portfolio/music_app.png'
+      '/assets/images/Portfolio/travel_screenshot_1.png',
+      '/assets/images/Portfolio/travel_screenshot_2.png',
+      '/assets/images/Portfolio/travel_screenshot_3.png',
+      '/assets/images/Portfolio/travel_screenshot_4.png'
+    ],
+    // Rich details populated for pixel-perfect match
+    subtitle: 'Travel & Tourism Website Development',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/redpanda.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' }
+    ],
+    overview: 'This travel and tourism website is developed to provide users with a seamless experience in discovering destinations, exploring tour packages, and making online bookings. The website is fully responsive, fast, SEO friendly and easy to manage.',
+    features: [
+      'Custom tour package management',
+      'Blog & travel guides section',
+      'Advanced search & filter system',
+      'Fully responsive for all devices',
+      'Online booking & inquiry system',
+      'SEO optimized & fast loading'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'TravelGo Holidays', iconType: 'user' },
+      { label: 'Industry', value: 'Travel & Tourism', iconType: 'globe' },
+      { label: 'Project Type', value: 'Custom Website', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'May 2024', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/travel_screenshot_1.png',
+      '/assets/images/Portfolio/travel_screenshot_2.png',
+      '/assets/images/Portfolio/travel_screenshot_3.png',
+      '/assets/images/Portfolio/travel_screenshot_4.png'
+    ],
+    results: [
+      { value: '150%', label: 'Increase in Website Traffic', iconType: 'trending-up' },
+      { value: '80%', label: 'Growth in Online Bookings', iconType: 'shopping-cart' },
+      { value: '60%', label: 'Higher User Engagement', iconType: 'users' },
+      { value: '95%', label: 'Client Satisfaction', iconType: 'smile' }
     ]
   },
   {
     id: 3,
-    title: 'Artify – Character Design',
-    category: 'Graphic Designing',
-    description: 'Unique character illustrations for a gaming brand storyboards.',
+    title: 'Food Delivery Mobile App',
+    category: 'App Development',
+    description: 'Feature-rich food delivery app with real-time tracking, payments, and user dashboard.',
     link: '/portfolio/3',
-    bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/character_design.png',
-    client: 'Artify Games',
-    date: 'Mar 2026',
-    services: 'Character Design, 2D/3D Modeling',
-    projectUrl: 'https://artifygames.com',
-    gallery: [
-      '/assets/images/Portfolio/character_design.png',
-      '/assets/images/Portfolio/vector_illustration.png',
-      '/assets/images/Portfolio/brand_identity.png',
-      '/assets/images/Portfolio/furniture_store.png'
-    ]
+    bgClass: 'bg-purple-soft',
+    image: '/assets/images/Portfolio/portfolio_food_app.png',
+    client: 'QuickBite Inc.',
+    date: 'Jan 2026',
+    services: 'Mobile App Design, iOS & Android Development',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_food_app.png']
   },
   {
     id: 4,
-    title: 'Finace – Banking Website',
-    category: 'Website Development',
-    description: 'A modern and clean banking website designed for seamless user experience.',
+    title: 'Fitness & Gym Website',
+    category: 'Web Development',
+    description: 'High-performance website with membership, schedules, and trainer management.',
     link: '/portfolio/4',
-    bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/banking_website.png',
-    client: 'Finace Group',
+    bgClass: 'bg-slate',
+    image: '/assets/images/Portfolio/portfolio_fitness_gym.png',
+    client: 'IronGym Fitness',
     date: 'Dec 2025',
-    services: 'Web Development, UX/UI Design, Frontend',
-    projectUrl: 'https://finace-bank.com',
-    gallery: [
-      '/assets/images/Portfolio/banking_website.png',
-      '/assets/images/Portfolio/photography_website.png',
-      '/assets/images/Portfolio/furniture_store.png',
-      '/assets/images/Portfolio/dashboard_software.png'
-    ]
+    services: 'Web Development, UX/UI Design',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_fitness_gym.png']
   },
   {
     id: 5,
-    title: 'Lenscope – Photography Website',
-    category: 'Website Development',
-    description: 'A photography website design to showcase visual stories and portfolio.',
+    title: 'Brand Identity for Startup',
+    category: 'Branding & Design',
+    description: 'Complete brand identity including logo, color palette, typography, and brand guidelines.',
     link: '/portfolio/5',
-    bgClass: 'bg-nature',
-    image: '/assets/images/Portfolio/photography_website.png',
-    client: 'Lenscope Studio',
-    date: 'Oct 2025',
-    services: 'Web Development, Web Design, CMS',
-    projectUrl: 'https://lenscopestudio.com',
-    gallery: [
-      '/assets/images/Portfolio/photography_website.png',
-      '/assets/images/Portfolio/banking_website.png',
-      '/assets/images/Portfolio/furniture_store.png',
-      '/assets/images/Portfolio/music_app.png'
-    ]
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/portfolio_brand_identity.png',
+    client: 'Nexora Tech',
+    date: 'Nov 2025',
+    services: 'Brand Identity, Logo Design, Stationery Mockups',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_brand_identity.png']
   },
   {
     id: 6,
-    title: 'Furni – E-commerce Store',
-    category: 'Ecommerce',
-    description: 'A fully responsive e-commerce website with smooth shopping experience.',
+    title: 'Lead Generation Campaign',
+    category: 'Digital Marketing',
+    description: 'Generated high-quality leads and improved conversion rate for a real estate client.',
     link: '/portfolio/6',
-    bgClass: 'bg-mint',
-    image: '/assets/images/Portfolio/furniture_store.png',
-    client: 'Furni Decor',
-    date: 'Nov 2025',
-    services: 'E-commerce, Shopify, Frontend Development',
-    projectUrl: 'https://furnidecor.store',
-    gallery: [
-      '/assets/images/Portfolio/furniture_store.png',
-      '/assets/images/Portfolio/banking_website.png',
-      '/assets/images/Portfolio/photography_website.png',
-      '/assets/images/Portfolio/music_app.png'
-    ]
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/portfolio_lead_gen.png',
+    client: 'Prime Realty',
+    date: 'Oct 2025',
+    services: 'Google Ads, Search Engine Marketing, Lead Nurturing',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_lead_gen.png']
   },
   {
     id: 7,
-    title: 'Melody – Music App UI',
-    category: 'Apps',
-    description: 'A mobile app UI design for music streaming with modern and elegant look.',
+    title: 'Finance Management App',
+    category: 'App Development',
+    description: 'Smart finance app for tracking income, expenses, and generating detailed reports.',
     link: '/portfolio/7',
-    bgClass: 'bg-teal',
-    image: '/assets/images/Portfolio/music_app.png',
-    client: 'Melody Inc.',
-    date: 'Jan 2026',
-    services: 'Mobile App Design, UX Research, Prototyping',
-    projectUrl: 'https://melodyapp.fm',
-    gallery: [
-      '/assets/images/Portfolio/music_app.png',
-      '/assets/images/Portfolio/dashboard_software.png',
-      '/assets/images/Portfolio/gemini_project.png',
-      '/assets/images/Portfolio/furniture_store.png'
-    ]
+    bgClass: 'bg-purple-soft',
+    image: '/assets/images/Portfolio/portfolio_finance_app.png',
+    client: 'Finace Group',
+    date: 'Sep 2025',
+    services: 'Fintech App, UI/UX Design, React Native',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_finance_app.png']
   },
   {
     id: 8,
-    title: 'Dasho – Dashboard UI',
-    category: 'Softwares',
-    description: 'A clean dashboard UI design for analytics and data visualization.',
+    title: 'E-Commerce Website',
+    category: 'Web Development',
+    description: 'Full-featured e-commerce platform with secure payments and inventory management.',
     link: '/portfolio/8',
-    bgClass: 'bg-slate',
-    image: '/assets/images/Portfolio/dashboard_software.png',
-    client: 'Dasho Analytics',
-    date: 'Sep 2025',
-    services: 'SaaS Design, Data Visualization',
-    projectUrl: 'https://dasho.io',
-    gallery: [
-      '/assets/images/Portfolio/dashboard_software.png',
-      '/assets/images/Portfolio/gemini_project.png',
-      '/assets/images/Portfolio/music_app.png',
-      '/assets/images/Portfolio/banking_website.png'
-    ]
+    bgClass: 'bg-teal',
+    image: '/assets/images/Portfolio/portfolio_ecommerce.png',
+    client: 'Furni Decor',
+    date: 'Aug 2025',
+    services: 'E-commerce, Shopify, Frontend Development',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_ecommerce.png']
   },
   {
     id: 9,
-    title: 'Gemini AI Integration Workspace',
-    category: 'Softwares',
-    description: 'A cutting-edge AI assistant workspace powered by Google Gemini to automate developer workflows.',
+    title: 'Logo & Brand Design',
+    category: 'Branding & Design',
+    description: 'Professional logo and brand design that creates a strong and memorable identity.',
     link: '/portfolio/9',
-    bgClass: 'bg-purple-soft',
-    image: '/assets/images/Portfolio/gemini_project.png',
-    client: 'Google Developer Group',
-    date: 'Feb 2026',
-    services: 'AI Integration, Workspace Design, React Native',
-    projectUrl: 'https://gemini-workspace.dev',
-    gallery: [
-      '/assets/images/Portfolio/gemini_project.png',
-      '/assets/images/Portfolio/dashboard_software.png',
-      '/assets/images/Portfolio/music_app.png',
-      '/assets/images/Portfolio/seo_campaign.png'
-    ]
-  },
-  {
-    id: 10,
-    title: 'AeroDrone – Promotional Video',
-    category: 'Videos',
-    description: 'A cinematic aerial drone promotional video showcasing brand architecture.',
-    link: '/portfolio/10',
-    bgClass: 'bg-mint',
-    image: '/assets/images/Portfolio/drone_video.png',
-    client: 'AeroDrone Flight Co.',
-    date: 'Jan 2026',
-    services: 'Video Editing, Drone Cinematography, Sound Design',
-    projectUrl: 'https://aerodrone.video',
-    videos: [
-      {
-        src: 'https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-light-12821-large.mp4',
-        type: 'reel',
-        title: 'Vertical Cinematic Reel'
-      },
-      {
-        src: 'https://assets.mixkit.co/videos/preview/mixkit-man-dancing-under-neon-lights-42582-large.mp4',
-        type: 'reel',
-        title: 'Neon Dancer Story'
-      },
-      {
-        src: 'https://assets.mixkit.co/videos/preview/mixkit-holding-a-smartphone-showing-a-map-41774-large.mp4',
-        type: 'reel',
-        title: 'Mobile Navigation'
-      },
-      {
-        src: 'https://assets.mixkit.co/videos/preview/mixkit-vertical-shot-of-a-dj-playing-music-at-a-club-51840-large.mp4',
-        type: 'reel',
-        title: 'DJ Club Music'
-      },
-      {
-        src: 'https://assets.mixkit.co/videos/preview/mixkit-vertical-video-of-a-beautiful-young-woman-smiling-at-the-camera-51897-large.mp4',
-        type: 'reel',
-        title: 'Model Smile'
-      },
-      {
-        src: 'https://assets.mixkit.co/videos/preview/mixkit-drones-flying-over-a-green-mountain-forest-41662-large.mp4',
-        type: 'video',
-        title: 'Mountain Forest Flyover'
-      },
-      {
-        src: 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-thick-forest-and-river-41669-large.mp4',
-        type: 'video',
-        title: 'River and Woods Aerial'
-      }
-    ]
-  },
-  {
-    id: 11,
-    title: 'Apex SEO – Digital Marketing Campaign',
-    category: 'Digital Marketing',
-    description: 'Data-driven SEO and PPC campaign that increased organic search traffic by 150%.',
-    link: '/portfolio/11',
-    bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/seo_campaign.png',
-    client: 'Apex Ltd.',
-    date: 'Nov 2025',
-    services: 'SEO, SEM, Social Media Marketing',
-    projectUrl: 'https://apexseo.agency',
-    gallery: [
-      '/assets/images/Portfolio/seo_campaign.png',
-      '/assets/images/Portfolio/dashboard_software.png',
-      '/assets/images/Portfolio/banking_website.png',
-      '/assets/images/Portfolio/gemini_project.png'
-    ]
+    bgClass: 'bg-slate',
+    image: '/assets/images/Portfolio/portfolio_logo_design.png',
+    client: 'Nexora Tech',
+    date: 'Jul 2025',
+    services: 'Logo Design, Vector Illustration, Brand Guidelines',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_logo_design.png']
   }
 ];
