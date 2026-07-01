@@ -27,6 +27,7 @@ export interface Project {
   metaGrid?: { label: string; value: string; iconType: string }[];
   screenshots?: string[];
   results?: { value: string; label: string; iconType: string }[];
+  badge?: string;
 }
 
 export const projectsData: Project[] = [
@@ -141,6 +142,7 @@ export const projectsData: Project[] = [
     subtitle: 'Arman Group Corporate Platform',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/armangroup.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/arman_group.png',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -200,6 +202,7 @@ export const projectsData: Project[] = [
     subtitle: 'Elkins Air Conditioning Portal',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/elkins_aircondition_mobile.png',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -240,7 +243,7 @@ export const projectsData: Project[] = [
   {
     id: 6,
     title: 'KB Enterprises',
-    category: 'Web Development',
+    category: 'eCommerce',
     description: 'Robust B2B trading and enterprise communication portal.',
     link: '/portfolio/6',
     bgClass: 'bg-lavender',
@@ -259,6 +262,7 @@ export const projectsData: Project[] = [
     subtitle: 'KB Enterprises Trading Platform',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/enterpriseskb.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/kb_enterprises_mobile.png',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -318,6 +322,7 @@ export const projectsData: Project[] = [
     subtitle: 'Radient Infotech Consultancy Portal',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/radiantconsultancy.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/radient_mobile.png',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -377,6 +382,7 @@ export const projectsData: Project[] = [
     subtitle: 'Shifa Infotech Healthcare Portal',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/shifainfotech.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/shifainfo_mobile.png',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -413,6 +419,59 @@ export const projectsData: Project[] = [
       { value: '99%', label: 'System Uptime Pass', iconType: 'users' },
       { value: '4.9★', label: 'User Feedback Rating', iconType: 'smile' }
     ]
+  },
+  {
+    id: 13,
+    title: 'Bazarway',
+    category: 'eCommerce',
+    description: 'A modern multi-vendor eCommerce marketplace built to connect sellers and buyers with a seamless shopping experience.',
+    link: '/portfolio/13',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/bazarway.png',
+    client: 'Bazarway Store',
+    date: 'Jan 2026',
+    services: 'Web Development, eCommerce, Multi-vendor Platform',
+    projectUrl: 'https://nooryak.com',
+    gallery: [
+      '/assets/images/Portfolio/projects/bazarway.png'
+    ],
+    subtitle: 'Bazarway eCommerce Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/bazarway.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwa_mobile.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Bazarway is a powerful multi-vendor marketplace platform that enables sellers to list products, manage orders, and track revenue in one unified dashboard.',
+    features: [
+      'Multi-vendor seller onboarding',
+      'Advanced product filters',
+      'Secure payment gateway',
+      'Live order tracking system',
+      'SEO optimized structure'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Bazarway Store', iconType: 'user' },
+      { label: 'Industry', value: 'eCommerce', iconType: 'globe' },
+      { label: 'Project Type', value: 'Marketplace Platform', iconType: 'code' },
+      { label: 'Duration', value: '5 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/bazarway.png'
+    ],
+    results: [
+      { value: '200%', label: 'Seller Registrations', iconType: 'trending-up' },
+      { value: '80%', label: 'Order Conversion Rate', iconType: 'shopping-cart' },
+      { value: '96%', label: 'Buyer Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Platform Uptime', iconType: 'check-circle' }
+    ],
+    badge: 'International Project'
   },
   {
     id: 9,

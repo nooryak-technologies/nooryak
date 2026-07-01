@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import '../portfolio.scss';
 import { projectsData } from '@/data/portfolioMainData';
 import {
   ArrowLeft, ExternalLink, Calendar, User, Tag, Award,
@@ -176,8 +177,15 @@ export default function ProjectDetailPage() {
         <div className="container">
           <div className="project-detail-hero-card">
             <div className="row align-items-center g-5">
-              <div className="col-lg-6 project-hero-info">
-                <span className="project-category-badge-premium">{project.category}</span>
+              <div className="col-lg-6 project-hero-info order-lg-1 order-2">
+                <div className="project-hero-badges">
+                  <span className="project-category-badge-premium">{project.category}</span>
+                  {project.badge && (
+                    <span className="project-international-badge">
+                      🌍 {project.badge}
+                    </span>
+                  )}
+                </div>
                 <h1 className="project-detail-title-premium">
                   {project.subtitle || project.title}
                 </h1>
@@ -193,15 +201,6 @@ export default function ProjectDetailPage() {
                     className="btn-live-preview-premium"
                   >
                     Live Preview ↗
-                  </a>
-                  <a
-                    href={project.projectUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-visit-website-premium"
-                  >
-                    <Globe size={18} />
-                    Visit Website
                   </a>
                 </div>
 
@@ -222,7 +221,7 @@ export default function ProjectDetailPage() {
                 )}
               </div>
 
-              <div className="col-lg-6 project-hero-mockup-wrapper">
+              <div className="col-lg-6 project-hero-mockup-wrapper order-lg-2 order-1">
                 {project.scrollImage ? (
                   <div className="project-hero-mockup-container">
                     <img
@@ -262,7 +261,7 @@ export default function ProjectDetailPage() {
         <div className="container">
           <div className="row g-5 align-items-center">
             {/* Left Column: Responsive Mockup */}
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-lg-1 order-2">
               <div className="overview-responsive-device-block">
                 <h2 className="overview-section-heading">100% responsive device</h2>
                 
@@ -297,7 +296,7 @@ export default function ProjectDetailPage() {
             </div>
 
             {/* Right Column: Project Overview Details */}
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-lg-2 order-1">
               <div className="overview-text-block">
                 <h2 className="overview-section-heading">Project Overview</h2>
                 {project.category !== 'Web Development' && (
@@ -442,7 +441,7 @@ export default function ProjectDetailPage() {
 
               <div className="row g-4 mt-2">
                 {project.results.map((result, idx) => (
-                  <div key={idx} className="col-lg-3 col-md-6">
+                  <div key={idx} className="col-lg-3 col-6">
                     <div className="result-metric-box">
                       <div className="result-metric-header">
                         <div className="result-metric-icon-circle">

@@ -11,7 +11,8 @@ import {
   Briefcase,
   Smile,
   Globe,
-  RefreshCw
+  RefreshCw,
+  ShoppingBag
 } from 'lucide-react';
 
 import { Project, projectsData } from '@/data/portfolioMainData';
@@ -20,6 +21,7 @@ const categories = [
   { name: 'All Projects', icon: <Grid size={16} /> },
   { name: 'Digital Marketing', icon: <Target size={16} /> },
   { name: 'Web Development', icon: <Code size={16} /> },
+  { name: 'eCommerce', icon: <ShoppingBag size={16} /> },
   { name: 'App Development', icon: <Smartphone size={16} /> },
   { name: 'Branding & Design', icon: <Palette size={16} /> }
 ];
@@ -68,6 +70,8 @@ export default function PortfolioMain() {
         return 'badge-orange';
       case 'Web Development':
         return 'badge-blue';
+      case 'eCommerce':
+        return 'badge-teal';
       case 'App Development':
         return 'badge-purple';
       case 'Branding & Design':
