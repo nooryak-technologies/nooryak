@@ -16,37 +16,37 @@ function TechIcon({ name }: { name: string }) {
   switch (name.toLowerCase()) {
     case 'wordpress':
       return (
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="tech-svg">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#0073AA" className="tech-svg">
           <path d="M12.158 12.786l-2.698 7.84a10.05 10.05 0 005.16-.438zm-2.115-1.29l2.253-6.52c-.653-.032-1.246-.052-1.246-.052-.702-.032-.67-.98.032-.98h4.526c.702 0 .67.948-.032.98 0 0-.604.02-1.225.044l-2.203 6.262 2.378 7.15c.613-.67 1.133-1.417 1.55-2.235l-2.887-8.08c.55-.032 1.05-.052 1.05-.052.702-.032.67-.98-.032-.98h2.906c.367 0 .367.98 0 .98l-.348.016a9.92 9.92 0 011.085 4.542 9.878 9.878 0 01-1.637 5.385zm-.69-.475L6.684 19.38A9.975 9.975 0 012 12a9.926 9.926 0 011.905-5.845zM12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm0 22a10 10 0 1110-10 10.011 10.011 0 01-10 10z" />
         </svg>
       );
     case 'php':
       return (
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="tech-svg">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#777BB4" className="tech-svg">
           <path d="M12.013 1.996C6.486 1.996 2 6.48 2 12.008c0 5.526 4.486 10.013 10.013 10.013 5.529 0 10.013-4.487 10.013-10.013 0-5.528-4.484-10.012-10.013-10.012zm5.72 12.593c-.443.79-1.272 1.185-2.487 1.185-.758 0-1.4-.153-1.929-.462-.528-.31-.914-.73-1.157-1.261h-.064l-.225 1.543h-2.146l1.378-9.479h2.339l-.608 4.195h.063c.427-.773 1.157-1.16 2.193-1.16.892 0 1.52.277 1.888.831.366.554.437 1.294.214 2.219a5.15 5.15 0 01-.527 1.488a4.832 4.832 0 01-.933 1.402zm-10.457 1.185H4.937L6.315 6.3h2.34L7.818 11.75c.422-.767 1.147-1.15 2.179-1.15.895 0 1.52.277 1.879.83.359.555.432 1.296.216 2.222a5.122 5.122 0 01-.529 1.486 4.832 4.832 0 01-.933 1.402c-.441.79-1.268 1.185-2.481 1.185a3.834 3.834 0 01-1.873-.45zm4.84-2.825c.08-.544.025-.94-.165-1.191-.19-.25-.503-.377-.941-.377-.504 0-.897.23-1.176.691-.28.462-.464 1.109-.553 1.944-.084.55.029.95.337 1.202.308.25.642.376.999.376.494 0 .88-.225 1.158-.675.278-.45.426-1.106.341-1.97zm7.553.056c.078-.547.021-.944-.171-1.193-.191-.249-.502-.373-.935-.373-.502 0-.895.228-1.176.685-.282.457-.468 1.102-.559 1.936-.08.549.032.948.337 1.2.305.25.639.376.999.376.495 0 .88-.225 1.158-.674.278-.45.429-1.107.347-1.957z" />
         </svg>
       );
     case 'mysql':
       return (
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="tech-svg">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#00758F" className="tech-svg">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.42 15.25c-1.37-.06-2.58-.66-3.23-1.63-.38-.57-.52-1.13-.52-2.12 0-1.83.92-3.15 2.62-3.76.67-.24 1.49-.33 2.52-.33h.84v-.96c0-.85-.04-1.04-.22-1.3-.23-.33-.68-.48-1.37-.48-1.02 0-1.68.29-2.02.9l-.16.29H5.2l.14-.38C5.83 6.04 7.63 5 10.3 5c2.3 0 3.73.61 4.54 1.93.38.61.47 1.04.47 2.37v4.61c0 1.83.05 2.19.34 2.57.2.26.47.33 1.01.33.32 0 .54-.03.74-.11l.3-.11.08.38c.11.53.04.66-.41.87-.63.29-1.52.37-2.16.21-.61-.15-.99-.54-1.16-1.19l-.07-.27h-.08c-.46.77-1.22 1.25-2.26 1.43-.27.05-.72.07-.99.07zm1.88-4.43c.8-.08 1.34-.33 1.66-.75.31-.41.38-.72.38-1.62v-.73h-.76c-1.05 0-1.78.13-2.17.4-.41.27-.63.76-.63 1.39 0 .86.53 1.36 1.52 1.31z" />
         </svg>
       );
     case 'html5':
       return (
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="tech-svg">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#E34F26" className="tech-svg">
           <path d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM18.7 5H5.3l.4 4.5H14l-.4 4.1-3.6 1-3.6-1-.2-2.5H4.1l.4 6.1 7.5 2.1 7.5-2.1.9-9.7.1-1.5z" />
         </svg>
       );
     case 'css3':
       return (
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="tech-svg">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#1572B6" className="tech-svg">
           <path d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM18.6 5.8H5.4l.2 2.7h10.2l-.3 3.5-3.5 1-3.5-1-.2-2H5.6l.4 4.8 6 1.7 6-1.7.7-7.6z" />
         </svg>
       );
     case 'javascript':
       return (
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="tech-svg">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="#F7DF1E" className="tech-svg">
           <path d="M0 0h24v24H0zM20 18.2c0-1.1-.6-1.8-1.8-2.3-1.1-.4-2-.7-2-.7s-1-.3-1-.8.4-.7 1-.7c.8 0 1.2.4 1.2.4l1.1-1.3s-.9-.8-2.2-.8c-1.8 0-3 1.1-3 2.7 0 1.6 1 2.2 2.6 2.8 1.4.5 1.8.8 1.8 1.3 0 .7-.7 1.1-1.5 1.1-1.1 0-1.9-.6-1.9-.6L13 21.2s1 1 2.9 1c2.1-.1 4.1-1.3 4.1-4zm-9-.6v-5.1H8.7v5.3c0 1.2-.5 1.8-1.5 1.8-1 0-1.4-.6-1.4-1.5v-5.6H3.5V18c0 2.2 1.2 3.3 3.3 3.3 2 0 3.2-1.1 3.2-3.1v-.6z" />
         </svg>
       );
@@ -237,7 +237,6 @@ export default function ProjectDetailPage() {
                         className="laptop-screen-scroll-img"
                       />
                     </div>
-
                   </div>
                 ) : project.detailHeroImage ? (
                   <img
@@ -261,18 +260,55 @@ export default function ProjectDetailPage() {
       {/* ── PROJECT OVERVIEW SECTION ── */}
       <section className="project-overview-section">
         <div className="container">
-          <div className="row g-5">
-            {/* Left Side: Overview & Features */}
-            <div className="col-lg-7">
+          <div className="row g-5 align-items-center">
+            {/* Left Column: Responsive Mockup */}
+            <div className="col-lg-6">
+              <div className="overview-responsive-device-block">
+                <h2 className="overview-section-heading">100% responsive device</h2>
+                
+                <div className="overview-mobile-mockup-wrapper">
+                  <div className="overview-mobile-mockup-container">
+                    <img 
+                      src="/assets/images/Portfolio/projects/mobile.png" 
+                      alt="Mobile mockups frame" 
+                      className="mobile-mockup-img-base"
+                    />
+                    
+                    {/* Left phone screen overlay */}
+                    <div className="mobile-screen-scroll-container screen-left">
+                      <img 
+                        src={project.mobileScrollImage || project.scrollImage || project.image} 
+                        alt="Mobile screen left content" 
+                        className="mobile-screen-scroll-img"
+                      />
+                    </div>
+                    
+                    {/* Right phone screen overlay */}
+                    <div className="mobile-screen-scroll-container screen-right">
+                      <img 
+                        src={project.mobileScrollImage || project.scrollImage || project.image} 
+                        alt="Mobile screen right content" 
+                        className="mobile-screen-scroll-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Project Overview Details */}
+            <div className="col-lg-6">
               <div className="overview-text-block">
                 <h2 className="overview-section-heading">Project Overview</h2>
-                <p className="overview-paragraph">
-                  {project.overview || project.description}
-                </p>
+                {project.category !== 'Web Development' && (
+                  <p className="overview-paragraph">
+                    {project.overview || project.description}
+                  </p>
+                )}
               </div>
 
-              {project.features && (
-                <div className="overview-features-block mt-4">
+              {project.category !== 'Web Development' && project.features && (
+                <div className="overview-features-block mt-4 mb-4">
                   <div className="row g-3">
                     {project.features.map((feature, idx) => (
                       <div key={idx} className="col-md-6">
@@ -285,10 +321,7 @@ export default function ProjectDetailPage() {
                   </div>
                 </div>
               )}
-            </div>
 
-            {/* Right Side: Meta Info Grid */}
-            <div className="col-lg-5">
               {project.metaGrid ? (
                 <div className="meta-info-grid-container">
                   <div className="row g-3">

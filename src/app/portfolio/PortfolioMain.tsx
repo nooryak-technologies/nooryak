@@ -192,11 +192,21 @@ export default function PortfolioMain() {
                       <span className={`category-badge ${getBadgeClass(project.category)}`}>
                         {project.category}
                       </span>
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="card-project-img" 
-                      />
+                      {project.category === 'Web Development' && project.scrollImage ? (
+                        <div className="portfolio-card-scroll-container">
+                          <img 
+                            src={project.scrollImage} 
+                            alt={project.title} 
+                            className="card-project-img-scroll" 
+                          />
+                        </div>
+                      ) : (
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="card-project-img" 
+                        />
+                      )}
                     </div>
 
                     {/* Content */}

@@ -20,15 +20,14 @@ function capitalize(str: string): string {
 function getOrCreateSubcategoryData(subcategory: string, type: string): SubcategoryData {
   const normSubcat = subcategory.replace(/_/g, '-');
   const normType = type.replace(/_/g, '-');
+  const subcategoryTitle = capitalize(normSubcat);
+  const categoryTitle = capitalize(normType);
   
   let data: SubcategoryData;
   
   if (subcategoryDataMap[normSubcat]) {
     data = { ...subcategoryDataMap[normSubcat] };
   } else {
-    const subcategoryTitle = capitalize(normSubcat);
-    const categoryTitle = capitalize(normType);
-
     data = {
       meta: {
         title: `${subcategoryTitle} Services | Nooryak Technologies`,
@@ -226,6 +225,22 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
     'ai-automations'
   ].includes(subcatLower)) {
     data.hero.floatingBadges = [];
+  }
+
+  // Dynamic override for all Web Development service subpages
+  if (normType.toLowerCase() === 'web-development' || normType.toLowerCase() === 'web_development' || normType.toLowerCase() === 'web-developer') {
+    data.recentWork = {
+      label: 'RECENT WORK',
+      title: `Our Latest ${subcategoryTitle} Projects`,
+      items: [
+        { title: 'Red Panda Vacations', tech: 'WordPress, PHP, MySQL', image: '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png', link: '/portfolio/2' },
+        { title: 'Arman Group', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/armangroup/slide1.png', link: '/portfolio/4' },
+        { title: 'Elkins Air Conditioning', tech: 'WordPress, PHP, MySQL', image: '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png', link: '/portfolio/5' },
+        { title: 'KB Enterprises', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/kbenterpises/slide1.png', link: '/portfolio/6' },
+        { title: 'Radient Infotech', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/radientinfotech/slide1.png', link: '/portfolio/7' },
+        { title: 'Shifa Infotech', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/shifainfotech/slide1.png', link: '/portfolio/8' }
+      ]
+    };
   }
 
   return data;

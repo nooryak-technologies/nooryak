@@ -20,6 +20,7 @@ export interface Project {
   subtitle?: string;
   detailHeroImage?: string;
   scrollImage?: string;
+  mobileScrollImage?: string;
   technologies?: { name: string; iconType: string }[];
   overview?: string;
   features?: string[];
@@ -45,26 +46,27 @@ export const projectsData: Project[] = [
   },
   {
     id: 2,
-    title: 'Travel & Tourism Website',
+    title: 'Red Panda Vacations',
     category: 'Web Development',
-    description: 'Modern, responsive website with booking system and CMS for easy content management.',
+    description: 'A modern, responsive website with custom booking system, destination management and seamless user experience.',
     link: '/portfolio/2',
     bgClass: 'bg-nature',
-    image: '/assets/images/Portfolio/portfolio_travel_website.png',
-    client: 'TravelGo Holidays',
+    image: '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png',
+    client: 'Red Panda Vacations',
     date: 'Feb 2026',
     services: 'Web Design, Next.js Development, CMS Integration',
     projectUrl: 'https://nooryak.com',
     gallery: [
-      '/assets/images/Portfolio/travel_screenshot_1.png',
-      '/assets/images/Portfolio/travel_screenshot_2.png',
-      '/assets/images/Portfolio/travel_screenshot_3.png',
-      '/assets/images/Portfolio/travel_screenshot_4.png'
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide2.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide3.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide4.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide5.png'
     ],
-    // Rich details populated for pixel-perfect match
-    subtitle: 'Travel & Tourism Website Development',
+    subtitle: 'Red Panda Vacations Development',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/redpanda.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/redpanda_mobil.png',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'PHP', iconType: 'php' },
@@ -73,17 +75,16 @@ export const projectsData: Project[] = [
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' }
     ],
-    overview: 'This travel and tourism website is developed to provide users with a seamless experience in discovering destinations, exploring tour packages, and making online bookings. The website is fully responsive, fast, SEO friendly and easy to manage.',
+    overview: 'Red Panda Vacations website was designed and built to offer a clean, engaging interface for tourists exploring premium holiday packages, offering seamless online reservation modules.',
     features: [
-      'Custom tour package management',
-      'Blog & travel guides section',
-      'Advanced search & filter system',
-      'Fully responsive for all devices',
-      'Online booking & inquiry system',
-      'SEO optimized & fast loading'
+      'Custom destination sliders',
+      'Interactive tour scheduler',
+      'Direct WhatsApp chat booking',
+      'Hardened security protection',
+      'Optimized speed score'
     ],
     metaGrid: [
-      { label: 'Client', value: 'TravelGo Holidays', iconType: 'user' },
+      { label: 'Client', value: 'Red Panda Vacations', iconType: 'user' },
       { label: 'Industry', value: 'Travel & Tourism', iconType: 'globe' },
       { label: 'Project Type', value: 'Custom Website', iconType: 'code' },
       { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
@@ -91,10 +92,11 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'May 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/travel_screenshot_1.png',
-      '/assets/images/Portfolio/travel_screenshot_2.png',
-      '/assets/images/Portfolio/travel_screenshot_3.png',
-      '/assets/images/Portfolio/travel_screenshot_4.png'
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide2.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide3.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide4.png',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide5.png'
     ],
     results: [
       { value: '150%', label: 'Increase in Website Traffic', iconType: 'trending-up' },
@@ -119,24 +121,305 @@ export const projectsData: Project[] = [
   },
   {
     id: 4,
-    title: 'Fitness & Gym Website',
+    title: 'Arman Group',
     category: 'Web Development',
-    description: 'High-performance website with membership, schedules, and trainer management.',
+    description: 'Premium corporate website for Arman Group showcasing their projects, team and global operations.',
     link: '/portfolio/4',
     bgClass: 'bg-slate',
-    image: '/assets/images/Portfolio/portfolio_fitness_gym.png',
-    client: 'IronGym Fitness',
+    image: '/assets/images/Portfolio/projects/armangroup/slide1.png',
+    client: 'Arman Group Ltd',
     date: 'Dec 2025',
     services: 'Web Development, UX/UI Design',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_fitness_gym.png']
+    gallery: [
+      '/assets/images/Portfolio/projects/armangroup/slide1.png',
+      '/assets/images/Portfolio/projects/armangroup/slide2.png',
+      '/assets/images/Portfolio/projects/armangroup/slide3.png',
+      '/assets/images/Portfolio/projects/armangroup/slide4.png',
+      '/assets/images/Portfolio/projects/armangroup/slide5.png'
+    ],
+    subtitle: 'Arman Group Corporate Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/armangroup.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'A custom corporate portal developed for Arman Group to showcase their diversified projects, business verticals, and contact gateways in a fast, responsive layout.',
+    features: [
+      'Diversified project portfolio grids',
+      'Interactive corporate timeline',
+      'Contact inquiry dashboard',
+      'Highly responsive UI design',
+      'Secure asset protection'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Arman Group', iconType: 'user' },
+      { label: 'Industry', value: 'Conglomerate', iconType: 'globe' },
+      { label: 'Project Type', value: 'Corporate Website', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2024', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/armangroup/slide1.png',
+      '/assets/images/Portfolio/projects/armangroup/slide2.png',
+      '/assets/images/Portfolio/projects/armangroup/slide3.png',
+      '/assets/images/Portfolio/projects/armangroup/slide4.png',
+      '/assets/images/Portfolio/projects/armangroup/slide5.png'
+    ],
+    results: [
+      { value: '110%', label: 'Increase in B2B Inquiries', iconType: 'trending-up' },
+      { value: '45%', label: 'More Page Sessions', iconType: 'shopping-cart' },
+      { value: '55%', label: 'Better Brand Authority', iconType: 'users' },
+      { value: '98%', label: 'User Rating', iconType: 'smile' }
+    ]
   },
   {
     id: 5,
+    title: 'Elkins Air Conditioning',
+    category: 'Web Development',
+    description: 'Modern service portal with appointment booking and HVAC solutions listing.',
+    link: '/portfolio/5',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
+    client: 'Elkins Air Conditioning Inc',
+    date: 'Nov 2025',
+    services: 'Web Development, SEO, Booking Integration',
+    projectUrl: 'https://nooryak.com',
+    gallery: [
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide2.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide3.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide4.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide5.png'
+    ],
+    subtitle: 'Elkins Air Conditioning Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Elkins Air Conditioning website delivers a clean service interface for booking maintenance visits, estimating HVAC system costs, and contacting local emergency technicians.',
+    features: [
+      'Online appointment scheduler',
+      'Service area maps mapping',
+      'Dynamic quote calculator',
+      'SEO optimized layout',
+      'Mobile-first responsive grids'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Elkins Air Conditioning', iconType: 'user' },
+      { label: 'Industry', value: 'HVAC Services', iconType: 'globe' },
+      { label: 'Project Type', value: 'Service Portal', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Oct 2024', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide2.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide3.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide4.png',
+      '/assets/images/Portfolio/projects/elkinsaircondition/slide5.png'
+    ],
+    results: [
+      { value: '180%', label: 'More Local Bookings', iconType: 'trending-up' },
+      { value: '75%', label: 'Call Volume Growth', iconType: 'shopping-cart' },
+      { value: '4.8★', label: 'Customer Trust Rating', iconType: 'smile' },
+      { value: '99%', label: 'System Uptime', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 6,
+    title: 'KB Enterprises',
+    category: 'Web Development',
+    description: 'Robust B2B trading and enterprise communication portal.',
+    link: '/portfolio/6',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/kbenterpises/slide1.png',
+    client: 'KB Enterprises Ltd',
+    date: 'Oct 2025',
+    services: 'Web Development, Database Management',
+    projectUrl: 'https://nooryak.com',
+    gallery: [
+      '/assets/images/Portfolio/projects/kbenterpises/slide1.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide2.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide3.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide4.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide5.png'
+    ],
+    subtitle: 'KB Enterprises Trading Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/enterpriseskb.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'KB Enterprises trading portal enables smooth B2B operations, wholesale catalog display, vendor registrations, and encrypted document sharing.',
+    features: [
+      'Wholesale product catalog',
+      'Vendor document upload nodes',
+      'Secure database structure',
+      'SEO friendly heading tags',
+      'Responsive table grids'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'KB Enterprises', iconType: 'user' },
+      { label: 'Industry', value: 'Trading & Logistics', iconType: 'globe' },
+      { label: 'Project Type', value: 'B2B Enterprise Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Sep 2024', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/kbenterpises/slide1.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide2.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide3.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide4.png',
+      '/assets/images/Portfolio/projects/kbenterpises/slide5.png'
+    ],
+    results: [
+      { value: '140%', label: 'Partner Onboardings', iconType: 'trending-up' },
+      { value: '50%', label: 'Admin Overhead Savings', iconType: 'shopping-cart' },
+      { value: '95%', label: 'Vendor Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Database Reliability', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 7,
+    title: 'Radient Infotech',
+    category: 'Web Development',
+    description: 'Modern IT consultancy website showcasing enterprise solutions and cloud services.',
+    link: '/portfolio/7',
+    bgClass: 'bg-purple-soft',
+    image: '/assets/images/Portfolio/projects/radientinfotech/slide1.png',
+    client: 'Radient Infotech Solutions',
+    date: 'Sep 2025',
+    services: 'Web Development, IT Branding',
+    projectUrl: 'https://nooryak.com',
+    gallery: [
+      '/assets/images/Portfolio/projects/radientinfotech/slide1.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide2.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide3.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide4.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide5.png'
+    ],
+    subtitle: 'Radient Infotech Consultancy Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/radiantconsultancy.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Radient Infotech digital hub showcases cloud consulting services, cybersecurity audits, and bespoke software delivery capabilities with detailed case study files.',
+    features: [
+      'Case study carousel grids',
+      'Consultation lead captures',
+      'High speed loading times',
+      'Vibrant brand style codes',
+      'SEO structured site map'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Radient Infotech', iconType: 'user' },
+      { label: 'Industry', value: 'IT Consultancy', iconType: 'globe' },
+      { label: 'Project Type', value: 'Company Hub', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Aug 2024', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/radientinfotech/slide1.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide2.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide3.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide4.png',
+      '/assets/images/Portfolio/projects/radientinfotech/slide5.png'
+    ],
+    results: [
+      { value: '120%', label: 'Consultation Leads', iconType: 'trending-up' },
+      { value: '85%', label: 'Organic Traffic Boost', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Client Success Rating', iconType: 'smile' },
+      { value: '100%', label: 'Core Vitals Pass', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 8,
+    title: 'Shifa Infotech',
+    category: 'Web Development',
+    description: 'Comprehensive healthcare and medical services directory and portal.',
+    link: '/portfolio/8',
+    bgClass: 'bg-teal',
+    image: '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
+    client: 'Shifa Healthcare Group',
+    date: 'Aug 2025',
+    services: 'Web Development, Patient Database',
+    projectUrl: 'https://nooryak.com',
+    gallery: [
+      '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide2.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide3.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide4.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide5.png'
+    ],
+    subtitle: 'Shifa Infotech Healthcare Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/shifainfotech.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Shifa Infotech portal offers appointment management modules, patient health sheets downloads, clinic location finders, and doctor profiles.',
+    features: [
+      'Online patient appointment cards',
+      'Doctor schedule finders',
+      'Encrypted health forms database',
+      'Fully responsive layout designs',
+      'SEO tags and schema setup'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Shifa Infotech', iconType: 'user' },
+      { label: 'Industry', value: 'Healthcare', iconType: 'globe' },
+      { label: 'Project Type', value: 'Medical Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jul 2024', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide2.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide3.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide4.png',
+      '/assets/images/Portfolio/projects/shifainfotech/slide5.png'
+    ],
+    results: [
+      { value: '200%', label: 'Patient Bookings', iconType: 'trending-up' },
+      { value: '60%', label: 'Form Fill Automation', iconType: 'shopping-cart' },
+      { value: '99%', label: 'System Uptime Pass', iconType: 'users' },
+      { value: '4.9★', label: 'User Feedback Rating', iconType: 'smile' }
+    ]
+  },
+  {
+    id: 9,
     title: 'Brand Identity for Startup',
     category: 'Branding & Design',
     description: 'Complete brand identity including logo, color palette, typography, and brand guidelines.',
-    link: '/portfolio/5',
+    link: '/portfolio/9',
     bgClass: 'bg-orange-soft',
     image: '/assets/images/Portfolio/portfolio_brand_identity.png',
     client: 'Nexora Tech',
@@ -146,11 +429,11 @@ export const projectsData: Project[] = [
     gallery: ['/assets/images/Portfolio/portfolio_brand_identity.png']
   },
   {
-    id: 6,
+    id: 10,
     title: 'Lead Generation Campaign',
     category: 'Digital Marketing',
     description: 'Generated high-quality leads and improved conversion rate for a real estate client.',
-    link: '/portfolio/6',
+    link: '/portfolio/10',
     bgClass: 'bg-lavender',
     image: '/assets/images/Portfolio/portfolio_lead_gen.png',
     client: 'Prime Realty',
@@ -160,11 +443,11 @@ export const projectsData: Project[] = [
     gallery: ['/assets/images/Portfolio/portfolio_lead_gen.png']
   },
   {
-    id: 7,
+    id: 11,
     title: 'Finance Management App',
     category: 'App Development',
     description: 'Smart finance app for tracking income, expenses, and generating detailed reports.',
-    link: '/portfolio/7',
+    link: '/portfolio/11',
     bgClass: 'bg-purple-soft',
     image: '/assets/images/Portfolio/portfolio_finance_app.png',
     client: 'Finace Group',
@@ -174,25 +457,11 @@ export const projectsData: Project[] = [
     gallery: ['/assets/images/Portfolio/portfolio_finance_app.png']
   },
   {
-    id: 8,
-    title: 'E-Commerce Website',
-    category: 'Web Development',
-    description: 'Full-featured e-commerce platform with secure payments and inventory management.',
-    link: '/portfolio/8',
-    bgClass: 'bg-teal',
-    image: '/assets/images/Portfolio/portfolio_ecommerce.png',
-    client: 'Furni Decor',
-    date: 'Aug 2025',
-    services: 'E-commerce, Shopify, Frontend Development',
-    projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_ecommerce.png']
-  },
-  {
-    id: 9,
+    id: 12,
     title: 'Logo & Brand Design',
     category: 'Branding & Design',
     description: 'Professional logo and brand design that creates a strong and memorable identity.',
-    link: '/portfolio/9',
+    link: '/portfolio/12',
     bgClass: 'bg-slate',
     image: '/assets/images/Portfolio/portfolio_logo_design.png',
     client: 'Nexora Tech',
