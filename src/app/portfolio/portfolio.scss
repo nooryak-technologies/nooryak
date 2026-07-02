@@ -1482,8 +1482,13 @@
   }
 
   @keyframes badgeGlow {
-    from { box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4); }
-    to   { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.7); }
+    from {
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    }
+
+    to {
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.7);
+    }
   }
 
   .project-detail-title-premium {
@@ -1495,7 +1500,7 @@
     letter-spacing: -0.5px;
 
     @media (max-width: 768px) {
-      font-size: 28px;
+      font-size: 23px;
     }
   }
 
@@ -1775,10 +1780,24 @@
     position: relative;
     width: 100%;
     max-width: 520px;
-    margin: 0 auto;
+    margin: 0 auto 0 -24px;
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @media (max-width: 991px) {
+      margin: 0 auto;
+    }
 
     @media (max-width: 576px) {
       max-width: 340px;
+    }
+  }
+
+  .overview-responsive-device-block.is-visible {
+    .overview-mobile-mockup-wrapper {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -1786,8 +1805,12 @@
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    @media (max-width: 991px) {
+      justify-content: center;
+    }
 
     .mobile-mockup-img-base {
       width: 100%;
@@ -1805,35 +1828,36 @@
 
       // Coordinates mapping to overlay inside the screen frames of mobile.png
       &.screen-left {
-        left: 14.2%;
-        top: 6.5%;
-        width: 30.3%;
-        height: 89%;
-        border-radius: 20px;
-
+        left: 11.02%;
+        top: 6.42%;
+        width: 27%;
+        height: 86.89%;
+        border-radius: 19px;
 
         @media (max-width: 991px) {
-          border-radius: 14px;
+          border-radius: 8px;
         }
 
         @media (max-width: 576px) {
-          border-radius: 8px;
+          border-radius: 4px;
         }
       }
 
       &.screen-right {
-        left: 55.5%;
-        top: 6.5%;
-        width: 30.3%;
-        height: 89%;
-        border-radius: 20px;
+        left: 49%;
+        top: 9.59%;
+        width: 40%;
+        height: 84.35%;
+        border-radius: 12px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
 
         @media (max-width: 991px) {
-          border-radius: 14px;
+          border-radius: 12px;
         }
 
         @media (max-width: 576px) {
-          border-radius: 8px;
+          border-radius: 6px;
         }
       }
 
@@ -1846,7 +1870,7 @@
         animation: phoneAutoScroll 22s ease-in-out infinite;
 
         &:hover {
-          animation-play-state: paused;
+          animation-play-state: paused !important;
         }
       }
     }
@@ -2074,22 +2098,18 @@
     }
   }
 
-  .screenshots-scroll-container {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+  .screenshots-swiper {
     padding: 10px 4px 20px;
-    scrollbar-width: none; // Firefox
+    width: 100%;
 
-    &::-webkit-scrollbar {
-      display: none; // Safari/Chrome
+    .swiper-slide {
+      height: auto;
     }
   }
 
   .screenshot-card {
-    flex: 0 0 420px;
-    height: 240px;
+    width: 100%;
+    height: 250px;
     border-radius: 16px;
     overflow: hidden;
     background: #ffffff;
@@ -2144,12 +2164,10 @@
     }
 
     @media (max-width: 768px) {
-      flex: 0 0 340px;
       height: 200px;
     }
 
     @media (max-width: 576px) {
-      flex: 0 0 280px;
       height: 160px;
     }
   }
@@ -2247,6 +2265,7 @@
       font-weight: 850;
       color: #ff4a17;
       letter-spacing: -0.5px;
+      font-variant-numeric: tabular-nums;
 
       @media (max-width: 576px) {
         font-size: 20px;

@@ -11,6 +11,8 @@ import {
   Play, Pause, Clock, CheckCircle, Globe, Code,
   TrendingUp, ShoppingCart, Users, Smile, ChevronLeft, ChevronRight, HelpCircle
 } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, FreeMode } from 'swiper/modules';
 
 // Custom component to render SVG tech logos
 function TechIcon({ name }: { name: string }) {
@@ -84,6 +86,64 @@ function RenderIcon({ type, size = 20 }: { type: string; size?: number }) {
   }
 }
 
+// Helper component to animate result metric numbers when scrolled into view
+function ResultMetricCounter({ valueString }: { valueString: string }) {
+  const [displayValue, setDisplayValue] = useState('0');
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const elementRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const match = valueString.match(/^([^\d]*)([\d.]+)([^\d]*)$/);
+    if (!match) {
+      setDisplayValue(valueString);
+      return;
+    }
+    const prefix = match[1] || '';
+    const numStr = match[2];
+    const suffix = match[3] || '';
+    const targetNum = parseFloat(numStr);
+    const decimals = numStr.includes('.') ? numStr.split('.')[1].length : 0;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            const duration = 2000;
+            const startTime = performance.now();
+
+            const animate = (currentTime: number) => {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+              const currentNum = targetNum * easeProgress;
+
+              setDisplayValue(`${prefix}${currentNum.toFixed(decimals)}${suffix}`);
+
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              } else {
+                setDisplayValue(`${prefix}${targetNum.toFixed(decimals)}${suffix}`);
+              }
+            };
+
+            requestAnimationFrame(animate);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [valueString, hasAnimated]);
+
+  return <span ref={elementRef} className="result-metric-value">{displayValue || valueString}</span>;
+}
+
 export default function ProjectDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -94,12 +154,32 @@ export default function ProjectDetailPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [isDeviceVisible, setIsDeviceVisible] = useState(false);
 
-  const screenshotContainerRef = useRef<HTMLDivElement>(null);
+  const deviceBlockRef = useRef<HTMLDivElement>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsDeviceVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (deviceBlockRef.current) {
+      observer.observe(deviceBlockRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -152,17 +232,6 @@ export default function ProjectDetailPage() {
     const gallery = project.screenshots || project.gallery;
     if (gallery) {
       setCurrentImageIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
-    }
-  };
-
-  const scrollScreenshots = (direction: 'left' | 'right') => {
-    const container = screenshotContainerRef.current;
-    if (container) {
-      const scrollAmount = 350;
-      container.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
     }
   };
 
@@ -262,31 +331,34 @@ export default function ProjectDetailPage() {
           <div className="row g-5 align-items-center">
             {/* Left Column: Responsive Mockup */}
             <div className="col-lg-6 order-lg-1 order-2">
-              <div className="overview-responsive-device-block">
+              <div
+                ref={deviceBlockRef}
+                className={`overview-responsive-device-block ${isDeviceVisible ? 'is-visible' : ''}`}
+              >
                 <h2 className="overview-section-heading">100% responsive device</h2>
-                
+
                 <div className="overview-mobile-mockup-wrapper">
                   <div className="overview-mobile-mockup-container">
-                    <img 
-                      src="/assets/images/Portfolio/projects/mobile.png" 
-                      alt="Mobile mockups frame" 
+                    <img
+                      src="/assets/images/Portfolio/projects/mobile_tablet.png"
+                      alt="Mobile and tablet mockups frame"
                       className="mobile-mockup-img-base"
                     />
-                    
+
                     {/* Left phone screen overlay */}
                     <div className="mobile-screen-scroll-container screen-left">
-                      <img 
-                        src={project.mobileScrollImage || project.scrollImage || project.image} 
-                        alt="Mobile screen left content" 
+                      <img
+                        src={project.mobileScrollImage || project.scrollImage || project.image}
+                        alt="Mobile screen content"
                         className="mobile-screen-scroll-img"
                       />
                     </div>
-                    
-                    {/* Right phone screen overlay */}
+
+                    {/* Right tablet screen overlay */}
                     <div className="mobile-screen-scroll-container screen-right">
-                      <img 
-                        src={project.mobileScrollImage || project.scrollImage || project.image} 
-                        alt="Mobile screen right content" 
+                      <img
+                        src={project.tabletScrollImage || project.scrollImage || project.image}
+                        alt="Tablet screen content"
                         className="mobile-screen-scroll-img"
                       />
                     </div>
@@ -391,37 +463,58 @@ export default function ProjectDetailPage() {
             <div className="screenshots-carousel-wrapper">
               <button
                 className="carousel-control-btn prev-btn"
-                onClick={() => scrollScreenshots('left')}
                 aria-label="Previous screenshots"
               >
                 <ChevronLeft size={24} />
               </button>
 
-              <div className="screenshots-scroll-container" ref={screenshotContainerRef}>
+              <Swiper
+                modules={[Autoplay, Navigation, FreeMode]}
+                loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true
+                }}
+                spaceBetween={24}
+                speed={1000}
+                navigation={{
+                  prevEl: '.prev-btn',
+                  nextEl: '.next-btn',
+                }}
+                breakpoints={{
+                  0: { slidesPerView: 1 },
+                  576: { slidesPerView: 1.5 },
+                  768: { slidesPerView: 2 },
+                  992: { slidesPerView: 2.5 },
+                  1200: { slidesPerView: 3 },
+                }}
+                className="screenshots-swiper"
+              >
                 {(project.screenshots || project.gallery || []).map((imgUrl, index) => (
-                  <div
-                    key={index}
-                    className="screenshot-card"
-                    onClick={() => {
-                      setCurrentImageIndex(index);
-                      setLightboxOpen(true);
-                    }}
-                  >
-                    <div className="screenshot-zoom-overlay">
-                      <span className="zoom-plus-icon">+</span>
+                  <SwiperSlide key={index}>
+                    <div
+                      className="screenshot-card"
+                      onClick={() => {
+                        setCurrentImageIndex(index);
+                        setLightboxOpen(true);
+                      }}
+                    >
+                      <div className="screenshot-zoom-overlay">
+                        <span className="zoom-plus-icon">+</span>
+                      </div>
+                      <img
+                        src={imgUrl}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className="screenshot-img"
+                      />
                     </div>
-                    <img
-                      src={imgUrl}
-                      alt={`${project.title} screenshot ${index + 1}`}
-                      className="screenshot-img"
-                    />
-                  </div>
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
 
               <button
                 className="carousel-control-btn next-btn"
-                onClick={() => scrollScreenshots('right')}
                 aria-label="Next screenshots"
               >
                 <ChevronRight size={24} />
@@ -447,7 +540,7 @@ export default function ProjectDetailPage() {
                         <div className="result-metric-icon-circle">
                           <RenderIcon type={result.iconType} size={22} />
                         </div>
-                        <span className="result-metric-value">{result.value}</span>
+                        <ResultMetricCounter valueString={result.value} />
                       </div>
                       <span className="result-metric-label">{result.label}</span>
                     </div>

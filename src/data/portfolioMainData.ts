@@ -28,6 +28,7 @@ export interface Project {
   screenshots?: string[];
   results?: { value: string; label: string; iconType: string }[];
   badge?: string;
+  tabletScrollImage?: string;
 }
 
 export const projectsData: Project[] = [
@@ -383,6 +384,7 @@ export const projectsData: Project[] = [
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/shifainfotech.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/shifainfo_mobile.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/shifainfotech_tablet.png',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
