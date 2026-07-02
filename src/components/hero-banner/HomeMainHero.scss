@@ -150,23 +150,6 @@ $bp-sm: 480px;
     }
 }
 
-/* ── LARGE MONITOR ONLY (1920px+) — 24-inch Full HD ── */
-@media screen and (min-width: 1920px) {
-    .hero {
-        background: rgba(255, 244, 233, 0.4705882353);
-        width: 96%;
-        margin: 20px auto 11px;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-    }
-
-    .main {
-        height: 900px;
-    }
-}
-
 /* ── MAIN CONTENT ── */
 .main {
     display: flex;
@@ -1202,4 +1185,28 @@ $bp-sm: 480px;
 
 .heading {
     height: 50px;
+}
+
+/* ── LARGE MONITOR ONLY (1920px+) — 24-inch Full HD ── */
+@media screen and (min-width: 1920px) {
+    .hero {
+        background: rgba(255, 244, 233, 0.4705882353);
+        width: 96%;
+        margin: 20px auto 11px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main {
+        height: 900px;
+    }
+}
+
+/* ── ULTRA LARGE MONITOR (2550px+) ── */
+@media screen and (min-width: 2550px) {
+    .main {
+        height: 1250px;
+    }
 }

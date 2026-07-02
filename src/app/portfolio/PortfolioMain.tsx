@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  Grid, 
-  Target, 
-  Code, 
-  Smartphone, 
+import {
+  Grid,
+  Target,
+  Code,
+  Smartphone,
   Palette,
   Briefcase,
   Smile,
@@ -83,32 +83,32 @@ export default function PortfolioMain() {
 
   return (
     <div className="portfolio-page-wrapper">
-      
+
       {/* ── HERO SECTION ── */}
       <section className="portfolio-hero">
         <div className="container">
           <div className="row align-items-center">
-            
+
             {/* Left Content */}
             <div className="col-lg-6">
               <div className="portfolio-hero-left">
                 <span className="portfolio-label-orange animate-up delay-1">OUR PORTFOLIO</span>
-                
+
                 <h1 className="portfolio-hero-title animate-up delay-2">
                   Our Work. <br />
                   <span>Real Results.</span>
                 </h1>
-                
+
                 <p className="portfolio-hero-desc animate-up delay-3">
                   Explore our latest projects across digital marketing, web development, app development and branding. Each project reflects our commitment to quality, creativity and performance.
                 </p>
-                
+
                 {/* Orange Divider Line */}
                 <div className="portfolio-divider animate-up delay-3">
                   <span className="divider-dot"></span>
                   <span className="divider-line"></span>
                 </div>
-                
+
                 {/* Stats Row */}
                 <div className="portfolio-hero-stats animate-up delay-4">
                   <div className="stat-item">
@@ -120,7 +120,7 @@ export default function PortfolioMain() {
                       <span className="stat-label">Projects Delivered</span>
                     </div>
                   </div>
-                  
+
                   <div className="stat-item">
                     <div className="stat-icon-box">
                       <Smile size={18} />
@@ -130,7 +130,7 @@ export default function PortfolioMain() {
                       <span className="stat-label">Client Satisfaction</span>
                     </div>
                   </div>
-                  
+
                   <div className="stat-item">
                     <div className="stat-icon-box">
                       <Globe size={18} />
@@ -147,9 +147,9 @@ export default function PortfolioMain() {
             {/* Right Mockup Image */}
             <div className="col-lg-6">
               <div className="portfolio-hero-mockups-container animate-fade-in delay-3">
-                <img 
-                  src="/assets/images/Portfolio/herobanner_portfolio.png" 
-                  alt="Desktop Monitor and Mobile Phone Mockups" 
+                <img
+                  src="/assets/images/Portfolio/herobanner_portfolio.png"
+                  alt="Desktop Monitor and Mobile Phone Mockups"
                   className="hero-mockups-img-custom"
                 />
               </div>
@@ -162,7 +162,7 @@ export default function PortfolioMain() {
       {/* ── FILTER TABS SECTION ── */}
       <section className="portfolio-filter-section">
         <div className="container">
-          
+
           <ul className="portfolio-tabs-nav">
             {categories.map((cat, idx) => (
               <li key={idx}>
@@ -184,13 +184,13 @@ export default function PortfolioMain() {
           <div className="portfolio-grid">
             <div className="row">
               {filteredProjects.map((project) => (
-                <div 
-                  key={project.id} 
+                <div
+                  key={project.id}
                   className={`col-lg-4 col-md-6 col-6 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
                   style={{ opacity: animateGrid ? 1 : 0 }}
                 >
                   <div className="portfolio-card">
-                    
+
                     {/* Visual Card Image Wrap */}
                     <div className="portfolio-card-image-wrap">
                       <span className={`category-badge ${getBadgeClass(project.category)}`}>
@@ -198,17 +198,17 @@ export default function PortfolioMain() {
                       </span>
                       {project.category === 'Web Development' && project.scrollImage ? (
                         <div className="portfolio-card-scroll-container">
-                          <img 
-                            src={project.scrollImage} 
-                            alt={project.title} 
-                            className="card-project-img-scroll" 
+                          <img
+                            src={project.scrollImage}
+                            alt={project.title}
+                            className="card-project-img-scroll"
                           />
                         </div>
                       ) : (
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="card-project-img" 
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="card-project-img"
                         />
                       )}
                     </div>
@@ -221,10 +221,10 @@ export default function PortfolioMain() {
                         </Link>
                       </h4>
                       <p className="portfolio-card-desc">{project.description}</p>
-                      
+
                       <div className="portfolio-card-footer-custom">
                         <Link href={project.link} className="view-case-study-link">
-                          View Case Study <span className="arrow-right">→</span>
+                          View  <span className="arrow-right">→</span>
                         </Link>
                       </div>
                     </div>
@@ -250,7 +250,7 @@ export default function PortfolioMain() {
       <section className="portfolio-cta-section">
         <div className="container">
           <div className="portfolio-cta-card">
-            
+
             <div className="cta-left-content">
               <span className="cta-label-orange">HAVE A PROJECT IN MIND?</span>
               <h2 className="cta-title">
@@ -258,13 +258,13 @@ export default function PortfolioMain() {
                 <span>Amazing Together.</span>
               </h2>
             </div>
-            
+
             <div className="cta-right-content">
               <p className="cta-description">
                 We're excited to hear about your ideas and help you turn them into powerful digital solutions.
               </p>
               <div className="cta-actions">
-                <a 
+                <a
                   href="#"
                   onClick={handleStartProjectClick}
                   className="btn-cta-orange"

@@ -57,7 +57,7 @@ export const projectsData: Project[] = [
     client: 'Red Panda Vacations',
     date: 'Feb 2026',
     services: 'Web Design, Next.js Development, CMS Integration',
-    projectUrl: 'https://nooryak.com',
+    projectUrl: 'https://redpandavacations.com/',
     gallery: [
       '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png',
       '/assets/images/Portfolio/projects/redpandscreenslide/slide2.png',
@@ -132,7 +132,7 @@ export const projectsData: Project[] = [
     client: 'Arman Group Ltd',
     date: 'Dec 2025',
     services: 'Web Development, UX/UI Design',
-    projectUrl: 'https://nooryak.com',
+    projectUrl: 'https://armangroup.co.in/',
     gallery: [
       '/assets/images/Portfolio/projects/armangroup/slide1.png',
       '/assets/images/Portfolio/projects/armangroup/slide2.png',
@@ -192,7 +192,7 @@ export const projectsData: Project[] = [
     client: 'Elkins Air Conditioning Inc',
     date: 'Nov 2025',
     services: 'Web Development, SEO, Booking Integration',
-    projectUrl: 'https://nooryak.com',
+    projectUrl: 'https://elkinsaircondition.com/',
     gallery: [
       '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
       '/assets/images/Portfolio/projects/elkinsaircondition/slide2.png',
@@ -252,7 +252,7 @@ export const projectsData: Project[] = [
     client: 'KB Enterprises Ltd',
     date: 'Oct 2025',
     services: 'Web Development, Database Management',
-    projectUrl: 'https://nooryak.com',
+    projectUrl: 'https://enterpriseskp.in/',
     gallery: [
       '/assets/images/Portfolio/projects/kbenterpises/slide1.png',
       '/assets/images/Portfolio/projects/kbenterpises/slide2.png',
@@ -372,7 +372,7 @@ export const projectsData: Project[] = [
     client: 'Shifa Healthcare Group',
     date: 'Aug 2025',
     services: 'Web Development, Patient Database',
-    projectUrl: 'https://nooryak.com',
+    projectUrl: 'https://shefainfotech.com/',
     gallery: [
       '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
       '/assets/images/Portfolio/projects/shifainfotech/slide2.png',
@@ -433,7 +433,7 @@ export const projectsData: Project[] = [
     client: 'Bazarway Store',
     date: 'Jan 2026',
     services: 'Web Development, eCommerce, Multi-vendor Platform',
-    projectUrl: 'https://nooryak.com',
+    projectUrl: 'https://bazaarway.co.uk/',
     gallery: [
       '/assets/images/Portfolio/projects/bazarway.png'
     ],
