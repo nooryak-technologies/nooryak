@@ -57,7 +57,7 @@ const HomeMainFooter: React.FC<IHomeMainFooter> = ({ bgColor = "footer-main" }) 
                 </div>
 
                 <div className="bottom-bar">
-                    <span><a href="/privacy-policy">Privacy Policy</a> - <a href="/terms-conditions">Terms & Conditions</a></span>
+                    <span><Link href="/privacy-policy">Privacy Policy</Link> - <Link href="/terms-conditions">Terms & Conditions</Link> - <Link href="/shipping-policy">Shipping Policy</Link> - <Link href="/refund-policy">Refund Policy</Link></span>
 
                     <SocialMedia />
 

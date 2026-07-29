@@ -140,150 +140,623 @@
 
 
 
+/* ==========================================
+   FLOATING BUTTONS & WHATSAPP CHAT POPUP
+   ========================================== */
+
+/* ── Foot Floating Container (Bottom Right) ── */
 .foot_floating {
   z-index: 10000;
   position: fixed;
-  bottom: 15px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
+}
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    animation: movingUp 2s ease-in-out infinite;
-    text-decoration: none;
+/* ── WhatsApp Pill Group ── */
+.whatsapp-pill-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
 
-    &:hover {
-      transform: scale(1.15);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    }
-  }
+/* ── WhatsApp Button Wrapper with Light Background Ring & Reduced Ripple Wave ── */
+.whatsapp-float-btn-wrap {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.16);
+  border: 1.5px solid rgba(37, 211, 102, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.12);
+}
 
-  .whatsapp-float-btn {
-    background: #25D366;
-    color: #ffffff;
-    font-size: 24px;
+.whatsapp-float-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #0e9377 100%);
+  color: #ffffff;
+  border: none;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
 
-    i {
-      display: block;
-    }
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  i {
     display: block;
+    line-height: 1;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
   }
 }
 
-@keyframes movingUp {
+/* ── WhatsApp Waving Ripple Effect Rings ── */
+.wa-ripple-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.55);
+  pointer-events: none;
+  z-index: 1;
+  animation: waPulseWave 2.2s cubic-bezier(0.1, 0.7, 0.1, 1) infinite;
 
-  0%,
-  100% {
-    transform: translateY(0);
+  &.ring2 {
+    animation-delay: 0.8s;
+  }
+}
+
+@keyframes waPulseWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
   }
 
   50% {
-    transform: translateY(-10px);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1.32);
+    opacity: 0;
   }
 }
 
+/* ── WhatsApp Chat Pill Badge ── */
+.whatsapp-chat-pill {
+  background: #ffffff;
+  color: #0c4a3e;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(37, 211, 102, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  transition: all 0.3s ease;
 
-.tp-copyright-big-text {
-  span {
-    color: #ff5722;
+  &:hover {
+    color: #25D366;
+    border-color: #25D366;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.2);
+    transform: translateY(-2px);
   }
 }
 
+@media (max-width: 480px) {
+  .whatsapp-chat-pill {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}
 
+/* ── WhatsApp Support Chat Popup ── */
+.wa-chat-popup {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 350px;
+  max-width: calc(100vw - 32px);
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 10001;
+  animation: waPopupAppear 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  font-family: inherit;
+}
 
+@keyframes waPopupAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.92);
+  }
 
-.btn-call {
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Popup Header */
+.wa-chat-header {
+  background: linear-gradient(135deg, #0e9377 0%, #066955 100%);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wa-chat-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wa-avatar-wrap {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  .wa-avatar-img {
+    object-fit: contain;
+    border-radius: 50%;
+  }
+
+  .wa-status-dot {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 11px;
+    height: 11px;
+    background: #00ff88;
+    border-radius: 50%;
+    border: 2px solid #066955;
+  }
+}
+
+.wa-header-text {
+  .wa-header-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .wa-header-status {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 3px;
+
+    .online-badge-dot {
+      width: 7px;
+      height: 7px;
+      background: #00ff88;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 6px #00ff88;
+    }
+  }
+}
+
+.wa-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(90deg);
+  }
+}
+
+/* Popup Body */
+.wa-chat-body {
+  background: #edf3f2;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wa-message-bubble {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 16px 16px 16px 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+
+  .wa-message-text {
+    font-size: 13.5px;
+    color: #2b3648;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+  }
+
+  .wa-timestamp {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 400;
+  }
+}
+
+.wa-quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wa-quick-btn {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: #1e293b;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-size: 13.5px;
+  font-weight: 700;
   text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: #eefbf6;
+    color: #0e9377;
+    border-color: #0e9377;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(14, 147, 119, 0.15);
+  }
+}
+
+/* Popup Footer Input */
+.wa-chat-footer {
+  background: #ffffff;
+  padding: 12px 14px;
+  border-top: 1px solid #e2e8f0;
+
+  .wa-chat-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .wa-chat-input {
+    flex: 1;
+    height: 42px;
+    border: 1.5px solid #25d366;
+    border-radius: 50px;
+    padding: 0 18px;
+    font-size: 13.5px;
+    outline: none;
+    color: #1e293b;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      border-color: #0e9377;
+      box-shadow: 0 0 0 3px rgba(14, 147, 119, 0.15);
+    }
+  }
+
+  .wa-send-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25D366 0%, #0e9377 100%);
+    border: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+
+    &:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+    }
+  }
+}
+
+/* ── Call Button (Mobile View Only, Hidden on Desktop/Laptop) with Light Background Ring ── */
+.btn-call.mobile-only-call {
+  cursor: pointer;
   z-index: 999;
-  background: #ff3d00;
-  border: 2px solid #ff3d00;
+  background: linear-gradient(135deg, #ff5722 0%, #ff3d00 100%);
+  border: 5px solid rgba(255, 61, 0, 0.16);
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 54px;
+  height: 54px;
   text-decoration: none;
-  transition: all .3s;
-  animation: 1s linear infinite hoverWave;
-  display: flex;
+  transition: all 0.3s ease;
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  box-shadow: 0 8px 10px #ff3d004d;
-  transform: rotate(90deg) !important;
+  bottom: 24px;
+  left: 24px;
+  box-shadow: 0 6px 18px rgba(255, 61, 0, 0.45);
+  transform: rotate(90deg);
+
+  /* Hide on Laptop & Desktop screens */
+  display: none !important;
+
+  /* Display ONLY on Mobile screens */
+  @media (max-width: 768px) {
+    display: flex !important;
+  }
+
+  .btn-call__ico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+    animation: shake 1.2s ease infinite;
+  }
+
+  &:hover {
+    transform: rotate(90deg) scale(1.08);
+    box-shadow: 0 8px 24px rgba(255, 61, 0, 0.6);
+  }
 }
 
-.btn-call__ico {
+/* ── Call Button Waving Ripple Effect Rings (Reduced Size) ── */
+.call-ripple-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 61, 0, 0.55);
+  pointer-events: none;
+  z-index: 1;
+  animation: callPulseWave 2.2s cubic-bezier(0.1, 0.7, 0.1, 1) infinite;
+
+  &.ring2 {
+    animation-delay: 0.8s;
+  }
+}
+
+@keyframes callPulseWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1.32);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   MOBILE BOTTOM NAVIGATION BAR (REF IMAGE 2)
+   ========================================== */
+
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: 440px;
+  height: 64px;
+  z-index: 99999;
+  display: none !important;
+  user-select: none;
+
+  @media (max-width: 768px) {
+    display: block !important;
+  }
+}
+
+.mobile-nav-inner {
+  background: #ffffff;
+  border-radius: 999px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  animation: 1200ms ease 0s normal none 1 running shake;
-  animation-iteration-count: infinite;
-  -webkit-animation: 1200ms ease 0s normal none 1 running shake;
-  -webkit-animation-iteration-count: infinite;
-  color: white;
-  font-size: 20px;
-  padding-top: 5px;
-  transition: .3s all;
-}
+  justify-content: space-around;
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 2px 10px rgba(0, 0, 0, 0.04);
+  border-bottom: 3.5px solid #ff5722;
 
-.btn-call:hover {
-  background-color: #fff;
-}
+  .nav-wave-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 65px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 
-.btn-call:hover .btn-call__ico {
-  color: #ff3d00;
-}
+    &.left-wave {
+      left: 0;
+    }
 
-@-webkit-keyframes hoverWave {
-  0% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 0 rgba(255, 61, 0, 0.2), 0 0 0 0 rgba(255, 61, 0, 0.2)
-  }
-
-  40% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 15px rgba(255, 61, 0, 0.2), 0 0 0 0 rgba(255, 61, 0, 0.2)
-  }
-
-  80% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 30px rgba(255, 61, 0, 0), 0 0 0 26.7px rgba(255, 61, 0, 0.067)
-  }
-
-  100% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 30px rgba(255, 61, 0, 0), 0 0 0 40px rgba(255, 61, 0, 0.0)
+    &.right-wave {
+      right: 0;
+    }
   }
 }
 
-@keyframes hoverWave {
-  0% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 0 rgba(255, 61, 0, 0.2), 0 0 0 0 rgba(255, 61, 0, 0.2)
+.mobile-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none !important;
+  background: none;
+  border: none;
+  padding: 4px 0 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+
+  .nav-icon-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff5ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #334155;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    svg {
+      display: block;
+      width: 17px;
+      height: 17px;
+    }
   }
 
-  40% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 15px rgba(255, 61, 0, 0.2), 0 0 0 0 rgba(255, 61, 0, 0.2)
+  .nav-label {
+    font-size: 8.5px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    line-height: 1;
+    color: #334155;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.25s ease;
   }
 
-  80% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 30px rgba(255, 61, 0, 0), 0 0 0 26.7px rgba(255, 61, 0, 0.067)
+  .active-indicator {
+    position: absolute;
+    bottom: 3px;
+    width: 18px;
+    height: 3px;
+    background: #ff5722;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(255, 87, 34, 0.4);
   }
 
-  100% {
-    box-shadow: 0 8px 10px rgba(255, 61, 0, 0.3), 0 0 0 30px rgba(255, 61, 0, 0), 0 0 0 40px rgba(255, 61, 0, 0.0)
+  /* Active state */
+  &.active {
+    .nav-icon-circle {
+      background: #ffffff;
+      color: #ff5722;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-label {
+      color: #ff5722;
+      font-weight: 800;
+    }
+  }
+
+  &:hover {
+    .nav-icon-circle {
+      color: #ff5722;
+      transform: translateY(-1px);
+    }
+
+    .nav-label {
+      color: #ff5722;
+    }
   }
 }
+
+/* Adjust Floating Buttons and Call Button on Mobile view for clean 20px clearance gap */
+@media (max-width: 768px) {
+  .foot_floating {
+    bottom: 96px;
+    right: 14px;
+
+    /* Hide horizontal text pill on mobile screens to prevent overlap */
+    .whatsapp-chat-pill {
+      display: none !important;
+    }
+  }
+
+  .btn-call.mobile-only-call {
+    bottom: 96px;
+    left: 14px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .whatsapp-float-btn-wrap {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  }
+
+  .wa-chat-popup {
+    bottom: 156px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+  }
+}
+
+
+
+
+
+
 
 /* animations icon */
 

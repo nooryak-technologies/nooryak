@@ -12,6 +12,7 @@ import AnimationWrapper from '@/components/shared/Animation/AnimationWrapper';
 import BackToTop from '@/components/shared/BackToTop/BackToTop';
 import EnquiryForm from '../forms/EnquiryFrom';
 import FloatingButtons from '@/components/common/FloatingButtons';
+import MobileBottomNav from '@/components/common/MobileBottomNav';
 
 export default function HeaderFooterWrapper({
   children,
@@ -64,6 +65,7 @@ export default function HeaderFooterWrapper({
             </div>
             <BackToTop />
             <FloatingButtons />
+            <MobileBottomNav />
             
             <div id="smooth-wrapper">
               <div id="smooth-content">
