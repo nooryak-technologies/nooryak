@@ -168,6 +168,7 @@ export default function FloatingButtons() {
             </button>
             <span className="wa-ripple-ring ring1"></span>
             <span className="wa-ripple-ring ring2"></span>
+            <span className="wa-ripple-ring ring3"></span>
           </div>
 
           {!isOpen && (
@@ -185,6 +186,7 @@ export default function FloatingButtons() {
         </div>
         <span className="call-ripple-ring ring1"></span>
         <span className="call-ripple-ring ring2"></span>
+        <span className="call-ripple-ring ring3"></span>
       </a>
     </>
   );

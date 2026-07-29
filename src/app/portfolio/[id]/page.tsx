@@ -264,8 +264,20 @@ export default function ProjectDetailPage() {
 
                 <div className="project-hero-actions-premium">
                   <a
-                    href={project.projectUrl}
-                    target="_blank"
+                    href={
+                      !project.projectUrl ||
+                      project.projectUrl.includes('nooryak.com') ||
+                      project.projectUrl === '#'
+                        ? '/coming-soon'
+                        : project.projectUrl
+                    }
+                    target={
+                      !project.projectUrl ||
+                      project.projectUrl.includes('nooryak.com') ||
+                      project.projectUrl === '#'
+                        ? '_self'
+                        : '_blank'
+                    }
                     rel="noopener noreferrer"
                     className="btn-live-preview-premium"
                   >

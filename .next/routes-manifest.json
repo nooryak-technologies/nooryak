@@ -324,6 +324,12 @@
       "namedRegex": "^/career\\-details/CareerDetailsMain(?:/)?$"
     },
     {
+      "page": "/coming-soon",
+      "regex": "^/coming\\-soon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/coming\\-soon(?:/)?$"
+    },
+    {
       "page": "/contact",
       "regex": "^/contact(?:/)?$",
       "routeKeys": {},
