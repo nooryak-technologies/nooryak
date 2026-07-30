@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Rocket, Star, Users, Briefcase, ThumbsUp, Globe, BarChart3,
+  Rocket, Star, Users, Briefcase, ThumbsUp, Globe, BarChart3, TrendingUp,
   Lightbulb, Target, Users2, Zap, Heart, ArrowUpRight, ArrowRight
 } from "lucide-react";
 import "./about.scss";
@@ -84,7 +84,7 @@ export default function AboutUs() {
                 <Star size={20} />
               </div>
               <div className="stat-content">
-                <span className="stat-number">8+</span>
+                <span className="stat-number">5+</span>
                 <span className="stat-label">Years of Experience</span>
               </div>
             </div>
@@ -132,40 +132,38 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* 3. Our Story Section */}
+      {/* 3. Our Story Section with Interactive Horizontal Timeline */}
       <section className="our-story-section" id="story-sec">
         <div className="container">
-          <div className="row align-items-center">
-            {/* Left Image */}
-            <div className="col-lg-5 col-12 order-lg-1 order-2">
-              <div className="story-image-container">
-                <div className="story-image-wrapper">
-                  <Image
-                    src="/assets/images/about/about_story.png"
-                    alt="Creative team brainstorming"
-                    width={520}
-                    height={480}
-                    className="img-fluid"
-                  />
-                </div>
-                {/* Floating Story Badge */}
-                <div className="floating-story-badge" id="values-badge">
+          <div className="row align-items-center gy-5">
+            {/* Left Image Box */}
+            <div className="col-12 col-lg-5">
+              <div className="story-img-wrapper">
+                <Image
+                  src="/assets/images/about/about_team.png"
+                  alt="Nooryak Team Strategy Discussion"
+                  width={540}
+                  height={580}
+                  className="img-fluid story-img"
+                  priority
+                />
+                <div className="story-img-badge">
                   <div className="badge-icon-box">
-                    <BarChart3 size={20} />
+                    <TrendingUp size={22} color="#FF5216" />
                   </div>
                   <div className="badge-text-group">
-                    <span className="line-item">Driven by Creativity</span>
-                    <span className="line-item">Focused on Results</span>
-                    <span className="line-item">Committed to Growth</span>
+                    <span className="badge-title">Driven by Creativity</span>
+                    <span className="badge-subtitle">Focused on Results</span>
+                    <span className="badge-subtitle">Committed to Growth</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Content */}
-            <div className="col-lg-7 col-12 order-lg-2 order-1">
-              <div className="story-content">
-                <div className="kicker orange-kicker" id="story-kicker">
+            {/* Right Story Content & Timeline */}
+            <div className="col-12 col-lg-7">
+              <div className="story-content-box">
+                <div className="kicker orange-kicker">
                   <span>OUR STORY</span>
                 </div>
                 <h2 className="story-title" id="story-main-title">
@@ -185,31 +183,31 @@ export default function AboutUs() {
                 <div className="story-timeline" id="timeline">
                   {/* Point 1 */}
                   <div className="timeline-node">
-                    <span className="node-year">2017</span>
+                    <span className="node-year">2021</span>
                     <div className="node-dot"></div>
                     <span className="node-desc">Founded</span>
                   </div>
                   {/* Point 2 */}
                   <div className="timeline-node">
-                    <span className="node-year">2019</span>
+                    <span className="node-year">2022</span>
                     <div className="node-dot"></div>
                     <span className="node-desc">Expanded Our Team</span>
                   </div>
                   {/* Point 3 */}
                   <div className="timeline-node">
-                    <span className="node-year">2021</span>
+                    <span className="node-year">2024</span>
                     <div className="node-dot"></div>
                     <span className="node-desc">500+ Projects Milestone</span>
                   </div>
                   {/* Point 4 */}
                   <div className="timeline-node">
-                    <span className="node-year">2023</span>
+                    <span className="node-year">2025</span>
                     <div className="node-dot"></div>
                     <span className="node-desc">Global Client Base</span>
                   </div>
                   {/* Point 5 */}
                   <div className="timeline-node">
-                    <span className="node-year">2025</span>
+                    <span className="node-year">2026</span>
                     <div className="node-dot"></div>
                     <span className="node-desc">Innovating for the Future</span>
                   </div>

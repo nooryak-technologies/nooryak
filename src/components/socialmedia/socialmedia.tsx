@@ -4,10 +4,10 @@ import "./socialmedia.scss"
 export default function SocialMedia() {
 
     const socials = [
-        { name: "instagram", icon: "fa-instagram", link: "https://secure.instagram.com/accounts/login" },
-        { name: "linkedin", icon: "fa-facebook", link: "https://www.facebook.com/" },
-        { name: "linkedin", icon: "fa-linkedin-in", link: "https://www.linkedin.com/company/login" },
-        { name: "x", icon: "fa-x-twitter", link: "https://x.com/" },
+        { name: "instagram", icon: "fa-instagram", link: "https://www.instagram.com/nooryak_technologies/" },
+        { name: "facebook", icon: "fa-facebook-f", link: "https://www.facebook.com/nooryaktech" },
+        { name: "linkedin", icon: "fa-linkedin-in", link: "https://www.linkedin.com/company/nooryak-tech/" },
+        { name: "x", icon: "fa-x-twitter", link: "https://x.com/nooryaktech" },
         { name: "youtube", icon: "fa-youtube", link: "https://www.youtube.com/@nooryaktechnologies" },
     ];
     return (

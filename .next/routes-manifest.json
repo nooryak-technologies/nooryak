@@ -438,6 +438,12 @@
       "namedRegex": "^/privacy\\-policy(?:/)?$"
     },
     {
+      "page": "/products",
+      "regex": "^/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products(?:/)?$"
+    },
+    {
       "page": "/refund-policy",
       "regex": "^/refund\\-policy(?:/)?$",
       "routeKeys": {},

@@ -170,15 +170,15 @@ const mobileMenuData: MenuItem[] = [
     {
         id: 4,
         title: "Products",
-        link: "/404",
+        link: "/products",
         megaMenu: true,
         columns: [
             {
                 title: "",
                 links: [
                     { title: "SAAS WEBSITE BUILDER", link: "https://launchshop.in/" },
-                    { title: "SAAS LEAD MANAGEMENT CRM", link: "https://nooryakcrm.com/authentication/register" },
-                    { title: "SAAS INVOICE GENERATOR", link: "/404" },
+                    { title: "SAAS LEAD MANAGEMENT CRM", link: "https://nooryakcrm.com/" },
+                    { title: "SAAS INVOICE GENERATOR", link: "https://pos.nooryak.com/" },
                 ]
             },
         ],

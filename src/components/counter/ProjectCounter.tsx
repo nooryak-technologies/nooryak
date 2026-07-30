@@ -10,7 +10,7 @@ const stats = [
     },
     {
         id: 2,
-        value: 16,
+        value: 5,
         suffix: "+",
         duration: 1,
         tagline: "[ Holy Moly! ]",

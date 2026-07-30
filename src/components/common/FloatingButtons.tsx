@@ -56,10 +56,10 @@ export default function FloatingButtons() {
             <div className="wa-chat-header-info">
               <div className="wa-avatar-wrap">
                 <Image
-                  src={Images.logo}
+                  src={Images.whatsappnooryak_logo}
                   alt="Nooryak Logo"
-                  width={34}
-                  height={34}
+                  width={48}
+                  height={48}
                   className="wa-avatar-img"
                 />
                 <span className="wa-status-dot"></span>
@@ -97,33 +97,75 @@ export default function FloatingButtons() {
                 className="wa-quick-btn"
                 onClick={() =>
                   handleSend(
-                    "Hello Nooryak Technologies, I want to Start My Online Store / Project."
+                    "Hello Nooryak Technologies, I'm interested in web development."
                   )
                 }
               >
-                Start My Online Store
+                <Image
+                  src={Images.whatsappnooryak_logo}
+                  alt="Nooryak Logo"
+                  width={26}
+                  height={26}
+                  className="wa-btn-logo"
+                />
+                <span>I&apos;m interested in web development</span>
               </button>
+
               <button
                 type="button"
                 className="wa-quick-btn"
                 onClick={() =>
                   handleSend(
-                    "Hello Nooryak Technologies, I would like to Talk to an Expert."
+                    "Hello Nooryak Technologies, I Want Mobile Application."
                   )
                 }
               >
-                Talk to Expert
+                <Image
+                  src={Images.whatsappnooryak_logo}
+                  alt="Nooryak Logo"
+                  width={26}
+                  height={26}
+                  className="wa-btn-logo"
+                />
+                <span>I Want Mobile Application</span>
               </button>
+
               <button
                 type="button"
                 className="wa-quick-btn"
                 onClick={() =>
                   handleSend(
-                    "Hello Nooryak Technologies, I want to check your Pricing & Plans."
+                    "Hello Nooryak Technologies, I Need Software Development."
                   )
                 }
               >
-                Pricing & Plans
+                <Image
+                  src={Images.whatsappnooryak_logo}
+                  alt="Nooryak Logo"
+                  width={26}
+                  height={26}
+                  className="wa-btn-logo"
+                />
+                <span>I Need Software Development</span>
+              </button>
+
+              <button
+                type="button"
+                className="wa-quick-btn"
+                onClick={() =>
+                  handleSend(
+                    "Hello Nooryak Technologies, I am looking for Digital Marketing For My Business."
+                  )
+                }
+              >
+                <Image
+                  src={Images.whatsappnooryak_logo}
+                  alt="Nooryak Logo"
+                  width={26}
+                  height={26}
+                  className="wa-btn-logo"
+                />
+                <span>Digital Marketing For My Business</span>
               </button>
             </div>
           </div>

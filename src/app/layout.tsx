@@ -73,8 +73,34 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
-  title: "Nooryak Technologies",
-  description: "Nooryak Technologies",
+  metadataBase: new URL("https://nooryak.com"),
+  title: {
+    default: "Nooryak Technologies",
+    template: "%s - Nooryak Technologies",
+  },
+  description: "Professional Web and App Development with Result-Oriented Digital Marketing Company",
+  openGraph: {
+    title: "Nooryak Technologies",
+    description: "Professional Web and App Development with Result-Oriented Digital Marketing Company",
+    url: "https://nooryak.com/",
+    siteName: "Nooryak Technologies",
+    images: [
+      {
+        url: "/assets/images/Product/share_linklogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Nooryak Technologies",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nooryak Technologies",
+    description: "Professional Web and App Development with Result-Oriented Digital Marketing Company",
+    images: ["/assets/images/Product/share_linklogo.png"],
+  },
 };
 
 export default function RootLayout({
@@ -88,6 +114,17 @@ export default function RootLayout({
         <link rel="icon" href="/assets/images/common/Logo-blue.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        
+        {/* OpenGraph Meta Tags for Link Previews (WhatsApp, Telegram, Facebook, Twitter, iMessage) */}
+        <meta property="og:title" content="Nooryak Technologies" />
+        <meta property="og:description" content="Professional Web and App Development with Result-Oriented Digital Marketing Company" />
+        <meta property="og:image" content="https://nooryak.com/assets/images/Product/share_linklogo.png" />
+        <meta property="og:url" content="https://nooryak.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nooryak Technologies" />
+        <meta name="twitter:description" content="Professional Web and App Development with Result-Oriented Digital Marketing Company" />
+        <meta name="twitter:image" content="https://nooryak.com/assets/images/Product/share_linklogo.png" />
       </head>
       <body suppressHydrationWarning={true} className={`tp-magic-cursor ${inter.variable}
      ${besley.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable}

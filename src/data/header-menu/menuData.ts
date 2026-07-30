@@ -173,16 +173,16 @@ const headerMenuData: MenuItem[] = [
     title: "Products",
     pluseIncon: true,
     smallMenu: true,
-    link: "#",
+    link: "/products",
     submenus: [
       {
         title: "Portfolio Grid",
-        link: "#",
+        link: "/products",
         pluseIncon: true,
         megaMenu: [
           { title: "SAAS WEBSITE BUILDER", link: "https://launchshop.in/" },
           { title: "SAAS LEAD MANAGEMENT CRM", link: "https://nooryakcrm.com/" },
-          { title: "SAAS INVOICE GENERATOR", link: "/404" }
+          { title: "SAAS INVOICE GENERATOR", link: "https://pos.nooryak.com/" }
         ]
       },
     ],
