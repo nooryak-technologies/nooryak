@@ -13,8 +13,8 @@ export const metadata: Metadata = {
       {
         url: "https://nooryak.com/assets/images/Product/share_linklogo.png",
         secureUrl: "https://nooryak.com/assets/images/Product/share_linklogo.png",
-        width: 1200,
-        height: 630,
+        width: 512,
+        height: 512,
         type: "image/png",
         alt: "Nooryak Technologies",
       },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Nooryak Technologies",
     description: "Professional Web and App Development with Result-Oriented Digital Marketing Company",
     images: ["https://nooryak.com/assets/images/Product/share_linklogo.png"],
