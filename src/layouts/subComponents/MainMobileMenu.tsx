@@ -31,13 +31,7 @@ const MainMobileMenu = ({ onNavigate }: MainMobileMenuProps) => {
             {/* ✅ MAIN MENU */}
             <Link
               href={menuItem.link}
-              onClick={(e) => {
-                if (isDropdown) {
-                  e.preventDefault();
-                  setActiveMenu(menuItem.id);
-                  return;
-                }
-
+              onClick={() => {
                 onNavigate?.();
               }}
             >

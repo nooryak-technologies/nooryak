@@ -13,7 +13,7 @@ export default function MobileBottomNav() {
   };
 
   const isHomeActive = pathname === "/";
-  const isProductsActive = pathname === "/portfolio" || pathname?.startsWith("/portfolio");
+  const isProductsActive = pathname === "/products" || pathname?.startsWith("/products");
   const isServicesActive = pathname === "/services" || pathname?.startsWith("/services");
   const isContactActive = pathname === "/contact" || pathname?.startsWith("/contact");
 
@@ -49,9 +49,9 @@ export default function MobileBottomNav() {
           {isHomeActive && <span className="active-indicator"></span>}
         </Link>
 
-        {/* 2. PRODUCTS (Redirects to /portfolio) */}
+        {/* 2. PRODUCTS (Redirects to /products) */}
         <Link
-          href="/portfolio"
+          href="/products"
           className={`mobile-nav-item ${isProductsActive ? "active" : ""}`}
         >
           <div className="nav-icon-circle">

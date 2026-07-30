@@ -86,9 +86,11 @@ export const metadata: Metadata = {
     siteName: "Nooryak Technologies",
     images: [
       {
-        url: "/assets/images/Product/share_linklogo.png",
+        url: "https://nooryak.com/assets/images/Product/share_linklogo.png",
+        secureUrl: "https://nooryak.com/assets/images/Product/share_linklogo.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "Nooryak Technologies",
       },
     ],
@@ -99,7 +101,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nooryak Technologies",
     description: "Professional Web and App Development with Result-Oriented Digital Marketing Company",
-    images: ["/assets/images/Product/share_linklogo.png"],
+    images: ["https://nooryak.com/assets/images/Product/share_linklogo.png"],
   },
 };
 
@@ -119,6 +121,10 @@ export default function RootLayout({
         <meta property="og:title" content="Nooryak Technologies" />
         <meta property="og:description" content="Professional Web and App Development with Result-Oriented Digital Marketing Company" />
         <meta property="og:image" content="https://nooryak.com/assets/images/Product/share_linklogo.png" />
+        <meta property="og:image:secure_url" content="https://nooryak.com/assets/images/Product/share_linklogo.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content="https://nooryak.com/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />

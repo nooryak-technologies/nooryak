@@ -178,7 +178,7 @@ const mobileMenuData: MenuItem[] = [
                 links: [
                     { title: "SAAS WEBSITE BUILDER", link: "https://launchshop.in/" },
                     { title: "SAAS LEAD MANAGEMENT CRM", link: "https://nooryakcrm.com/" },
-                    { title: "SAAS INVOICE GENERATOR", link: "https://pos.nooryak.com/" },
+                    { title: "SAAS INVOICE GENERATOR", link: "/coming-soon" },
                 ]
             },
         ],
