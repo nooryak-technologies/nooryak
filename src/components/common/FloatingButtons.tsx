@@ -196,6 +196,12 @@ export default function FloatingButtons() {
             <span className="wa-ripple-ring ring2"></span>
             <span className="wa-ripple-ring ring3"></span>
           </div>
+
+          {!isOpen && (
+            <div className="whatsapp-chat-pill">
+              <span>Chat With Us</span>
+            </div>
+          )}
         </div>
       </div>
 

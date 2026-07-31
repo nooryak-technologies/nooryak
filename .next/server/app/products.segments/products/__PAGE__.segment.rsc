@@ -3,5 +3,5 @@
 3:I[90484,[],"OutletBoundary"]
 4:"$Sreact.suspense"
 :HL["/_next/static/css/2b1045770e06fc5d.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2b1045770e06fc5d.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"xi-xwkyMSYCIkfjhPnuMn"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2b1045770e06fc5d.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"WGBE1DS4ffpZwNcwChWFk"}
 5:null
