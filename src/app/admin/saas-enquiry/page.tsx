@@ -23,6 +23,9 @@ export default function SaasEnquiriesListPage() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedEnquiry, setSelectedEnquiry] = useState<SaasEnquiry | null>(null);
+  const [dateFilter, setDateFilter] = useState<'all' | 'today' | 'yesterday' | 'custom'>('all');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   const fetchEnquiries = async () => {
     try {
@@ -72,12 +75,54 @@ export default function SaasEnquiriesListPage() {
     }
   };
 
-  const filteredEnquiries = enquiries.filter(e => 
-    e.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    e.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    e.product.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    e.phone.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredEnquiries = enquiries.filter(e => {
+    const matchesSearch = 
+      e.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      e.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      e.product.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      e.phone.toLowerCase().includes(searchQuery.toLowerCase());
+
+    if (!matchesSearch) return false;
+
+    if (dateFilter === 'all') return true;
+
+    const itemDate = new Date(e.createdAt);
+    const now = new Date();
+
+    if (dateFilter === 'today') {
+      return (
+        itemDate.getDate() === now.getDate() &&
+        itemDate.getMonth() === now.getMonth() &&
+        itemDate.getFullYear() === now.getFullYear()
+      );
+    }
+
+    if (dateFilter === 'yesterday') {
+      const yesterday = new Date(now);
+      yesterday.setDate(now.getDate() - 1);
+      return (
+        itemDate.getDate() === yesterday.getDate() &&
+        itemDate.getMonth() === yesterday.getMonth() &&
+        itemDate.getFullYear() === yesterday.getFullYear()
+      );
+    }
+
+    if (dateFilter === 'custom') {
+      if (startDate) {
+        const start = new Date(startDate);
+        start.setHours(0, 0, 0, 0);
+        if (itemDate < start) return false;
+      }
+      if (endDate) {
+        const end = new Date(endDate);
+        end.setHours(23, 59, 59, 999);
+        if (itemDate > end) return false;
+      }
+      return true;
+    }
+
+    return true;
+  });
 
   return (
     <AppShell title="SaaS Enquiries Management" breadcrumb="SaaS Enquiries / List">
@@ -91,8 +136,8 @@ export default function SaasEnquiriesListPage() {
         </div>
       </div>
 
-      <div className="flex items-center gap-3 mb-10">
-        <div className="relative flex-1 max-w-[400px]">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div className="relative flex-1 max-w-[380px]">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#888]" size={14} />
           <Input
             placeholder="Search demo requests by name, email, or product..."
@@ -100,6 +145,72 @@ export default function SaasEnquiriesListPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="bg-[#111111] border-[#2a2a2a] pl-9 px-5 h-10 text-[13px] text-white focus:border-[#ff7a18]"
           />
+        </div>
+
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center bg-[#111111] border border-[#2a2a2a] p-1 rounded-xl gap-1">
+            <button
+              onClick={() => setDateFilter('all')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                dateFilter === 'all'
+                  ? 'bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] text-white shadow-md'
+                  : 'text-[#888] hover:text-white hover:bg-[#1a1a1a]'
+              }`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => setDateFilter('today')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                dateFilter === 'today'
+                  ? 'bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] text-white shadow-md'
+                  : 'text-[#888] hover:text-white hover:bg-[#1a1a1a]'
+              }`}
+            >
+              Today
+            </button>
+            <button
+              onClick={() => setDateFilter('yesterday')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                dateFilter === 'yesterday'
+                  ? 'bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] text-white shadow-md'
+                  : 'text-[#888] hover:text-white hover:bg-[#1a1a1a]'
+              }`}
+            >
+              Yesterday
+            </button>
+            <button
+              onClick={() => setDateFilter('custom')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5 ${
+                dateFilter === 'custom'
+                  ? 'bg-gradient-to-r from-[#ff7a18] to-[#ff3d00] text-white shadow-md'
+                  : 'text-[#888] hover:text-white hover:bg-[#1a1a1a]'
+              }`}
+            >
+              <Calendar size={13} />
+              Custom Date
+            </button>
+          </div>
+
+          {dateFilter === 'custom' && (
+            <div className="flex items-center gap-2 animate-in fade-in slide-in-from-left-2 duration-200">
+              <input
+                type="date"
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
+                className="bg-[#111111] border border-[#2a2a2a] px-3 h-9 rounded-xl text-xs text-white focus:border-[#ff7a18] outline-none"
+                title="Start Date"
+              />
+              <span className="text-[#888] text-xs font-medium">to</span>
+              <input
+                type="date"
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+                className="bg-[#111111] border border-[#2a2a2a] px-3 h-9 rounded-xl text-xs text-white focus:border-[#ff7a18] outline-none"
+                title="End Date"
+              />
+            </div>
+          )}
         </div>
       </div>
 
