@@ -1,13 +1,19 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { Images } from "@/utils/Images";
 
 export default function FloatingButtons() {
+  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
   const popupRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const togglePopup = () => {
     setIsOpen((prev) => !prev);
@@ -49,7 +55,7 @@ export default function FloatingButtons() {
   return (
     <>
       {/* WhatsApp Support Chat Popup */}
-      {isOpen && (
+      {isOpen && mounted && createPortal(
         <div className="wa-chat-popup" ref={popupRef}>
           {/* Header */}
           <div className="wa-chat-header">
@@ -179,7 +185,8 @@ export default function FloatingButtons() {
               </button>
             </form>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* WhatsApp Floating Button & Pill Group */}

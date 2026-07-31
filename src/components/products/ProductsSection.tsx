@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -23,6 +24,7 @@ interface ProductsSectionProps {
 }
 
 export default function ProductsSection({ isPage = true }: ProductsSectionProps) {
+  const [mounted, setMounted] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState("Launchshop");
   const [formData, setFormData] = useState({
@@ -32,6 +34,10 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
     message: ""
   });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleOpenDemo = (productName: string, e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -628,9 +634,9 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. INTERACTIVE BOOK DEMO MODAL                                            */}
+      {/* 5. INTERACTIVE BOOK DEMO MODAL (PORTAL TO BODY FOR PERFECT CENTERING)     */}
       {/* ========================================================================= */}
-      {showDemoModal && (
+      {showDemoModal && mounted && createPortal(
         <div className="demo-modal-overlay" onClick={() => setShowDemoModal(false)}>
           <div
             className="demo-modal-card"
@@ -723,7 +729,8 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
               </div>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
     </div>

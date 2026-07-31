@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import "./enquiryfrom.scss";
 import { toast } from "sonner";
 import Swal from 'sweetalert2';
 import ReCAPTCHA from "../common/ReCAPTCHA";
 
 export default function EnquiryForm() {
+    const [mounted, setMounted] = useState(false);
     const [open, setOpen] = useState(false);
     const [closing, setClosing] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -18,6 +20,10 @@ export default function EnquiryForm() {
         service: 'Digital Marketing',
         message: ''
     });
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         let timeout: NodeJS.Timeout | null = null;
@@ -118,7 +124,7 @@ export default function EnquiryForm() {
                 <i className="fa-solid fa-paper-plane"></i>
             </button>
 
-            {isMounted && (
+            {isMounted && mounted && createPortal(
                 <div
                     className={`enquiry-overlay ${isActive ? "open" : "closing"}`}
                     onClick={handleClose}
@@ -231,7 +237,8 @@ export default function EnquiryForm() {
                         </form>
 
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </div>
     );
