@@ -71,8 +71,8 @@
     .enquiry-overlay {
         position: fixed;
         inset: 0;
-        z-index: 2000;
-        background: rgba(0, 0, 0, 0.4);
+        z-index: 1000005;
+        background: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(8px);
         display: flex;
         justify-content: flex-end;
@@ -341,16 +341,18 @@
             align-items: center !important;
             padding: 16px !important;
             display: flex !important;
+            z-index: 1000005 !important;
         }
 
         .enquiry-panel {
             width: 100% !important;
-            max-width: 400px !important;
+            max-width: 420px !important;
             height: auto !important;
-            max-height: calc(100vh - 32px) !important;
+            max-height: calc(100vh - 40px) !important;
+            margin: auto !important;
             border-radius: 24px !important;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            padding: 2rem 1.5rem !important;
+            padding: 1.75rem 1.25rem 2.5rem !important;
             transform: translateY(20px) !important;
             opacity: 0 !important;
             transition: all 0.4s ease-out !important;

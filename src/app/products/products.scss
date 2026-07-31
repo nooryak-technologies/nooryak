@@ -764,31 +764,34 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(17, 24, 39, 0.7);
-  backdrop-filter: blur(4px);
-  z-index: 99999;
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 1000005;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   animation: fadeIn 0.25s ease;
+  overflow-y: auto;
 }
 
 .demo-modal-card {
   background: #ffffff;
   border-radius: 24px;
-  max-width: 480px;
+  max-width: 500px;
   width: 100%;
   padding: 32px;
   position: relative;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
   animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  max-height: calc(100vh - 40px);
+  max-height: min(90vh, 680px);
   overflow-y: auto;
 
   @media (max-width: 576px) {
-    padding: 24px 18px;
+    padding: 24px 18px 30px;
     border-radius: 20px;
+    max-height: calc(100vh - 80px);
   }
 
   .modal-close-btn {
