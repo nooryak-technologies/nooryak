@@ -216,6 +216,12 @@
       "namedRegex": "^/admin/logs(?:/)?$"
     },
     {
+      "page": "/admin/saas-enquiry",
+      "regex": "^/admin/saas\\-enquiry(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/saas\\-enquiry(?:/)?$"
+    },
+    {
       "page": "/admin/services",
       "regex": "^/admin/services(?:/)?$",
       "routeKeys": {},
@@ -276,6 +282,12 @@
       "namedRegex": "^/api/admin/me(?:/)?$"
     },
     {
+      "page": "/api/admin/saas-enquiries",
+      "regex": "^/api/admin/saas\\-enquiries(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/saas\\-enquiries(?:/)?$"
+    },
+    {
       "page": "/api/admin/services",
       "regex": "^/api/admin/services(?:/)?$",
       "routeKeys": {},
@@ -310,6 +322,12 @@
       "regex": "^/api/enquiry(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/enquiry(?:/)?$"
+    },
+    {
+      "page": "/api/saas-enquiry",
+      "regex": "^/api/saas\\-enquiry(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/saas\\-enquiry(?:/)?$"
     },
     {
       "page": "/blog",

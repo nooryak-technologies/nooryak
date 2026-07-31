@@ -48,14 +48,41 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
     }
   };
 
-  const handleSubmitDemo = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmitDemo = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setShowDemoModal(false);
-      setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 2000);
+    setIsSubmitting(true);
+    try {
+      const res = await fetch('/api/saas-enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          product: selectedProduct,
+          message: formData.message,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setShowDemoModal(false);
+          setSubmitted(false);
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        }, 2500);
+      } else {
+        const data = await res.json();
+        alert(data.message || 'Failed to submit demo request');
+      }
+    } catch (err) {
+      console.error('Error submitting SaaS demo enquiry:', err);
+      alert('Error submitting demo request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const whatsappUrl = "https://wa.me/916374913298?text=Hello%20Nooryak%20Technologies%2C%20I%20would%20like%20to%20discuss%20about%20your%20Digital%20Services";
@@ -678,8 +705,8 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                     />
                   </div>
 
-                  <button type="submit" className="btn-submit-demo">
-                    <span>Schedule My Demo</span>
+                  <button type="submit" className="btn-submit-demo" disabled={isSubmitting}>
+                    <span>{isSubmitting ? 'Submitting...' : 'Schedule My Demo'}</span>
                     <ArrowRight size={18} />
                   </button>
                 </form>

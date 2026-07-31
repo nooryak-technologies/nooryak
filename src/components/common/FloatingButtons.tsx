@@ -65,7 +65,7 @@ export default function FloatingButtons() {
                 <span className="wa-status-dot"></span>
               </div>
               <div className="wa-header-text">
-                <h4 className="wa-header-title">Nooryak Technologies Support</h4>
+                <h4 className="wa-header-title">Nooryak Support Team</h4>
                 <div className="wa-header-status">
                   <span className="online-badge-dot"></span> Online
                 </div>
@@ -101,13 +101,9 @@ export default function FloatingButtons() {
                   )
                 }
               >
-                <Image
-                  src={Images.whatsappnooryak_logo}
-                  alt="Nooryak Logo"
-                  width={26}
-                  height={26}
-                  className="wa-btn-logo"
-                />
+                <div className="wa-btn-icon-badge">
+                  <i className="fa-solid fa-code"></i>
+                </div>
                 <span>I&apos;m interested in web development</span>
               </button>
 
@@ -120,13 +116,9 @@ export default function FloatingButtons() {
                   )
                 }
               >
-                <Image
-                  src={Images.whatsappnooryak_logo}
-                  alt="Nooryak Logo"
-                  width={26}
-                  height={26}
-                  className="wa-btn-logo"
-                />
+                <div className="wa-btn-icon-badge">
+                  <i className="fa-solid fa-mobile-screen-button"></i>
+                </div>
                 <span>I Want Mobile Application</span>
               </button>
 
@@ -139,13 +131,9 @@ export default function FloatingButtons() {
                   )
                 }
               >
-                <Image
-                  src={Images.whatsappnooryak_logo}
-                  alt="Nooryak Logo"
-                  width={26}
-                  height={26}
-                  className="wa-btn-logo"
-                />
+                <div className="wa-btn-icon-badge">
+                  <i className="fa-solid fa-laptop-code"></i>
+                </div>
                 <span>I Need Software Development</span>
               </button>
 
@@ -158,13 +146,9 @@ export default function FloatingButtons() {
                   )
                 }
               >
-                <Image
-                  src={Images.whatsappnooryak_logo}
-                  alt="Nooryak Logo"
-                  width={26}
-                  height={26}
-                  className="wa-btn-logo"
-                />
+                <div className="wa-btn-icon-badge">
+                  <i className="fa-solid fa-chart-line"></i>
+                </div>
                 <span>Digital Marketing For My Business</span>
               </button>
             </div>
@@ -212,12 +196,6 @@ export default function FloatingButtons() {
             <span className="wa-ripple-ring ring2"></span>
             <span className="wa-ripple-ring ring3"></span>
           </div>
-
-          {!isOpen && (
-            <div className="whatsapp-chat-pill">
-              <span>Still Confused? Chat With Us</span>
-            </div>
-          )}
         </div>
       </div>
 

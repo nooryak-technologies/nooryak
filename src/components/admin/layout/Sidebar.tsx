@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronLeft, ChevronRight, Zap, LayoutGrid, Layers, Newspaper, Users, Settings, ScrollText, LogOut } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Zap, LayoutGrid, Layers, Newspaper, Users, Settings, ScrollText, LogOut, ShoppingBag } from 'lucide-react';
 import { cn } from '@/lib/admin/utils';
 import { useAuth } from '@/contexts/admin/AuthContext';
 import { Images } from '@/utils/Images';
@@ -33,6 +33,7 @@ const navItems: NavItem[] = [
   { label: 'Users', icon: <Users size={18} />, href: '/admin/user', adminOnly: true },
   { label: 'Activity Logs', icon: <ScrollText size={18} />, href: '/admin/logs', adminOnly: true },
   { label: 'Enquiries', icon: <Zap size={18} />, href: '/admin/enquiry' },
+  { label: 'SaaS Enquiries', icon: <ShoppingBag size={18} />, href: '/admin/saas-enquiry' },
   { label: 'Settings', icon: <Settings size={18} />, href: '/admin/setting', adminOnly: true },
 ];
 
