@@ -26,17 +26,26 @@ const categories = [
   { name: 'Branding & Design', icon: <Palette size={16} /> }
 ];
 
+const ITEMS_PER_ROW = 4;
+const INITIAL_ITEMS = 8; // 2 rows * 4 columns
+
 export default function PortfolioMain() {
   const [activeTab, setActiveTab] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
+  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_ITEMS);
   const [animateGrid, setAnimateGrid] = useState(false);
 
   // Filter projects dynamically when tab changes
   useEffect(() => {
     setAnimateGrid(false);
+    setVisibleCount(INITIAL_ITEMS);
     const timeout = setTimeout(() => {
       if (activeTab === 'All Projects') {
         setFilteredProjects(projectsData);
+      } else if (activeTab === 'eCommerce') {
+        setFilteredProjects(projectsData.filter(p => (p.category === 'eCommerce' || p.id === 2) && p.id !== 13));
+      } else if (activeTab === 'Web Development') {
+        setFilteredProjects(projectsData.filter(p => p.category === 'Web Development' || p.id === 13));
       } else {
         setFilteredProjects(projectsData.filter(p => p.category === activeTab));
       }
@@ -45,6 +54,10 @@ export default function PortfolioMain() {
 
     return () => clearTimeout(timeout);
   }, [activeTab]);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + ITEMS_PER_ROW);
+  };
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTab(categoryName);
@@ -183,10 +196,10 @@ export default function PortfolioMain() {
           {/* ── PROJECT GRID ── */}
           <div className="portfolio-grid">
             <div className="row">
-              {filteredProjects.map((project) => (
+              {filteredProjects.slice(0, visibleCount).map((project) => (
                 <div
                   key={project.id}
-                  className={`col-lg-4 col-md-6 col-6 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
+                  className={`col-xl-3 col-lg-3 col-md-6 col-12 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
                   style={{ opacity: animateGrid ? 1 : 0 }}
                 >
                   <div className="portfolio-card">
@@ -196,7 +209,7 @@ export default function PortfolioMain() {
                       <span className={`category-badge ${getBadgeClass(project.category)}`}>
                         {project.category}
                       </span>
-                      {project.category === 'Web Development' && project.scrollImage ? (
+                      {project.scrollImage ? (
                         <div className="portfolio-card-scroll-container">
                           <img
                             src={project.scrollImage}
@@ -224,8 +237,13 @@ export default function PortfolioMain() {
 
                       <div className="portfolio-card-footer-custom">
                         <Link href={project.link} className="view-case-study-link">
-                          View  <span className="arrow-right">→</span>
+                          View <span className="arrow-right">→</span>
                         </Link>
+                        {project.badge && (
+                          <span className="card-international-badge">
+                            🌍 {project.badge}
+                          </span>
+                        )}
                       </div>
                     </div>
 
@@ -236,12 +254,14 @@ export default function PortfolioMain() {
           </div>
 
           {/* Load More Button */}
-          <div className="load-more-container">
-            <button className="btn-load-more">
-              Load More Projects
-              <RefreshCw size={16} className="refresh-icon" />
-            </button>
-          </div>
+          {visibleCount < filteredProjects.length && (
+            <div className="load-more-container">
+              <button type="button" onClick={handleLoadMore} className="btn-load-more">
+                Load More Projects
+                <RefreshCw size={16} className="refresh-icon" />
+              </button>
+            </div>
+          )}
 
         </div>
       </section>

@@ -144,6 +144,28 @@
    FLOATING BUTTONS & WHATSAPP CHAT POPUP
    ========================================== */
 
+/* ── Back to Top Button Positioned Above WhatsApp Floating Icon ── */
+.back-to-top-wrapper {
+  position: fixed;
+  right: 24px;
+  bottom: 94px !important;
+  z-index: 10001;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &.back-to-top-btn-show {
+    bottom: 94px !important;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 768px) {
+    right: 14px;
+    &.back-to-top-btn-show {
+      bottom: 158px !important;
+    }
+  }
+}
+
 /* ── Foot Floating Container (Bottom Right) ── */
 .foot_floating {
   z-index: 10000;

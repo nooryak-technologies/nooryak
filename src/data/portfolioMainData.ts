@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
   {
     id: 2,
     title: 'Red Panda Vacations',
-    category: 'Web Development',
+    category: 'eCommerce',
     description: 'A modern, responsive website with custom booking system, destination management and seamless user experience.',
     link: '/portfolio/2',
     bgClass: 'bg-nature',
@@ -140,11 +140,12 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/armangroup/slide4.png',
       '/assets/images/Portfolio/projects/armangroup/slide5.png'
     ],
-    subtitle: 'Arman Group Corporate Platform',
+    subtitle: 'Arman Group Platform',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/armangroup.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/arman_group.png',
     technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' },
@@ -188,23 +189,23 @@ export const projectsData: Project[] = [
     description: 'Modern service portal with appointment booking and HVAC solutions listing.',
     link: '/portfolio/5',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
+    image: '/assets/images/Portfolio/projects/elkins_laptopview.png',
     client: 'Elkins Air Conditioning Inc',
     date: 'Nov 2025',
     services: 'Web Development, SEO, Booking Integration',
     projectUrl: 'https://elkinsaircondition.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide2.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide3.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide4.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide5.png'
+      '/assets/images/Portfolio/projects/elkins_laptopview.png',
+      '/assets/images/Portfolio/projects/elkins_tablet.png',
+      '/assets/images/Portfolio/projects/elkins_mobile.png'
     ],
     subtitle: 'Elkins Air Conditioning Portal',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/elkins_aircondition_mobile.png',
+    scrollImage: '/assets/images/Portfolio/projects/elkins_laptopview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/elkins_tablet.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/elkins_mobile.png',
     technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' },
@@ -228,11 +229,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Oct 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide2.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide3.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide4.png',
-      '/assets/images/Portfolio/projects/elkinsaircondition/slide5.png'
+      '/assets/images/Portfolio/projects/elkins_laptopview.png',
+      '/assets/images/Portfolio/projects/elkins_tablet.png',
+      '/assets/images/Portfolio/projects/elkins_mobile.png'
     ],
     results: [
       { value: '180%', label: 'More Local Bookings', iconType: 'trending-up' },
@@ -245,7 +244,7 @@ export const projectsData: Project[] = [
     id: 6,
     title: 'KB Enterprises',
     category: 'eCommerce',
-    description: 'Robust B2B trading and enterprise communication portal.',
+    description: 'Kb Enterprises is a Ecommerce Platform To Selling Commercial Machine ',
     link: '/portfolio/6',
     bgClass: 'bg-lavender',
     image: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
@@ -258,12 +257,13 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/enterprises_tabletview.png',
       '/assets/images/Portfolio/projects/enterprises_mobileview.png'
     ],
-    subtitle: 'KB Enterprises Trading Platform',
+    subtitle: 'KB Enterprises Ecommerce Platform',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/enterprises_mobileview.png',
     tabletScrollImage: '/assets/images/Portfolio/projects/enterprises_tabletview.png',
     technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' },
@@ -309,7 +309,7 @@ export const projectsData: Project[] = [
     client: 'Radient Infotech Solutions',
     date: 'Sep 2025',
     services: 'Web Development, IT Branding',
-    projectUrl: 'https://nooryak.com',
+    projectUrl: 'https://radientinfotech.in/',
     gallery: [
       '/assets/images/Portfolio/projects/radientinfotech/slide1.png',
       '/assets/images/Portfolio/projects/radientinfotech/slide2.png',
@@ -322,6 +322,7 @@ export const projectsData: Project[] = [
     scrollImage: '/assets/images/Portfolio/projects/radiantconsultancy.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/radient_mobile.png',
     technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' },
@@ -362,14 +363,14 @@ export const projectsData: Project[] = [
     id: 8,
     title: 'Shifa Infotech',
     category: 'Web Development',
-    description: 'Comprehensive healthcare and medical services directory and portal.',
+    description: 'Comprehensive Laptop services and repair.',
     link: '/portfolio/8',
     bgClass: 'bg-teal',
     image: '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
     client: 'Shifa Healthcare Group',
     date: 'Aug 2025',
     services: 'Web Development, Patient Database',
-    projectUrl: 'https://shefainfotech.com/',
+    projectUrl: '/coming-soon',
     gallery: [
       '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
       '/assets/images/Portfolio/projects/shifainfotech/slide2.png',
@@ -377,30 +378,31 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/shifainfotech/slide4.png',
       '/assets/images/Portfolio/projects/shifainfotech/slide5.png'
     ],
-    subtitle: 'Shifa Infotech Healthcare Portal',
+    subtitle: 'Shifa Infotech Service platform',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/shifainfotech.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/shifainfo_mobile.png',
     tabletScrollImage: '/assets/images/Portfolio/projects/shifainfotech_tablet.png',
     technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' },
       { name: 'PHP', iconType: 'php' },
       { name: 'MySQL', iconType: 'mysql' }
     ],
-    overview: 'Shifa Infotech portal offers appointment management modules, patient health sheets downloads, clinic location finders, and doctor profiles.',
+    overview: 'Shifa Infotech portal offers Laptop repair services, and laptop products and  service provider.',
     features: [
-      'Online patient appointment cards',
-      'Doctor schedule finders',
-      'Encrypted health forms database',
+      'Laptop repair services',
+      'Laptop products',
+      'Laptop repair request form',
       'Fully responsive layout designs',
       'SEO tags and schema setup'
     ],
     metaGrid: [
       { label: 'Client', value: 'Shifa Infotech', iconType: 'user' },
-      { label: 'Industry', value: 'Healthcare', iconType: 'globe' },
-      { label: 'Project Type', value: 'Medical Portal', iconType: 'code' },
+      { label: 'Industry', value: 'Laptop Service Provider', iconType: 'globe' },
+      { label: 'Project Type', value: 'Service Platform', iconType: 'code' },
       { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
       { label: 'Status', value: 'Completed', iconType: 'check-circle' },
       { label: 'Launch Date', value: 'Jul 2024', iconType: 'calendar' }
@@ -413,7 +415,7 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/shifainfotech/slide5.png'
     ],
     results: [
-      { value: '200%', label: 'Patient Bookings', iconType: 'trending-up' },
+      { value: '200%', label: 'Laptop repair Request', iconType: 'trending-up' },
       { value: '60%', label: 'Form Fill Automation', iconType: 'shopping-cart' },
       { value: '99%', label: 'System Uptime Pass', iconType: 'users' },
       { value: '4.9★', label: 'User Feedback Rating', iconType: 'smile' }
@@ -422,39 +424,41 @@ export const projectsData: Project[] = [
   {
     id: 13,
     title: 'Bazarway',
-    category: 'eCommerce',
+    category: 'Web Development',
     description: 'A modern multi-vendor eCommerce marketplace built to connect sellers and buyers with a seamless shopping experience.',
     link: '/portfolio/13',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/bazarway.png',
+    image: '/assets/images/Portfolio/projects/bazarway_laptopview.png',
     client: 'Bazarway Store',
     date: 'Jan 2026',
     services: 'Web Development, eCommerce, Multi-vendor Platform',
     projectUrl: 'https://bazaarway.co.uk/',
     gallery: [
-      '/assets/images/Portfolio/projects/bazarway.png'
+      '/assets/images/Portfolio/projects/bazarway_laptopview.png',
+      '/assets/images/Portfolio/projects/bazarwa_mobile.png'
     ],
-    subtitle: 'Bazarway eCommerce Platform',
+    subtitle: 'Bazarway Website',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/bazarway.png',
+    scrollImage: '/assets/images/Portfolio/projects/bazarway_laptopview.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/bazarwa_mobile.png',
     technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' },
       { name: 'PHP', iconType: 'php' },
       { name: 'MySQL', iconType: 'mysql' }
     ],
-    overview: 'Bazarway is a powerful multi-vendor marketplace platform that enables sellers to list products, manage orders, and track revenue in one unified dashboard.',
+    overview: 'Bazarway is a online  website, Two showcase the product and services etc',
     features: [
-      'Multi-vendor seller onboarding',
-      'Advanced product filters',
-      'Secure payment gateway',
-      'Live order tracking system',
+      'showcase the products',
+      'showcase the services',
+      'Online service booking',
+      'Contact form for service booking',
       'SEO optimized structure'
     ],
     metaGrid: [
-      { label: 'Client', value: 'Bazarway Store', iconType: 'user' },
+      { label: 'Client', value: 'Bazarway', iconType: 'user' },
       { label: 'Industry', value: 'eCommerce', iconType: 'globe' },
       { label: 'Project Type', value: 'Marketplace Platform', iconType: 'code' },
       { label: 'Duration', value: '5 Weeks', iconType: 'clock' },
@@ -462,7 +466,8 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/bazarway.png'
+      '/assets/images/Portfolio/projects/bazarway_laptopview.png',
+      '/assets/images/Portfolio/projects/bazarwa_mobile.png'
     ],
     results: [
       { value: '200%', label: 'Seller Registrations', iconType: 'trending-up' },
@@ -475,7 +480,7 @@ export const projectsData: Project[] = [
   {
     id: 14,
     title: 'Arrow Computerz',
-    category: 'Web Development',
+    category: 'eCommerce',
     description: 'Modern computer sales, hardware repair, and IT solutions portal designed for seamless service bookings.',
     link: '/portfolio/14',
     bgClass: 'bg-slate',
@@ -489,7 +494,7 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
       '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
     ],
-    subtitle: 'Arrow Computerz Service Portal',
+    subtitle: 'Arrow Computerz Refurbished  ecommerce Website',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png',
@@ -540,7 +545,7 @@ export const projectsData: Project[] = [
     client: 'DND Mobile Wash',
     date: 'Feb 2026',
     services: 'Web Development, Booking Engine, Mobile Optimization',
-    projectUrl: 'https://dndmobilewash.com/',
+    projectUrl: '/coming-soon',
     gallery: [
       '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
       '/assets/images/Portfolio/projects/dndmobilewash_tabletview.png',
@@ -589,15 +594,15 @@ export const projectsData: Project[] = [
   {
     id: 16,
     title: 'Fun Kiddoz',
-    category: 'Web Development',
-    description: 'Vibrant, family-friendly website for kids entertainment center and party venue bookings.',
+    category: 'eCommerce',
+    description: 'Vibrant, family-friendly website for kids entertainment toys and toys selling webite',
     link: '/portfolio/16',
     bgClass: 'bg-orange-soft',
     image: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-    client: 'Fun Kiddoz Entertainment',
+    client: 'Fun Kiddoz Toy selling  ecommerce ',
     date: 'Jan 2026',
-    services: 'Web Design, Interactive Animations, Ticket Booking',
-    projectUrl: 'https://funkiddoz.com/',
+    services: 'Web Design, Interactive Animations, Toy selling ecommerce website',
+    projectUrl: 'https://funkiddoz.in/',
     gallery: [
       '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
       '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
@@ -615,11 +620,11 @@ export const projectsData: Project[] = [
       { name: 'PHP', iconType: 'php' },
       { name: 'MySQL', iconType: 'mysql' }
     ],
-    overview: 'Fun Kiddoz website is crafted with bright, engaging visual components to showcase indoor play arenas, birthday party packages, and event reservations for families.',
+    overview: 'Fun Kiddoz website is crafted with bright, engaging visual components to showcase toys, ',
     features: [
-      'Birthday party booking system',
-      'Interactive play zone tour',
-      'Ticket & pass pricing cards',
+      'Toy selling website',
+      'Interactive toy store',
+      'Toy &  pricing cards',
       'Parent testimonials & reviews',
       'Mobile-first responsive design'
     ],
@@ -666,6 +671,7 @@ export const projectsData: Project[] = [
     mobileScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_mobileview.png',
     tabletScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_tabletview.png',
     technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
       { name: 'JavaScript', iconType: 'javascript' },
@@ -703,7 +709,7 @@ export const projectsData: Project[] = [
   {
     id: 18,
     title: 'Limras Gallery',
-    category: 'Web Development',
+    category: 'eCommerce',
     description: 'Elegant website showcasing custom picture framing, art collections, and interior wall decor.',
     link: '/portfolio/18',
     bgClass: 'bg-teal',
@@ -817,7 +823,7 @@ export const projectsData: Project[] = [
   {
     id: 20,
     title: 'Youverse',
-    category: 'Web Development',
+    category: 'eCommerce',
     description: 'Cutting-edge digital ecosystem platform connecting innovative software solutions and user experiences.',
     link: '/portfolio/20',
     bgClass: 'bg-lavender',
@@ -825,13 +831,13 @@ export const projectsData: Project[] = [
     client: 'Youverse Tech',
     date: 'Jan 2026',
     services: 'Web Development, UI/UX Architecture, Cloud Integration',
-    projectUrl: 'https://youverse.io/',
+    projectUrl: 'https://youverse.in/',
     gallery: [
       '/assets/images/Portfolio/projects/youverse_laptopview.png',
       '/assets/images/Portfolio/projects/youverse_tabletview.png',
       '/assets/images/Portfolio/projects/youverse_mobileview.png'
     ],
-    subtitle: 'Youverse Digital Experience & Tech Platform',
+    subtitle: 'Youverse is a Product Selling E-commerce website.',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/youverse_laptopview.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/youverse_mobileview.png',
@@ -926,5 +932,123 @@ export const projectsData: Project[] = [
     services: 'Logo Design, Vector Illustration, Brand Guidelines',
     projectUrl: 'https://nooryak.com',
     gallery: ['/assets/images/Portfolio/portfolio_logo_design.png']
+  },
+  {
+    id: 21,
+    title: 'Bazarway Shop',
+    category: 'eCommerce',
+    description: 'Premier online shop and multi-category retail marketplace offering curated products with fast checkout.',
+    link: '/portfolio/21',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/bazarway_store.png',
+    client: 'Bazarway UK Store',
+    date: 'Jan 2026',
+    services: 'Web Development, eCommerce, Retail Portal',
+    projectUrl: 'https://bazaarway.co.uk/shopproducts/',
+    gallery: [
+      '/assets/images/Portfolio/projects/bazarway_store.png',
+      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
+      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
+    ],
+    subtitle: 'Bazarway Retail & Product Shop',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/bazarway_store.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwaystore_mobile.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Bazarway Shop is an expansive eCommerce marketplace featuring custom product filters, instant cart additions, and secure payment integration for online shoppers.',
+    features: [
+      'Multi-category product catalog',
+      'Instant search and filter engine',
+      'Integrated payment gateway',
+      'Mobile-first responsive shopping',
+      'SEO optimized product pages'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Bazarway Retail', iconType: 'user' },
+      { label: 'Industry', value: 'eCommerce & Retail', iconType: 'globe' },
+      { label: 'Project Type', value: 'Product Shop', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/bazarway_store.png',
+      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
+      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
+    ],
+    results: [
+      { value: '180%', label: 'Product Conversion Boost', iconType: 'trending-up' },
+      { value: '85%', label: 'Mobile Order Growth', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Customer Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Platform Uptime', iconType: 'check-circle' }
+    ],
+    badge: 'International Project'
+  },
+  {
+    id: 22,
+    title: 'Fiori Celebrations',
+    category: 'eCommerce',
+    description: 'Bespoke event floral design, decor booking, and luxury celebration services portal.',
+    link: '/portfolio/22',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+    client: 'Fiori Celebrations',
+    date: 'Feb 2026',
+    services: 'Web Development, Event Booking, UI/UX Design',
+    projectUrl: 'https://fioricelebrations.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
+    ],
+    subtitle: 'Fiori Luxury Event & Floral Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/fioricelebration_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Fiori Celebrations web application showcases elegant floral arrangements, event decor consultation tools, and automated service booking packages.',
+    features: [
+      'Event decor portfolio gallery',
+      'Custom bouquet & package builder',
+      'Online consultation booking',
+      'Mobile responsive design',
+      'Fast page load speeds'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Fiori Celebrations', iconType: 'user' },
+      { label: 'Industry', value: 'Events & Luxury Decor', iconType: 'globe' },
+      { label: 'Project Type', value: 'Service & Booking Portal', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
+    ],
+    results: [
+      { value: '210%', label: 'Event Booking Enquiries', iconType: 'trending-up' },
+      { value: '75%', label: 'Growth in Direct Sales', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Client Delight Rating', iconType: 'smile' },
+      { value: '100%', label: 'Speed Performance Pass', iconType: 'check-circle' }
+    ],
+    badge: 'International Project'
   }
 ];

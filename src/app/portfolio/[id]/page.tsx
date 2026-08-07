@@ -237,6 +237,37 @@ export default function ProjectDetailPage() {
 
   const isVideoCategory = project.category === 'Videos';
 
+  const renderLaptopMockup = () => (
+    project.scrollImage ? (
+      <div className="project-hero-mockup-container">
+        <img
+          src={project.detailHeroImage || project.image}
+          alt={`${project.title} mockups`}
+          className="project-hero-mockup-img-base"
+        />
+        <div className="laptop-screen-scroll-container">
+          <img
+            src={project.scrollImage}
+            alt="Laptop screen content"
+            className="laptop-screen-scroll-img"
+          />
+        </div>
+      </div>
+    ) : project.detailHeroImage ? (
+      <img
+        src={project.detailHeroImage}
+        alt={`${project.title} mockups`}
+        className="project-hero-mockup-img"
+      />
+    ) : (
+      <img
+        src={project.image}
+        alt={`${project.title} cover`}
+        className="project-hero-cover-img-fallback"
+      />
+    )
+  );
+
   return (
     <div className="portfolio-detail-wrapper">
 
@@ -246,7 +277,7 @@ export default function ProjectDetailPage() {
         <div className="container">
           <div className="project-detail-hero-card">
             <div className="row align-items-center g-5">
-              <div className="col-lg-6 project-hero-info order-lg-1 order-2">
+              <div className="col-lg-6 project-hero-info">
                 <div className="project-hero-badges">
                   <span className="project-category-badge-premium">{project.category}</span>
                   {project.badge && (
@@ -258,6 +289,12 @@ export default function ProjectDetailPage() {
                 <h1 className="project-detail-title-premium">
                   {project.subtitle || project.title}
                 </h1>
+
+                {/* Laptop Mockup Image for Mobile View (Right below title) */}
+                <div className="project-hero-mockup-wrapper d-block d-lg-none my-4">
+                  {renderLaptopMockup()}
+                </div>
+
                 <p className="project-detail-desc-premium">
                   {project.description}
                 </p>
@@ -302,35 +339,9 @@ export default function ProjectDetailPage() {
                 )}
               </div>
 
-              <div className="col-lg-6 project-hero-mockup-wrapper order-lg-2 order-1">
-                {project.scrollImage ? (
-                  <div className="project-hero-mockup-container">
-                    <img
-                      src={project.detailHeroImage || project.image}
-                      alt={`${project.title} mockups`}
-                      className="project-hero-mockup-img-base"
-                    />
-                    <div className="laptop-screen-scroll-container">
-                      <img
-                        src={project.scrollImage}
-                        alt="Laptop screen content"
-                        className="laptop-screen-scroll-img"
-                      />
-                    </div>
-                  </div>
-                ) : project.detailHeroImage ? (
-                  <img
-                    src={project.detailHeroImage}
-                    alt={`${project.title} mockups`}
-                    className="project-hero-mockup-img"
-                  />
-                ) : (
-                  <img
-                    src={project.image}
-                    alt={`${project.title} cover`}
-                    className="project-hero-cover-img-fallback"
-                  />
-                )}
+              {/* Laptop Mockup Image for Desktop View (Right side 50% column) */}
+              <div className="col-lg-6 project-hero-mockup-wrapper d-none d-lg-block">
+                {renderLaptopMockup()}
               </div>
             </div>
           </div>

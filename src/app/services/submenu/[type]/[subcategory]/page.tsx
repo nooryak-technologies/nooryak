@@ -235,8 +235,8 @@ function getOrCreateSubcategoryData(subcategory: string, type: string): Subcateg
       items: [
         { title: 'Red Panda Vacations', tech: 'WordPress, PHP, MySQL', image: '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png', link: '/portfolio/2' },
         { title: 'Arman Group', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/armangroup/slide1.png', link: '/portfolio/4' },
-        { title: 'Elkins Air Conditioning', tech: 'WordPress, PHP, MySQL', image: '/assets/images/Portfolio/projects/elkinsaircondition/slide1.png', link: '/portfolio/5' },
-        { title: 'KB Enterprises', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/kbenterpises/slide1.png', link: '/portfolio/6' },
+        { title: 'Elkins Air Conditioning', tech: 'WordPress, PHP, MySQL', image: '/assets/images/Portfolio/projects/elkins_laptopview.png', link: '/portfolio/5' },
+        { title: 'KB Enterprises', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/enterprises_laptopview.png', link: '/portfolio/6' },
         { title: 'Radient Infotech', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/radientinfotech/slide1.png', link: '/portfolio/7' },
         { title: 'Shifa Infotech', tech: 'HTML5, CSS3, JavaScript, PHP, MySQL', image: '/assets/images/Portfolio/projects/shifainfotech/slide1.png', link: '/portfolio/8' }
       ]
