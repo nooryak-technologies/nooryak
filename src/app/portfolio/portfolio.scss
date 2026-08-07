@@ -1434,9 +1434,16 @@
   }
 }
 
+.portfolio-detail-wrapper {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 .project-detail-hero-section {
   background-color: #ffffff;
   padding: 10px 0 30px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .project-detail-hero-card {
@@ -1608,6 +1615,10 @@
       align-items: center;
       gap: 20px;
       flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        gap: 12px;
+      }
     }
 
     .tech-icon-item {
@@ -1668,20 +1679,24 @@
 
     @media (max-width: 991px) {
       width: 100%;
+      max-width: 100%;
       margin-top: 15px;
 
       .project-hero-mockup-container {
-        width: 108%;
-        transform: scale(1.08);
-        transform-origin: center center;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
       }
     }
 
     @media (max-width: 575px) {
+      width: 100%;
+      max-width: 100%;
+
       .project-hero-mockup-container {
-        width: 115%;
-        transform: scale(1.14);
-        transform-origin: center center;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
       }
     }
 

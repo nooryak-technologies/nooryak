@@ -11,4 +11,4 @@
 :HL["/_next/static/media/why_choose_card_icon_2.8157ce5f.webp","image"]
 :HL["/_next/static/media/why_choose_card_icon_3.d328472b.webp","image"]
 :HL["/_next/static/media/why_choose_card_icon_4.14b828f2.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"qXw9pEm3_kJA0NHEb7WGS"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"fWJy2t2A1WIkf_MSkA5MA"}
