@@ -768,7 +768,7 @@ export const projectsData: Project[] = [
     client: 'Spark Events',
     date: 'Feb 2026',
     services: 'Web Development, Event Booking, Media Gallery',
-    projectUrl: 'https://sparkevents.com/',
+    projectUrl: 'https://sparkevent.in/',
     gallery: [
       '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
       '/assets/images/Portfolio/projects/sparkevent_tabletview.png',
