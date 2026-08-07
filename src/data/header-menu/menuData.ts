@@ -199,14 +199,14 @@ const headerMenuData: MenuItem[] = [
     id: 6,
     active: true,
     title: "Clients",
-    link: "/404",
+    link: "/coming-soon",
   },
   // Careers
   {
     id: 7,
     active: true,
     title: "Careers",
-    link: "/404",
+    link: "/coming-soon",
   },
   // Blog
   {

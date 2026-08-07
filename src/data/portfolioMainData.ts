@@ -248,22 +248,21 @@ export const projectsData: Project[] = [
     description: 'Robust B2B trading and enterprise communication portal.',
     link: '/portfolio/6',
     bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/projects/kbenterpises/slide1.png',
+    image: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
     client: 'KB Enterprises Ltd',
     date: 'Oct 2025',
     services: 'Web Development, Database Management',
     projectUrl: 'https://enterpriseskp.in/',
     gallery: [
-      '/assets/images/Portfolio/projects/kbenterpises/slide1.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide2.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide3.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide4.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide5.png'
+      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
+      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
     ],
     subtitle: 'KB Enterprises Trading Platform',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/enterpriseskb.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/kb_enterprises_mobile.png',
+    scrollImage: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/enterprises_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/enterprises_tabletview.png',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -288,11 +287,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Sep 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/kbenterpises/slide1.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide2.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide3.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide4.png',
-      '/assets/images/Portfolio/projects/kbenterpises/slide5.png'
+      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
+      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
     ],
     results: [
       { value: '140%', label: 'Partner Onboardings', iconType: 'trending-up' },
@@ -474,6 +471,405 @@ export const projectsData: Project[] = [
       { value: '99.9%', label: 'Platform Uptime', iconType: 'check-circle' }
     ],
     badge: 'International Project'
+  },
+  {
+    id: 14,
+    title: 'Arrow Computerz',
+    category: 'Web Development',
+    description: 'Modern computer sales, hardware repair, and IT solutions portal designed for seamless service bookings.',
+    link: '/portfolio/14',
+    bgClass: 'bg-slate',
+    image: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+    client: 'Arrow Computerz',
+    date: 'Jan 2026',
+    services: 'Web Development, Service Portal, UI/UX Design',
+    projectUrl: 'https://arrowcomputerz.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
+    ],
+    subtitle: 'Arrow Computerz Service Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Arrow Computerz web platform showcases custom computer hardware products, laptop repair booking tools, and IT consultancy services with a clean and interactive interface.',
+    features: [
+      'Online repair appointment booking',
+      'Hardware product showcase',
+      'Service price estimator',
+      'Interactive customer support',
+      'Mobile responsive layout'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Arrow Computerz', iconType: 'user' },
+      { label: 'Industry', value: 'IT & Computer Services', iconType: 'globe' },
+      { label: 'Project Type', value: 'Service & Store Portal', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
+    ],
+    results: [
+      { value: '160%', label: 'Increase in Online Enquiries', iconType: 'trending-up' },
+      { value: '75%', label: 'Growth in Service Appointments', iconType: 'shopping-cart' },
+      { value: '4.9★', label: 'Customer Rating', iconType: 'smile' },
+      { value: '99.9%', label: 'Uptime & Performance', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 15,
+    title: 'DND Mobile Wash',
+    category: 'Web Development',
+    description: 'On-demand eco-friendly mobile auto detailing & car wash booking web application.',
+    link: '/portfolio/15',
+    bgClass: 'bg-nature',
+    image: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
+    client: 'DND Mobile Wash',
+    date: 'Feb 2026',
+    services: 'Web Development, Booking Engine, Mobile Optimization',
+    projectUrl: 'https://dndmobilewash.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
+      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.png',
+      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.png'
+    ],
+    subtitle: 'DND Detailing & Mobile Wash Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_tabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'DND Mobile Wash provides customer-centric mobile auto detailing scheduling, package selection, and instant service quote requests.',
+    features: [
+      'Package selection & online quote generator',
+      'Location-based mobile wash scheduling',
+      'Customer review & photo gallery',
+      'WhatsApp quick booking integration',
+      'Optimized fast loading layout'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'DND Mobile Wash', iconType: 'user' },
+      { label: 'Industry', value: 'Automotive Services', iconType: 'globe' },
+      { label: 'Project Type', value: 'On-Demand Service Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
+      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.png',
+      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.png'
+    ],
+    results: [
+      { value: '210%', label: 'More Mobile Wash Bookings', iconType: 'trending-up' },
+      { value: '85%', label: 'Repeat Customer Rate', iconType: 'shopping-cart' },
+      { value: '50%', label: 'Savings in Admin Time', iconType: 'users' },
+      { value: '4.9★', label: 'Service Satisfaction', iconType: 'smile' }
+    ]
+  },
+  {
+    id: 16,
+    title: 'Fun Kiddoz',
+    category: 'Web Development',
+    description: 'Vibrant, family-friendly website for kids entertainment center and party venue bookings.',
+    link: '/portfolio/16',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+    client: 'Fun Kiddoz Entertainment',
+    date: 'Jan 2026',
+    services: 'Web Design, Interactive Animations, Ticket Booking',
+    projectUrl: 'https://funkiddoz.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
+      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
+    ],
+    subtitle: 'Fun Kiddoz Play & Activity Center',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/funkiddoz_mobile.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Fun Kiddoz website is crafted with bright, engaging visual components to showcase indoor play arenas, birthday party packages, and event reservations for families.',
+    features: [
+      'Birthday party booking system',
+      'Interactive play zone tour',
+      'Ticket & pass pricing cards',
+      'Parent testimonials & reviews',
+      'Mobile-first responsive design'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Fun Kiddoz', iconType: 'user' },
+      { label: 'Industry', value: 'Entertainment & Leisure', iconType: 'globe' },
+      { label: 'Project Type', value: 'Interactive Booking Portal', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
+      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
+    ],
+    results: [
+      { value: '180%', label: 'Increase in Party Reservations', iconType: 'trending-up' },
+      { value: '95%', label: 'Positive Family Ratings', iconType: 'smile' },
+      { value: '70%', label: 'More Mobile Visitors', iconType: 'users' },
+      { value: '99%', label: 'Website Speed Score', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 17,
+    title: 'Kavis Construction',
+    category: 'Web Development',
+    description: 'Professional website showcasing premier architectural design, civil engineering, and construction projects.',
+    link: '/portfolio/17',
+    bgClass: 'bg-slate',
+    image: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
+    client: 'Kavis Construction Group',
+    date: 'Feb 2026',
+    services: 'Web Development, Architectural Showcase, Lead Capture',
+    projectUrl: 'https://kavisconstruction.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
+      '/assets/images/Portfolio/projects/kavisconstruction_tabletview.png',
+      '/assets/images/Portfolio/projects/kavisconstruction_mobileview.png'
+    ],
+    subtitle: 'Kavis Construction & Infrastructure Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_tabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Kavis Construction platform provides prospective residential and commercial clients with an elegant architectural portfolio, site progress galleries, and consultation request channels.',
+    features: [
+      'High-res completed project gallery',
+      'Interactive cost estimator form',
+      'Architectural blueprint showcases',
+      'Client inquiry management system',
+      'SEO optimized infrastructure structure'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Kavis Construction', iconType: 'user' },
+      { label: 'Industry', value: 'Construction & Engineering', iconType: 'globe' },
+      { label: 'Project Type', value: 'Corporate Construction Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
+      '/assets/images/Portfolio/projects/kavisconstruction_tabletview.png',
+      '/assets/images/Portfolio/projects/kavisconstruction_mobileview.png'
+    ],
+    results: [
+      { value: '140%', label: 'Growth in Construction Leads', iconType: 'trending-up' },
+      { value: '65%', label: 'Higher Time-on-Site', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Client Trust Score', iconType: 'smile' },
+      { value: '100%', label: 'Mobile Responsiveness', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 18,
+    title: 'Limras Gallery',
+    category: 'Web Development',
+    description: 'Elegant website showcasing custom picture framing, art collections, and interior wall decor.',
+    link: '/portfolio/18',
+    bgClass: 'bg-teal',
+    image: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+    client: 'Limras Gallery',
+    date: 'Jan 2026',
+    services: 'Web Development, Art Gallery Showcase, E-Catalog',
+    projectUrl: 'https://limrasgallery.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
+      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
+    ],
+    subtitle: 'Limras Gallery Framing & Decor Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/limrasgallermobileviw.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/limrasgalletabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Limras Gallery platform highlights bespoke picture frames, canvas prints, and custom artwork with interactive visual preview capabilities for interior designers and homeowners.',
+    features: [
+      'Custom frame style gallery',
+      'Art catalog filter system',
+      'Consultation & quote request form',
+      'Vibrant photo sliders',
+      'Smooth mobile navigation'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Limras Gallery', iconType: 'user' },
+      { label: 'Industry', value: 'Art & Interior Decor', iconType: 'globe' },
+      { label: 'Project Type', value: 'Gallery Showcase Website', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
+      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
+    ],
+    results: [
+      { value: '175%', label: 'Increase in Framing Inquiries', iconType: 'trending-up' },
+      { value: '80%', label: 'Higher Catalog Views', iconType: 'shopping-cart' },
+      { value: '97%', label: 'Client Satisfaction', iconType: 'smile' },
+      { value: '99.5%', label: 'Site Speed Score', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 19,
+    title: 'Spark Events',
+    category: 'Web Development',
+    description: 'Modern event management portal for corporate galas, weddings, and grand celebrations.',
+    link: '/portfolio/19',
+    bgClass: 'bg-purple-soft',
+    image: '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
+    client: 'Spark Events',
+    date: 'Feb 2026',
+    services: 'Web Development, Event Booking, Media Gallery',
+    projectUrl: 'https://sparkevents.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
+      '/assets/images/Portfolio/projects/sparkevent_tabletview.png',
+      '/assets/images/Portfolio/projects/sparkevent_mobileview.png'
+    ],
+    subtitle: 'Spark Events Planning & Management Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/sparkevent_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/sparkevent_tabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Spark Events website brings grand event concepts to life with immersive photo galleries, vendor coordination forms, and custom event package estimators.',
+    features: [
+      'Event package calculator',
+      'Immersive wedding & corporate video highlights',
+      'Vendor coordination request module',
+      'Interactive timeline display',
+      'Mobile responsive UI'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Spark Events', iconType: 'user' },
+      { label: 'Industry', value: 'Event Management', iconType: 'globe' },
+      { label: 'Project Type', value: 'Event Management Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
+      '/assets/images/Portfolio/projects/sparkevent_tabletview.png',
+      '/assets/images/Portfolio/projects/sparkevent_mobileview.png'
+    ],
+    results: [
+      { value: '190%', label: 'More Event Bookings', iconType: 'trending-up' },
+      { value: '85%', label: 'Growth in Corporate Leads', iconType: 'shopping-cart' },
+      { value: '4.9★', label: 'Client Rating', iconType: 'smile' },
+      { value: '99.9%', label: 'Uptime Rating', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 20,
+    title: 'Youverse',
+    category: 'Web Development',
+    description: 'Cutting-edge digital ecosystem platform connecting innovative software solutions and user experiences.',
+    link: '/portfolio/20',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/youverse_laptopview.png',
+    client: 'Youverse Tech',
+    date: 'Jan 2026',
+    services: 'Web Development, UI/UX Architecture, Cloud Integration',
+    projectUrl: 'https://youverse.io/',
+    gallery: [
+      '/assets/images/Portfolio/projects/youverse_laptopview.png',
+      '/assets/images/Portfolio/projects/youverse_tabletview.png',
+      '/assets/images/Portfolio/projects/youverse_mobileview.png'
+    ],
+    subtitle: 'Youverse Digital Experience & Tech Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/youverse_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/youverse_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/youverse_tabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Youverse digital hub is built to deliver interactive technology solutions, seamless software integrations, and intuitive SaaS navigation.',
+    features: [
+      'Interactive product module showcase',
+      'High-performance cloud integration',
+      'Clean dark-mode aesthetic styling',
+      'Encrypted lead capture forms',
+      'Optimized core web vitals'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Youverse Tech', iconType: 'user' },
+      { label: 'Industry', value: 'Software & Technology', iconType: 'globe' },
+      { label: 'Project Type', value: 'Digital Platform', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/youverse_laptopview.png',
+      '/assets/images/Portfolio/projects/youverse_tabletview.png',
+      '/assets/images/Portfolio/projects/youverse_mobileview.png'
+    ],
+    results: [
+      { value: '220%', label: 'User Engagement Growth', iconType: 'trending-up' },
+      { value: '90%', label: 'SaaS Onboarding Rate', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Client Satisfaction', iconType: 'smile' },
+      { value: '100%', label: 'Performance Score', iconType: 'check-circle' }
+    ]
   },
   {
     id: 9,

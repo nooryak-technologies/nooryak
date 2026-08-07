@@ -34,12 +34,12 @@ interface MenuItem {
 // Menu data structure
 const mobileMenuData: MenuItem[] = [
     { id: 1, title: "Home", link: "/", megaMenu: false },
-    { id: 2, title: "About Us", link: "/404", megaMenu: false },
+    { id: 2, title: "About Us", link: "/about", megaMenu: false },
 
     {
         id: 3,
         title: "Services",
-        link: "/404",
+        link: "/services",
         megaMenu: true,
         columns: [
             {
@@ -186,10 +186,10 @@ const mobileMenuData: MenuItem[] = [
         image: { src: menuThumb, alt: "menu thumb" }
     },
 
-    { id: 5, title: "Portfolio", link: "/404", megaMenu: false },
-    { id: 6, title: "Careers", link: "/404", megaMenu: false },
-    { id: 7, title: "Clients", link: "/404", megaMenu: false },
-    { id: 8, title: "Blog", link: "/404", megaMenu: false },
+    { id: 5, title: "Portfolio", link: "/portfolio", megaMenu: false },
+    { id: 6, title: "Careers", link: "/coming-soon", megaMenu: false },
+    { id: 7, title: "Clients", link: "/coming-soon", megaMenu: false },
+    { id: 8, title: "Blog", link: "/blog", megaMenu: false },
     { id: 9, title: "Contact", link: "/contact", megaMenu: false }
 ];
 
