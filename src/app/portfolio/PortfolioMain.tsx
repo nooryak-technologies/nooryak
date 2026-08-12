@@ -218,6 +218,11 @@ export default function PortfolioMain() {
                       <span className={`category-badge ${getBadgeClass(project.category)}`}>
                         {project.category}
                       </span>
+                      {project.badge && (
+                        <span className="card-international-badge">
+                          🌍 {project.badge}
+                        </span>
+                      )}
                       {project.scrollImage ? (
                         <div className="portfolio-card-scroll-container">
                           <img
@@ -248,11 +253,6 @@ export default function PortfolioMain() {
                         <Link href={project.link} className="view-case-study-link">
                           View <span className="arrow-right">→</span>
                         </Link>
-                        {project.badge && (
-                          <span className="card-international-badge">
-                            🌍 {project.badge}
-                          </span>
-                        )}
                       </div>
                     </div>
 

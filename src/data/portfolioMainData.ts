@@ -33,20 +33,6 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    id: 1,
-    title: 'Social Media Campaign for E-Commerce Brand',
-    category: 'Digital Marketing',
-    description: 'Increased engagement by 320% and boosted sales through targeted ad campaigns.',
-    link: '/portfolio/1',
-    bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/portfolio_social_media.png',
-    client: 'E-Shop International',
-    date: 'Mar 2026',
-    services: 'Social Media Marketing, Paid Ads',
-    projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_social_media.png']
-  },
-  {
     id: 2,
     title: 'Red Panda Vacations',
     category: 'eCommerce',
@@ -108,18 +94,467 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: 3,
-    title: 'Food Delivery Mobile App',
-    category: 'App Development',
-    description: 'Feature-rich food delivery app with real-time tracking, payments, and user dashboard.',
-    link: '/portfolio/3',
-    bgClass: 'bg-purple-soft',
-    image: '/assets/images/Portfolio/portfolio_food_app.png',
-    client: 'QuickBite Inc.',
+    id: 6,
+    title: 'KP Enterprises Ecommerce Website',
+    category: 'eCommerce',
+    description: 'KP Enterprises is a Ecommerce Platform To Selling Commercial Machine ',
+    link: '/portfolio/6',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+    client: 'KP Enterprises Ltd',
+    date: 'Oct 2025',
+    services: 'Web Development, Database Management',
+    projectUrl: 'https://enterpriseskp.in/',
+    gallery: [
+      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
+      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
+    ],
+    subtitle: 'KP Enterprises Ecommerce Website',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/enterprises_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/enterprises_tabletview.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'KB Enterprises trading portal enables smooth B2B operations, wholesale catalog display, vendor registrations, and encrypted document sharing.',
+    features: [
+      'Wholesale product catalog',
+      'Vendor document upload nodes',
+      'Secure database structure',
+      'SEO friendly heading tags',
+      'Responsive table grids'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'KB Enterprises', iconType: 'user' },
+      { label: 'Industry', value: 'Trading & Logistics', iconType: 'globe' },
+      { label: 'Project Type', value: 'B2B Enterprise Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Sep 2024', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
+      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
+    ],
+    results: [
+      { value: '140%', label: 'Partner Onboardings', iconType: 'trending-up' },
+      { value: '50%', label: 'Admin Overhead Savings', iconType: 'shopping-cart' },
+      { value: '95%', label: 'Vendor Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Database Reliability', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 14,
+    title: 'Arrow Computerz',
+    category: 'eCommerce',
+    description: 'Modern computer sales, hardware repair, and IT solutions portal designed for seamless service bookings.',
+    link: '/portfolio/14',
+    bgClass: 'bg-slate',
+    image: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+    client: 'Arrow Computerz',
     date: 'Jan 2026',
-    services: 'Mobile App Design, iOS & Android Development',
-    projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_food_app.png']
+    services: 'Web Development, Service Portal, UI/UX Design',
+    projectUrl: 'https://arrowcomputerz.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
+    ],
+    subtitle: 'Arrow Computerz Refurbished  ecommerce Website',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Arrow Computerz web platform showcases custom computer hardware products, laptop repair booking tools, and IT consultancy services with a clean and interactive interface.',
+    features: [
+      'Online repair appointment booking',
+      'Hardware product showcase',
+      'Service price estimator',
+      'Interactive customer support',
+      'Mobile responsive layout'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Arrow Computerz', iconType: 'user' },
+      { label: 'Industry', value: 'IT & Computer Services', iconType: 'globe' },
+      { label: 'Project Type', value: 'Service & Store Portal', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
+      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
+    ],
+    results: [
+      { value: '160%', label: 'Increase in Online Enquiries', iconType: 'trending-up' },
+      { value: '75%', label: 'Growth in Service Appointments', iconType: 'shopping-cart' },
+      { value: '4.9★', label: 'Customer Rating', iconType: 'smile' },
+      { value: '99.9%', label: 'Uptime & Performance', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 16,
+    title: 'Fun Kiddoz',
+    category: 'eCommerce',
+    description: 'Vibrant, family-friendly website for kids entertainment toys and toys selling webite',
+    link: '/portfolio/16',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+    client: 'Fun Kiddoz Toy selling  ecommerce ',
+    date: 'Jan 2026',
+    services: 'Web Design, Interactive Animations, Toy selling ecommerce website',
+    projectUrl: 'https://funkiddoz.in/',
+    gallery: [
+      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
+      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
+    ],
+    subtitle: 'Fun Kiddoz Play & Activity Center',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/funkiddoz_mobile.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Fun Kiddoz website is crafted with bright, engaging visual components to showcase toys, ',
+    features: [
+      'Toy selling website',
+      'Interactive toy store',
+      'Toy &  pricing cards',
+      'Parent testimonials & reviews',
+      'Mobile-first responsive design'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Fun Kiddoz', iconType: 'user' },
+      { label: 'Industry', value: 'Entertainment & Leisure', iconType: 'globe' },
+      { label: 'Project Type', value: 'Interactive Booking Portal', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
+      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
+    ],
+    results: [
+      { value: '180%', label: 'Increase in Party Reservations', iconType: 'trending-up' },
+      { value: '95%', label: 'Positive Family Ratings', iconType: 'smile' },
+      { value: '70%', label: 'More Mobile Visitors', iconType: 'users' },
+      { value: '99%', label: 'Website Speed Score', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 18,
+    title: 'Limras Gallery',
+    category: 'eCommerce',
+    description: 'Elegant website showcasing custom picture framing, art collections, and interior wall decor.',
+    link: '/portfolio/18',
+    bgClass: 'bg-teal',
+    image: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+    client: 'Limras Gallery',
+    date: 'Jan 2026',
+    services: 'Web Development, Art Gallery Showcase, E-Catalog',
+    projectUrl: 'https://limrasgallery.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
+      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
+    ],
+    subtitle: 'Limras Gallery Framing & Decor Portal',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/limrasgallermobileviw.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/limrasgalletabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Limras Gallery platform highlights bespoke picture frames, canvas prints, and custom artwork with interactive visual preview capabilities for interior designers and homeowners.',
+    features: [
+      'Custom frame style gallery',
+      'Art catalog filter system',
+      'Consultation & quote request form',
+      'Vibrant photo sliders',
+      'Smooth mobile navigation'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Limras Gallery', iconType: 'user' },
+      { label: 'Industry', value: 'Art & Interior Decor', iconType: 'globe' },
+      { label: 'Project Type', value: 'Gallery Showcase Website', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
+      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
+    ],
+    results: [
+      { value: '175%', label: 'Increase in Framing Inquiries', iconType: 'trending-up' },
+      { value: '80%', label: 'Higher Catalog Views', iconType: 'shopping-cart' },
+      { value: '97%', label: 'Client Satisfaction', iconType: 'smile' },
+      { value: '99.5%', label: 'Site Speed Score', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 20,
+    title: 'Youverse',
+    category: 'eCommerce',
+    description: 'Cutting-edge digital ecosystem platform connecting innovative software solutions and user experiences.',
+    link: '/portfolio/20',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/youverse_laptopview.png',
+    client: 'Youverse Tech',
+    date: 'Jan 2026',
+    services: 'Web Development, UI/UX Architecture, Cloud Integration',
+    projectUrl: 'https://youverse.in/',
+    gallery: [
+      '/assets/images/Portfolio/projects/youverse_laptopview.png',
+      '/assets/images/Portfolio/projects/youverse_tabletview.png',
+      '/assets/images/Portfolio/projects/youverse_mobileview.png'
+    ],
+    subtitle: 'Youverse is a Product Selling E-commerce website.',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/youverse_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/youverse_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/youverse_tabletview.png',
+    technologies: [
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Youverse digital hub is built to deliver interactive technology solutions, seamless software integrations, and intuitive SaaS navigation.',
+    features: [
+      'Interactive product module showcase',
+      'High-performance cloud integration',
+      'Clean dark-mode aesthetic styling',
+      'Encrypted lead capture forms',
+      'Optimized core web vitals'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Youverse Tech', iconType: 'user' },
+      { label: 'Industry', value: 'Software & Technology', iconType: 'globe' },
+      { label: 'Project Type', value: 'Digital Platform', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/youverse_laptopview.png',
+      '/assets/images/Portfolio/projects/youverse_tabletview.png',
+      '/assets/images/Portfolio/projects/youverse_mobileview.png'
+    ],
+    results: [
+      { value: '220%', label: 'User Engagement Growth', iconType: 'trending-up' },
+      { value: '90%', label: 'SaaS Onboarding Rate', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Client Satisfaction', iconType: 'smile' },
+      { value: '100%', label: 'Performance Score', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 21,
+    title: 'Bazarway Shop',
+    category: 'eCommerce',
+    description: 'Premier online shop and multi-category retail marketplace offering curated products with fast checkout.',
+    link: '/portfolio/21',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/bazarway_store.png',
+    client: 'Bazarway UK Store',
+    date: 'Jan 2026',
+    services: 'Web Development, eCommerce, Retail Portal',
+    projectUrl: 'https://bazaarway.co.uk/shopproducts/',
+    gallery: [
+      '/assets/images/Portfolio/projects/bazarway_store.png',
+      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
+      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
+    ],
+    subtitle: 'Bazarway Retail & Product Shop',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/bazarway_store.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwaystore_mobile.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Bazarway Shop is an expansive eCommerce marketplace featuring custom product filters, instant cart additions, and secure payment integration for online shoppers.',
+    features: [
+      'Multi-category product catalog',
+      'Instant search and filter engine',
+      'Integrated payment gateway',
+      'Mobile-first responsive shopping',
+      'SEO optimized product pages'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Bazarway Retail', iconType: 'user' },
+      { label: 'Industry', value: 'eCommerce & Retail', iconType: 'globe' },
+      { label: 'Project Type', value: 'Product Shop', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/bazarway_store.png',
+      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
+      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
+    ],
+    results: [
+      { value: '180%', label: 'Product Conversion Boost', iconType: 'trending-up' },
+      { value: '85%', label: 'Mobile Order Growth', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Customer Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Platform Uptime', iconType: 'check-circle' }
+    ],
+    badge: 'International Project'
+  },
+  {
+    id: 22,
+    title: 'Fiori Celebrations',
+    category: 'eCommerce',
+    description: 'Bespoke event floral design, decor booking, and luxury celebration services portal.',
+    link: '/portfolio/22',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+    client: 'Fiori Celebrations',
+    date: 'Feb 2026',
+    services: 'Web Development, Event Booking, UI/UX Design',
+    projectUrl: 'https://fioricelebrations.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
+    ],
+    subtitle: 'Fiori Luxury Event & Floral Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/fioricelebration_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Fiori Celebrations web application showcases elegant floral arrangements, event decor consultation tools, and automated service booking packages.',
+    features: [
+      'Event decor portfolio gallery',
+      'Custom bouquet & package builder',
+      'Online consultation booking',
+      'Mobile responsive design',
+      'Fast page load speeds'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Fiori Celebrations', iconType: 'user' },
+      { label: 'Industry', value: 'Events & Luxury Decor', iconType: 'globe' },
+      { label: 'Project Type', value: 'Service & Booking Portal', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
+      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
+    ],
+    results: [
+      { value: '210%', label: 'Event Booking Enquiries', iconType: 'trending-up' },
+      { value: '75%', label: 'Growth in Direct Sales', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Client Delight Rating', iconType: 'smile' },
+      { value: '100%', label: 'Speed Performance Pass', iconType: 'check-circle' }
+    ],
+    badge: 'International Project'
+  },
+  {
+    id: 23,
+    title: 'Annsha Gifts',
+    category: 'eCommerce',
+    description: 'An online eCommerce gift store specializing in personalized hampers, custom gifts, and luxury celebration packages.',
+    link: '/portfolio/23',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+    client: 'Annsha Gifts Store',
+    date: 'Feb 2026',
+    services: 'Web Development, eCommerce, Custom Gift Portal',
+    projectUrl: 'https://annshagifts.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
+      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
+    ],
+    subtitle: 'Annsha Gifts Online eCommerce Store',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/annshagift_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/annshagift_tabletview.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Annsha Gifts eCommerce portal delivers a seamless shopping experience for custom gift customization, luxury gift hampers, occasion-based filtering, and secure payment checkout.',
+    features: [
+      'Personalized gift hamper customizer',
+      'Occasion & holiday gift category filters',
+      'Integrated WooCommerce payment gateway',
+      'Fast mobile checkout process',
+      'SEO optimized store pages'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Annsha Gifts', iconType: 'user' },
+      { label: 'Industry', value: 'Gifting & Retail', iconType: 'globe' },
+      { label: 'Project Type', value: 'eCommerce Store', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
+      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
+    ],
+    results: [
+      { value: '230%', label: 'Online Gift Sales Growth', iconType: 'trending-up' },
+      { value: '88%', label: 'Mobile Order Conversions', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Customer Satisfaction', iconType: 'smile' },
+      { value: '100%', label: 'Store Uptime & Speed', iconType: 'check-circle' }
+    ],
+    badge: 'International Project'
   },
   {
     id: 4,
@@ -238,64 +673,6 @@ export const projectsData: Project[] = [
       { value: '75%', label: 'Call Volume Growth', iconType: 'shopping-cart' },
       { value: '4.8★', label: 'Customer Trust Rating', iconType: 'smile' },
       { value: '99%', label: 'System Uptime', iconType: 'check-circle' }
-    ]
-  },
-  {
-    id: 6,
-    title: 'KP Enterprises Ecommerce Website',
-    category: 'eCommerce',
-    description: 'KP Enterprises is a Ecommerce Platform To Selling Commercial Machine ',
-    link: '/portfolio/6',
-    bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-    client: 'KP Enterprises Ltd',
-    date: 'Oct 2025',
-    services: 'Web Development, Database Management',
-    projectUrl: 'https://enterpriseskp.in/',
-    gallery: [
-      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
-      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
-    ],
-    subtitle: 'KP Enterprises Ecommerce Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/enterprises_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/enterprises_tabletview.png',
-    technologies: [
-      { name: 'WordPress', iconType: 'wordpress' },
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'KB Enterprises trading portal enables smooth B2B operations, wholesale catalog display, vendor registrations, and encrypted document sharing.',
-    features: [
-      'Wholesale product catalog',
-      'Vendor document upload nodes',
-      'Secure database structure',
-      'SEO friendly heading tags',
-      'Responsive table grids'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'KB Enterprises', iconType: 'user' },
-      { label: 'Industry', value: 'Trading & Logistics', iconType: 'globe' },
-      { label: 'Project Type', value: 'B2B Enterprise Portal', iconType: 'code' },
-      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Sep 2024', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
-      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
-    ],
-    results: [
-      { value: '140%', label: 'Partner Onboardings', iconType: 'trending-up' },
-      { value: '50%', label: 'Admin Overhead Savings', iconType: 'shopping-cart' },
-      { value: '95%', label: 'Vendor Satisfaction', iconType: 'smile' },
-      { value: '99.9%', label: 'Database Reliability', iconType: 'check-circle' }
     ]
   },
   {
@@ -478,63 +855,6 @@ export const projectsData: Project[] = [
     badge: 'International Project'
   },
   {
-    id: 14,
-    title: 'Arrow Computerz',
-    category: 'eCommerce',
-    description: 'Modern computer sales, hardware repair, and IT solutions portal designed for seamless service bookings.',
-    link: '/portfolio/14',
-    bgClass: 'bg-slate',
-    image: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
-    client: 'Arrow Computerz',
-    date: 'Jan 2026',
-    services: 'Web Development, Service Portal, UI/UX Design',
-    projectUrl: 'https://arrowcomputerz.com/',
-    gallery: [
-      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
-    ],
-    subtitle: 'Arrow Computerz Refurbished  ecommerce Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
-    technologies: [
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'Arrow Computerz web platform showcases custom computer hardware products, laptop repair booking tools, and IT consultancy services with a clean and interactive interface.',
-    features: [
-      'Online repair appointment booking',
-      'Hardware product showcase',
-      'Service price estimator',
-      'Interactive customer support',
-      'Mobile responsive layout'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'Arrow Computerz', iconType: 'user' },
-      { label: 'Industry', value: 'IT & Computer Services', iconType: 'globe' },
-      { label: 'Project Type', value: 'Service & Store Portal', iconType: 'code' },
-      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
-    ],
-    results: [
-      { value: '160%', label: 'Increase in Online Enquiries', iconType: 'trending-up' },
-      { value: '75%', label: 'Growth in Service Appointments', iconType: 'shopping-cart' },
-      { value: '4.9★', label: 'Customer Rating', iconType: 'smile' },
-      { value: '99.9%', label: 'Uptime & Performance', iconType: 'check-circle' }
-    ]
-  },
-  {
     id: 15,
     title: 'DND Mobile Wash',
     category: 'Web Development',
@@ -589,63 +909,6 @@ export const projectsData: Project[] = [
       { value: '85%', label: 'Repeat Customer Rate', iconType: 'shopping-cart' },
       { value: '50%', label: 'Savings in Admin Time', iconType: 'users' },
       { value: '4.9★', label: 'Service Satisfaction', iconType: 'smile' }
-    ]
-  },
-  {
-    id: 16,
-    title: 'Fun Kiddoz',
-    category: 'eCommerce',
-    description: 'Vibrant, family-friendly website for kids entertainment toys and toys selling webite',
-    link: '/portfolio/16',
-    bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-    client: 'Fun Kiddoz Toy selling  ecommerce ',
-    date: 'Jan 2026',
-    services: 'Web Design, Interactive Animations, Toy selling ecommerce website',
-    projectUrl: 'https://funkiddoz.in/',
-    gallery: [
-      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
-      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
-    ],
-    subtitle: 'Fun Kiddoz Play & Activity Center',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/funkiddoz_mobile.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
-    technologies: [
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'Fun Kiddoz website is crafted with bright, engaging visual components to showcase toys, ',
-    features: [
-      'Toy selling website',
-      'Interactive toy store',
-      'Toy &  pricing cards',
-      'Parent testimonials & reviews',
-      'Mobile-first responsive design'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'Fun Kiddoz', iconType: 'user' },
-      { label: 'Industry', value: 'Entertainment & Leisure', iconType: 'globe' },
-      { label: 'Project Type', value: 'Interactive Booking Portal', iconType: 'code' },
-      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
-      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
-    ],
-    results: [
-      { value: '180%', label: 'Increase in Party Reservations', iconType: 'trending-up' },
-      { value: '95%', label: 'Positive Family Ratings', iconType: 'smile' },
-      { value: '70%', label: 'More Mobile Visitors', iconType: 'users' },
-      { value: '99%', label: 'Website Speed Score', iconType: 'check-circle' }
     ]
   },
   {
@@ -707,63 +970,6 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: 18,
-    title: 'Limras Gallery',
-    category: 'eCommerce',
-    description: 'Elegant website showcasing custom picture framing, art collections, and interior wall decor.',
-    link: '/portfolio/18',
-    bgClass: 'bg-teal',
-    image: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
-    client: 'Limras Gallery',
-    date: 'Jan 2026',
-    services: 'Web Development, Art Gallery Showcase, E-Catalog',
-    projectUrl: 'https://limrasgallery.com/',
-    gallery: [
-      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
-      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
-      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
-    ],
-    subtitle: 'Limras Gallery Framing & Decor Portal',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/limrasgallermobileviw.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/limrasgalletabletview.png',
-    technologies: [
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'Limras Gallery platform highlights bespoke picture frames, canvas prints, and custom artwork with interactive visual preview capabilities for interior designers and homeowners.',
-    features: [
-      'Custom frame style gallery',
-      'Art catalog filter system',
-      'Consultation & quote request form',
-      'Vibrant photo sliders',
-      'Smooth mobile navigation'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'Limras Gallery', iconType: 'user' },
-      { label: 'Industry', value: 'Art & Interior Decor', iconType: 'globe' },
-      { label: 'Project Type', value: 'Gallery Showcase Website', iconType: 'code' },
-      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
-      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
-      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
-    ],
-    results: [
-      { value: '175%', label: 'Increase in Framing Inquiries', iconType: 'trending-up' },
-      { value: '80%', label: 'Higher Catalog Views', iconType: 'shopping-cart' },
-      { value: '97%', label: 'Client Satisfaction', iconType: 'smile' },
-      { value: '99.5%', label: 'Site Speed Score', iconType: 'check-circle' }
-    ]
-  },
-  {
     id: 19,
     title: 'Spark Events',
     category: 'Web Development',
@@ -821,89 +1027,18 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: 20,
-    title: 'Youverse',
-    category: 'eCommerce',
-    description: 'Cutting-edge digital ecosystem platform connecting innovative software solutions and user experiences.',
-    link: '/portfolio/20',
-    bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/projects/youverse_laptopview.png',
-    client: 'Youverse Tech',
+    id: 3,
+    title: 'Food Delivery Mobile App',
+    category: 'App Development',
+    description: 'Feature-rich food delivery app with real-time tracking, payments, and user dashboard.',
+    link: '/portfolio/3',
+    bgClass: 'bg-purple-soft',
+    image: '/assets/images/Portfolio/portfolio_food_app.png',
+    client: 'QuickBite Inc.',
     date: 'Jan 2026',
-    services: 'Web Development, UI/UX Architecture, Cloud Integration',
-    projectUrl: 'https://youverse.in/',
-    gallery: [
-      '/assets/images/Portfolio/projects/youverse_laptopview.png',
-      '/assets/images/Portfolio/projects/youverse_tabletview.png',
-      '/assets/images/Portfolio/projects/youverse_mobileview.png'
-    ],
-    subtitle: 'Youverse is a Product Selling E-commerce website.',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/youverse_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/youverse_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/youverse_tabletview.png',
-    technologies: [
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'Youverse digital hub is built to deliver interactive technology solutions, seamless software integrations, and intuitive SaaS navigation.',
-    features: [
-      'Interactive product module showcase',
-      'High-performance cloud integration',
-      'Clean dark-mode aesthetic styling',
-      'Encrypted lead capture forms',
-      'Optimized core web vitals'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'Youverse Tech', iconType: 'user' },
-      { label: 'Industry', value: 'Software & Technology', iconType: 'globe' },
-      { label: 'Project Type', value: 'Digital Platform', iconType: 'code' },
-      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/youverse_laptopview.png',
-      '/assets/images/Portfolio/projects/youverse_tabletview.png',
-      '/assets/images/Portfolio/projects/youverse_mobileview.png'
-    ],
-    results: [
-      { value: '220%', label: 'User Engagement Growth', iconType: 'trending-up' },
-      { value: '90%', label: 'SaaS Onboarding Rate', iconType: 'shopping-cart' },
-      { value: '99%', label: 'Client Satisfaction', iconType: 'smile' },
-      { value: '100%', label: 'Performance Score', iconType: 'check-circle' }
-    ]
-  },
-  {
-    id: 9,
-    title: 'Brand Identity for Startup',
-    category: 'Branding & Design',
-    description: 'Complete brand identity including logo, color palette, typography, and brand guidelines.',
-    link: '/portfolio/9',
-    bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/portfolio_brand_identity.png',
-    client: 'Nexora Tech',
-    date: 'Nov 2025',
-    services: 'Brand Identity, Logo Design, Stationery Mockups',
+    services: 'Mobile App Design, iOS & Android Development',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_brand_identity.png']
-  },
-  {
-    id: 10,
-    title: 'Lead Generation Campaign',
-    category: 'Digital Marketing',
-    description: 'Generated high-quality leads and improved conversion rate for a real estate client.',
-    link: '/portfolio/10',
-    bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/portfolio_lead_gen.png',
-    client: 'Prime Realty',
-    date: 'Oct 2025',
-    services: 'Google Ads, Search Engine Marketing, Lead Nurturing',
-    projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_lead_gen.png']
+    gallery: ['/assets/images/Portfolio/portfolio_food_app.png']
   },
   {
     id: 11,
@@ -920,6 +1055,20 @@ export const projectsData: Project[] = [
     gallery: ['/assets/images/Portfolio/portfolio_finance_app.png']
   },
   {
+    id: 9,
+    title: 'Brand Identity for Startup',
+    category: 'Branding & Design',
+    description: 'Complete brand identity including logo, color palette, typography, and brand guidelines.',
+    link: '/portfolio/9',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/portfolio_brand_identity.png',
+    client: 'Nexora Tech',
+    date: 'Nov 2025',
+    services: 'Brand Identity, Logo Design, Stationery Mockups',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_brand_identity.png']
+  },
+  {
     id: 12,
     title: 'Logo & Brand Design',
     category: 'Branding & Design',
@@ -934,180 +1083,31 @@ export const projectsData: Project[] = [
     gallery: ['/assets/images/Portfolio/portfolio_logo_design.png']
   },
   {
-    id: 21,
-    title: 'Bazarway Shop',
-    category: 'eCommerce',
-    description: 'Premier online shop and multi-category retail marketplace offering curated products with fast checkout.',
-    link: '/portfolio/21',
+    id: 1,
+    title: 'Social Media Campaign for E-Commerce Brand',
+    category: 'Digital Marketing',
+    description: 'Increased engagement by 320% and boosted sales through targeted ad campaigns.',
+    link: '/portfolio/1',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/bazarway_store.png',
-    client: 'Bazarway UK Store',
-    date: 'Jan 2026',
-    services: 'Web Development, eCommerce, Retail Portal',
-    projectUrl: 'https://bazaarway.co.uk/shopproducts/',
-    gallery: [
-      '/assets/images/Portfolio/projects/bazarway_store.png',
-      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
-      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
-    ],
-    subtitle: 'Bazarway Retail & Product Shop',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/bazarway_store.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwaystore_mobile.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
-    technologies: [
-      { name: 'WordPress', iconType: 'wordpress' },
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'Bazarway Shop is an expansive eCommerce marketplace featuring custom product filters, instant cart additions, and secure payment integration for online shoppers.',
-    features: [
-      'Multi-category product catalog',
-      'Instant search and filter engine',
-      'Integrated payment gateway',
-      'Mobile-first responsive shopping',
-      'SEO optimized product pages'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'Bazarway Retail', iconType: 'user' },
-      { label: 'Industry', value: 'eCommerce & Retail', iconType: 'globe' },
-      { label: 'Project Type', value: 'Product Shop', iconType: 'code' },
-      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/bazarway_store.png',
-      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
-      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
-    ],
-    results: [
-      { value: '180%', label: 'Product Conversion Boost', iconType: 'trending-up' },
-      { value: '85%', label: 'Mobile Order Growth', iconType: 'shopping-cart' },
-      { value: '98%', label: 'Customer Satisfaction', iconType: 'smile' },
-      { value: '99.9%', label: 'Platform Uptime', iconType: 'check-circle' }
-    ],
-    badge: 'International Project'
+    image: '/assets/images/Portfolio/portfolio_social_media.png',
+    client: 'E-Shop International',
+    date: 'Mar 2026',
+    services: 'Social Media Marketing, Paid Ads',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_social_media.png']
   },
   {
-    id: 22,
-    title: 'Fiori Celebrations',
-    category: 'eCommerce',
-    description: 'Bespoke event floral design, decor booking, and luxury celebration services portal.',
-    link: '/portfolio/22',
+    id: 10,
+    title: 'Lead Generation Campaign',
+    category: 'Digital Marketing',
+    description: 'Generated high-quality leads and improved conversion rate for a real estate client.',
+    link: '/portfolio/10',
     bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
-    client: 'Fiori Celebrations',
-    date: 'Feb 2026',
-    services: 'Web Development, Event Booking, UI/UX Design',
-    projectUrl: 'https://fioricelebrations.com/',
-    gallery: [
-      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
-    ],
-    subtitle: 'Fiori Luxury Event & Floral Platform',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/fioricelebration_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
-    technologies: [
-      { name: 'WordPress', iconType: 'wordpress' },
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'Fiori Celebrations web application showcases elegant floral arrangements, event decor consultation tools, and automated service booking packages.',
-    features: [
-      'Event decor portfolio gallery',
-      'Custom bouquet & package builder',
-      'Online consultation booking',
-      'Mobile responsive design',
-      'Fast page load speeds'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'Fiori Celebrations', iconType: 'user' },
-      { label: 'Industry', value: 'Events & Luxury Decor', iconType: 'globe' },
-      { label: 'Project Type', value: 'Service & Booking Portal', iconType: 'code' },
-      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
-    ],
-    results: [
-      { value: '210%', label: 'Event Booking Enquiries', iconType: 'trending-up' },
-      { value: '75%', label: 'Growth in Direct Sales', iconType: 'shopping-cart' },
-      { value: '99%', label: 'Client Delight Rating', iconType: 'smile' },
-      { value: '100%', label: 'Speed Performance Pass', iconType: 'check-circle' }
-    ],
-    badge: 'International Project'
-  },
-  {
-    id: 23,
-    title: 'Annsha Gifts',
-    category: 'eCommerce',
-    description: 'An online eCommerce gift store specializing in personalized hampers, custom gifts, and luxury celebration packages.',
-    link: '/portfolio/23',
-    bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
-    client: 'Annsha Gifts Store',
-    date: 'Feb 2026',
-    services: 'Web Development, eCommerce, Custom Gift Portal',
-    projectUrl: 'https://annshagifts.com/',
-    gallery: [
-      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
-      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
-      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
-    ],
-    subtitle: 'Annsha Gifts Online eCommerce Store',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/annshagift_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/annshagift_tabletview.png',
-    technologies: [
-      { name: 'WordPress', iconType: 'wordpress' },
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'Annsha Gifts eCommerce portal delivers a seamless shopping experience for custom gift customization, luxury gift hampers, occasion-based filtering, and secure payment checkout.',
-    features: [
-      'Personalized gift hamper customizer',
-      'Occasion & holiday gift category filters',
-      'Integrated WooCommerce payment gateway',
-      'Fast mobile checkout process',
-      'SEO optimized store pages'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'Annsha Gifts', iconType: 'user' },
-      { label: 'Industry', value: 'Gifting & Retail', iconType: 'globe' },
-      { label: 'Project Type', value: 'eCommerce Store', iconType: 'code' },
-      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
-      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
-      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
-    ],
-    results: [
-      { value: '230%', label: 'Online Gift Sales Growth', iconType: 'trending-up' },
-      { value: '88%', label: 'Mobile Order Conversions', iconType: 'shopping-cart' },
-      { value: '99%', label: 'Customer Satisfaction', iconType: 'smile' },
-      { value: '100%', label: 'Store Uptime & Speed', iconType: 'check-circle' }
-    ],
-    badge: 'International Project'
+    image: '/assets/images/Portfolio/portfolio_lead_gen.png',
+    client: 'Prime Realty',
+    date: 'Oct 2025',
+    services: 'Google Ads, Search Engine Marketing, Lead Nurturing',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/portfolio_lead_gen.png']
   }
 ];

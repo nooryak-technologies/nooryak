@@ -605,22 +605,28 @@
 }
 
 .card-international-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 10;
   background: linear-gradient(135deg, #f59e0b, #d97706);
   color: #ffffff;
-  padding: 4px 10px;
-  border-radius: 50px;
+  padding: 5px 12px;
+  border-radius: 100px;
   font-weight: 700;
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.2px;
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
   display: inline-flex;
   align-items: center;
   gap: 4px;
 
   @media (max-width: 767px) {
-    font-size: 9.5px;
-    padding: 3px 7px;
+    bottom: 8px;
+    right: 8px;
+    font-size: 9px;
+    padding: 3px 8px;
   }
 }
 
