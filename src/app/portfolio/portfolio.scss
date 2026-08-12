@@ -1638,9 +1638,11 @@
         justify-content: center;
         transition: all 0.3s ease;
 
-        .tech-svg {
-          width: 22px;
-          height: 22px;
+        .tech-svg,
+        .tech-icon-img {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
           transition: transform 0.3s ease;
         }
       }
@@ -1658,7 +1660,8 @@
           transform: translateY(-3px);
           box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
 
-          .tech-svg {
+          .tech-svg,
+          .tech-icon-img {
             transform: scale(1.1);
           }
         }

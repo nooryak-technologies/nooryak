@@ -6,9 +6,9 @@
 :HL["/_next/static/css/0684f04323f415b9.css","style"]
 :HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css","style"]
-:HL["/_next/static/css/e8aee6159d739f51.css","style"]
+:HL["/_next/static/css/858a47b1362e639b.css","style"]
 :HL["/_next/static/media/why_choose_card_icon_1.52eb52ab.webp","image"]
 :HL["/_next/static/media/why_choose_card_icon_2.8157ce5f.webp","image"]
 :HL["/_next/static/media/why_choose_card_icon_3.d328472b.webp","image"]
 :HL["/_next/static/media/why_choose_card_icon_4.14b828f2.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"fWJy2t2A1WIkf_MSkA5MA"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"BHtpwK-H_xoYmCusrVenu"}

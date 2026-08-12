@@ -242,13 +242,13 @@ export const projectsData: Project[] = [
   },
   {
     id: 6,
-    title: 'KB Enterprises',
+    title: 'KP Enterprises Ecommerce Website',
     category: 'eCommerce',
-    description: 'Kb Enterprises is a Ecommerce Platform To Selling Commercial Machine ',
+    description: 'KP Enterprises is a Ecommerce Platform To Selling Commercial Machine ',
     link: '/portfolio/6',
     bgClass: 'bg-lavender',
     image: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-    client: 'KB Enterprises Ltd',
+    client: 'KP Enterprises Ltd',
     date: 'Oct 2025',
     services: 'Web Development, Database Management',
     projectUrl: 'https://enterpriseskp.in/',
@@ -257,7 +257,7 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/enterprises_tabletview.png',
       '/assets/images/Portfolio/projects/enterprises_mobileview.png'
     ],
-    subtitle: 'KB Enterprises Ecommerce Platform',
+    subtitle: 'KP Enterprises Ecommerce Website',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/enterprises_mobileview.png',
@@ -1048,6 +1048,65 @@ export const projectsData: Project[] = [
       { value: '75%', label: 'Growth in Direct Sales', iconType: 'shopping-cart' },
       { value: '99%', label: 'Client Delight Rating', iconType: 'smile' },
       { value: '100%', label: 'Speed Performance Pass', iconType: 'check-circle' }
+    ],
+    badge: 'International Project'
+  },
+  {
+    id: 23,
+    title: 'Annsha Gifts',
+    category: 'eCommerce',
+    description: 'An online eCommerce gift store specializing in personalized hampers, custom gifts, and luxury celebration packages.',
+    link: '/portfolio/23',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+    client: 'Annsha Gifts Store',
+    date: 'Feb 2026',
+    services: 'Web Development, eCommerce, Custom Gift Portal',
+    projectUrl: 'https://annshagifts.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
+      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
+    ],
+    subtitle: 'Annsha Gifts Online eCommerce Store',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
+    scrollImage: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+    mobileScrollImage: '/assets/images/Portfolio/projects/annshagift_mobileview.png',
+    tabletScrollImage: '/assets/images/Portfolio/projects/annshagift_tabletview.png',
+    technologies: [
+      { name: 'WordPress', iconType: 'wordpress' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' }
+    ],
+    overview: 'Annsha Gifts eCommerce portal delivers a seamless shopping experience for custom gift customization, luxury gift hampers, occasion-based filtering, and secure payment checkout.',
+    features: [
+      'Personalized gift hamper customizer',
+      'Occasion & holiday gift category filters',
+      'Integrated WooCommerce payment gateway',
+      'Fast mobile checkout process',
+      'SEO optimized store pages'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Annsha Gifts', iconType: 'user' },
+      { label: 'Industry', value: 'Gifting & Retail', iconType: 'globe' },
+      { label: 'Project Type', value: 'eCommerce Store', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
+      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
+    ],
+    results: [
+      { value: '230%', label: 'Online Gift Sales Growth', iconType: 'trending-up' },
+      { value: '88%', label: 'Mobile Order Conversions', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Customer Satisfaction', iconType: 'smile' },
+      { value: '100%', label: 'Store Uptime & Speed', iconType: 'check-circle' }
     ],
     badge: 'International Project'
   }

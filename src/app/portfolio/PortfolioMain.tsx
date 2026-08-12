@@ -32,13 +32,20 @@ const INITIAL_ITEMS = 8; // 2 rows * 4 columns
 export default function PortfolioMain() {
   const [activeTab, setActiveTab] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
-  const [visibleCount, setVisibleCount] = useState<number>(INITIAL_ITEMS);
+  const [visibleCount, setVisibleCount] = useState<number>(8);
   const [animateGrid, setAnimateGrid] = useState(false);
+
+  const getInitialItemsCount = () => {
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      return 5;
+    }
+    return 8;
+  };
 
   // Filter projects dynamically when tab changes
   useEffect(() => {
     setAnimateGrid(false);
-    setVisibleCount(INITIAL_ITEMS);
+    setVisibleCount(getInitialItemsCount());
     const timeout = setTimeout(() => {
       if (activeTab === 'All Projects') {
         setFilteredProjects(projectsData);
@@ -56,7 +63,9 @@ export default function PortfolioMain() {
   }, [activeTab]);
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + ITEMS_PER_ROW);
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const increment = isMobile ? 3 : 4;
+    setVisibleCount((prev) => prev + increment);
   };
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
