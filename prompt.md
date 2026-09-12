@@ -1,3 +1,9 @@
+nooryakremote_db_user
+EMe95hIf3gqD3WRy
+
+mongodb+srv://<db_username>:EMe95hIf3gqD3WRy@cluster0.rwve3ln.mongodb.net/?appName=Cluster0 
+
+
 Next.js Pixel-Perfect Prompt
 Social Media Marketing Page — Full Dev Prompt
 Copy and paste into Cursor, Claude Code, v0, or any AI coding tool

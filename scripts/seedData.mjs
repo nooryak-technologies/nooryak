@@ -15,8 +15,10 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/noorya
 
 // Define Schemas (Simplified for Seeding)
 const UserSchema = new mongoose.Schema({
+  name: { type: String, default: 'Administrator' },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  role: { type: String, enum: ['Admin', 'Editor'], default: 'Admin' },
 }, { timestamps: true });
 
 const BlogSchema = new mongoose.Schema({
@@ -166,10 +168,10 @@ async function seed() {
 
     // 2. Seed Admin User
     const adminEmail = 'admin@nooryak.com';
-    const adminPassword = 'admin123';
+    const adminPassword = 'adminpassword';
     const hashedAdminPassword = await bcrypt.hash(adminPassword, 12);
-    await User.create({ email: adminEmail, password: hashedAdminPassword });
-    console.log('✅ Admin User Created: admin@nooryak.com / admin123');
+    await User.create({ name: 'Administrator', email: adminEmail, password: hashedAdminPassword, role: 'Admin' });
+    console.log('✅ Admin User Created: admin@nooryak.com / adminpassword');
 
     // 3. Seed Blogs
     await Blog.insertMany(sampleBlogs);
