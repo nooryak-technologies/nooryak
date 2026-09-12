@@ -217,7 +217,6 @@ export default function EnquiryForm() {
                                     rows={4} 
                                     value={formData.message}
                                     onChange={handleChange}
-                                    required 
                                     placeholder=" "
                                 ></textarea>
                                 <label htmlFor="message">Your Message</label>

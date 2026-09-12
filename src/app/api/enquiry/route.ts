@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     await dbConnect();
     const { name, email, company, service, message, phone, token } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email) {
       return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
     }
 

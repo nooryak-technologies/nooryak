@@ -267,13 +267,12 @@ const ContactFormArea = () => {
 
                                     <div className="col-12">
                                         <div className="form-field">
-                                            <label>How Can We Help You? <span className="required-asterisk">*</span></label>
+                                            <label>How Can We Help You?</label>
                                             <textarea
                                                 name="message"
                                                 placeholder="Tell us about your project or requirement..."
                                                 value={formData.message}
                                                 onChange={handleChange}
-                                                required
                                             ></textarea>
                                         </div>
                                     </div>
