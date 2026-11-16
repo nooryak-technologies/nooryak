@@ -15,7 +15,10 @@ import {
   X,
   CreditCard,
   Check,
-  CheckCircle
+  CheckCircle,
+  Sparkles,
+  Zap,
+  Globe
 } from "lucide-react";
 import "../../app/products/products.scss";
 
@@ -139,23 +142,24 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
       </section>
 
       {/* ========================================================================= */}
-      {/* 2. MAIN PRODUCTS CARDS GRID (Ref Image 1 Desktop & Image 3 Mobile)       */}
+      {/* 2. MAIN PRODUCTS SHOWCASE (Alternating on Laptop, Native Card on Mobile)  */}
       {/* ========================================================================= */}
       <section className="products-grid-section">
         <div className="container-fluid max-w-1450">
-          <div className="row gy-4 gx-3">
+          <div className="row gy-4 gy-lg-5 gx-3">
 
             {/* --------------------------------------------------------------------- */}
-            {/* CARD 1: LAUNCHSHOP (Ecommerce Store Builder)                         */}
+            {/* PRODUCT 1: LAUNCHSHOP (Ecommerce Store Builder)                      */}
+            {/* Laptop: Left Image, Right Content (showcase-image-left)              */}
             {/* --------------------------------------------------------------------- */}
-            <div className="col-12 col-xl-4 col-lg-6">
+            <div className="col-12 product-showcase-col">
               <div
-                className="product-card launchshop-card"
+                className="product-card launchshop-card showcase-image-left"
                 onClick={() => handleProductClick("https://launchshop.in/")}
                 title="Click to view Launchshop product page"
               >
                 <div className="card-inner-split">
-                  {/* Left Column: Info & Actions */}
+                  {/* Content Column */}
                   <div className="card-left-content">
                     <div className="card-top-header">
                       <div className="brand-icon-box orange-box">
@@ -173,8 +177,12 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                       </div>
                     </div>
 
+                    <h3 className="card-tagline d-none d-lg-block">
+                      Build, Launch & Scale Your Online Store
+                    </h3>
+
                     <p className="card-description">
-                      Build, launch, and grow your online store with ease. Create stunning eCommerce stores in minutes.
+                      Build, launch, and grow your online store with ease. Create stunning eCommerce stores in minutes with complete inventory and order management.
                     </p>
 
                     {/* Feature Pills */}
@@ -222,27 +230,33 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                     </div>
                   </div>
 
-                  {/* Right Column: Image Mockup (Desktop vs Mobile Responsive Images) */}
+                  {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      {/* Desktop Mockup Image */}
-                      <Image
-                        src="/assets/images/Product/launchshop.png"
-                        alt="Launchshop eCommerce Store Builder preview mockup"
-                        width={280}
-                        height={360}
-                        className="img-fluid mockup-img d-none d-md-block"
-                        priority
-                      />
-                      {/* Mobile Mockup Image (launchshop_mobile.png) */}
-                      <Image
-                        src="/assets/images/Product/launchshop_mobile.png"
-                        alt="Launchshop eCommerce Store Builder mobile mockup"
-                        width={240}
-                        height={320}
-                        className="img-fluid mockup-img d-block d-md-none"
-                        priority
-                      />
+                      <div className="dashboard-preview-window">
+                        {/* Desktop Mockup Image */}
+                        <Image
+                          src="/assets/images/Product/launchshop.png"
+                          alt="Launchshop eCommerce Store Builder preview mockup"
+                          width={600}
+                          height={400}
+                          className="img-fluid mockup-img d-none d-md-block"
+                          priority
+                        />
+                        {/* Mobile Mockup Image */}
+                        <Image
+                          src="/assets/images/Product/launchshop_mobile.png"
+                          alt="Launchshop eCommerce Store Builder mobile mockup"
+                          width={240}
+                          height={320}
+                          className="img-fluid mockup-img d-block d-md-none"
+                          priority
+                        />
+                      </div>
+                      <div className="floating-showcase-badge badge-orange d-none d-lg-flex">
+                        <Sparkles size={14} />
+                        <span>eCommerce Ready</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -250,16 +264,17 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
             </div>
 
             {/* --------------------------------------------------------------------- */}
-            {/* CARD 2: NOORYAK CRM (Lead Management CRM)                           */}
+            {/* PRODUCT 2: NOORYAK CRM (Lead Management CRM)                         */}
+            {/* Laptop: Left Content, Right Image (showcase-image-right)             */}
             {/* --------------------------------------------------------------------- */}
-            <div className="col-12 col-xl-4 col-lg-6">
+            <div className="col-12 product-showcase-col">
               <div
-                className="product-card crm-card"
+                className="product-card crm-card showcase-image-right"
                 onClick={() => handleProductClick("https://nooryakcrm.com/")}
                 title="Click to view Nooryak CRM product page"
               >
                 <div className="card-inner-split">
-                  {/* Left Column: Info & Actions */}
+                  {/* Content Column */}
                   <div className="card-left-content">
                     <div className="card-top-header">
                       <div className="brand-icon-box green-box">
@@ -277,8 +292,12 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                       </div>
                     </div>
 
+                    <h3 className="card-tagline d-none d-lg-block">
+                      Close Deals Faster & Automate Your Sales Pipeline
+                    </h3>
+
                     <p className="card-description">
-                      Capture leads, automate follow-ups, and close deals faster with our smart CRM platform.
+                      Capture leads, automate follow-ups, and close deals faster with our smart CRM platform designed for modern sales and marketing teams.
                     </p>
 
                     {/* Feature Pills */}
@@ -326,27 +345,33 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                     </div>
                   </div>
 
-                  {/* Right Column: Image Mockup (Desktop vs Mobile Responsive Images) */}
+                  {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      {/* Desktop Mockup Image */}
-                      <Image
-                        src="/assets/images/Product/nooryakcrm.png"
-                        alt="Nooryak CRM Lead Management preview mockup"
-                        width={280}
-                        height={360}
-                        className="img-fluid mockup-img d-none d-md-block"
-                        priority
-                      />
-                      {/* Mobile Mockup Image (crm_dashboard_mobile.png) */}
-                      <Image
-                        src="/assets/images/Product/crm_dashboard_mobile.png"
-                        alt="Nooryak CRM mobile dashboard mockup"
-                        width={240}
-                        height={320}
-                        className="img-fluid mockup-img d-block d-md-none"
-                        priority
-                      />
+                      <div className="dashboard-preview-window">
+                        {/* Desktop Mockup Image */}
+                        <Image
+                          src="/assets/images/Product/nooryakcrm.png"
+                          alt="Nooryak CRM Lead Management preview mockup"
+                          width={600}
+                          height={400}
+                          className="img-fluid mockup-img d-none d-md-block"
+                          priority
+                        />
+                        {/* Mobile Mockup Image */}
+                        <Image
+                          src="/assets/images/Product/crm_dashboard_mobile.png"
+                          alt="Nooryak CRM mobile dashboard mockup"
+                          width={240}
+                          height={320}
+                          className="img-fluid mockup-img d-block d-md-none"
+                          priority
+                        />
+                      </div>
+                      <div className="floating-showcase-badge badge-green d-none d-lg-flex">
+                        <Zap size={14} />
+                        <span>Smart Automation</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -354,16 +379,17 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
             </div>
 
             {/* --------------------------------------------------------------------- */}
-            {/* CARD 3: SAAS BILLING & INVENTORY POS                                 */}
+            {/* PRODUCT 3: SAAS BILLING & INVENTORY POS                              */}
+            {/* Laptop: Left Image, Right Content (showcase-image-left)              */}
             {/* --------------------------------------------------------------------- */}
-            <div className="col-12 col-xl-4 col-lg-6">
+            <div className="col-12 product-showcase-col">
               <div
-                className="product-card pos-card"
+                className="product-card pos-card showcase-image-left"
                 onClick={() => handleProductClick("/coming-soon")}
                 title="Click to view SaaS POS product page"
               >
                 <div className="card-inner-split">
-                  {/* Left Column: Info & Actions */}
+                  {/* Content Column */}
                   <div className="card-left-content">
                     <div className="card-top-header">
                       <div className="brand-icon-box blue-box">
@@ -375,8 +401,12 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                       </div>
                     </div>
 
+                    <h3 className="card-tagline d-none d-lg-block">
+                      Streamline Retail Billing, Stock & Multi-Store Operations
+                    </h3>
+
                     <p className="card-description">
-                      Manage billing, inventory, sales, and customers in one powerful platform. Perfect for retail stores and wholesalers.
+                      Manage billing, inventory, sales, and customers in one powerful platform. Perfect for retail stores, supermarkets, and wholesale businesses.
                     </p>
 
                     {/* Feature Pills */}
@@ -424,27 +454,239 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                     </div>
                   </div>
 
-                  {/* Right Column: Image Mockup (Desktop vs Mobile Responsive Images) */}
+                  {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      {/* Desktop Mockup Image */}
-                      <Image
-                        src="/assets/images/Product/invoicegenerator.png"
-                        alt="SaaS Billing & POS Invoice Generator preview mockup"
-                        width={280}
-                        height={360}
-                        className="img-fluid mockup-img d-none d-md-block"
-                        priority
-                      />
-                      {/* Mobile Mockup Image (pos_dashboard_mobile.png) */}
-                      <Image
-                        src="/assets/images/Product/pos_dashboard_mobile.png"
-                        alt="SaaS Billing & POS mobile dashboard mockup"
-                        width={240}
-                        height={320}
-                        className="img-fluid mockup-img d-block d-md-none"
-                        priority
-                      />
+                      <div className="dashboard-preview-window">
+                        {/* Desktop Mockup Image */}
+                        <Image
+                          src="/assets/images/Product/invoicegenerator.png"
+                          alt="SaaS Billing & POS Invoice Generator preview mockup"
+                          width={600}
+                          height={400}
+                          className="img-fluid mockup-img d-none d-md-block"
+                          priority
+                        />
+                        {/* Mobile Mockup Image */}
+                        <Image
+                          src="/assets/images/Product/pos_dashboard_mobile.png"
+                          alt="SaaS Billing & POS mobile dashboard mockup"
+                          width={240}
+                          height={320}
+                          className="img-fluid mockup-img d-block d-md-none"
+                          priority
+                        />
+                      </div>
+                      <div className="floating-showcase-badge badge-blue d-none d-lg-flex">
+                        <CreditCard size={14} />
+                        <span>Retail & POS Suite</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* --------------------------------------------------------------------- */}
+            {/* PRODUCT 4: SAAS RESELLING (White-Label Solution)                     */}
+            {/* Laptop: Left Content, Right Image (showcase-image-right)             */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="col-12 product-showcase-col">
+              <div
+                className="product-card reselling-card showcase-image-right"
+                onClick={() => handleProductClick("/coming-soon")}
+                title="Click to view SaaS Reselling product page"
+              >
+                <div className="card-inner-split">
+                  {/* Content Column */}
+                  <div className="card-left-content">
+                    <div className="card-top-header">
+                      <div className="brand-icon-box purple-box">
+                        <Image
+                          src="/assets/images/Product/share_linklogo.png"
+                          alt="SaaS Reselling White-Label logo"
+                          width={32}
+                          height={32}
+                          className="brand-logo-img"
+                        />
+                      </div>
+                      <div className="title-group">
+                        <h2 className="product-title">SaaS Reselling</h2>
+                        <span className="product-category purple-text">White-Label SaaS Platform</span>
+                      </div>
+                    </div>
+
+                    <h3 className="card-tagline d-none d-lg-block">
+                      Sell Turnkey White-Label Software Under Your Own Brand
+                    </h3>
+
+                    <p className="card-description">
+                      Start your own software business today. Resell fully-managed SaaS products under your brand name, set your own pricing, and keep 100% of your customer revenue.
+                    </p>
+
+                    {/* Feature Pills */}
+                    <div className="feature-pills-grid">
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">100% White-Label</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Custom Domain & Brand</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Turnkey SaaS Setup</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Keep 100% Profits</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="card-actions-row">
+                      <button
+                        type="button"
+                        className="btn-primary-pill btn-purple"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleProductClick("/coming-soon");
+                        }}
+                      >
+                        <span>Explore SaaS Reselling</span>
+                        <ArrowRight size={16} />
+                      </button>
+
+                      <button
+                        type="button"
+                        className="btn-secondary-pill"
+                        onClick={(e) => handleOpenDemo("SaaS Reselling", e)}
+                      >
+                        <Calendar size={15} />
+                        <span>Book a Demo</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Image Mockup Column */}
+                  <div className="card-right-mockup">
+                    <div className="mockup-img-container">
+                      <div className="dashboard-preview-window">
+                        {/* Widescreen Reselling Dashboard Mockup */}
+                        <Image
+                          src="/assets/images/Product/saasreselling.png"
+                          alt="White-Label SaaS Reselling Dashboard preview mockup"
+                          width={700}
+                          height={380}
+                          className="img-fluid mockup-img"
+                          priority
+                        />
+                      </div>
+                      <div className="floating-showcase-badge badge-purple d-none d-lg-flex">
+                        <Layers size={14} />
+                        <span>100% White-Label</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* --------------------------------------------------------------------- */}
+            {/* PRODUCT 5: WEBSITE BUILDER (Instant Website Builder)                 */}
+            {/* Laptop: Left Image, Right Content (showcase-image-left)              */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="col-12 product-showcase-col">
+              <div
+                className="product-card builder-card showcase-image-left"
+                onClick={() => handleProductClick("/coming-soon")}
+                title="Click to view Website Builder product page"
+              >
+                <div className="card-inner-split">
+                  {/* Content Column */}
+                  <div className="card-left-content">
+                    <div className="card-top-header">
+                      <div className="brand-icon-box indigo-box">
+                        <Globe size={24} color="#4F46E5" strokeWidth={2.5} />
+                      </div>
+                      <div className="title-group">
+                        <h2 className="product-title">Website Builder</h2>
+                        <span className="product-category indigo-text">Instant Website Builder</span>
+                      </div>
+                    </div>
+
+                    <h3 className="card-tagline d-none d-lg-block">
+                      Select a Theme & Launch Your Business in 2 Minutes
+                    </h3>
+
+                    <p className="card-description">
+                      Launch high-converting, mobile-ready websites for your business in just 2 minutes. Pick from designer themes, customize with an intuitive visual editor, and go live effortlessly.
+                    </p>
+
+                    {/* Feature Pills */}
+                    <div className="feature-pills-grid">
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">2-Minute Instant Launch</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Ready-Made Themes</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Drag & Drop Builder</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Fast Cloud Hosting</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="card-actions-row">
+                      <button
+                        type="button"
+                        className="btn-primary-pill btn-indigo"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleProductClick("/coming-soon");
+                        }}
+                      >
+                        <span>Explore Website Builder</span>
+                        <ArrowRight size={16} />
+                      </button>
+
+                      <button
+                        type="button"
+                        className="btn-secondary-pill"
+                        onClick={(e) => handleOpenDemo("Website Builder", e)}
+                      >
+                        <Calendar size={15} />
+                        <span>Book a Demo</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Image Mockup Column */}
+                  <div className="card-right-mockup">
+                    <div className="mockup-img-container">
+                      <div className="dashboard-preview-window">
+                        {/* Widescreen Website Builder Mockup */}
+                        <Image
+                          src="/assets/images/Product/websitebuilder.png"
+                          alt="Website Builder Theme & Live Launch preview mockup"
+                          width={700}
+                          height={380}
+                          className="img-fluid mockup-img"
+                          priority
+                        />
+                      </div>
+                      <div className="floating-showcase-badge badge-indigo d-none d-lg-flex">
+                        <Rocket size={14} />
+                        <span>2-Min Instant Launch</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -672,6 +914,8 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                       <option value="Launchshop">Launchshop (Ecommerce Builder)</option>
                       <option value="Nooryak CRM">Nooryak CRM (Lead Management)</option>
                       <option value="SaaS Billing & POS">SaaS Billing & POS Platform</option>
+                      <option value="SaaS Reselling">SaaS Reselling (White-Label Solution)</option>
+                      <option value="Website Builder">Website Builder (Instant 2-Min Launch)</option>
                     </select>
                   </div>
 
