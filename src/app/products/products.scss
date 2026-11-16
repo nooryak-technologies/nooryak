@@ -136,12 +136,12 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
 
-      .mockup-img {
-        transform: scale(1.03);
-      }
+      .mockup-img-container {
+        box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 
-      .dashboard-preview-window {
-        box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.06);
+        .mockup-img {
+          transform: scale(1.035);
+        }
       }
     }
 
@@ -199,14 +199,6 @@
         position: relative;
         transition: transform 0.35s ease;
 
-        .dashboard-preview-window {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.35s ease;
-        }
-
         .mockup-img {
           width: 100%;
           max-width: 100%;
@@ -233,11 +225,6 @@
 
         .mockup-img-container {
           max-width: 220px;
-
-          .dashboard-preview-window {
-            border-radius: 10px;
-            overflow: hidden;
-          }
 
           .mockup-img {
             max-height: 280px;
@@ -354,76 +341,32 @@
       }
 
       .card-right-mockup {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 52%;
+        max-width: 52%;
         justify-content: center;
 
         .mockup-img-container {
+          width: 100%;
           max-width: 100%;
+          height: 380px;
           margin: 0 auto;
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: 18px;
+          overflow: hidden;
+          box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
 
-          .dashboard-preview-window {
-            border-radius: 18px;
-            background: #ffffff;
-            overflow: hidden;
-            box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+          .mockup-img {
+            width: 100%;
+            height: 100%;
             max-width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .mockup-img {
-              max-height: 380px;
-              width: 100%;
-              object-fit: contain;
-              filter: none;
-            }
-          }
-
-          .floating-showcase-badge {
-            position: absolute;
-            bottom: -12px;
-            right: 20px;
-            border-radius: 999px;
-            background: #ffffff;
-            padding: 6px 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 11.5px;
-            font-weight: 700;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-            border: 1.5px solid;
-            z-index: 3;
-            white-space: nowrap;
-
-            &.badge-orange {
-              color: #FF5216;
-              border-color: #FFE3D6;
-            }
-
-            &.badge-green {
-              color: #00B67A;
-              border-color: #D2F4E6;
-            }
-
-            &.badge-blue {
-              color: #1A66FF;
-              border-color: #D9E5FF;
-            }
-
-            &.badge-purple {
-              color: #7C3AED;
-              border-color: #EDE9FE;
-            }
-
-            &.badge-indigo {
-              color: #4F46E5;
-              border-color: #E0E7FF;
-            }
+            max-height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            filter: none;
+            display: block;
+            transition: transform 0.4s ease;
           }
         }
       }
@@ -450,11 +393,11 @@
       }
 
       .card-right-mockup {
-        flex: 0 0 51%;
-        max-width: 51%;
+        flex: 0 0 52%;
+        max-width: 52%;
 
-        .mockup-img-container .dashboard-preview-window .mockup-img {
-          max-height: 400px;
+        .mockup-img-container {
+          height: 400px;
         }
       }
     }
@@ -467,22 +410,12 @@
       .card-inner-split {
         flex-direction: row-reverse;
       }
-
-      .floating-showcase-badge {
-        right: 24px;
-        left: auto;
-      }
     }
 
     /* showcase-image-right: Content on LEFT, Mockup Image on RIGHT */
     .product-card.showcase-image-right {
       .card-inner-split {
         flex-direction: row;
-      }
-
-      .floating-showcase-badge {
-        left: 24px;
-        right: auto;
       }
     }
   }

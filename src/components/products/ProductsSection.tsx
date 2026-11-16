@@ -233,30 +233,24 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                   {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      <div className="dashboard-preview-window">
-                        {/* Desktop Mockup Image */}
-                        <Image
-                          src="/assets/images/Product/launchshop.png"
-                          alt="Launchshop eCommerce Store Builder preview mockup"
-                          width={600}
-                          height={400}
-                          className="img-fluid mockup-img d-none d-md-block"
-                          priority
-                        />
-                        {/* Mobile Mockup Image */}
-                        <Image
-                          src="/assets/images/Product/launchshop_mobile.png"
-                          alt="Launchshop eCommerce Store Builder mobile mockup"
-                          width={240}
-                          height={320}
-                          className="img-fluid mockup-img d-block d-md-none"
-                          priority
-                        />
-                      </div>
-                      <div className="floating-showcase-badge badge-orange d-none d-lg-flex">
-                        <Sparkles size={14} />
-                        <span>eCommerce Ready</span>
-                      </div>
+                      {/* Desktop Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/launchshop.png"
+                        alt="Launchshop eCommerce Store Builder preview mockup"
+                        width={700}
+                        height={450}
+                        className="img-fluid mockup-img d-none d-md-block"
+                        priority
+                      />
+                      {/* Mobile Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/launchshop_mobile.png"
+                        alt="Launchshop eCommerce Store Builder mobile mockup"
+                        width={240}
+                        height={320}
+                        className="img-fluid mockup-img d-block d-md-none"
+                        priority
+                      />
                     </div>
                   </div>
                 </div>
@@ -348,30 +342,24 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                   {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      <div className="dashboard-preview-window">
-                        {/* Desktop Mockup Image */}
-                        <Image
-                          src="/assets/images/Product/nooryakcrm.png"
-                          alt="Nooryak CRM Lead Management preview mockup"
-                          width={600}
-                          height={400}
-                          className="img-fluid mockup-img d-none d-md-block"
-                          priority
-                        />
-                        {/* Mobile Mockup Image */}
-                        <Image
-                          src="/assets/images/Product/crm_dashboard_mobile.png"
-                          alt="Nooryak CRM mobile dashboard mockup"
-                          width={240}
-                          height={320}
-                          className="img-fluid mockup-img d-block d-md-none"
-                          priority
-                        />
-                      </div>
-                      <div className="floating-showcase-badge badge-green d-none d-lg-flex">
-                        <Zap size={14} />
-                        <span>Smart Automation</span>
-                      </div>
+                      {/* Desktop Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/nooryakcrm.png"
+                        alt="Nooryak CRM Lead Management preview mockup"
+                        width={700}
+                        height={450}
+                        className="img-fluid mockup-img d-none d-md-block"
+                        priority
+                      />
+                      {/* Mobile Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/crm_dashboard_mobile.png"
+                        alt="Nooryak CRM mobile dashboard mockup"
+                        width={240}
+                        height={320}
+                        className="img-fluid mockup-img d-block d-md-none"
+                        priority
+                      />
                     </div>
                   </div>
                 </div>
@@ -385,7 +373,7 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
             <div className="col-12 product-showcase-col">
               <div
                 className="product-card pos-card showcase-image-left"
-                onClick={() => handleProductClick("/coming-soon")}
+                onClick={() => handleProductClick("https://billing.nooryak.com/")}
                 title="Click to view SaaS POS product page"
               >
                 <div className="card-inner-split">
@@ -436,7 +424,7 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                         className="btn-primary-pill btn-blue"
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleProductClick("/coming-soon");
+                          handleProductClick("https://billing.nooryak.com/");
                         }}
                       >
                         <span>Explore POS Platform</span>
@@ -457,30 +445,24 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                   {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      <div className="dashboard-preview-window">
-                        {/* Desktop Mockup Image */}
-                        <Image
-                          src="/assets/images/Product/invoicegenerator.png"
-                          alt="SaaS Billing & POS Invoice Generator preview mockup"
-                          width={600}
-                          height={400}
-                          className="img-fluid mockup-img d-none d-md-block"
-                          priority
-                        />
-                        {/* Mobile Mockup Image */}
-                        <Image
-                          src="/assets/images/Product/pos_dashboard_mobile.png"
-                          alt="SaaS Billing & POS mobile dashboard mockup"
-                          width={240}
-                          height={320}
-                          className="img-fluid mockup-img d-block d-md-none"
-                          priority
-                        />
-                      </div>
-                      <div className="floating-showcase-badge badge-blue d-none d-lg-flex">
-                        <CreditCard size={14} />
-                        <span>Retail & POS Suite</span>
-                      </div>
+                      {/* Desktop Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/invoicegenerator.png"
+                        alt="SaaS Billing & POS Invoice Generator preview mockup"
+                        width={700}
+                        height={450}
+                        className="img-fluid mockup-img d-none d-md-block"
+                        priority
+                      />
+                      {/* Mobile Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/pos_dashboard_mobile.png"
+                        alt="SaaS Billing & POS mobile dashboard mockup"
+                        width={240}
+                        height={320}
+                        className="img-fluid mockup-img d-block d-md-none"
+                        priority
+                      />
                     </div>
                   </div>
                 </div>
@@ -494,7 +476,7 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
             <div className="col-12 product-showcase-col">
               <div
                 className="product-card reselling-card showcase-image-right"
-                onClick={() => handleProductClick("/coming-soon")}
+                onClick={() => handleProductClick("https://saasreselling.com/")}
                 title="Click to view SaaS Reselling product page"
               >
                 <div className="card-inner-split">
@@ -551,7 +533,7 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                         className="btn-primary-pill btn-purple"
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleProductClick("/coming-soon");
+                          handleProductClick("https://saasreselling.com/");
                         }}
                       >
                         <span>Explore SaaS Reselling</span>
@@ -572,21 +554,15 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                   {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      <div className="dashboard-preview-window">
-                        {/* Widescreen Reselling Dashboard Mockup */}
-                        <Image
-                          src="/assets/images/Product/saasreselling.png"
-                          alt="White-Label SaaS Reselling Dashboard preview mockup"
-                          width={700}
-                          height={380}
-                          className="img-fluid mockup-img"
-                          priority
-                        />
-                      </div>
-                      <div className="floating-showcase-badge badge-purple d-none d-lg-flex">
-                        <Layers size={14} />
-                        <span>100% White-Label</span>
-                      </div>
+                      {/* Widescreen Reselling Dashboard Mockup */}
+                      <Image
+                        src="/assets/images/Product/saasreselling.png"
+                        alt="White-Label SaaS Reselling Dashboard preview mockup"
+                        width={800}
+                        height={450}
+                        className="img-fluid mockup-img"
+                        priority
+                      />
                     </div>
                   </div>
                 </div>
@@ -600,7 +576,7 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
             <div className="col-12 product-showcase-col">
               <div
                 className="product-card builder-card showcase-image-left"
-                onClick={() => handleProductClick("/coming-soon")}
+                onClick={() => handleProductClick("https://websitebuilder.saasreselling.com/")}
                 title="Click to view Website Builder product page"
               >
                 <div className="card-inner-split">
@@ -651,7 +627,7 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                         className="btn-primary-pill btn-indigo"
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleProductClick("/coming-soon");
+                          handleProductClick("https://websitebuilder.saasreselling.com/");
                         }}
                       >
                         <span>Explore Website Builder</span>
@@ -672,21 +648,15 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                   {/* Image Mockup Column */}
                   <div className="card-right-mockup">
                     <div className="mockup-img-container">
-                      <div className="dashboard-preview-window">
-                        {/* Widescreen Website Builder Mockup */}
-                        <Image
-                          src="/assets/images/Product/websitebuilder.png"
-                          alt="Website Builder Theme & Live Launch preview mockup"
-                          width={700}
-                          height={380}
-                          className="img-fluid mockup-img"
-                          priority
-                        />
-                      </div>
-                      <div className="floating-showcase-badge badge-indigo d-none d-lg-flex">
-                        <Rocket size={14} />
-                        <span>2-Min Instant Launch</span>
-                      </div>
+                      {/* Widescreen Website Builder Mockup */}
+                      <Image
+                        src="/assets/images/Product/websitebuilder.png"
+                        alt="Website Builder Theme & Live Launch preview mockup"
+                        width={800}
+                        height={450}
+                        className="img-fluid mockup-img"
+                        priority
+                      />
                     </div>
                   </div>
                 </div>
