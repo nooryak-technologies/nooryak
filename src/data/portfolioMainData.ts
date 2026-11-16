@@ -52,7 +52,6 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/redpandscreenslide/slide5.png'
     ],
     subtitle: 'Red Panda Vacations',
-    badge: 'International Project',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/redpanda.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/redpanda_mobil.png',
@@ -227,6 +226,7 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
     ],
     subtitle: 'Fun Kiddoz Ecommerce',
+    badge: 'International Project',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/funkiddoz_mobile.png',
@@ -284,6 +284,7 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
     ],
     subtitle: 'Limras Gallery Ecommerce',
+    badge: 'International Project',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/limrasgallermobileviw.png',
@@ -577,7 +578,6 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/armangroup/slide5.png'
     ],
     subtitle: 'Arman Group Website',
-    badge: 'International Project',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/armangroup.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/arman_group.png',
@@ -694,6 +694,7 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/radientinfotech/slide5.png'
     ],
     subtitle: 'Radient  Website',
+    badge: 'International Project',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
     scrollImage: '/assets/images/Portfolio/projects/radiantconsultancy.png',
     mobileScrollImage: '/assets/images/Portfolio/projects/radient_mobile.png',

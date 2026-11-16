@@ -134,7 +134,7 @@ export default function PortfolioMain() {
                 {/* Main Heading */}
                 <h1 className="portfolio-hero-title">
                   Our Work. <br />
-                  <span className="orange-highlight">Real Impact.</span>
+                  <span className="orange-highlight">Real </span>Impact.
                 </h1>
 
                 {/* Subtitle */}
