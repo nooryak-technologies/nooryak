@@ -305,41 +305,47 @@ export default function PortfolioMain() {
                       }
                     }}
                   >
-                    {/* Visual Mockup Container (Laptop + Mobile Mockup) */}
+                    {/* Visual Mockup Container (Laptop + Mobile Mockup with Full Background) */}
                     <div className="card-mockup-wrapper">
-                      {/* Laptop Mockup */}
-                      <div className="mockup-laptop">
-                        <div className="laptop-camera-dot"></div>
-                        <div className="laptop-screen-frame">
-                          <img
-                            src={project.scrollImage || project.image}
-                            alt={`${project.title} laptop view`}
-                            className="laptop-screen-content"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="laptop-chin">
-                          <div className="laptop-chin-notch"></div>
-                        </div>
-                      </div>
-
-                      {/* Mobile Mockup (Foreground overlapping on bottom right) */}
-                      {(project.mobileScrollImage || (project.category === 'App Development' && project.image)) && (
-                        <div className="mockup-mobile">
-                          <div className="mobile-speaker"></div>
-                          <div className="mobile-screen-frame">
+                      <div className="device-scene">
+                        {/* Realistic Laptop Mockup */}
+                        <div className="mockup-laptop">
+                          <div className="laptop-screen-frame">
+                            <div className="laptop-camera-dot"></div>
                             <img
-                              src={project.mobileScrollImage || project.image}
-                              alt={`${project.title} mobile view`}
-                              className="mobile-screen-content"
+                              src={project.scrollImage || project.image}
+                              alt={`${project.title} laptop view`}
+                              className="laptop-screen-content"
                               loading="lazy"
                             />
                           </div>
+                          {/* Keyboard Base Chassis */}
+                          <div className="laptop-keyboard-chassis">
+                            <div className="chassis-notch"></div>
+                          </div>
+                          {/* Laptop Table Shadow */}
+                          <div className="laptop-table-shadow"></div>
                         </div>
-                      )}
+
+                        {/* Mobile Phone Mockup (Foreground overlapping on bottom right) */}
+                        {(project.mobileScrollImage || (project.category === 'App Development' && project.image)) && (
+                          <div className="mockup-mobile">
+                            <div className="mobile-screen-frame">
+                              <div className="mobile-dynamic-island"></div>
+                              <img
+                                src={project.mobileScrollImage || project.image}
+                                alt={`${project.title} mobile view`}
+                                className="mobile-screen-content"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div className="mobile-table-shadow"></div>
+                          </div>
+                        )}
+                      </div>
                     </div>
 
-                    {/* Content & Arrow Details */}
+                    {/* Content & Arrow Details (Vertically Centered) */}
                     <div className="card-details-wrapper">
                       <div className="card-text-group">
                         <h4 className="card-project-title">

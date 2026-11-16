@@ -439,9 +439,24 @@
       border-color: #FFC4AE;
       box-shadow: 0 18px 45px rgba(255, 82, 22, 0.12);
     }
+
+    @media (min-width: 992px) {
+      .card-right-mockup .mockup-img-container {
+        height: auto;
+        border-radius: 18px;
+
+        .mockup-img {
+          width: 100%;
+          height: auto;
+          max-height: 430px;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
   }
 
-  /* CARD 2: NOORYAK CRM STYLES */
+  /* CARD 2: NOORYAK CRM STYLES (Full cover as requested) */
   .crm-card {
     background-color: #F0FAF6;
     border: 1.5px solid #D2F4E6;
@@ -451,9 +466,32 @@
       border-color: #A3E9CD;
       box-shadow: 0 18px 45px rgba(0, 182, 122, 0.12);
     }
+
+    @media (min-width: 992px) {
+      .card-right-mockup .mockup-img-container {
+        height: 390px;
+        max-height: 390px;
+        border-radius: 18px;
+
+        .mockup-img {
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .card-right-mockup .mockup-img-container {
+        height: 410px;
+        max-height: 410px;
+      }
+    }
   }
 
-  /* CARD 3: SAAS POS STYLES */
+  /* CARD 3: SAAS POS STYLES (Full cover as requested) */
   .pos-card {
     background-color: #F2F6FF;
     border: 1.5px solid #D9E5FF;
@@ -462,6 +500,29 @@
     &:hover {
       border-color: #B5CEFF;
       box-shadow: 0 18px 45px rgba(26, 102, 255, 0.12);
+    }
+
+    @media (min-width: 992px) {
+      .card-right-mockup .mockup-img-container {
+        height: 390px;
+        max-height: 390px;
+        border-radius: 18px;
+
+        .mockup-img {
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .card-right-mockup .mockup-img-container {
+        height: 410px;
+        max-height: 410px;
+      }
     }
   }
 
@@ -475,6 +536,21 @@
       border-color: #DDD6FE;
       box-shadow: 0 18px 45px rgba(124, 58, 237, 0.12);
     }
+
+    @media (min-width: 992px) {
+      .card-right-mockup .mockup-img-container {
+        height: auto;
+        border-radius: 18px;
+
+        .mockup-img {
+          width: 100%;
+          height: auto;
+          max-height: 430px;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
   }
 
   /* CARD 5: WEBSITE BUILDER STYLES */
@@ -486,6 +562,21 @@
     &:hover {
       border-color: #C7D2FE;
       box-shadow: 0 18px 45px rgba(79, 70, 229, 0.12);
+    }
+
+    @media (min-width: 992px) {
+      .card-right-mockup .mockup-img-container {
+        height: auto;
+        border-radius: 18px;
+
+        .mockup-img {
+          width: 100%;
+          height: auto;
+          max-height: 430px;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
     }
   }
 
