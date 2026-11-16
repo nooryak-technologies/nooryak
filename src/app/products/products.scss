@@ -545,9 +545,7 @@
         color: #111827;
         margin: 0;
         line-height: 1.2;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
 
         @media (max-width: 576px) {
           font-size: 16px;
@@ -559,9 +557,10 @@
         font-weight: 700;
         margin-top: 1px;
         display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        line-height: 1.25;
 
         &.orange-text {
           color: #FF5216;
@@ -612,7 +611,7 @@
     margin-bottom: 22px;
 
     @media (max-width: 576px) {
-      gap: 5px;
+      gap: 6px;
       margin-bottom: 14px;
     }
 
@@ -620,7 +619,7 @@
       background: #ffffff;
       border: 1.5px solid #E5E7EB;
       border-radius: 999px;
-      padding: 6px 12px;
+      padding: 6px 10px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -628,8 +627,9 @@
       min-width: 0;
 
       @media (max-width: 576px) {
-        padding: 4px 6px;
+        padding: 5px 6px;
         gap: 4px;
+        border-radius: 12px;
       }
 
       .pill-check {
@@ -673,15 +673,18 @@
       }
 
       .pill-text {
-        font-size: 11.5px;
+        font-size: 11px;
         font-weight: 600;
         color: #374151;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        line-height: 1.2;
+        word-break: normal;
 
         @media (max-width: 576px) {
           font-size: 9.5px;
+          line-height: 1.15;
         }
       }
     }

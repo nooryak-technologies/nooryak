@@ -29,7 +29,7 @@ interface ProductsSectionProps {
 export default function ProductsSection({ isPage = true }: ProductsSectionProps) {
   const [mounted, setMounted] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState("Launchshop");
+  const [selectedProduct, setSelectedProduct] = useState("SaaS Reselling");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -149,12 +149,121 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
           <div className="row gy-4 gy-lg-5 gx-3">
 
             {/* --------------------------------------------------------------------- */}
-            {/* PRODUCT 1: LAUNCHSHOP (Ecommerce Store Builder)                      */}
+            {/* PRODUCT 1: SAAS RESELLING (White-Label Solution)                     */}
             {/* Laptop: Left Image, Right Content (showcase-image-left)              */}
             {/* --------------------------------------------------------------------- */}
             <div className="col-12 product-showcase-col">
               <div
-                className="product-card launchshop-card showcase-image-left"
+                className="product-card reselling-card showcase-image-left"
+                onClick={() => handleProductClick("https://saasreselling.com/")}
+                title="Click to view SaaS Reselling product page"
+              >
+                <div className="card-inner-split">
+                  {/* Content Column */}
+                  <div className="card-left-content">
+                    <div className="card-top-header">
+                      <div className="brand-icon-box purple-box">
+                        <Image
+                          src="/assets/images/Product/share_linklogo.png"
+                          alt="SaaS Reselling White-Label logo"
+                          width={32}
+                          height={32}
+                          className="brand-logo-img"
+                        />
+                      </div>
+                      <div className="title-group">
+                        <h2 className="product-title">SaaS Reselling</h2>
+                        <span className="product-category purple-text">White-Label SaaS Platform</span>
+                      </div>
+                    </div>
+
+                    <h3 className="card-tagline d-none d-lg-block">
+                      Sell Turnkey White-Label Software Under Your Own Brand
+                    </h3>
+
+                    <p className="card-description">
+                      Start your own software business today. Resell fully-managed SaaS products under your brand name, set your own pricing, and keep 100% of your customer revenue.
+                    </p>
+
+                    {/* Feature Pills */}
+                    <div className="feature-pills-grid">
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">100% White-Label</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Custom Domain & Brand</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Turnkey SaaS Setup</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Keep 100% Profits</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="card-actions-row">
+                      <button
+                        type="button"
+                        className="btn-primary-pill btn-purple"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleProductClick("https://saasreselling.com/");
+                        }}
+                      >
+                        <span>Explore SaaS Reselling</span>
+                        <ArrowRight size={16} />
+                      </button>
+
+                      <button
+                        type="button"
+                        className="btn-secondary-pill"
+                        onClick={(e) => handleOpenDemo("SaaS Reselling", e)}
+                      >
+                        <Calendar size={15} />
+                        <span>Book a Demo</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Image Mockup Column */}
+                  <div className="card-right-mockup">
+                    <div className="mockup-img-container">
+                      {/* Desktop Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/saasreselling.png"
+                        alt="White-Label SaaS Reselling Dashboard preview mockup"
+                        width={800}
+                        height={450}
+                        className="img-fluid mockup-img d-none d-md-block"
+                        priority
+                      />
+                      {/* Mobile Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/saasresellingmobile.png"
+                        alt="White-Label SaaS Reselling mobile mockup"
+                        width={240}
+                        height={320}
+                        className="img-fluid mockup-img d-block d-md-none"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* --------------------------------------------------------------------- */}
+            {/* PRODUCT 2: LAUNCHSHOP (Ecommerce Store Builder)                      */}
+            {/* Laptop: Left Content, Right Image (showcase-image-right)             */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="col-12 product-showcase-col">
+              <div
+                className="product-card launchshop-card showcase-image-right"
                 onClick={() => handleProductClick("https://launchshop.in/")}
                 title="Click to view Launchshop product page"
               >
@@ -258,7 +367,110 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
             </div>
 
             {/* --------------------------------------------------------------------- */}
-            {/* PRODUCT 2: NOORYAK CRM (Lead Management CRM)                         */}
+            {/* PRODUCT 3: WEBSITE BUILDER (Instant Website Builder)                 */}
+            {/* Laptop: Left Image, Right Content (showcase-image-left)              */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="col-12 product-showcase-col">
+              <div
+                className="product-card builder-card showcase-image-left"
+                onClick={() => handleProductClick("https://websitebuilder.saasreselling.com/")}
+                title="Click to view Website Builder product page"
+              >
+                <div className="card-inner-split">
+                  {/* Content Column */}
+                  <div className="card-left-content">
+                    <div className="card-top-header">
+                      <div className="brand-icon-box indigo-box">
+                        <Globe size={24} color="#4F46E5" strokeWidth={2.5} />
+                      </div>
+                      <div className="title-group">
+                        <h2 className="product-title">Website Builder</h2>
+                        <span className="product-category indigo-text">Instant Website Builder</span>
+                      </div>
+                    </div>
+
+                    <h3 className="card-tagline d-none d-lg-block">
+                      Select a Theme & Launch Your Business in 2 Minutes
+                    </h3>
+
+                    <p className="card-description">
+                      Launch high-converting, mobile-ready websites for your business in just 2 minutes. Pick from designer themes, customize with an intuitive visual editor, and go live effortlessly.
+                    </p>
+
+                    {/* Feature Pills */}
+                    <div className="feature-pills-grid">
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">2-Minute Instant Launch</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Ready-Made Themes</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Drag & Drop Builder</span>
+                      </div>
+                      <div className="feature-pill">
+                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
+                        <span className="pill-text">Fast Cloud Hosting</span>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="card-actions-row">
+                      <button
+                        type="button"
+                        className="btn-primary-pill btn-indigo"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleProductClick("https://websitebuilder.saasreselling.com/");
+                        }}
+                      >
+                        <span>Explore Website Builder</span>
+                        <ArrowRight size={16} />
+                      </button>
+
+                      <button
+                        type="button"
+                        className="btn-secondary-pill"
+                        onClick={(e) => handleOpenDemo("Website Builder", e)}
+                      >
+                        <Calendar size={15} />
+                        <span>Book a Demo</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Image Mockup Column */}
+                  <div className="card-right-mockup">
+                    <div className="mockup-img-container">
+                      {/* Desktop Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/websitebuilder.png"
+                        alt="Website Builder Theme & Live Launch preview mockup"
+                        width={800}
+                        height={450}
+                        className="img-fluid mockup-img d-none d-md-block"
+                        priority
+                      />
+                      {/* Mobile Mockup Image */}
+                      <Image
+                        src="/assets/images/Product/websitebuildermobile.png"
+                        alt="Website Builder mobile mockup"
+                        width={240}
+                        height={320}
+                        className="img-fluid mockup-img d-block d-md-none"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* --------------------------------------------------------------------- */}
+            {/* PRODUCT 4: NOORYAK CRM (Lead Management CRM)                         */}
             {/* Laptop: Left Content, Right Image (showcase-image-right)             */}
             {/* --------------------------------------------------------------------- */}
             <div className="col-12 product-showcase-col">
@@ -367,7 +579,7 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
             </div>
 
             {/* --------------------------------------------------------------------- */}
-            {/* PRODUCT 3: SAAS BILLING & INVENTORY POS                              */}
+            {/* PRODUCT 5: SAAS BILLING & INVENTORY POS                              */}
             {/* Laptop: Left Image, Right Content (showcase-image-left)              */}
             {/* --------------------------------------------------------------------- */}
             <div className="col-12 product-showcase-col">
@@ -461,200 +673,6 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                         width={240}
                         height={320}
                         className="img-fluid mockup-img d-block d-md-none"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* --------------------------------------------------------------------- */}
-            {/* PRODUCT 4: SAAS RESELLING (White-Label Solution)                     */}
-            {/* Laptop: Left Content, Right Image (showcase-image-right)             */}
-            {/* --------------------------------------------------------------------- */}
-            <div className="col-12 product-showcase-col">
-              <div
-                className="product-card reselling-card showcase-image-right"
-                onClick={() => handleProductClick("https://saasreselling.com/")}
-                title="Click to view SaaS Reselling product page"
-              >
-                <div className="card-inner-split">
-                  {/* Content Column */}
-                  <div className="card-left-content">
-                    <div className="card-top-header">
-                      <div className="brand-icon-box purple-box">
-                        <Image
-                          src="/assets/images/Product/share_linklogo.png"
-                          alt="SaaS Reselling White-Label logo"
-                          width={32}
-                          height={32}
-                          className="brand-logo-img"
-                        />
-                      </div>
-                      <div className="title-group">
-                        <h2 className="product-title">SaaS Reselling</h2>
-                        <span className="product-category purple-text">White-Label SaaS Platform</span>
-                      </div>
-                    </div>
-
-                    <h3 className="card-tagline d-none d-lg-block">
-                      Sell Turnkey White-Label Software Under Your Own Brand
-                    </h3>
-
-                    <p className="card-description">
-                      Start your own software business today. Resell fully-managed SaaS products under your brand name, set your own pricing, and keep 100% of your customer revenue.
-                    </p>
-
-                    {/* Feature Pills */}
-                    <div className="feature-pills-grid">
-                      <div className="feature-pill">
-                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">100% White-Label</span>
-                      </div>
-                      <div className="feature-pill">
-                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">Custom Domain & Brand</span>
-                      </div>
-                      <div className="feature-pill">
-                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">Turnkey SaaS Setup</span>
-                      </div>
-                      <div className="feature-pill">
-                        <span className="pill-check purple-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">Keep 100% Profits</span>
-                      </div>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="card-actions-row">
-                      <button
-                        type="button"
-                        className="btn-primary-pill btn-purple"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleProductClick("https://saasreselling.com/");
-                        }}
-                      >
-                        <span>Explore SaaS Reselling</span>
-                        <ArrowRight size={16} />
-                      </button>
-
-                      <button
-                        type="button"
-                        className="btn-secondary-pill"
-                        onClick={(e) => handleOpenDemo("SaaS Reselling", e)}
-                      >
-                        <Calendar size={15} />
-                        <span>Book a Demo</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Image Mockup Column */}
-                  <div className="card-right-mockup">
-                    <div className="mockup-img-container">
-                      {/* Widescreen Reselling Dashboard Mockup */}
-                      <Image
-                        src="/assets/images/Product/saasreselling.png"
-                        alt="White-Label SaaS Reselling Dashboard preview mockup"
-                        width={800}
-                        height={450}
-                        className="img-fluid mockup-img"
-                        priority
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* --------------------------------------------------------------------- */}
-            {/* PRODUCT 5: WEBSITE BUILDER (Instant Website Builder)                 */}
-            {/* Laptop: Left Image, Right Content (showcase-image-left)              */}
-            {/* --------------------------------------------------------------------- */}
-            <div className="col-12 product-showcase-col">
-              <div
-                className="product-card builder-card showcase-image-left"
-                onClick={() => handleProductClick("https://websitebuilder.saasreselling.com/")}
-                title="Click to view Website Builder product page"
-              >
-                <div className="card-inner-split">
-                  {/* Content Column */}
-                  <div className="card-left-content">
-                    <div className="card-top-header">
-                      <div className="brand-icon-box indigo-box">
-                        <Globe size={24} color="#4F46E5" strokeWidth={2.5} />
-                      </div>
-                      <div className="title-group">
-                        <h2 className="product-title">Website Builder</h2>
-                        <span className="product-category indigo-text">Instant Website Builder</span>
-                      </div>
-                    </div>
-
-                    <h3 className="card-tagline d-none d-lg-block">
-                      Select a Theme & Launch Your Business in 2 Minutes
-                    </h3>
-
-                    <p className="card-description">
-                      Launch high-converting, mobile-ready websites for your business in just 2 minutes. Pick from designer themes, customize with an intuitive visual editor, and go live effortlessly.
-                    </p>
-
-                    {/* Feature Pills */}
-                    <div className="feature-pills-grid">
-                      <div className="feature-pill">
-                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">2-Minute Instant Launch</span>
-                      </div>
-                      <div className="feature-pill">
-                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">Ready-Made Themes</span>
-                      </div>
-                      <div className="feature-pill">
-                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">Drag & Drop Builder</span>
-                      </div>
-                      <div className="feature-pill">
-                        <span className="pill-check indigo-check"><Check size={13} strokeWidth={3} /></span>
-                        <span className="pill-text">Fast Cloud Hosting</span>
-                      </div>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="card-actions-row">
-                      <button
-                        type="button"
-                        className="btn-primary-pill btn-indigo"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleProductClick("https://websitebuilder.saasreselling.com/");
-                        }}
-                      >
-                        <span>Explore Website Builder</span>
-                        <ArrowRight size={16} />
-                      </button>
-
-                      <button
-                        type="button"
-                        className="btn-secondary-pill"
-                        onClick={(e) => handleOpenDemo("Website Builder", e)}
-                      >
-                        <Calendar size={15} />
-                        <span>Book a Demo</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Image Mockup Column */}
-                  <div className="card-right-mockup">
-                    <div className="mockup-img-container">
-                      {/* Widescreen Website Builder Mockup */}
-                      <Image
-                        src="/assets/images/Product/websitebuilder.png"
-                        alt="Website Builder Theme & Live Launch preview mockup"
-                        width={800}
-                        height={450}
-                        className="img-fluid mockup-img"
                         priority
                       />
                     </div>
@@ -881,11 +899,11 @@ export default function ProductsSection({ isPage = true }: ProductsSectionProps)
                       value={selectedProduct}
                       onChange={(e) => setSelectedProduct(e.target.value)}
                     >
+                      <option value="SaaS Reselling">SaaS Reselling (White-Label Solution)</option>
                       <option value="Launchshop">Launchshop (Ecommerce Builder)</option>
+                      <option value="Website Builder">Website Builder (Instant 2-Min Launch)</option>
                       <option value="Nooryak CRM">Nooryak CRM (Lead Management)</option>
                       <option value="SaaS Billing & POS">SaaS Billing & POS Platform</option>
-                      <option value="SaaS Reselling">SaaS Reselling (White-Label Solution)</option>
-                      <option value="Website Builder">Website Builder (Instant 2-Min Launch)</option>
                     </select>
                   </div>
 
