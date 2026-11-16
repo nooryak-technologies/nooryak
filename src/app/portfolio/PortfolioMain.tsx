@@ -15,6 +15,7 @@ import {
   ShoppingBag,
   Rocket,
   Users,
+  Star,
   ArrowRight
 } from 'lucide-react';
 
@@ -213,10 +214,10 @@ export default function PortfolioMain() {
                 {/* Stat 1 */}
                 <div className="stat-card-unit">
                   <div className="stat-unit-icon">
-                    <Rocket size={22} color="#FF5216" strokeWidth={2.2} />
+                    <Rocket size={20} color="#FF5216" strokeWidth={2.4} />
                   </div>
                   <div className="stat-unit-text">
-                    <span className="stat-unit-num">100+</span>
+                    <span className="stat-unit-num">142+</span>
                     <span className="stat-unit-label">Projects Delivered</span>
                   </div>
                 </div>
@@ -226,10 +227,10 @@ export default function PortfolioMain() {
                 {/* Stat 2 */}
                 <div className="stat-card-unit">
                   <div className="stat-unit-icon">
-                    <Users size={22} color="#FF5216" strokeWidth={2.2} />
+                    <Users size={20} color="#FF5216" strokeWidth={2.4} />
                   </div>
                   <div className="stat-unit-text">
-                    <span className="stat-unit-num">75+</span>
+                    <span className="stat-unit-num">90+</span>
                     <span className="stat-unit-label">Happy Clients</span>
                   </div>
                 </div>
@@ -239,11 +240,24 @@ export default function PortfolioMain() {
                 {/* Stat 3 */}
                 <div className="stat-card-unit">
                   <div className="stat-unit-icon">
-                    <Globe size={22} color="#FF5216" strokeWidth={2.2} />
+                    <Globe size={20} color="#FF5216" strokeWidth={2.4} />
                   </div>
                   <div className="stat-unit-text">
-                    <span className="stat-unit-num">20+</span>
+                    <span className="stat-unit-num">5+</span>
                     <span className="stat-unit-label">Countries Served</span>
+                  </div>
+                </div>
+
+                <div className="stat-unit-divider"></div>
+
+                {/* Stat 4 */}
+                <div className="stat-card-unit">
+                  <div className="stat-unit-icon">
+                    <Star size={20} color="#FF5216" fill="#FF5216" strokeWidth={1} />
+                  </div>
+                  <div className="stat-unit-text">
+                    <span className="stat-unit-num">98%</span>
+                    <span className="stat-unit-label">Client Satisfaction</span>
                   </div>
                 </div>
               </div>
@@ -275,17 +289,20 @@ export default function PortfolioMain() {
               ))}
             </ul>
 
-            <button
-              type="button"
-              onClick={() => {
-                setActiveTab('All Projects');
-                document.querySelector('.portfolio-filter-section')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="btn-view-all-projects d-none d-lg-inline-flex"
-            >
-              <span>View All Projects</span>
-              <ArrowRight size={15} />
-            </button>
+            <div className="filter-actions-right d-none d-lg-flex align-items-center">
+              <span className="filter-vertical-divider"></span>
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('All Projects');
+                  document.querySelector('.portfolio-filter-section')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="btn-view-all-projects"
+              >
+                <span>View All Projects</span>
+                <ArrowRight size={15} />
+              </button>
+            </div>
           </div>
 
           {/* ── PROJECT GRID (Ref Image 2 Match: Dual Device Mockups + Info) ── */}
@@ -348,6 +365,12 @@ export default function PortfolioMain() {
                     {/* Content & Arrow Details (Vertically Centered) */}
                     <div className="card-details-wrapper">
                       <div className="card-text-group">
+                        {project.badge && (
+                          <div className="card-international-badge">
+                            <Globe size={11} strokeWidth={2.4} />
+                            <span>{project.badge}</span>
+                          </div>
+                        )}
                         <h4 className="card-project-title">
                           <Link href={project.link} onClick={(e) => e.stopPropagation()}>
                             {(project.subtitle || project.title).replace(/\.+$/, '').trim()}
