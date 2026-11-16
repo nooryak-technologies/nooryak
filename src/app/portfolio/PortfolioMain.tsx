@@ -30,20 +30,17 @@ const categories = [
   { name: 'Digital Marketing', icon: <Target size={15} /> }
 ];
 
-const ITEMS_PER_ROW = 4;
-const INITIAL_ITEMS = 8; // 2 rows * 4 columns
+const ITEMS_PER_ROW = 3;
+const INITIAL_ITEMS = 6; // 2 rows * 3 columns matching reference
 
 export default function PortfolioMain() {
   const [activeTab, setActiveTab] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
-  const [visibleCount, setVisibleCount] = useState<number>(8);
+  const [visibleCount, setVisibleCount] = useState<number>(6);
   const [animateGrid, setAnimateGrid] = useState(false);
 
   const getInitialItemsCount = () => {
-    if (typeof window !== 'undefined' && window.innerWidth < 768) {
-      return 5;
-    }
-    return 8;
+    return 6;
   };
 
   // Filter projects dynamically when tab changes
@@ -75,9 +72,7 @@ export default function PortfolioMain() {
   }, [activeTab]);
 
   const handleLoadMore = () => {
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-    const increment = isMobile ? 3 : 4;
-    setVisibleCount((prev) => prev + increment);
+    setVisibleCount((prev) => prev + 6);
   };
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
@@ -293,58 +288,76 @@ export default function PortfolioMain() {
             </button>
           </div>
 
-          {/* ── PROJECT GRID ── */}
+          {/* ── PROJECT GRID (Ref Image 2 Match: Dual Device Mockups + Info) ── */}
           <div className="portfolio-grid">
-            <div className="row">
+            <div className="row g-4">
               {filteredProjects.slice(0, visibleCount).map((project) => (
                 <div
                   key={project.id}
-                  className={`col-xl-3 col-lg-3 col-md-6 col-12 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
+                  className={`col-xl-4 col-lg-4 col-md-6 col-12 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
                   style={{ opacity: animateGrid ? 1 : 0 }}
                 >
-                  <div className="portfolio-card">
-
-                    {/* Visual Card Image Wrap */}
-                    <div className="portfolio-card-image-wrap">
-                      <span className={`category-badge ${getBadgeClass(project.category)}`}>
-                        {project.category}
-                      </span>
-                      {project.badge && (
-                        <span className="card-international-badge">
-                          🌍 {project.badge}
-                        </span>
-                      )}
-                      {project.scrollImage ? (
-                        <div className="portfolio-card-scroll-container">
+                  <div
+                    className="portfolio-project-card"
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.location.href = project.link;
+                      }
+                    }}
+                  >
+                    {/* Visual Mockup Container (Laptop + Mobile Mockup) */}
+                    <div className="card-mockup-wrapper">
+                      {/* Laptop Mockup */}
+                      <div className="mockup-laptop">
+                        <div className="laptop-camera-dot"></div>
+                        <div className="laptop-screen-frame">
                           <img
-                            src={project.scrollImage}
-                            alt={project.title}
-                            className="card-project-img-scroll"
+                            src={project.scrollImage || project.image}
+                            alt={`${project.title} laptop view`}
+                            className="laptop-screen-content"
+                            loading="lazy"
                           />
                         </div>
-                      ) : (
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="card-project-img"
-                        />
+                        <div className="laptop-chin">
+                          <div className="laptop-chin-notch"></div>
+                        </div>
+                      </div>
+
+                      {/* Mobile Mockup (Foreground overlapping on bottom right) */}
+                      {(project.mobileScrollImage || (project.category === 'App Development' && project.image)) && (
+                        <div className="mockup-mobile">
+                          <div className="mobile-speaker"></div>
+                          <div className="mobile-screen-frame">
+                            <img
+                              src={project.mobileScrollImage || project.image}
+                              alt={`${project.title} mobile view`}
+                              className="mobile-screen-content"
+                              loading="lazy"
+                            />
+                          </div>
+                        </div>
                       )}
                     </div>
 
-                    {/* Content */}
-                    <div className="portfolio-card-content">
-                      <h4 className="portfolio-card-title">
-                        <Link href={project.link}>
-                          {project.title}
-                        </Link>
-                      </h4>
-                      <p className="portfolio-card-desc">{project.description}</p>
-
-                      <div className="portfolio-card-footer-custom">
-                        <Link href={project.link} className="view-case-study-link">
-                          View <span className="arrow-right">→</span>
-                        </Link>
+                    {/* Content & Arrow Details */}
+                    <div className="card-details-wrapper">
+                      <div className="card-text-group">
+                        <h4 className="card-project-title">
+                          <Link href={project.link} onClick={(e) => e.stopPropagation()}>
+                            {(project.subtitle || project.title).replace(/\.+$/, '').trim()}
+                          </Link>
+                        </h4>
+                        <p className="card-project-desc">{project.description}</p>
                       </div>
+
+                      <Link
+                        href={project.link}
+                        className="card-arrow-action"
+                        aria-label={`View ${project.title}`}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ArrowRight size={15} />
+                      </Link>
                     </div>
 
                   </div>

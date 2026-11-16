@@ -213,43 +213,48 @@
     /* Mobile & Tablet view (<= 991px): ALWAYS KEEP LEFT CONTENT & RIGHT MOCKUP */
     @media (max-width: 991px) {
       flex-direction: row !important;
+      align-items: center;
 
       .card-left-content {
-        flex: 0 0 54%;
-        max-width: 54%;
+        flex: 0 0 50%;
+        max-width: 50%;
       }
 
       .card-right-mockup {
-        flex: 0 0 46%;
-        max-width: 46%;
+        flex: 0 0 50%;
+        max-width: 50%;
 
         .mockup-img-container {
-          max-width: 220px;
+          max-width: 280px;
 
           .mockup-img {
-            max-height: 280px;
+            max-height: 330px;
+            width: 100%;
           }
         }
       }
     }
 
     @media (max-width: 576px) {
-      gap: 8px;
+      gap: 10px;
 
       .card-left-content {
-        flex: 0 0 58%;
-        max-width: 58%;
+        flex: 0 0 49%;
+        max-width: 49%;
       }
 
       .card-right-mockup {
-        flex: 0 0 42%;
-        max-width: 42%;
+        flex: 0 0 51%;
+        max-width: 51%;
 
         .mockup-img-container {
-          max-width: 175px;
+          max-width: 240px;
+          margin-left: auto;
 
           .mockup-img {
-            max-height: 230px;
+            max-height: 310px;
+            width: 100%;
+            transform: scale(1.06);
           }
         }
       }
@@ -341,29 +346,29 @@
       }
 
       .card-right-mockup {
-        flex: 0 0 52%;
-        max-width: 52%;
+        flex: 0 0 53%;
+        max-width: 53%;
         justify-content: center;
 
         .mockup-img-container {
           width: 100%;
           max-width: 100%;
-          height: 380px;
+          height: auto;
           margin: 0 auto;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 18px;
           overflow: hidden;
+          background: #ffffff;
           box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
 
           .mockup-img {
             width: 100%;
-            height: 100%;
+            height: auto;
             max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-            object-position: top center;
+            max-height: 430px;
+            object-fit: contain;
             filter: none;
             display: block;
             transition: transform 0.4s ease;
@@ -373,7 +378,7 @@
     }
 
     @media (min-width: 1200px) {
-      gap: 60px;
+      gap: 50px;
 
       .card-left-content {
         flex: 0 0 45%;
@@ -393,11 +398,15 @@
       }
 
       .card-right-mockup {
-        flex: 0 0 52%;
-        max-width: 52%;
+        flex: 0 0 53%;
+        max-width: 53%;
 
         .mockup-img-container {
-          height: 400px;
+          height: auto;
+
+          .mockup-img {
+            max-height: 450px;
+          }
         }
       }
     }
