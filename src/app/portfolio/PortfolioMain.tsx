@@ -38,37 +38,26 @@ export default function PortfolioMain() {
   const [activeTab, setActiveTab] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
   const [visibleCount, setVisibleCount] = useState<number>(6);
-  const [animateGrid, setAnimateGrid] = useState(false);
-
-  const getInitialItemsCount = () => {
-    return 6;
-  };
 
   // Filter projects dynamically when tab changes
   useEffect(() => {
-    setAnimateGrid(false);
-    const timeout = setTimeout(() => {
-      if (activeTab === 'All Projects') {
-        setFilteredProjects(projectsData);
-      } else if (activeTab === 'Web Development') {
-        setFilteredProjects(projectsData.filter(p => p.category === 'Web Development' || p.id === 13));
-      } else if (activeTab === 'Mobile Apps') {
-        setFilteredProjects(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps'));
-      } else if (activeTab === 'UI/UX Design') {
-        setFilteredProjects(projectsData.filter(p => p.category === 'Branding & Design' || p.category === 'UI/UX Design'));
-      } else if (activeTab === 'E-Commerce' || activeTab === 'eCommerce') {
-        setFilteredProjects(projectsData.filter(p => (p.category === 'eCommerce' || p.category === 'E-Commerce' || p.id === 2) && p.id !== 13));
-      } else if (activeTab === 'Software Solutions') {
-        setFilteredProjects(projectsData.filter(p => p.category === 'Web Development' || p.category === 'eCommerce'));
-      } else if (activeTab === 'Digital Marketing') {
-        setFilteredProjects(projectsData.filter(p => p.category === 'Digital Marketing'));
-      } else {
-        setFilteredProjects(projectsData.filter(p => p.category === activeTab));
-      }
-      setAnimateGrid(true);
-    }, 150);
-
-    return () => clearTimeout(timeout);
+    if (activeTab === 'All Projects') {
+      setFilteredProjects(projectsData);
+    } else if (activeTab === 'Web Development') {
+      setFilteredProjects(projectsData.filter(p => p.category === 'Web Development' || p.id === 13));
+    } else if (activeTab === 'Mobile Apps') {
+      setFilteredProjects(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps'));
+    } else if (activeTab === 'UI/UX Design') {
+      setFilteredProjects(projectsData.filter(p => p.category === 'Branding & Design' || p.category === 'UI/UX Design'));
+    } else if (activeTab === 'E-Commerce' || activeTab === 'eCommerce') {
+      setFilteredProjects(projectsData.filter(p => (p.category === 'eCommerce' || p.category === 'E-Commerce' || p.id === 2) && p.id !== 13));
+    } else if (activeTab === 'Software Solutions') {
+      setFilteredProjects(projectsData.filter(p => p.category === 'Web Development' || p.category === 'eCommerce'));
+    } else if (activeTab === 'Digital Marketing') {
+      setFilteredProjects(projectsData.filter(p => p.category === 'Digital Marketing'));
+    } else {
+      setFilteredProjects(projectsData.filter(p => p.category === activeTab));
+    }
   }, [activeTab]);
 
   const handleLoadMore = () => {
@@ -91,12 +80,12 @@ export default function PortfolioMain() {
     setFilteredProjects(projectsData);
     setVisibleCount(projectsData.length);
     setTimeout(() => {
-      const grid = document.querySelector('.portfolio-grid');
-      if (grid) {
-        const top = grid.getBoundingClientRect().top + window.pageYOffset - 90;
+      const section = document.querySelector('.portfolio-filter-section');
+      if (section) {
+        const top = section.getBoundingClientRect().top + window.pageYOffset - 130;
         window.scrollTo({ top, behavior: 'smooth' });
       }
-    }, 80);
+    }, 60);
   };
 
   const handleStartProjectClick = (e: React.MouseEvent) => {
@@ -321,8 +310,7 @@ export default function PortfolioMain() {
               {filteredProjects.slice(0, visibleCount).map((project) => (
                 <div
                   key={project.id}
-                  className={`col-xl-4 col-lg-4 col-md-6 col-12 portfolio-card-col ${animateGrid ? 'fade-in-item' : ''}`}
-                  style={{ opacity: animateGrid ? 1 : 0 }}
+                  className="col-xl-4 col-lg-4 col-md-6 col-12 portfolio-card-col"
                 >
                   <div
                     className="portfolio-project-card"
