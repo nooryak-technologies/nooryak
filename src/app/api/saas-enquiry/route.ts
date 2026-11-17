@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import SaasEnquiry from '@/models/SaasEnquiry';
+import { sendEnquiryNotificationEmail } from '@/lib/mail';
 
 export async function POST(req: Request) {
   try {
@@ -18,6 +19,16 @@ export async function POST(req: Request) {
       product,
       message: message || `Demo Request for ${product}`,
     });
+
+    // Send copy to nooryaktechnologies@gmail.com
+    sendEnquiryNotificationEmail({
+      type: 'saas',
+      name,
+      email,
+      phone,
+      serviceOrProduct: product,
+      message: message || `Demo Request for ${product}`
+    }).catch(err => console.error('SAAS notification mail failed:', err));
 
     return NextResponse.json({ message: 'Demo request submitted successfully', enquiry }, { status: 201 });
   } catch (error: any) {

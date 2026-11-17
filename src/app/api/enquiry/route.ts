@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongodb';
 import Enquiry from '@/models/Enquiry';
+import { sendEnquiryNotificationEmail } from '@/lib/mail';
 
 export async function POST(req: Request) {
   try {
@@ -44,6 +45,17 @@ export async function POST(req: Request) {
       message,
       phone
     });
+
+    // Send copy to nooryaktechnologies@gmail.com
+    sendEnquiryNotificationEmail({
+      type: 'contact',
+      name,
+      email,
+      phone,
+      company,
+      serviceOrProduct: service || 'General Inquiry',
+      message
+    }).catch(err => console.error('Enquiry notification mail failed:', err));
 
     return NextResponse.json({ message: 'Enquiry submitted successfully', enquiry }, { status: 201 });
   } catch (error: any) {

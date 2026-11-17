@@ -1,11 +1,11 @@
 :HL["/_next/static/css/407612c88d650ba4.css","style"]
 :HL["/_next/static/css/9b682a4237dfd5a2.css","style"]
-:HL["/_next/static/css/28c71205f183be5e.css","style"]
+:HL["/_next/static/css/b973f668dd85ccba.css","style"]
 :HL["/_next/static/css/451a7a5aca3d86c3.css","style"]
 :HL["/_next/static/css/bd4495f87fa567b1.css","style"]
 :HL["/_next/static/css/400853b258a0c9a5.css","style"]
 :HL["/_next/static/css/0f77a171b124cfd6.css","style"]
 :HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css","style"]
 :HL["https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css","style"]
-:HL["/_next/static/css/b23c6bf14bb8e32c.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"admin","param":null,"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"add","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"vt8ApSRrnOt6Q_6lzui7R"}
+:HL["/_next/static/css/2709e9b08d8b2d64.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"admin","param":null,"prefetchHints":0,"slots":{"children":{"name":"blog","param":null,"prefetchHints":0,"slots":{"children":{"name":"add","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"f8DrrLXXcPFJqG7OIjy3L"}

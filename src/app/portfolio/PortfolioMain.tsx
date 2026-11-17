@@ -47,7 +47,6 @@ export default function PortfolioMain() {
   // Filter projects dynamically when tab changes
   useEffect(() => {
     setAnimateGrid(false);
-    setVisibleCount(getInitialItemsCount());
     const timeout = setTimeout(() => {
       if (activeTab === 'All Projects') {
         setFilteredProjects(projectsData);
@@ -78,12 +77,26 @@ export default function PortfolioMain() {
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTab(categoryName);
+    setVisibleCount(6);
     const button = e.currentTarget;
     button.scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
       inline: 'center'
     });
+  };
+
+  const handleViewAllProjects = () => {
+    setActiveTab('All Projects');
+    setFilteredProjects(projectsData);
+    setVisibleCount(projectsData.length);
+    setTimeout(() => {
+      const grid = document.querySelector('.portfolio-grid');
+      if (grid) {
+        const top = grid.getBoundingClientRect().top + window.pageYOffset - 90;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }, 80);
   };
 
   const handleStartProjectClick = (e: React.MouseEvent) => {
@@ -293,10 +306,7 @@ export default function PortfolioMain() {
               <span className="filter-vertical-divider"></span>
               <button
                 type="button"
-                onClick={() => {
-                  setActiveTab('All Projects');
-                  document.querySelector('.portfolio-filter-section')?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={handleViewAllProjects}
                 className="btn-view-all-projects"
               >
                 <span>View All Projects</span>
@@ -365,18 +375,39 @@ export default function PortfolioMain() {
                     {/* Content & Arrow Details (Vertically Centered) */}
                     <div className="card-details-wrapper">
                       <div className="card-text-group">
-                        {project.badge && (
-                          <div className="card-international-badge">
-                            <Globe size={11} strokeWidth={2.4} />
-                            <span>{project.badge}</span>
-                          </div>
-                        )}
+                        {/* Badges Row: Category badge + International badge if present (Task 5) */}
+                        <div className="card-badges-row">
+                          {project.badge && (
+                            <div className="card-international-badge">
+                              <Globe size={11} strokeWidth={2.4} />
+                              <span>{project.badge}</span>
+                            </div>
+                          )}
+                          <span className={`card-category-badge ${getBadgeClass(project.category)}`}>
+                            {project.category === 'eCommerce' ? 'E-Commerce' : project.category}
+                          </span>
+                        </div>
+
                         <h4 className="card-project-title">
                           <Link href={project.link} onClick={(e) => e.stopPropagation()}>
                             {(project.subtitle || project.title).replace(/\.+$/, '').trim()}
                           </Link>
                         </h4>
+
                         <p className="card-project-desc">{project.description}</p>
+
+                        {/* Mini Tech Stack Pills Row (Task 5: fills empty space) */}
+                        <div className="card-tech-stack-row">
+                          {(project.technologies && project.technologies.length > 0 ? project.technologies.slice(0, 3) : [
+                            { name: 'React', iconType: 'react' },
+                            { name: 'Next.js', iconType: 'nextjs' },
+                            { name: 'Node.js', iconType: 'nodejs' }
+                          ]).map((tech, i) => (
+                            <span key={i} className="card-mini-tech-pill">
+                              {tech.name}
+                            </span>
+                          ))}
+                        </div>
                       </div>
 
                       <Link

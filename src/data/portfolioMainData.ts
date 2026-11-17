@@ -39,22 +39,22 @@ export const projectsData: Project[] = [
     description: 'Red Panda Vacations is the travel and tourism website',
     link: '/portfolio/2',
     bgClass: 'bg-nature',
-    image: '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png',
+    image: '/assets/images/Portfolio/projects/redpandscreenslide/slide1.webp',
     client: 'Red Panda Vacations',
     date: 'Feb 2026',
     services: 'Web Design, Next.js Development, CMS Integration',
     projectUrl: 'https://redpandavacations.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide2.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide3.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide4.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide5.png'
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide1.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide2.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide3.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide4.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide5.webp'
     ],
     subtitle: 'Red Panda Vacations',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/redpanda.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/redpanda_mobil.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/redpanda.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/redpanda_mobil.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'PHP', iconType: 'php' },
@@ -80,11 +80,11 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'May 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide1.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide2.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide3.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide4.png',
-      '/assets/images/Portfolio/projects/redpandscreenslide/slide5.png'
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide1.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide2.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide3.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide4.webp',
+      '/assets/images/Portfolio/projects/redpandscreenslide/slide5.webp'
     ],
     results: [
       { value: '150%', label: 'Increase in Website Traffic', iconType: 'trending-up' },
@@ -100,21 +100,21 @@ export const projectsData: Project[] = [
     description: 'KP Enterprises is a Ecommerce Platform To Selling Commercial Machine ',
     link: '/portfolio/6',
     bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
+    image: '/assets/images/Portfolio/projects/enterprises_laptopview.webp',
     client: 'KP Enterprises Ltd',
     date: 'Oct 2025',
     services: 'Web Development, Database Management',
     projectUrl: 'https://enterpriseskp.in/',
     gallery: [
-      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
-      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
+      '/assets/images/Portfolio/projects/enterprises_laptopview.webp',
+      '/assets/images/Portfolio/projects/enterprises_tabletview.webp',
+      '/assets/images/Portfolio/projects/enterprises_mobileview.webp'
     ],
     subtitle: 'KP Enterprises Ecommerce',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/enterprises_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/enterprises_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/enterprises_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/enterprises_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/enterprises_tabletview.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -140,9 +140,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Sep 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/enterprises_laptopview.png',
-      '/assets/images/Portfolio/projects/enterprises_tabletview.png',
-      '/assets/images/Portfolio/projects/enterprises_mobileview.png'
+      '/assets/images/Portfolio/projects/enterprises_laptopview.webp',
+      '/assets/images/Portfolio/projects/enterprises_tabletview.webp',
+      '/assets/images/Portfolio/projects/enterprises_mobileview.webp'
     ],
     results: [
       { value: '140%', label: 'Partner Onboardings', iconType: 'trending-up' },
@@ -158,21 +158,21 @@ export const projectsData: Project[] = [
     description: 'Modern computer sales, hardware repair, and IT solutions  designed for seamless service bookings.',
     link: '/portfolio/14',
     bgClass: 'bg-slate',
-    image: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
+    image: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.webp',
     client: 'Arrow Computerz Ecommerce',
     date: 'Jan 2026',
     services: 'Web Development, Service Portal, UI/UX Design',
     projectUrl: 'https://arrowcomputerz.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
+      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.webp',
+      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.webp',
+      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.webp'
     ],
     subtitle: 'Arrow Computerz Ecommerce',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.webp',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -197,9 +197,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.png',
-      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.png'
+      '/assets/images/Portfolio/projects/arrowcomputerz_laptopview.webp',
+      '/assets/images/Portfolio/projects/arrowcomputerz_tabletview.webp',
+      '/assets/images/Portfolio/projects/arrowcomputerz_mobileview.webp'
     ],
     results: [
       { value: '160%', label: 'Increase in Online Enquiries', iconType: 'trending-up' },
@@ -215,22 +215,22 @@ export const projectsData: Project[] = [
     description: 'User-friendly website for kids entertainment toys and toys selling webite',
     link: '/portfolio/16',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
+    image: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.webp',
     client: 'Fun Kiddoz Toy selling  ecommerce ',
     date: 'Jan 2026',
     services: 'Web Design, Interactive Animations, Toy selling ecommerce website',
     projectUrl: 'https://funkiddoz.in/',
     gallery: [
-      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
-      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
+      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.webp',
+      '/assets/images/Portfolio/projects/funkiddoz_tablet.webp',
+      '/assets/images/Portfolio/projects/funkiddoz_mobile.webp'
     ],
     subtitle: 'Fun Kiddoz Ecommerce',
     badge: 'International Project',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/funkiddoz_mobile.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/funkiddoz_mobile.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/funkiddoz_tablet.webp',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -255,9 +255,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.png',
-      '/assets/images/Portfolio/projects/funkiddoz_tablet.png',
-      '/assets/images/Portfolio/projects/funkiddoz_mobile.png'
+      '/assets/images/Portfolio/projects/funkiddoz_laptopvie.webp',
+      '/assets/images/Portfolio/projects/funkiddoz_tablet.webp',
+      '/assets/images/Portfolio/projects/funkiddoz_mobile.webp'
     ],
     results: [
       { value: '180%', label: 'Increase in Party Reservations', iconType: 'trending-up' },
@@ -273,22 +273,22 @@ export const projectsData: Project[] = [
     description: 'Limras Gallery  is the ecommerce website to selling the prices and gifts.',
     link: '/portfolio/18',
     bgClass: 'bg-teal',
-    image: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
+    image: '/assets/images/Portfolio/projects/limrasgallerlaptopview.webp',
     client: 'Limras Gallery',
     date: 'Jan 2026',
     services: 'Web Development, Art Gallery Showcase, E-Catalog',
     projectUrl: 'https://limrasgallery.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
-      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
-      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
+      '/assets/images/Portfolio/projects/limrasgallerlaptopview.webp',
+      '/assets/images/Portfolio/projects/limrasgalletabletview.webp',
+      '/assets/images/Portfolio/projects/limrasgallermobileviw.webp'
     ],
     subtitle: 'Limras Gallery Ecommerce',
     badge: 'International Project',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/limrasgallermobileviw.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/limrasgalletabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/limrasgallerlaptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/limrasgallermobileviw.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/limrasgalletabletview.webp',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -313,9 +313,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/limrasgallerlaptopview.png',
-      '/assets/images/Portfolio/projects/limrasgalletabletview.png',
-      '/assets/images/Portfolio/projects/limrasgallermobileviw.png'
+      '/assets/images/Portfolio/projects/limrasgallerlaptopview.webp',
+      '/assets/images/Portfolio/projects/limrasgalletabletview.webp',
+      '/assets/images/Portfolio/projects/limrasgallermobileviw.webp'
     ],
     results: [
       { value: '175%', label: 'Increase in Framing Inquiries', iconType: 'trending-up' },
@@ -331,21 +331,21 @@ export const projectsData: Project[] = [
     description: 'Youverse Ecommerce is the ecommerce website to selling the products.',
     link: '/portfolio/20',
     bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/projects/youverse_laptopview.png',
+    image: '/assets/images/Portfolio/projects/youverse_laptopview.webp',
     client: 'Youverse Tech',
     date: 'Jan 2026',
     services: 'Web Development, UI/UX Architecture, Cloud Integration',
     projectUrl: 'https://youverse.in/',
     gallery: [
-      '/assets/images/Portfolio/projects/youverse_laptopview.png',
-      '/assets/images/Portfolio/projects/youverse_tabletview.png',
-      '/assets/images/Portfolio/projects/youverse_mobileview.png'
+      '/assets/images/Portfolio/projects/youverse_laptopview.webp',
+      '/assets/images/Portfolio/projects/youverse_tabletview.webp',
+      '/assets/images/Portfolio/projects/youverse_mobileview.webp'
     ],
     subtitle: 'Youverse Ecommerce.',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/youverse_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/youverse_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/youverse_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/youverse_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/youverse_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/youverse_tabletview.webp',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -370,9 +370,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/youverse_laptopview.png',
-      '/assets/images/Portfolio/projects/youverse_tabletview.png',
-      '/assets/images/Portfolio/projects/youverse_mobileview.png'
+      '/assets/images/Portfolio/projects/youverse_laptopview.webp',
+      '/assets/images/Portfolio/projects/youverse_tabletview.webp',
+      '/assets/images/Portfolio/projects/youverse_mobileview.webp'
     ],
     results: [
       { value: '220%', label: 'User Engagement Growth', iconType: 'trending-up' },
@@ -388,21 +388,21 @@ export const projectsData: Project[] = [
     description: 'Bazarway is the ecommerce website to selling the products.',
     link: '/portfolio/21',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/bazarway_store.png',
+    image: '/assets/images/Portfolio/projects/bazarway_store.webp',
     client: 'Bazarway UK Store',
     date: 'Jan 2026',
     services: 'Web Development, eCommerce, Retail Portal',
     projectUrl: 'https://bazaarway.co.uk/shopproducts/',
     gallery: [
-      '/assets/images/Portfolio/projects/bazarway_store.png',
-      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
-      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
+      '/assets/images/Portfolio/projects/bazarway_store.webp',
+      '/assets/images/Portfolio/projects/bazarway_store_tableteview.webp',
+      '/assets/images/Portfolio/projects/bazarwaystore_mobile.webp'
     ],
     subtitle: 'Bazarway Shop Ecommerce',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/bazarway_store.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwaystore_mobile.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/bazarway_store.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwaystore_mobile.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/bazarway_store_tableteview.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -428,9 +428,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/bazarway_store.png',
-      '/assets/images/Portfolio/projects/bazarway_store_tableteview.png',
-      '/assets/images/Portfolio/projects/bazarwaystore_mobile.png'
+      '/assets/images/Portfolio/projects/bazarway_store.webp',
+      '/assets/images/Portfolio/projects/bazarway_store_tableteview.webp',
+      '/assets/images/Portfolio/projects/bazarwaystore_mobile.webp'
     ],
     results: [
       { value: '180%', label: 'Product Conversion Boost', iconType: 'trending-up' },
@@ -447,21 +447,21 @@ export const projectsData: Project[] = [
     description: 'Fiori Celebrations is the ecommerce website to selling the jewellery items.',
     link: '/portfolio/22',
     bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
+    image: '/assets/images/Portfolio/projects/fioricelebration_laptopview.webp',
     client: 'Fiori Celebrations',
     date: 'Feb 2026',
     services: 'Web Development, Event Booking, UI/UX Design',
     projectUrl: 'https://fioricelebrations.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
+      '/assets/images/Portfolio/projects/fioricelebration_laptopview.webp',
+      '/assets/images/Portfolio/projects/fioricelebration_tabletview.webp',
+      '/assets/images/Portfolio/projects/fioricelebration_mobileview.webp'
     ],
     subtitle: 'fioricelebrations Ecommerce',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/fioricelebration_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/fioricelebration_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/fioricelebration_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/fioricelebration_tabletview.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -487,9 +487,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/fioricelebration_laptopview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_tabletview.png',
-      '/assets/images/Portfolio/projects/fioricelebration_mobileview.png'
+      '/assets/images/Portfolio/projects/fioricelebration_laptopview.webp',
+      '/assets/images/Portfolio/projects/fioricelebration_tabletview.webp',
+      '/assets/images/Portfolio/projects/fioricelebration_mobileview.webp'
     ],
     results: [
       { value: '210%', label: 'Event Booking Enquiries', iconType: 'trending-up' },
@@ -506,21 +506,21 @@ export const projectsData: Project[] = [
     description: 'Annsha Gifts is the ecommerce website to selling the Gift Items.',
     link: '/portfolio/23',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
+    image: '/assets/images/Portfolio/projects/annshagift_laptopview.webp',
     client: 'Annsha Gifts Store',
     date: 'Feb 2026',
     services: 'Web Development, eCommerce, Custom Gift Portal',
     projectUrl: 'https://annshagifts.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
-      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
-      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
+      '/assets/images/Portfolio/projects/annshagift_laptopview.webp',
+      '/assets/images/Portfolio/projects/annshagift_tabletview.webp',
+      '/assets/images/Portfolio/projects/annshagift_mobileview.webp'
     ],
     subtitle: 'Annsha Gifts Ecommerce',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/annshagift_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/annshagift_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/annshagift_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/annshagift_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/annshagift_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/annshagift_tabletview.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -546,9 +546,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/annshagift_laptopview.png',
-      '/assets/images/Portfolio/projects/annshagift_tabletview.png',
-      '/assets/images/Portfolio/projects/annshagift_mobileview.png'
+      '/assets/images/Portfolio/projects/annshagift_laptopview.webp',
+      '/assets/images/Portfolio/projects/annshagift_tabletview.webp',
+      '/assets/images/Portfolio/projects/annshagift_mobileview.webp'
     ],
     results: [
       { value: '230%', label: 'Online Gift Sales Growth', iconType: 'trending-up' },
@@ -565,22 +565,22 @@ export const projectsData: Project[] = [
     description: 'Premium website for Arman Group showcasing their projects, team and global operations.',
     link: '/portfolio/4',
     bgClass: 'bg-slate',
-    image: '/assets/images/Portfolio/projects/armangroup/slide1.png',
+    image: '/assets/images/Portfolio/projects/armangroup/slide1.webp',
     client: 'Arman Group Ltd',
     date: 'Dec 2025',
     services: 'Web Development, UX/UI Design',
     projectUrl: 'https://armangroup.co.in/',
     gallery: [
-      '/assets/images/Portfolio/projects/armangroup/slide1.png',
-      '/assets/images/Portfolio/projects/armangroup/slide2.png',
-      '/assets/images/Portfolio/projects/armangroup/slide3.png',
-      '/assets/images/Portfolio/projects/armangroup/slide4.png',
-      '/assets/images/Portfolio/projects/armangroup/slide5.png'
+      '/assets/images/Portfolio/projects/armangroup/slide1.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide2.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide3.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide4.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide5.webp'
     ],
     subtitle: 'Arman Group Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/armangroup.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/arman_group.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/armangroup.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/arman_group.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'PHP', iconType: 'php' },
@@ -603,11 +603,11 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Nov 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/armangroup/slide1.png',
-      '/assets/images/Portfolio/projects/armangroup/slide2.png',
-      '/assets/images/Portfolio/projects/armangroup/slide3.png',
-      '/assets/images/Portfolio/projects/armangroup/slide4.png',
-      '/assets/images/Portfolio/projects/armangroup/slide5.png'
+      '/assets/images/Portfolio/projects/armangroup/slide1.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide2.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide3.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide4.webp',
+      '/assets/images/Portfolio/projects/armangroup/slide5.webp'
     ],
     results: [
       { value: '110%', label: 'Increase in B2B Inquiries', iconType: 'trending-up' },
@@ -623,21 +623,21 @@ export const projectsData: Project[] = [
     description: 'Modern service website with booking and AMC solutions.',
     link: '/portfolio/5',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/elkins_laptopview.png',
+    image: '/assets/images/Portfolio/projects/elkins_laptopview.webp',
     client: 'Elkins Air Conditioning Inc',
     date: 'Nov 2025',
     services: 'Web Development, SEO, Booking Integration',
     projectUrl: 'https://elkinsaircondition.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/elkins_laptopview.png',
-      '/assets/images/Portfolio/projects/elkins_tablet.png',
-      '/assets/images/Portfolio/projects/elkins_mobile.png'
+      '/assets/images/Portfolio/projects/elkins_laptopview.webp',
+      '/assets/images/Portfolio/projects/elkins_tablet.webp',
+      '/assets/images/Portfolio/projects/elkins_mobile.webp'
     ],
     subtitle: 'Elkins Air Conditioning Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/elkins_laptopview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/elkins_tablet.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/elkins_mobile.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/elkins_laptopview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/elkins_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/elkins_mobile.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -663,9 +663,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Oct 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/elkins_laptopview.png',
-      '/assets/images/Portfolio/projects/elkins_tablet.png',
-      '/assets/images/Portfolio/projects/elkins_mobile.png'
+      '/assets/images/Portfolio/projects/elkins_laptopview.webp',
+      '/assets/images/Portfolio/projects/elkins_tablet.webp',
+      '/assets/images/Portfolio/projects/elkins_mobile.webp'
     ],
     results: [
       { value: '180%', label: 'More Local Bookings', iconType: 'trending-up' },
@@ -681,23 +681,23 @@ export const projectsData: Project[] = [
     description: 'Modern  website showcasing  solutions and  Services.',
     link: '/portfolio/7',
     bgClass: 'bg-purple-soft',
-    image: '/assets/images/Portfolio/projects/radientinfotech/slide1.png',
+    image: '/assets/images/Portfolio/projects/radientinfotech/slide1.webp',
     client: 'Radient',
     date: 'Sep 2025',
     services: 'Web Development, IT Branding',
     projectUrl: 'https://radientinfotech.in/',
     gallery: [
-      '/assets/images/Portfolio/projects/radientinfotech/slide1.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide2.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide3.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide4.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide5.png'
+      '/assets/images/Portfolio/projects/radientinfotech/slide1.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide2.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide3.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide4.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide5.webp'
     ],
     subtitle: 'Radient  Website',
     badge: 'International Project',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/radiantconsultancy.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/radient_mobile.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/radiantconsultancy.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/radient_mobile.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -723,11 +723,11 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Aug 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/radientinfotech/slide1.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide2.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide3.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide4.png',
-      '/assets/images/Portfolio/projects/radientinfotech/slide5.png'
+      '/assets/images/Portfolio/projects/radientinfotech/slide1.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide2.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide3.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide4.webp',
+      '/assets/images/Portfolio/projects/radientinfotech/slide5.webp'
     ],
     results: [
       { value: '120%', label: 'Consultation Leads', iconType: 'trending-up' },
@@ -743,23 +743,23 @@ export const projectsData: Project[] = [
     description: 'Modern Laptop services and repair.',
     link: '/portfolio/8',
     bgClass: 'bg-teal',
-    image: '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
+    image: '/assets/images/Portfolio/projects/shifainfotech/slide1.webp',
     client: 'Shifa Infotech',
     date: 'Aug 2025',
     services: 'Web Development, Patient Database',
     projectUrl: '/coming-soon',
     gallery: [
-      '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide2.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide3.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide4.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide5.png'
+      '/assets/images/Portfolio/projects/shifainfotech/slide1.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide2.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide3.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide4.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide5.webp'
     ],
     subtitle: 'Shifa Infotech Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/shifainfotech.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/shifainfo_mobile.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/shifainfotech_tablet.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/shifainfotech.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/shifainfo_mobile.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/shifainfotech_tablet.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -785,11 +785,11 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Jul 2024', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/shifainfotech/slide1.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide2.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide3.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide4.png',
-      '/assets/images/Portfolio/projects/shifainfotech/slide5.png'
+      '/assets/images/Portfolio/projects/shifainfotech/slide1.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide2.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide3.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide4.webp',
+      '/assets/images/Portfolio/projects/shifainfotech/slide5.webp'
     ],
     results: [
       { value: '200%', label: 'Laptop repair Request', iconType: 'trending-up' },
@@ -805,19 +805,19 @@ export const projectsData: Project[] = [
     description: 'Bazaarway Group UK Providing Business Needs',
     link: '/portfolio/13',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/projects/bazarway_laptopview.png',
+    image: '/assets/images/Portfolio/projects/bazarway_laptopview.webp',
     client: 'Bazarway Store',
     date: 'Jan 2026',
     services: 'Web Development, eCommerce, Multi-vendor Platform',
     projectUrl: 'https://bazaarway.co.uk/',
     gallery: [
-      '/assets/images/Portfolio/projects/bazarway_laptopview.png',
-      '/assets/images/Portfolio/projects/bazarwa_mobile.png'
+      '/assets/images/Portfolio/projects/bazarway_laptopview.webp',
+      '/assets/images/Portfolio/projects/bazarwa_mobile.webp'
     ],
     subtitle: 'Bazarway Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/bazarway_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwa_mobile.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/bazarway_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/bazarwa_mobile.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -843,8 +843,8 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Dec 2025', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/bazarway_laptopview.png',
-      '/assets/images/Portfolio/projects/bazarwa_mobile.png'
+      '/assets/images/Portfolio/projects/bazarway_laptopview.webp',
+      '/assets/images/Portfolio/projects/bazarwa_mobile.webp'
     ],
     results: [
       { value: '200%', label: 'Seller Registrations', iconType: 'trending-up' },
@@ -861,21 +861,21 @@ export const projectsData: Project[] = [
     description: 'On-demand eco-friendly mobile auto detailing & car wash  website.',
     link: '/portfolio/15',
     bgClass: 'bg-nature',
-    image: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
+    image: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
     client: 'DND Mobile Wash',
     date: 'Feb 2026',
     services: 'Web Development, Booking Engine, Mobile Optimization',
     projectUrl: '/coming-soon',
     gallery: [
-      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
-      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.png',
-      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.png'
+      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
+      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.webp',
+      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.webp'
     ],
     subtitle: 'Dizzle N Drift Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_tabletview.webp',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -900,9 +900,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.png',
-      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.png',
-      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.png'
+      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
+      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.webp',
+      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.webp'
     ],
     results: [
       { value: '210%', label: 'More Mobile Wash Bookings', iconType: 'trending-up' },
@@ -918,21 +918,21 @@ export const projectsData: Project[] = [
     description: 'Guaranteed professional Construction & Renovation services',
     link: '/portfolio/17',
     bgClass: 'bg-slate',
-    image: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
+    image: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.webp',
     client: 'Kavis Construction Group',
     date: 'Feb 2026',
     services: 'Web Development, Architectural Showcase, Lead Capture',
     projectUrl: 'https://kavisconstruction.com/',
     gallery: [
-      '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
-      '/assets/images/Portfolio/projects/kavisconstruction_tabletview.png',
-      '/assets/images/Portfolio/projects/kavisconstruction_mobileview.png'
+      '/assets/images/Portfolio/projects/kavisconstruction-laptopview.webp',
+      '/assets/images/Portfolio/projects/kavisconstruction_tabletview.webp',
+      '/assets/images/Portfolio/projects/kavisconstruction_mobileview.webp'
     ],
     subtitle: 'Kavis Construction Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_tabletview.webp',
     technologies: [
       { name: 'WordPress', iconType: 'wordpress' },
       { name: 'HTML5', iconType: 'html5' },
@@ -958,9 +958,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/kavisconstruction-laptopview.png',
-      '/assets/images/Portfolio/projects/kavisconstruction_tabletview.png',
-      '/assets/images/Portfolio/projects/kavisconstruction_mobileview.png'
+      '/assets/images/Portfolio/projects/kavisconstruction-laptopview.webp',
+      '/assets/images/Portfolio/projects/kavisconstruction_tabletview.webp',
+      '/assets/images/Portfolio/projects/kavisconstruction_mobileview.webp'
     ],
     results: [
       { value: '140%', label: 'Growth in Construction Leads', iconType: 'trending-up' },
@@ -976,21 +976,21 @@ export const projectsData: Project[] = [
     description: 'Spark Events is the event booking website',
     link: '/portfolio/19',
     bgClass: 'bg-purple-soft',
-    image: '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
+    image: '/assets/images/Portfolio/projects/sparkevent_laptopview.webp',
     client: 'Spark Events',
     date: 'Feb 2026',
     services: 'Web Development, Event Booking, Media Gallery',
     projectUrl: 'https://sparkevent.in/',
     gallery: [
-      '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
-      '/assets/images/Portfolio/projects/sparkevent_tabletview.png',
-      '/assets/images/Portfolio/projects/sparkevent_mobileview.png'
+      '/assets/images/Portfolio/projects/sparkevent_laptopview.webp',
+      '/assets/images/Portfolio/projects/sparkevent_tabletview.webp',
+      '/assets/images/Portfolio/projects/sparkevent_mobileview.webp'
     ],
     subtitle: 'Spark Events  Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.png',
-    scrollImage: '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
-    mobileScrollImage: '/assets/images/Portfolio/projects/sparkevent_mobileview.png',
-    tabletScrollImage: '/assets/images/Portfolio/projects/sparkevent_tabletview.png',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/sparkevent_laptopview.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/sparkevent_mobileview.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/sparkevent_tabletview.webp',
     technologies: [
       { name: 'HTML5', iconType: 'html5' },
       { name: 'CSS3', iconType: 'css3' },
@@ -1015,9 +1015,9 @@ export const projectsData: Project[] = [
       { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
     ],
     screenshots: [
-      '/assets/images/Portfolio/projects/sparkevent_laptopview.png',
-      '/assets/images/Portfolio/projects/sparkevent_tabletview.png',
-      '/assets/images/Portfolio/projects/sparkevent_mobileview.png'
+      '/assets/images/Portfolio/projects/sparkevent_laptopview.webp',
+      '/assets/images/Portfolio/projects/sparkevent_tabletview.webp',
+      '/assets/images/Portfolio/projects/sparkevent_mobileview.webp'
     ],
     results: [
       { value: '190%', label: 'More Event Bookings', iconType: 'trending-up' },
@@ -1033,12 +1033,12 @@ export const projectsData: Project[] = [
     description: 'Feature-rich food delivery app with real-time tracking, payments, and user dashboard.',
     link: '/portfolio/3',
     bgClass: 'bg-purple-soft',
-    image: '/assets/images/Portfolio/portfolio_food_app.png',
+    image: '/assets/images/Portfolio/portfolio_food_app.webp',
     client: 'QuickBite Inc.',
     date: 'Jan 2026',
     services: 'Mobile App Design, iOS & Android Development',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_food_app.png']
+    gallery: ['/assets/images/Portfolio/portfolio_food_app.webp']
   },
   {
     id: 11,
@@ -1047,12 +1047,12 @@ export const projectsData: Project[] = [
     description: 'Smart finance app for tracking income, expenses, and generating detailed reports.',
     link: '/portfolio/11',
     bgClass: 'bg-purple-soft',
-    image: '/assets/images/Portfolio/portfolio_finance_app.png',
+    image: '/assets/images/Portfolio/portfolio_finance_app.webp',
     client: 'Finace Group',
     date: 'Sep 2025',
     services: 'Fintech App, UI/UX Design, React Native',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_finance_app.png']
+    gallery: ['/assets/images/Portfolio/portfolio_finance_app.webp']
   },
   {
     id: 9,
@@ -1061,12 +1061,12 @@ export const projectsData: Project[] = [
     description: 'Complete brand identity including logo, color palette, typography, and brand guidelines.',
     link: '/portfolio/9',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/portfolio_brand_identity.png',
+    image: '/assets/images/Portfolio/portfolio_brand_identity.webp',
     client: 'Nexora Tech',
     date: 'Nov 2025',
     services: 'Brand Identity, Logo Design, Stationery Mockups',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_brand_identity.png']
+    gallery: ['/assets/images/Portfolio/portfolio_brand_identity.webp']
   },
   {
     id: 12,
@@ -1075,12 +1075,12 @@ export const projectsData: Project[] = [
     description: 'Professional logo and brand design that creates a strong and memorable identity.',
     link: '/portfolio/12',
     bgClass: 'bg-slate',
-    image: '/assets/images/Portfolio/portfolio_logo_design.png',
+    image: '/assets/images/Portfolio/portfolio_logo_design.webp',
     client: 'Nexora Tech',
     date: 'Jul 2025',
     services: 'Logo Design, Vector Illustration, Brand Guidelines',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_logo_design.png']
+    gallery: ['/assets/images/Portfolio/portfolio_logo_design.webp']
   },
   {
     id: 1,
@@ -1089,12 +1089,12 @@ export const projectsData: Project[] = [
     description: 'Increased engagement by 320% and boosted sales through targeted ad campaigns.',
     link: '/portfolio/1',
     bgClass: 'bg-orange-soft',
-    image: '/assets/images/Portfolio/portfolio_social_media.png',
+    image: '/assets/images/Portfolio/portfolio_social_media.webp',
     client: 'E-Shop International',
     date: 'Mar 2026',
     services: 'Social Media Marketing, Paid Ads',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_social_media.png']
+    gallery: ['/assets/images/Portfolio/portfolio_social_media.webp']
   },
   {
     id: 10,
@@ -1103,11 +1103,11 @@ export const projectsData: Project[] = [
     description: 'Generated high-quality leads and improved conversion rate for a real estate client.',
     link: '/portfolio/10',
     bgClass: 'bg-lavender',
-    image: '/assets/images/Portfolio/portfolio_lead_gen.png',
+    image: '/assets/images/Portfolio/portfolio_lead_gen.webp',
     client: 'Prime Realty',
     date: 'Oct 2025',
     services: 'Google Ads, Search Engine Marketing, Lead Nurturing',
     projectUrl: 'https://nooryak.com',
-    gallery: ['/assets/images/Portfolio/portfolio_lead_gen.png']
+    gallery: ['/assets/images/Portfolio/portfolio_lead_gen.webp']
   }
 ];

@@ -15,6 +15,7 @@ const ContactFormArea = () => {
         service: '',
         message: ''
     });
+    const [countryCode, setCountryCode] = useState('+91');
     const [loading, setLoading] = useState(false);
     const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
@@ -25,12 +26,19 @@ const ContactFormArea = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        if (!formData.name || !formData.email || !formData.phone || !formData.service) {
+            toast.error('Please fill in all mandatory fields');
+            return;
+        }
+
         if (!recaptchaToken) {
             toast.error('Please verify you are not a robot');
             return;
         }
 
         setLoading(true);
+
+        const fullPhone = `${countryCode} ${formData.phone}`.trim();
 
         try {
             const res = await fetch('/api/enquiry', {
@@ -40,8 +48,8 @@ const ContactFormArea = () => {
                     name: formData.name,
                     email: formData.email,
                     company: formData.company,
-                    phone: formData.phone,
-                    service: formData.service || 'General Inquiry',
+                    phone: fullPhone,
+                    service: formData.service,
                     message: formData.message,
                     token: recaptchaToken
                 })
@@ -229,25 +237,50 @@ const ContactFormArea = () => {
 
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
-                                            <label>Phone Number</label>
-                                            <input
-                                                name="phone"
-                                                type="tel"
-                                                placeholder="Enter your phone number"
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                            />
+                                            <label>Phone Number <span className="required-asterisk">*</span></label>
+                                            <div className="zip-phone-input-group">
+                                                <select
+                                                    value={countryCode}
+                                                    onChange={(e) => setCountryCode(e.target.value)}
+                                                    className="zip-country-select"
+                                                    aria-label="Select Country Code"
+                                                >
+                                                    <option value="+91">🇮🇳 +91 (India)</option>
+                                                    <option value="+1">🇺🇸 +1 (USA/Canada)</option>
+                                                    <option value="+44">🇬🇧 +44 (UK)</option>
+                                                    <option value="+971">🇦🇪 +971 (UAE)</option>
+                                                    <option value="+65">🇸🇬 +65 (Singapore)</option>
+                                                    <option value="+61">🇦🇺 +61 (Australia)</option>
+                                                    <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+                                                    <option value="+974">🇶🇦 +974 (Qatar)</option>
+                                                    <option value="+965">🇰🇼 +965 (Kuwait)</option>
+                                                    <option value="+968">🇴🇲 +968 (Oman)</option>
+                                                    <option value="+49">🇩🇪 +49 (Germany)</option>
+                                                    <option value="+33">🇫🇷 +33 (France)</option>
+                                                    <option value="+81">🇯🇵 +81 (Japan)</option>
+                                                </select>
+                                                <input
+                                                    name="phone"
+                                                    type="tel"
+                                                    placeholder="Enter your phone number"
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="zip-phone-input"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div className="col-12">
                                         <div className="form-field">
-                                            <label>Services Interested In</label>
+                                            <label>Services Interested In <span className="required-asterisk">*</span></label>
                                             <div className="select-wrapper">
                                                 <select
                                                     name="service"
                                                     value={formData.service}
                                                     onChange={handleChange}
+                                                    required
                                                 >
                                                     <option value="" disabled>Select a service</option>
                                                     <option value="Digital Marketing">Digital Marketing</option>

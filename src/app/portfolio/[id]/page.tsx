@@ -343,7 +343,7 @@ export default function ProjectDetailPage() {
                 <div className="overview-mobile-mockup-wrapper">
                   <div className="overview-mobile-mockup-container">
                     <img
-                      src="/assets/images/Portfolio/projects/mobile_tablet.png"
+                      src="/assets/images/Portfolio/projects/mobile_tablet.webp"
                       alt="Mobile and tablet mockups frame"
                       className="mobile-mockup-img-base"
                     />
@@ -571,9 +571,17 @@ export default function ProjectDetailPage() {
                   We help businesses create powerful digital solutions that drive growth and deliver real results.
                 </p>
                 <div className="cta-actions-row">
-                  <Link href="/contact" className="btn-cta-start-project">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.dispatchEvent(new Event('openEnquiryForm'));
+                      }
+                    }}
+                    className="btn-cta-start-project"
+                  >
                     Start a Project ↗
-                  </Link>
+                  </button>
                   <Link href="/contact" className="btn-cta-contact-us">
                     Contact Us
                   </Link>
