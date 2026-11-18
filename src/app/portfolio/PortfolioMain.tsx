@@ -33,8 +33,8 @@ const categories = [
   { name: 'Digital Marketing', icon: <Target size={15} /> }
 ];
 
-// Featured top-row projects (Limras Gallery, Bazarway Shop Ecommerce, Bazarway Store, Annsha Gifts, Fiori Celebrations)
-const FEATURED_TOP_IDS = [18, 21, 13, 23, 22];
+// Featured top-row projects (Row 1: Limras Gallery, Bazarway Shop, Bazarway Store; Row 2: Annsha Gifts, Fiori Celebrations, Arrow Computerz)
+const FEATURED_TOP_IDS = [18, 21, 13, 23, 22, 14];
 
 function sortWithFeaturedFirst(list: Project[]): Project[] {
   const rank = (id: number) => {
@@ -50,7 +50,7 @@ export default function PortfolioMain() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(ORDERED_PROJECTS);
-  const [visibleCount, setVisibleCount] = useState<number>(8);
+  const [visibleCount, setVisibleCount] = useState<number>(6);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
@@ -196,7 +196,7 @@ export default function PortfolioMain() {
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTab(categoryName);
-    setVisibleCount(categoryName === 'All Projects' ? 8 : 6);
+    setVisibleCount(6);
     pauseAutoSlide(4500);
     const button = e.currentTarget;
     const container = tabsNavRef.current;
@@ -211,12 +211,16 @@ export default function PortfolioMain() {
     setFilteredProjects(ORDERED_PROJECTS);
     setVisibleCount(ORDERED_PROJECTS.length);
     setTimeout(() => {
-      const section = document.querySelector('.portfolio-filter-section');
-      if (section) {
-        const top = section.getBoundingClientRect().top + window.pageYOffset - 130;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    }, 60);
+      requestAnimationFrame(() => {
+        const cards = document.querySelectorAll('.portfolio-grid .portfolio-card-col');
+        const lastCard = cards[cards.length - 1];
+        if (lastCard) {
+          const rect = lastCard.getBoundingClientRect();
+          const targetTop = rect.top + window.scrollY - Math.max(120, (window.innerHeight - rect.height) / 2);
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+        }
+      });
+    }, 120);
   };
 
   const handleStartProjectClick = (e: React.MouseEvent) => {
@@ -355,10 +359,6 @@ export default function PortfolioMain() {
   );
 
   const visibleProjects = filteredProjects.slice(0, visibleCount);
-  const splitFeaturedRows = activeTab === 'All Projects';
-  const featuredRowOne = splitFeaturedRows ? visibleProjects.slice(0, 3) : [];
-  const featuredRowTwo = splitFeaturedRows ? visibleProjects.slice(3, 5) : [];
-  const remainingProjects = splitFeaturedRows ? visibleProjects.slice(5) : visibleProjects;
 
   return (
     <div className="portfolio-page-wrapper">
@@ -587,34 +587,11 @@ export default function PortfolioMain() {
             </div>
           </div>
 
-          {/* ── PROJECT GRID (Ref Image 2 Match: Dual Device Mockups + Info) ── */}
+          {/* ── PROJECT GRID (Strictly 3 Columns Per Row on Desktop) ── */}
           <div className="portfolio-grid">
-            {splitFeaturedRows ? (
-              <>
-                {/* First Row: Limras Gallery, Bazarway Shop Ecommerce, Bazarway Website */}
-                <div className="row g-4">
-                  {featuredRowOne.map((project) => renderProjectCard(project))}
-                </div>
-
-                {/* Second Row: Annsha Gifts Ecommerce, Fiori Celebrations Ecommerce */}
-                {featuredRowTwo.length > 0 && (
-                  <div className="row g-4 justify-content-center">
-                    {featuredRowTwo.map((project) => renderProjectCard(project))}
-                  </div>
-                )}
-
-                {/* Other Projects Below */}
-                {remainingProjects.length > 0 && (
-                  <div className="row g-4">
-                    {remainingProjects.map((project) => renderProjectCard(project))}
-                  </div>
-                )}
-              </>
-            ) : (
-              <div className="row g-4">
-                {remainingProjects.map((project) => renderProjectCard(project))}
-              </div>
-            )}
+            <div className="row g-4">
+              {visibleProjects.map((project) => renderProjectCard(project))}
+            </div>
           </div>
 
           {/* Load More Button */}

@@ -1,63 +1,454 @@
-.tp-offcanvas-logo {
-    a {
-        img {
-            background: linear-gradient(135deg, #0f172a 60%, #ff5722 140%);
-            border-radius: 50px;
-            width: 150px;
-            height: auto;
-            padding: 2px 12px;
-        }
+/* ══════════════════════════════════════════════════════════════════════════
+   NOORYAK MOBILE SIDEBAR DRAWER — DARK SLEEK PILL LAYOUT + GRADIENT ORANGE
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.nooryak-mobile-overlay.body-overlay {
+    z-index: 100005 !important;
+    background: rgba(5, 7, 12, 0.72) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    @media (min-width: 1200px) {
+        display: none !important;
     }
 }
 
-.tp-offcanvas-wrapper {
-    height: 100vh;
-    padding: 20px;
-
-    // Hide on desktop — mobile burger menu still works
+.nooryak-mobile-drawer {
     @media (min-width: 1200px) {
         display: none !important;
     }
 
-    .tp-offcanvas-top {
-        margin-bottom: 20px;
+    .ny-drawer-shell.tp-offcanvas-wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 400px;
+        height: 100dvh;
+        height: 100vh;
+        z-index: 100010 !important;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden !important;
+        background: linear-gradient(180deg, #0E1016 0%, #0A0C11 60%, #07080C 100%) !important;
+        border-left: 1px solid rgba(255, 110, 40, 0.18);
+        box-shadow: -16px 0 50px rgba(0, 0, 0, 0.55);
+        font-family: var(--font-inter), sans-serif;
+
+        @media (min-width: 1200px) {
+            display: none !important;
+        }
     }
 
-    .tp-megamenu-wrapper {
-        padding: 6px 2px;
+    /* ── Header Bar ─────────────────────────────────────────────────────── */
+    .ny-drawer-header {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 18px 20px 16px;
+        background: linear-gradient(180deg, rgba(255, 82, 22, 0.1) 0%, rgba(14, 16, 22, 0.96) 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .tp-offcanvas-menu .tp-megamenu-list ul li a {
-        padding: 8px 20px;
-        font-size: 14px;
-        background-color: transparent !important;
+    .ny-drawer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        text-decoration: none !important;
     }
 
-    .tp-offcanvas-menu {
-        margin-bottom: 20px;
+    .ny-drawer-logo-wrap {
+        display: inline-flex;
+        align-items: center;
+        background: linear-gradient(135deg, #161B26 0%, #241914 100%);
+        border: 1px solid rgba(255, 98, 36, 0.32);
+        border-radius: 999px;
+        padding: 4px 14px;
+        box-shadow: 0 4px 14px rgba(255, 82, 22, 0.18);
     }
 
-    .tp-megamenu-list {
-        margin-top: 20px;
-        ul{
-            li{
-                a{
-                    padding: 8px 0;
-                }
+    .ny-drawer-logo-img {
+        width: 118px !important;
+        height: auto !important;
+        display: block;
+    }
+
+    .ny-drawer-tagline {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #FF6B2C 0%, #FFA347 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-left: 6px;
+        line-height: 1;
+    }
+
+    .ny-drawer-close-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.07);
+        color: #FFFFFF;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+        &:hover,
+        &:active {
+            background: linear-gradient(135deg, #FF5216 0%, #FF822E 100%);
+            border-color: #FF6B2C;
+            transform: rotate(90deg);
+        }
+    }
+
+    /* ── Scrollable Pill Menu Body ──────────────────────────────────────── */
+    .ny-drawer-body {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        padding: 16px 18px 14px;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 98, 36, 0.45) transparent;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255, 98, 36, 0.45);
+            border-radius: 999px;
+        }
+    }
+
+    .ny-mobile-nav-list {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .ny-mobile-nav-item {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .ny-nav-pill {
+        width: 100%;
+        min-height: 52px;
+        padding: 13px 18px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: #FFFFFF;
+        color: #0F172A !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        text-decoration: none !important;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: -0.1px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.25s ease, color 0.2s ease;
+
+        &:hover,
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(255, 82, 22, 0.22);
+        }
+
+        &.is-active {
+            background: linear-gradient(135deg, #FF4D12 0%, #FF761E 55%, #FF9636 100%);
+            border-color: rgba(255, 168, 92, 0.55);
+            color: #FFFFFF !important;
+            box-shadow:
+                0 8px 24px rgba(255, 82, 22, 0.42),
+                inset 0 1px 0 rgba(255, 255, 255, 0.28);
+
+            .ny-pill-icon {
+                color: #FFFFFF;
+            }
+
+            .ny-hiring-badge {
+                background: rgba(255, 255, 255, 0.95);
+                color: #15803D;
+                border-color: transparent;
             }
         }
     }
-}
 
-// Hide body overlay on desktop too
-@media (min-width: 1200px) {
-    .body-overlay {
-        display: none !important;
+    .ny-pill-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        line-height: 1.2;
     }
-}
 
+    .ny-hiring-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 3px 9px;
+        border-radius: 999px;
+        background: #DCFCE7;
+        border: 1px solid #86EFAC;
+        color: #15803D;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: 0.1px;
+    }
 
+    .ny-pill-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #0F172A;
+        flex-shrink: 0;
+        transition: transform 0.25s ease, color 0.2s ease;
 
-.tp-offcanvas-menu ul li .submenu+.tp-menu-close {
-    display: none;
+        &.rotated {
+            transform: rotate(180deg);
+        }
+    }
+
+    /* ── Expandable Submenu Panel (Services / Products) ─────────────────── */
+    .ny-submenu-drawer {
+        margin-top: 8px;
+        padding: 12px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 110, 40, 0.22);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .ny-submenu-all-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 12px;
+        border-radius: 10px;
+        background: rgba(255, 82, 22, 0.16);
+        border: 1px solid rgba(255, 110, 40, 0.32);
+        color: #FFA366 !important;
+        font-size: 12.5px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover,
+        &:active {
+            background: linear-gradient(135deg, #FF5216 0%, #FF822E 100%);
+            color: #FFFFFF !important;
+        }
+    }
+
+    .ny-submenu-groups {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .ny-submenu-group {
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        overflow: hidden;
+    }
+
+    .ny-submenu-group-head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 10px 12px;
+        border: none;
+        background: transparent;
+        color: #F8FAFC;
+        font-size: 12.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        cursor: pointer;
+        text-align: left;
+
+        .ny-sub-chevron {
+            color: #FF7A2F;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        &.open {
+            color: #FF8A4C;
+            background: rgba(255, 82, 22, 0.1);
+
+            .ny-sub-chevron {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .ny-submenu-links {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 6px 8px 8px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+        li {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    }
+
+    .ny-submenu-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 8px;
+        color: rgba(241, 245, 249, 0.86) !important;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none !important;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        svg {
+            opacity: 0.55;
+            flex-shrink: 0;
+        }
+
+        &:hover,
+        &:active,
+        &.active-sub {
+            background: rgba(255, 82, 22, 0.18);
+            color: #FFFFFF !important;
+
+            svg {
+                opacity: 1;
+                color: #FF7A2F;
+            }
+        }
+
+        &.ny-submenu-overview {
+            font-weight: 700;
+            color: #FFA366 !important;
+        }
+    }
+
+    /* ── Bottom Sticky Footer Actions ───────────────────────────────────── */
+    .ny-drawer-footer {
+        flex-shrink: 0;
+        padding: 14px 18px 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(180deg, rgba(12, 14, 20, 0.96) 0%, #07080C 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ny-cta-consultation-btn {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 18px;
+        border-radius: 13px;
+        border: none;
+        background: linear-gradient(135deg, #FF4D12 0%, #FF761E 55%, #FF9636 100%);
+        color: #FFFFFF !important;
+        font-size: 14.5px;
+        font-weight: 700;
+        letter-spacing: 0.1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+        box-shadow: 0 8px 22px rgba(255, 82, 22, 0.36);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover,
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 26px rgba(255, 82, 22, 0.5);
+        }
+    }
+
+    .ny-quick-contact-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ny-quick-btn {
+        min-height: 44px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        font-size: 13.5px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+
+        &:hover,
+        &:active {
+            transform: translateY(-1px);
+        }
+    }
+
+    .ny-quick-whatsapp {
+        background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+        color: #FFFFFF !important;
+        box-shadow: 0 6px 16px rgba(34, 197, 94, 0.28);
+    }
+
+    .ny-quick-call {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: #FFFFFF !important;
+
+        svg {
+            color: #FF7A2F;
+        }
+
+        &:hover,
+        &:active {
+            background: rgba(255, 82, 22, 0.16);
+            border-color: rgba(255, 110, 40, 0.45);
+        }
+    }
+
+    .ny-drawer-location {
+        margin: 2px 0 0;
+        text-align: center;
+        font-size: 11.5px;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        color: rgba(226, 232, 240, 0.58);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
 }
