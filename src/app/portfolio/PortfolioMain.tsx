@@ -33,14 +33,24 @@ const categories = [
   { name: 'Digital Marketing', icon: <Target size={15} /> }
 ];
 
-const ITEMS_PER_ROW = 3;
-const INITIAL_ITEMS = 6; // 2 rows * 3 columns matching reference
+// Featured top-row projects (Limras Gallery, Bazarway Shop Ecommerce, Bazarway Store, Annsha Gifts, Fiori Celebrations)
+const FEATURED_TOP_IDS = [18, 21, 13, 23, 22];
+
+function sortWithFeaturedFirst(list: Project[]): Project[] {
+  const rank = (id: number) => {
+    const idx = FEATURED_TOP_IDS.indexOf(id);
+    return idx === -1 ? FEATURED_TOP_IDS.length : idx;
+  };
+  return [...list].sort((a, b) => rank(a.id) - rank(b.id));
+}
+
+const ORDERED_PROJECTS = sortWithFeaturedFirst(projectsData);
 
 export default function PortfolioMain() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState('All Projects');
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
-  const [visibleCount, setVisibleCount] = useState<number>(6);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(ORDERED_PROJECTS);
+  const [visibleCount, setVisibleCount] = useState<number>(8);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
@@ -54,21 +64,21 @@ export default function PortfolioMain() {
   // Filter projects dynamically when tab changes
   useEffect(() => {
     if (activeTab === 'All Projects') {
-      setFilteredProjects(projectsData);
+      setFilteredProjects(ORDERED_PROJECTS);
     } else if (activeTab === 'Web Development') {
-      setFilteredProjects(projectsData.filter(p => p.category === 'Web Development' || p.id === 13));
+      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Web Development' || p.id === 13)));
     } else if (activeTab === 'Mobile Apps') {
-      setFilteredProjects(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps'));
+      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps')));
     } else if (activeTab === 'UI/UX Design') {
-      setFilteredProjects(projectsData.filter(p => p.category === 'Branding & Design' || p.category === 'UI/UX Design'));
+      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Branding & Design' || p.category === 'UI/UX Design')));
     } else if (activeTab === 'E-Commerce' || activeTab === 'eCommerce') {
-      setFilteredProjects(projectsData.filter(p => (p.category === 'eCommerce' || p.category === 'E-Commerce' || p.id === 2) && p.id !== 13));
+      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => (p.category === 'eCommerce' || p.category === 'E-Commerce' || p.id === 2) && p.id !== 13)));
     } else if (activeTab === 'Software Solutions') {
-      setFilteredProjects(projectsData.filter(p => p.category === 'Web Development' || p.category === 'eCommerce'));
+      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Web Development' || p.category === 'eCommerce')));
     } else if (activeTab === 'Digital Marketing') {
-      setFilteredProjects(projectsData.filter(p => p.category === 'Digital Marketing'));
+      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Digital Marketing')));
     } else {
-      setFilteredProjects(projectsData.filter(p => p.category === activeTab));
+      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === activeTab)));
     }
   }, [activeTab]);
 
@@ -186,7 +196,7 @@ export default function PortfolioMain() {
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTab(categoryName);
-    setVisibleCount(6);
+    setVisibleCount(categoryName === 'All Projects' ? 8 : 6);
     pauseAutoSlide(4500);
     const button = e.currentTarget;
     const container = tabsNavRef.current;
@@ -198,8 +208,8 @@ export default function PortfolioMain() {
 
   const handleViewAllProjects = () => {
     setActiveTab('All Projects');
-    setFilteredProjects(projectsData);
-    setVisibleCount(projectsData.length);
+    setFilteredProjects(ORDERED_PROJECTS);
+    setVisibleCount(ORDERED_PROJECTS.length);
     setTimeout(() => {
       const section = document.querySelector('.portfolio-filter-section');
       if (section) {
@@ -236,6 +246,119 @@ export default function PortfolioMain() {
         return 'badge-gray';
     }
   };
+
+  const renderProjectCard = (project: Project) => (
+    <div
+      key={project.id}
+      className="col-xl-4 col-lg-4 col-md-6 col-12 portfolio-card-col"
+    >
+      <div
+        className="portfolio-project-card"
+        onClick={() => router.push(project.link)}
+      >
+        {/* Visual Mockup Container (Laptop + Mobile Mockup with Full Background) */}
+        <div className="card-mockup-wrapper">
+          <div className="device-scene">
+            {/* Realistic Laptop Mockup */}
+            <div className="mockup-laptop">
+              <div className="laptop-screen-frame">
+                <div className="laptop-camera-dot"></div>
+                <img
+                  src={project.cardLaptopThumb || project.scrollImage || project.image}
+                  alt={`${project.title} laptop view`}
+                  className="laptop-screen-content"
+                  width={480}
+                  height={300}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              {/* Keyboard Base Chassis */}
+              <div className="laptop-keyboard-chassis">
+                <div className="chassis-notch"></div>
+              </div>
+              {/* Laptop Table Shadow */}
+              <div className="laptop-table-shadow"></div>
+            </div>
+
+            {/* Mobile Phone Mockup (Foreground overlapping on bottom right) */}
+            {(project.cardMobileThumb || project.mobileScrollImage || (project.category === 'App Development' && project.image)) && (
+              <div className="mockup-mobile">
+                <div className="mobile-screen-frame">
+                  <div className="mobile-dynamic-island"></div>
+                  <img
+                    src={project.cardMobileThumb || project.mobileScrollImage || project.image}
+                    alt={`${project.title} mobile view`}
+                    className="mobile-screen-content"
+                    width={180}
+                    height={390}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="mobile-table-shadow"></div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Content & Arrow Details (Vertically Centered) */}
+        <div className="card-details-wrapper">
+          <div className="card-text-group">
+            {/* Badges Row: Project-specific Category badge + International badge if present */}
+            <div className="card-badges-row">
+              {project.badge && (
+                <div className="card-international-badge">
+                  <Globe size={12} strokeWidth={2.4} />
+                  <span>{project.badge}</span>
+                </div>
+              )}
+              <span className={`card-category-badge ${getBadgeClass(project.category)}`}>
+                {project.categoryLabel || (project.category === 'eCommerce' ? 'E-Commerce' : project.category)}
+              </span>
+            </div>
+
+            <h4 className="card-project-title">
+              <Link href={project.link} onClick={(e) => e.stopPropagation()}>
+                {(project.subtitle || project.title).replace(/\.+$/, '').trim()}
+              </Link>
+            </h4>
+
+            <p className="card-project-desc">{project.description}</p>
+
+            {/* Mini Tech Stack Pills Row */}
+            <div className="card-tech-stack-row">
+              {(project.technologies && project.technologies.length > 0 ? project.technologies.slice(0, 3) : [
+                { name: 'React', iconType: 'react' },
+                { name: 'Next.js', iconType: 'nextjs' },
+                { name: 'Node.js', iconType: 'nodejs' }
+              ]).map((tech, i) => (
+                <span key={i} className="card-mini-tech-pill">
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <Link
+            href={project.link}
+            className="card-arrow-action"
+            aria-label={`View ${project.title}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ArrowRight size={15} />
+          </Link>
+        </div>
+
+      </div>
+    </div>
+  );
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const splitFeaturedRows = activeTab === 'All Projects';
+  const featuredRowOne = splitFeaturedRows ? visibleProjects.slice(0, 3) : [];
+  const featuredRowTwo = splitFeaturedRows ? visibleProjects.slice(3, 5) : [];
+  const remainingProjects = splitFeaturedRows ? visibleProjects.slice(5) : visibleProjects;
 
   return (
     <div className="portfolio-page-wrapper">
@@ -324,9 +447,6 @@ export default function PortfolioMain() {
                     </svg>
                     <span>WordPress</span>
                   </div>
-
-                  {/* and more... */}
-                  <span className="tech-more">and more...</span>
                 </div>
               </div>
             </div>
@@ -469,114 +589,32 @@ export default function PortfolioMain() {
 
           {/* ── PROJECT GRID (Ref Image 2 Match: Dual Device Mockups + Info) ── */}
           <div className="portfolio-grid">
-            <div className="row g-4">
-              {filteredProjects.slice(0, visibleCount).map((project) => (
-                <div
-                  key={project.id}
-                  className="col-xl-4 col-lg-4 col-md-6 col-12 portfolio-card-col"
-                >
-                  <div
-                    className="portfolio-project-card"
-                    onClick={() => router.push(project.link)}
-                  >
-                    {/* Visual Mockup Container (Laptop + Mobile Mockup with Full Background) */}
-                    <div className="card-mockup-wrapper">
-                      <div className="device-scene">
-                        {/* Realistic Laptop Mockup */}
-                        <div className="mockup-laptop">
-                          <div className="laptop-screen-frame">
-                            <div className="laptop-camera-dot"></div>
-                            <img
-                              src={project.cardLaptopThumb || project.scrollImage || project.image}
-                              alt={`${project.title} laptop view`}
-                              className="laptop-screen-content"
-                              width={480}
-                              height={300}
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </div>
-                          {/* Keyboard Base Chassis */}
-                          <div className="laptop-keyboard-chassis">
-                            <div className="chassis-notch"></div>
-                          </div>
-                          {/* Laptop Table Shadow */}
-                          <div className="laptop-table-shadow"></div>
-                        </div>
-
-                        {/* Mobile Phone Mockup (Foreground overlapping on bottom right) */}
-                        {(project.cardMobileThumb || project.mobileScrollImage || (project.category === 'App Development' && project.image)) && (
-                          <div className="mockup-mobile">
-                            <div className="mobile-screen-frame">
-                              <div className="mobile-dynamic-island"></div>
-                              <img
-                                src={project.cardMobileThumb || project.mobileScrollImage || project.image}
-                                alt={`${project.title} mobile view`}
-                                className="mobile-screen-content"
-                                width={180}
-                                height={390}
-                                loading="lazy"
-                                decoding="async"
-                              />
-                            </div>
-                            <div className="mobile-table-shadow"></div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Content & Arrow Details (Vertically Centered) */}
-                    <div className="card-details-wrapper">
-                      <div className="card-text-group">
-                        {/* Badges Row: Project-specific Category badge + International badge if present */}
-                        <div className="card-badges-row">
-                          {project.badge && (
-                            <div className="card-international-badge">
-                              <Globe size={11} strokeWidth={2.4} />
-                              <span>{project.badge}</span>
-                            </div>
-                          )}
-                          <span className={`card-category-badge ${getBadgeClass(project.category)}`}>
-                            {project.categoryLabel || (project.category === 'eCommerce' ? 'E-Commerce' : project.category)}
-                          </span>
-                        </div>
-
-                        <h4 className="card-project-title">
-                          <Link href={project.link} onClick={(e) => e.stopPropagation()}>
-                            {(project.subtitle || project.title).replace(/\.+$/, '').trim()}
-                          </Link>
-                        </h4>
-
-                        <p className="card-project-desc">{project.description}</p>
-
-                        {/* Mini Tech Stack Pills Row (Task 5: fills empty space) */}
-                        <div className="card-tech-stack-row">
-                          {(project.technologies && project.technologies.length > 0 ? project.technologies.slice(0, 3) : [
-                            { name: 'React', iconType: 'react' },
-                            { name: 'Next.js', iconType: 'nextjs' },
-                            { name: 'Node.js', iconType: 'nodejs' }
-                          ]).map((tech, i) => (
-                            <span key={i} className="card-mini-tech-pill">
-                              {tech.name}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <Link
-                        href={project.link}
-                        className="card-arrow-action"
-                        aria-label={`View ${project.title}`}
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <ArrowRight size={15} />
-                      </Link>
-                    </div>
-
-                  </div>
+            {splitFeaturedRows ? (
+              <>
+                {/* First Row: Limras Gallery, Bazarway Shop Ecommerce, Bazarway Website */}
+                <div className="row g-4">
+                  {featuredRowOne.map((project) => renderProjectCard(project))}
                 </div>
-              ))}
-            </div>
+
+                {/* Second Row: Annsha Gifts Ecommerce, Fiori Celebrations Ecommerce */}
+                {featuredRowTwo.length > 0 && (
+                  <div className="row g-4 justify-content-center">
+                    {featuredRowTwo.map((project) => renderProjectCard(project))}
+                  </div>
+                )}
+
+                {/* Other Projects Below */}
+                {remainingProjects.length > 0 && (
+                  <div className="row g-4">
+                    {remainingProjects.map((project) => renderProjectCard(project))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="row g-4">
+                {remainingProjects.map((project) => renderProjectCard(project))}
+              </div>
+            )}
           </div>
 
           {/* Load More Button */}
