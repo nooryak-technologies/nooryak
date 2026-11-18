@@ -280,26 +280,23 @@ export default function ProjectDetailPage() {
                 </p>
 
                 <div className="project-hero-actions-premium">
-                  <a
-                    href={
+                  {(() => {
+                    const isPlaceholderUrl =
                       !project.projectUrl ||
-                      project.projectUrl.includes('nooryak.com') ||
-                      project.projectUrl === '#'
-                        ? '/coming-soon'
-                        : project.projectUrl
-                    }
-                    target={
-                      !project.projectUrl ||
-                      project.projectUrl.includes('nooryak.com') ||
-                      project.projectUrl === '#'
-                        ? '_self'
-                        : '_blank'
-                    }
-                    rel="noopener noreferrer"
-                    className="btn-live-preview-premium"
-                  >
-                    Live Preview ↗
-                  </a>
+                      project.projectUrl === '#' ||
+                      project.projectUrl === '/coming-soon' ||
+                      /^https?:\/\/(www\.)?nooryak\.com\/?$/i.test(project.projectUrl);
+                    return (
+                      <a
+                        href={isPlaceholderUrl ? '/coming-soon' : project.projectUrl}
+                        target={isPlaceholderUrl ? '_self' : '_blank'}
+                        rel="noopener noreferrer"
+                        className="btn-live-preview-premium"
+                      >
+                        Live Preview ↗
+                      </a>
+                    );
+                  })()}
                 </div>
 
                 {project.technologies && (

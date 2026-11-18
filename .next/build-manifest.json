@@ -4,8 +4,8 @@
   ],
   "devFiles": [],
   "lowPriorityFiles": [
-    "static/u4BimkKilokAZlEsFHDH_/_buildManifest.js",
-    "static/u4BimkKilokAZlEsFHDH_/_ssgManifest.js"
+    "static/Vefk72sh4RU0QLjmSFbkr/_buildManifest.js",
+    "static/Vefk72sh4RU0QLjmSFbkr/_ssgManifest.js"
   ],
   "rootMainFiles": [
     "static/chunks/webpack-2b567c367986a155.js",
@@ -223,7 +223,7 @@
       "static/chunks/2502-649bb095eae5c843.js",
       "static/chunks/7558-6c989df88b51a990.js",
       "static/chunks/7512-f015096af29ecf0f.js",
-      "static/chunks/9684-ffde676b2994f57c.js",
+      "static/chunks/9684-21baf1e5e77dac96.js",
       "static/chunks/5667-f4fd09ab74fd8022.js",
       "static/css/d7745d43281c8485.css",
       "static/chunks/pages/homes/home/HomeMain-7b58fe409aaaddbf.js"
@@ -245,7 +245,7 @@
       "static/chunks/2502-649bb095eae5c843.js",
       "static/chunks/7558-6c989df88b51a990.js",
       "static/chunks/7512-f015096af29ecf0f.js",
-      "static/chunks/9684-ffde676b2994f57c.js",
+      "static/chunks/9684-21baf1e5e77dac96.js",
       "static/chunks/pages/homes/it-solution/ITSolutionMain-38e79dca2f164250.js"
     ],
     "/homes/mobile-application/MobileApplicationMain": [
@@ -280,7 +280,7 @@
       "static/chunks/4690-b6ea04afe6cc57c4.js",
       "static/chunks/7861-9d4555d6db81fa14.js",
       "static/chunks/7558-6c989df88b51a990.js",
-      "static/chunks/9684-ffde676b2994f57c.js",
+      "static/chunks/9684-21baf1e5e77dac96.js",
       "static/chunks/pages/homes/personal-portfolio/PersonalPortfolioMain-d045fd1e694730cb.js"
     ],
     "/homes/shop-modern/ShopModernMain": [

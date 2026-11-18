@@ -49,7 +49,7 @@ export const projectsData: Project[] = [
     client: 'Red Panda Vacations',
     date: 'Feb 2026',
     services: 'Web Design, Next.js Development, CMS Integration',
-    projectUrl: 'https://redpandavacations.com/',
+    projectUrl: 'https://redpandavacations.nooryak.com/',
     gallery: [
       '/assets/images/Portfolio/projects/redpandscreenslide/slide1.webp',
       '/assets/images/Portfolio/projects/redpandscreenslide/slide2.webp',
@@ -234,7 +234,7 @@ export const projectsData: Project[] = [
     client: 'Fun Kiddoz Toy selling  ecommerce ',
     date: 'Jan 2026',
     services: 'Web Design, Interactive Animations, Toy selling ecommerce website',
-    projectUrl: 'https://funkiddoz.in/',
+    projectUrl: 'https://funkiddoz.nooryak.com/',
     gallery: [
       '/assets/images/Portfolio/projects/funkiddoz_laptopvie.webp',
       '/assets/images/Portfolio/projects/funkiddoz_tablet.webp',
@@ -356,7 +356,7 @@ export const projectsData: Project[] = [
     client: 'Youverse Tech',
     date: 'Jan 2026',
     services: 'Web Development, UI/UX Architecture, Cloud Integration',
-    projectUrl: 'https://youverse.in/',
+    projectUrl: 'https://youverse.nooryak.com/',
     gallery: [
       '/assets/images/Portfolio/projects/youverse_laptopview.webp',
       '/assets/images/Portfolio/projects/youverse_tabletview.webp',

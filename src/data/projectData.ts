@@ -95,7 +95,7 @@ export const projectsData: projectsDT[] = [
         title: "Red Panda vacations",
         image: Images.project_6,
         categories: ["UI/UX Design", "Ecommerce Development", "Backend"],
-        link: "https://redpandavacations.com/",
+        link: "https://redpandavacations.nooryak.com/",
     },
     {
         id: 6,
