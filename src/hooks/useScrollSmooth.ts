@@ -35,47 +35,68 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { usePathname } from "next/navigation";
 
 export default function useScrollSmooth() {
+  const pathname = usePathname();
+
   useGSAP(() => {
     // Register plugins
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.config({ nullTargetWarn: false });
 
     const smoothWrapper = document.getElementById("smooth-wrapper");
     const smoothContent = document.getElementById("smooth-content");
 
     if (!smoothWrapper || !smoothContent) return;
 
+    // Portfolio pages use native GPU-composited scrolling for zero-hang smoothness
+    const useNativeScroll = pathname?.startsWith("/portfolio");
     const isDesktop = window.innerWidth >= 768;
 
-    if (isDesktop) {
+    const existing = ScrollSmoother.get();
+    if (useNativeScroll || !isDesktop) {
+      if (existing) {
+        existing.kill();
+      }
+      smoothWrapper.style.cssText = "";
+      smoothContent.style.cssText = "";
+      document.body.style.height = "";
+    } else if (!existing) {
       ScrollSmoother.create({
         wrapper: smoothWrapper,
         content: smoothContent,
-        smooth: 2,
+        smooth: 0.75,
         effects: true,
-        smoothTouch: 0.3,
-        normalizeScroll: true,
-        ignoreMobileResize: false,
+        smoothTouch: 0,
+        normalizeScroll: false,
+        ignoreMobileResize: true,
       });
-    } else {
-      gsap.config({ nullTargetWarn: false });
     }
-    ScrollTrigger.create({
-      trigger: ".shape",
-      pin: true,
-      start: "center center",
-      end: "+=300",
-      markers: false,
-    });
+
+    if (document.querySelector(".shape")) {
+      ScrollTrigger.create({
+        trigger: ".shape",
+        pin: true,
+        start: "center center",
+        end: "+=300",
+        markers: false,
+      });
+    }
+
+    let resizeTimer: ReturnType<typeof setTimeout> | null = null;
     const handleResize = () => {
-      ScrollTrigger.refresh();
+      if (resizeTimer) clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 150);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
 
     return () => {
+      if (resizeTimer) clearTimeout(resizeTimer);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [pathname]);
 }

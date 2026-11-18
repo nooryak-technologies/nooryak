@@ -256,18 +256,15 @@
   0% {
     transform: scale(0.95);
     opacity: 0.85;
-    box-shadow: 0 0 0px rgba(37, 211, 102, 0.5);
   }
 
   50% {
-    opacity: 0.5;
-    box-shadow: 0 0 14px rgba(37, 211, 102, 0.4);
+    opacity: 0.45;
   }
 
   100% {
     transform: scale(1.65);
     opacity: 0;
-    box-shadow: 0 0 22px rgba(37, 211, 102, 0);
   }
 }
 
@@ -637,18 +634,15 @@
   0% {
     transform: scale(0.95);
     opacity: 0.85;
-    box-shadow: 0 0 0px rgba(255, 61, 0, 0.5);
   }
 
   50% {
-    opacity: 0.5;
-    box-shadow: 0 0 14px rgba(255, 61, 0, 0.4);
+    opacity: 0.45;
   }
 
   100% {
     transform: scale(1.65);
     opacity: 0;
-    box-shadow: 0 0 22px rgba(255, 61, 0, 0);
   }
 }
 

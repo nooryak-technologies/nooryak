@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import {
   Grid,
   Target,
@@ -9,14 +10,15 @@ import {
   Smartphone,
   Palette,
   Briefcase,
-  Smile,
   Globe,
   RefreshCw,
   ShoppingBag,
   Rocket,
   Users,
   Star,
-  ArrowRight
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 import { Project, projectsData } from '@/data/portfolioMainData';
@@ -35,9 +37,19 @@ const ITEMS_PER_ROW = 3;
 const INITIAL_ITEMS = 6; // 2 rows * 3 columns matching reference
 
 export default function PortfolioMain() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState('All Projects');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
   const [visibleCount, setVisibleCount] = useState<number>(6);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const tabsNavRef = useRef<HTMLUListElement | null>(null);
+  const progressFillRef = useRef<HTMLDivElement | null>(null);
+  const isUserInteractingRef = useRef(false);
+  const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const autoDirRef = useRef<1 | -1>(1);
+  const edgePauseUntilRef = useRef<number>(0);
 
   // Filter projects dynamically when tab changes
   useEffect(() => {
@@ -60,6 +72,114 @@ export default function PortfolioMain() {
     }
   }, [activeTab]);
 
+  // Keep GSAP ScrollTrigger / ScrollSmoother height synced when cards expand or filter
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const rafId = requestAnimationFrame(() => {
+      try {
+        const { ScrollTrigger } = require('gsap/ScrollTrigger');
+        ScrollTrigger.refresh();
+      } catch {
+        // ignore if gsap not yet loaded
+      }
+    });
+    return () => cancelAnimationFrame(rafId);
+  }, [visibleCount, filteredProjects.length]);
+
+  const updateScrollArrows = useCallback(() => {
+    const el = tabsNavRef.current;
+    if (!el) return;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    const nextLeft = el.scrollLeft > 4;
+    const nextRight = maxScroll > 4 && el.scrollLeft < maxScroll - 4;
+    setCanScrollLeft((prev) => (prev === nextLeft ? prev : nextLeft));
+    setCanScrollRight((prev) => (prev === nextRight ? prev : nextRight));
+    if (progressFillRef.current) {
+      const pct = maxScroll > 4 ? Math.min(100, Math.max(18, (el.scrollLeft / maxScroll) * 100)) : 18;
+      progressFillRef.current.style.width = `${pct}%`;
+    }
+  }, []);
+
+  const pauseAutoSlide = useCallback((resumeDelayMs = 3500) => {
+    isUserInteractingRef.current = true;
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => {
+      isUserInteractingRef.current = false;
+    }, resumeDelayMs);
+  }, []);
+
+  // Mobile/Tablet Category Auto-Slider + Manual Slider sync
+  useEffect(() => {
+    const el = tabsNavRef.current;
+    if (!el || typeof window === 'undefined') return;
+
+    updateScrollArrows();
+
+    let rafId = 0;
+    let lastTime = performance.now();
+    let carry = 0;
+    const speedPxPerSec = 34;
+
+    const tick = (now: number) => {
+      const dt = Math.min((now - lastTime) / 1000, 0.05);
+      lastTime = now;
+
+      const isMobileOrTablet = window.innerWidth < 992;
+      const maxScroll = el.scrollWidth - el.clientWidth;
+
+      if (
+        isMobileOrTablet &&
+        maxScroll > 6 &&
+        !isUserInteractingRef.current &&
+        now >= edgePauseUntilRef.current
+      ) {
+        carry += autoDirRef.current * speedPxPerSec * dt;
+        const step = Math.trunc(carry);
+        if (step !== 0) {
+          carry -= step;
+          const nextLeft = el.scrollLeft + step;
+          if (nextLeft >= maxScroll) {
+            el.scrollLeft = maxScroll;
+            autoDirRef.current = -1;
+            edgePauseUntilRef.current = now + 1200;
+          } else if (nextLeft <= 0) {
+            el.scrollLeft = 0;
+            autoDirRef.current = 1;
+            edgePauseUntilRef.current = now + 1200;
+          } else {
+            el.scrollLeft = nextLeft;
+          }
+          updateScrollArrows();
+        }
+      }
+
+      rafId = requestAnimationFrame(tick);
+    };
+
+    rafId = requestAnimationFrame(tick);
+
+    const onScroll = () => updateScrollArrows();
+    const onResize = () => updateScrollArrows();
+
+    el.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+      el.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [updateScrollArrows]);
+
+  const handleManualSlide = (direction: 'prev' | 'next') => {
+    const el = tabsNavRef.current;
+    if (!el) return;
+    pauseAutoSlide(4000);
+    const delta = direction === 'next' ? 190 : -190;
+    el.scrollBy({ left: delta, behavior: 'smooth' });
+  };
+
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 6);
   };
@@ -67,12 +187,13 @@ export default function PortfolioMain() {
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTab(categoryName);
     setVisibleCount(6);
+    pauseAutoSlide(4500);
     const button = e.currentTarget;
-    button.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
-    });
+    const container = tabsNavRef.current;
+    if (container) {
+      const targetLeft = button.offsetLeft - (container.clientWidth / 2) + (button.offsetWidth / 2);
+      container.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+    }
   };
 
   const handleViewAllProjects = () => {
@@ -274,22 +395,64 @@ export default function PortfolioMain() {
         <div className="container-fluid max-w-1450">
 
           <div className="filter-top-bar">
-            <ul className="portfolio-tabs-nav">
-              {categories.map((cat, idx) => (
-                <li key={idx}>
+            <div className={`tabs-slider-shell ${canScrollLeft ? 'has-left' : ''} ${canScrollRight ? 'has-right' : ''}`}>
+              <ul
+                ref={tabsNavRef}
+                className="portfolio-tabs-nav"
+                onTouchStart={() => pauseAutoSlide(4000)}
+                onTouchMove={() => pauseAutoSlide(4000)}
+                onPointerDown={() => pauseAutoSlide(4000)}
+                onWheel={() => pauseAutoSlide(3500)}
+                onMouseEnter={() => { isUserInteractingRef.current = true; }}
+                onMouseLeave={() => { isUserInteractingRef.current = false; }}
+              >
+                {categories.map((cat, idx) => (
+                  <li key={idx}>
+                    <button
+                      type="button"
+                      onClick={(e) => handleTabClick(cat.name, e)}
+                      className={`portfolio-tab-btn ${activeTab === cat.name ? 'active' : ''}`}
+                    >
+                      <span className={`tab-icon ${activeTab === cat.name ? 'icon-active' : `icon-${cat.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}`}>
+                        {cat.icon}
+                      </span>
+                      {cat.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mobile Manual + Auto Slider Controls Bar */}
+              <div className="mobile-tabs-slider-controls d-lg-none">
+                <div className="slider-arrow-group">
                   <button
                     type="button"
-                    onClick={(e) => handleTabClick(cat.name, e)}
-                    className={`portfolio-tab-btn ${activeTab === cat.name ? 'active' : ''}`}
+                    className={`tabs-nav-arrow prev ${!canScrollLeft ? 'is-disabled' : ''}`}
+                    onClick={() => handleManualSlide('prev')}
+                    disabled={!canScrollLeft}
+                    aria-label="Slide categories left"
                   >
-                    <span className={`tab-icon ${activeTab === cat.name ? 'icon-active' : `icon-${cat.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}`}>
-                      {cat.icon}
-                    </span>
-                    {cat.name}
+                    <ChevronLeft size={15} strokeWidth={2.5} />
                   </button>
-                </li>
-              ))}
-            </ul>
+                  <button
+                    type="button"
+                    className={`tabs-nav-arrow next ${!canScrollRight ? 'is-disabled' : ''}`}
+                    onClick={() => handleManualSlide('next')}
+                    disabled={!canScrollRight}
+                    aria-label="Slide categories right"
+                  >
+                    <ChevronRight size={15} strokeWidth={2.5} />
+                  </button>
+                </div>
+                <div className="slider-progress-track">
+                  <div
+                    ref={progressFillRef}
+                    className="slider-progress-fill"
+                    style={{ width: '18%' }}
+                  />
+                </div>
+              </div>
+            </div>
 
             <div className="filter-actions-right d-none d-lg-flex align-items-center">
               <span className="filter-vertical-divider"></span>
@@ -314,11 +477,7 @@ export default function PortfolioMain() {
                 >
                   <div
                     className="portfolio-project-card"
-                    onClick={() => {
-                      if (typeof window !== 'undefined') {
-                        window.location.href = project.link;
-                      }
-                    }}
+                    onClick={() => router.push(project.link)}
                   >
                     {/* Visual Mockup Container (Laptop + Mobile Mockup with Full Background) */}
                     <div className="card-mockup-wrapper">
@@ -328,10 +487,13 @@ export default function PortfolioMain() {
                           <div className="laptop-screen-frame">
                             <div className="laptop-camera-dot"></div>
                             <img
-                              src={project.scrollImage || project.image}
+                              src={project.cardLaptopThumb || project.scrollImage || project.image}
                               alt={`${project.title} laptop view`}
                               className="laptop-screen-content"
+                              width={480}
+                              height={300}
                               loading="lazy"
+                              decoding="async"
                             />
                           </div>
                           {/* Keyboard Base Chassis */}
@@ -343,15 +505,18 @@ export default function PortfolioMain() {
                         </div>
 
                         {/* Mobile Phone Mockup (Foreground overlapping on bottom right) */}
-                        {(project.mobileScrollImage || (project.category === 'App Development' && project.image)) && (
+                        {(project.cardMobileThumb || project.mobileScrollImage || (project.category === 'App Development' && project.image)) && (
                           <div className="mockup-mobile">
                             <div className="mobile-screen-frame">
                               <div className="mobile-dynamic-island"></div>
                               <img
-                                src={project.mobileScrollImage || project.image}
+                                src={project.cardMobileThumb || project.mobileScrollImage || project.image}
                                 alt={`${project.title} mobile view`}
                                 className="mobile-screen-content"
+                                width={180}
+                                height={390}
                                 loading="lazy"
+                                decoding="async"
                               />
                             </div>
                             <div className="mobile-table-shadow"></div>
@@ -363,7 +528,7 @@ export default function PortfolioMain() {
                     {/* Content & Arrow Details (Vertically Centered) */}
                     <div className="card-details-wrapper">
                       <div className="card-text-group">
-                        {/* Badges Row: Category badge + International badge if present (Task 5) */}
+                        {/* Badges Row: Project-specific Category badge + International badge if present */}
                         <div className="card-badges-row">
                           {project.badge && (
                             <div className="card-international-badge">
@@ -372,7 +537,7 @@ export default function PortfolioMain() {
                             </div>
                           )}
                           <span className={`card-category-badge ${getBadgeClass(project.category)}`}>
-                            {project.category === 'eCommerce' ? 'E-Commerce' : project.category}
+                            {project.categoryLabel || (project.category === 'eCommerce' ? 'E-Commerce' : project.category)}
                           </span>
                         </div>
 

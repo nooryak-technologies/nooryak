@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import Swal from 'sweetalert2';
-import { Phone, Mail, MapPin, Clock, ShieldCheck, ArrowRight, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ShieldCheck, ArrowRight, Send, User, Building2, Briefcase, MessageSquare, Sparkles } from 'lucide-react';
 import ReCAPTCHA from '../common/ReCAPTCHA';
 
 const ContactFormArea = () => {
@@ -189,55 +189,80 @@ const ContactFormArea = () => {
                     {/* Right Column: Send Us a Message Card */}
                     <div className="col-lg-6 col-12">
                         <div className="contact-form-card">
+                            <div className="form-header-badge">
+                                <Sparkles size={13} />
+                                <span>QUICK RESPONSE • WITHIN 24 HRS</span>
+                            </div>
                             <h2 className="form-title">Send Us a Message</h2>
-                            <p className="form-subtitle">Fill out the form below and we'll get back to you shortly.</p>
+                            <p className="form-subtitle">Fill out the form below and our team will get back to you shortly.</p>
 
                             <form onSubmit={handleSubmit} className="custom-form">
-                                <div className="row g-4">
+                                <div className="row g-3 g-md-4">
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
-                                            <label>Full Name <span className="required-asterisk">*</span></label>
-                                            <input
-                                                name="name"
-                                                type="text"
-                                                placeholder="Enter your full name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                required
-                                            />
+                                            <label htmlFor="contact-name">Full Name <span className="required-asterisk">*</span></label>
+                                            <div className="zip-input-box">
+                                                <span className="zip-input-addon" aria-hidden="true">
+                                                    <User size={16} />
+                                                </span>
+                                                <input
+                                                    id="contact-name"
+                                                    name="name"
+                                                    type="text"
+                                                    placeholder="Your full name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                                <span className="zip-focus-line" aria-hidden="true"></span>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
-                                            <label>Email Address <span className="required-asterisk">*</span></label>
-                                            <input
-                                                name="email"
-                                                type="email"
-                                                placeholder="Enter your email address"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                required
-                                            />
+                                            <label htmlFor="contact-email">Email Address <span className="required-asterisk">*</span></label>
+                                            <div className="zip-input-box">
+                                                <span className="zip-input-addon" aria-hidden="true">
+                                                    <Mail size={16} />
+                                                </span>
+                                                <input
+                                                    id="contact-email"
+                                                    name="email"
+                                                    type="email"
+                                                    placeholder="you@example.com"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                                <span className="zip-focus-line" aria-hidden="true"></span>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
-                                            <label>Company</label>
-                                            <input
-                                                name="company"
-                                                type="text"
-                                                placeholder="Enter your company name"
-                                                value={formData.company}
-                                                onChange={handleChange}
-                                            />
+                                            <label htmlFor="contact-company">Company</label>
+                                            <div className="zip-input-box">
+                                                <span className="zip-input-addon" aria-hidden="true">
+                                                    <Building2 size={16} />
+                                                </span>
+                                                <input
+                                                    id="contact-company"
+                                                    name="company"
+                                                    type="text"
+                                                    placeholder="Company name"
+                                                    value={formData.company}
+                                                    onChange={handleChange}
+                                                />
+                                                <span className="zip-focus-line" aria-hidden="true"></span>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div className="col-md-6 col-12">
                                         <div className="form-field">
-                                            <label>Phone Number <span className="required-asterisk">*</span></label>
+                                            <label htmlFor="contact-phone">Phone Number <span className="required-asterisk">*</span></label>
                                             <div className="zip-phone-input-group">
                                                 <select
                                                     value={countryCode}
@@ -245,68 +270,84 @@ const ContactFormArea = () => {
                                                     className="zip-country-select"
                                                     aria-label="Select Country Code"
                                                 >
-                                                    <option value="+91">🇮🇳 +91 (India)</option>
-                                                    <option value="+1">🇺🇸 +1 (USA/Canada)</option>
-                                                    <option value="+44">🇬🇧 +44 (UK)</option>
-                                                    <option value="+971">🇦🇪 +971 (UAE)</option>
-                                                    <option value="+65">🇸🇬 +65 (Singapore)</option>
-                                                    <option value="+61">🇦🇺 +61 (Australia)</option>
-                                                    <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
-                                                    <option value="+974">🇶🇦 +974 (Qatar)</option>
-                                                    <option value="+965">🇰🇼 +965 (Kuwait)</option>
-                                                    <option value="+968">🇴🇲 +968 (Oman)</option>
-                                                    <option value="+49">🇩🇪 +49 (Germany)</option>
-                                                    <option value="+33">🇫🇷 +33 (France)</option>
-                                                    <option value="+81">🇯🇵 +81 (Japan)</option>
+                                                    <option value="+91">🇮🇳 +91</option>
+                                                    <option value="+1">🇺🇸 +1</option>
+                                                    <option value="+44">🇬🇧 +44</option>
+                                                    <option value="+971">🇦🇪 +971</option>
+                                                    <option value="+65">🇸🇬 +65</option>
+                                                    <option value="+61">🇦🇺 +61</option>
+                                                    <option value="+966">🇸🇦 +966</option>
+                                                    <option value="+974">🇶🇦 +974</option>
+                                                    <option value="+965">🇰🇼 +965</option>
+                                                    <option value="+968">🇴🇲 +968</option>
+                                                    <option value="+49">🇩🇪 +49</option>
+                                                    <option value="+33">🇫🇷 +33</option>
+                                                    <option value="+81">🇯🇵 +81</option>
                                                 </select>
                                                 <input
+                                                    id="contact-phone"
                                                     name="phone"
                                                     type="tel"
-                                                    placeholder="Enter your phone number"
+                                                    placeholder="Phone number"
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                     required
                                                     className="zip-phone-input"
                                                 />
+                                                <span className="zip-focus-line" aria-hidden="true"></span>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="col-12">
                                         <div className="form-field">
-                                            <label>Services Interested In <span className="required-asterisk">*</span></label>
-                                            <div className="select-wrapper">
-                                                <select
-                                                    name="service"
-                                                    value={formData.service}
+                                            <label htmlFor="contact-service">Services Interested In <span className="required-asterisk">*</span></label>
+                                            <div className="zip-input-box zip-select-box">
+                                                <span className="zip-input-addon" aria-hidden="true">
+                                                    <Briefcase size={16} />
+                                                </span>
+                                                <div className="select-wrapper">
+                                                    <select
+                                                        id="contact-service"
+                                                        name="service"
+                                                        value={formData.service}
+                                                        onChange={handleChange}
+                                                        required
+                                                    >
+                                                        <option value="" disabled>Select a service</option>
+                                                        <option value="Digital Marketing">Digital Marketing</option>
+                                                        <option value="Web Development">Web Development</option>
+                                                        <option value="App Development">App Development</option>
+                                                        <option value="Google Ads / PPC">Google Ads / PPC</option>
+                                                        <option value="Local SEO">Local SEO</option>
+                                                        <option value="Software Development">Software Development</option>
+                                                        <option value="MLM Software Development">MLM Software Development</option>
+                                                        <option value="Social Media Marketing">Social Media Marketing</option>
+                                                        <option value="Graphic Designing">Graphic Designing</option>
+                                                        <option value="Video Editing">Video Editing</option>
+                                                    </select>
+                                                </div>
+                                                <span className="zip-focus-line" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-12">
+                                        <div className="form-field">
+                                            <label htmlFor="contact-message">How Can We Help You?</label>
+                                            <div className="zip-input-box zip-textarea-box">
+                                                <span className="zip-input-addon zip-textarea-addon" aria-hidden="true">
+                                                    <MessageSquare size={16} />
+                                                </span>
+                                                <textarea
+                                                    id="contact-message"
+                                                    name="message"
+                                                    placeholder="Tell us about your project or requirement..."
+                                                    value={formData.message}
                                                     onChange={handleChange}
-                                                    required
-                                                >
-                                                    <option value="" disabled>Select a service</option>
-                                                    <option value="Digital Marketing">Digital Marketing</option>
-                                                    <option value="Web Development">Web Development</option>
-                                                    <option value="App Development">App Development</option>
-                                                    <option value="Google Ads / PPC">Google Ads / PPC</option>
-                                                    <option value="Local SEO">Local SEO</option>
-                                                    <option value="Software Development">Software Development</option>
-                                                    <option value="MLM Software Development">MLM Software Development</option>
-                                                    <option value="Social Media Marketing">Social Media Marketing</option>
-                                                    <option value="Graphic Designing">Graphic Designing</option>
-                                                    <option value="Video Editing">Video Editing</option>
-                                                </select>
+                                                ></textarea>
+                                                <span className="zip-focus-line" aria-hidden="true"></span>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="form-field">
-                                            <label>How Can We Help You?</label>
-                                            <textarea
-                                                name="message"
-                                                placeholder="Tell us about your project or requirement..."
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                            ></textarea>
                                         </div>
                                     </div>
 
@@ -318,15 +359,15 @@ const ContactFormArea = () => {
                                         />
                                     </div>
 
-                                    <div className="col-12 mt-4">
+                                    <div className="col-12 mt-3">
                                         <button className="submit-btn" type="submit" disabled={loading || !recaptchaToken}>
                                             <span>{loading ? 'Sending...' : 'Send Message'}</span>
                                             <ArrowRight size={18} className="btn-arrow" />
                                         </button>
                                     </div>
 
-                                    <div className="col-12 mt-3 text-center">
-                                        <div className="privacy-badge d-flex align-items-center justify-content-center">
+                                    <div className="col-12 mt-2 text-center">
+                                        <div className="privacy-badge d-inline-flex align-items-center justify-content-center">
                                             <ShieldCheck size={16} className="privacy-icon me-2" />
                                             <span>We respect your privacy. Your information is safe with us.</span>
                                         </div>
