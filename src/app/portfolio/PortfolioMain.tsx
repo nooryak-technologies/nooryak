@@ -26,39 +26,108 @@ import { Project, projectsData } from '@/data/portfolioMainData';
 const categories = [
   { name: 'All Projects', icon: <Grid size={15} /> },
   { name: 'Web Development', icon: <Code size={15} /> },
-  { name: 'Mobile Apps', icon: <Smartphone size={15} /> },
-  { name: 'UI/UX Design', icon: <Palette size={15} /> },
-  { name: 'E-Commerce', icon: <ShoppingBag size={15} /> },
   { name: 'Software Solutions', icon: <Briefcase size={15} /> },
-  { name: 'Digital Marketing', icon: <Target size={15} /> }
+  { name: 'E-Commerce', icon: <ShoppingBag size={15} /> },
+  { name: 'Mobile Apps', icon: <Smartphone size={15} /> },
+  { name: 'Digital Marketing', icon: <Target size={15} /> },
+  { name: 'Graphic Designing', icon: <Palette size={15} /> }
 ];
 
-// Priority Order as defined in promptr.md:
-// 1) PrimeAxis, 2) Spark Event, 3) Radient, 4) Fiori, 5) Annsha, 6) Kavis Construction (UK),
-// 7) Bazarway Shop, 8) Red Panda, 9) KP Enterprise, 10) Tech Era, 11) Nature Axis,
-// 12) WearNova, 13) TrendKart, 14) BullionX MLM, 15) Elkins Aircond, 16) Bazarway,
-// 17) Limras Gallery, 18) Fun Kiddoz, 19) Arman Group, 20) Youverse
+// Priority Order for All Projects:
+// Each 3-column row mixes in 1 Software Solution project:
+// Row 1: PrimeAxis (24), Spark Events (19), SaaSReselling (25)
+// Row 2: Radient (7), Fiori Celebrations (22), LaunchShop SaaS (26)
+// Row 3: Annsha Gifts (23), Kavis UK Construction (17), Website Builder SaaS (27)
+// Row 4: Bazarway Shop (21), Red Panda (2), BillBOSS POS (28)
+// Row 5: KP Enterprises (6), Tech Era (32), Nooryak CRM (29)
+// Row 6: Nature Axis (33), WearNova (34), BinaryEcom (30)
+// Row 7: TrendKart (35), Elkins Air Condition (5), BullionX MLM (31 - last among software)
+// Row 8: Bazarway Website (13), Limras Gallery (18), Fun Kiddoz (16)
+// Row 9: Arman Group (4), Youverse (20), Arrow Computerz (14)
+// Row 10: Shifa Infotech (8), Food Delivery App (3), Finance App (11)
+// Row 11: Digital Marketing (1, 10)
+// Bottom Rows: Graphic Designing dummy projects (9, 12, 36, 37, 38)
 const PORTFOLIO_PRIORITY_IDS = [
-  24, // 1) PrimeAxis Healthcare
-  19, // 2) Spark Events Website
-  7,  // 3) Radient Website
-  22, // 4) Fiori Celebrations
-  23, // 5) Annsha Gifts
-  17, // 6) Kavis Construction
-  21, // 7) Bazarway Shop
-  2,  // 8) Red Panda Vacations
-  6,  // 9) KP Enterprises
-  32, // 10) Tech Era
-  33, // 11) Nature Axis
-  34, // 12) WearNova
-  35, // 13) TrendKart
-  31, // 14) BullionX MLM Software
-  5,  // 15) Elkins Air Condition
-  13, // 16) Bazarway Website
-  18, // 17) Limras Gallery
-  16, // 18) Fun Kiddoz
-  4,  // 19) Arman Group
-  20  // 20) Youverse
+  // Row 1
+  24, // PrimeAxis Healthcare
+  19, // Spark Events Website
+  25, // SaaSReselling Platform (Software Solution 1)
+
+  // Row 2
+  7,  // Radient Website
+  22, // Fiori Celebrations
+  26, // LaunchShop eCommerce Builder (Software Solution 2)
+
+  // Row 3
+  23, // Annsha Gifts
+  17, // Kavis Construction
+  27, // AI Website Builder SaaS (Software Solution 3)
+
+  // Row 4
+  21, // Bazarway Shop
+  2,  // Red Panda Vacations
+  28, // Billing POS (BillBOSS) (Software Solution 4)
+
+  // Row 5
+  6,  // KP Enterprises
+  32, // Tech Era
+  29, // Nooryak CRM (Software Solution 5)
+
+  // Row 6
+  33, // Nature Axis
+  34, // WearNova
+  30, // BinaryEcom Software (Software Solution 6)
+
+  // Row 7
+  35, // TrendKart
+  5,  // Elkins Air Condition
+  31, // BullionX MLM Software (Software Solution 7 - displayed last among software)
+
+  // Row 8
+  13, // Bazarway Website
+  18, // Limras Gallery
+  16, // Fun Kiddoz
+
+  // Row 9
+  4,  // Arman Group
+  20, // Youverse
+  14, // Arrow Computerz
+
+  // Row 10
+  8,  // Shifa Infotech
+  3,  // Food Delivery Mobile App
+  11, // Finance Management App
+
+  // Row 11
+  1,  // Social Media Campaign
+  10, // Lead Generation Campaign
+
+  // Graphic Designing Dummy Projects (displayed at the bottom of the page on All Projects)
+  9,  // Brand Identity for Startup
+  12, // Logo & Brand Design
+  36, // Packaging & Label Design
+  37, // Social Media & Ad Creatives
+  38  // Corporate Print & Brochure Design
+];
+
+// Software Solutions Tab Priority (BullionX displayed last, Kavis & Bazarway excluded)
+const SOFTWARE_SOLUTIONS_PRIORITY_IDS = [
+  25, // SaaSReselling Platform
+  26, // LaunchShop eCommerce Builder
+  27, // AI Website Builder SaaS
+  28, // Billing POS (BillBOSS)
+  29, // Nooryak CRM
+  30, // BinaryEcom Software
+  31  // BullionX MLM Software (displayed last)
+];
+
+// Graphic Designing Tab Priority
+const GRAPHIC_DESIGNING_PRIORITY_IDS = [
+  9,  // Brand Identity for Startup
+  12, // Logo & Brand Design
+  36, // Packaging & Label Design
+  37, // Social Media & Ad Creatives
+  38  // Corporate Print & Brochure Design
 ];
 
 function sortByPriority(list: Project[], priorityIds: number[]): Project[] {
@@ -92,16 +161,17 @@ export default function PortfolioMain() {
       setFilteredProjects(ORDERED_PROJECTS);
     } else if (activeTab === 'Web Development') {
       setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Web Development' || p.id === 13 || p.id === 17), PORTFOLIO_PRIORITY_IDS));
-    } else if (activeTab === 'Mobile Apps') {
-      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps'), PORTFOLIO_PRIORITY_IDS));
-    } else if (activeTab === 'UI/UX Design') {
-      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Branding & Design' || p.category === 'UI/UX Design'), PORTFOLIO_PRIORITY_IDS));
+    } else if (activeTab === 'Software Solutions') {
+      // Exclude Kavis Construction and Bazarway Website; place BullionX last
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Software Solutions' && p.id !== 13 && p.id !== 17), SOFTWARE_SOLUTIONS_PRIORITY_IDS));
     } else if (activeTab === 'E-Commerce' || activeTab === 'eCommerce') {
       setFilteredProjects(sortByPriority(projectsData.filter(p => (p.category === 'eCommerce' || p.category === 'E-Commerce' || p.id === 2 || p.id === 32 || p.id === 33 || p.id === 34 || p.id === 35) && p.id !== 13), PORTFOLIO_PRIORITY_IDS));
-    } else if (activeTab === 'Software Solutions') {
-      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Software Solutions' || p.id === 31 || p.id === 13 || p.id === 17), PORTFOLIO_PRIORITY_IDS));
+    } else if (activeTab === 'Mobile Apps') {
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps'), PORTFOLIO_PRIORITY_IDS));
     } else if (activeTab === 'Digital Marketing') {
       setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Digital Marketing'), PORTFOLIO_PRIORITY_IDS));
+    } else if (activeTab === 'Graphic Designing') {
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Graphic Designing' || p.category === 'Branding & Design'), GRAPHIC_DESIGNING_PRIORITY_IDS));
     } else {
       setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === activeTab), PORTFOLIO_PRIORITY_IDS));
     }
@@ -221,7 +291,7 @@ export default function PortfolioMain() {
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTab(categoryName);
-    setVisibleCount(categoryName === 'Software Solutions' ? 9 : 6);
+    setVisibleCount(categoryName === 'Software Solutions' || categoryName === 'Graphic Designing' ? 9 : 6);
     pauseAutoSlide(4500);
     const button = e.currentTarget;
     const container = tabsNavRef.current;
@@ -267,8 +337,10 @@ export default function PortfolioMain() {
         return 'badge-teal';
       case 'App Development':
       case 'Mobile Apps':
+        return 'badge-purple';
       case 'Software Solutions':
         return 'badge-purple';
+      case 'Graphic Designing':
       case 'Branding & Design':
       case 'UI/UX Design':
         return 'badge-green';

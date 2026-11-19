@@ -1057,7 +1057,7 @@ export const projectsData: Project[] = [
   {
     id: 9,
     title: 'Brand Identity for Startup',
-    category: 'Branding & Design',
+    category: 'Graphic Designing',
     categoryLabel: 'Brand Identity',
     cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-9-laptop.webp',
     description: 'Complete brand identity including logo, color palette, typography, and brand guidelines.',
@@ -1073,7 +1073,7 @@ export const projectsData: Project[] = [
   {
     id: 12,
     title: 'Logo & Brand Design',
-    category: 'Branding & Design',
+    category: 'Graphic Designing',
     categoryLabel: 'Logo & Branding',
     cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-12-laptop.webp',
     description: 'Professional logo and brand design that creates a strong and memorable identity.',
@@ -1836,6 +1836,146 @@ export const projectsData: Project[] = [
       { value: '98%', label: 'Positive Order Feedback', iconType: 'smile' },
       { value: '99.9%', label: 'Platform Availability', iconType: 'check-circle' }
     ]
+  },
+  {
+    id: 36,
+    title: 'Packaging & Label Design',
+    category: 'Graphic Designing',
+    categoryLabel: 'Packaging & Labels',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-36-laptop.webp',
+    description: 'Custom packaging, premium box die-cuts, and product label graphics for organic retail products.',
+    link: '/portfolio/36',
+    bgClass: 'bg-nature',
+    image: '/assets/images/Portfolio/projects/graphic_packaging.webp',
+    client: 'PureBotanics Wellness',
+    date: 'Jan 2026',
+    services: 'Packaging Design, 3D Mockups, Die-Cut Blueprints',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/projects/graphic_packaging.webp'],
+    subtitle: 'PureBotanics Packaging Design',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/graphic_packaging.webp',
+    technologies: [
+      { name: 'Illustrator', iconType: 'adobe' },
+      { name: 'Photoshop', iconType: 'adobe' },
+      { name: 'Figma', iconType: 'figma' }
+    ],
+    overview: 'Comprehensive product packaging and label designs tailored for luxury and organic cosmetics brands.',
+    features: [
+      'Precision vector dieline layouts',
+      'Photorealistic 3D bottle & box mockups',
+      'Pantone color calibration for print',
+      'Barcode & regulatory compliance placement'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'PureBotanics Wellness', iconType: 'user' },
+      { label: 'Industry', value: 'Cosmetics & Retail', iconType: 'globe' },
+      { label: 'Project Type', value: 'Packaging & Label', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/graphic_packaging.webp'
+    ],
+    results: [
+      { value: '250%', label: 'Shelf Appeal Increase', iconType: 'trending-up' },
+      { value: '100%', label: 'Print Accuracy', iconType: 'check-circle' },
+      { value: '98%', label: 'Client Approval Rating', iconType: 'smile' }
+    ]
+  },
+  {
+    id: 37,
+    title: 'Social Media & Ad Creatives',
+    category: 'Graphic Designing',
+    categoryLabel: 'Social Media Visuals',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-37-laptop.webp',
+    description: 'High-converting advertising banners, social carousels, and vector promotional creatives.',
+    link: '/portfolio/37',
+    bgClass: 'bg-purple-soft',
+    image: '/assets/images/Portfolio/projects/graphic_social_ad.webp',
+    client: 'Apex Media & Growth',
+    date: 'Feb 2026',
+    services: 'Ad Creatives, Social Media Graphics, Motion Banners',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/projects/graphic_social_ad.webp'],
+    subtitle: 'Creative Campaign Visuals',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/graphic_social_ad.webp',
+    technologies: [
+      { name: 'Photoshop', iconType: 'adobe' },
+      { name: 'Illustrator', iconType: 'adobe' },
+      { name: 'Canva Pro', iconType: 'canva' }
+    ],
+    overview: 'Creative graphic visual assets optimized for high engagement and click-through rates across Instagram, Facebook, and LinkedIn.',
+    features: [
+      'Brand-aligned social feed post sets',
+      'High-converting story & reel covers',
+      'Multi-format Google Display ad banners',
+      'Custom vector icon sets and typography'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Apex Media', iconType: 'user' },
+      { label: 'Industry', value: 'Digital Marketing & Growth', iconType: 'globe' },
+      { label: 'Project Type', value: 'Ad Campaign Graphics', iconType: 'code' },
+      { label: 'Duration', value: '2 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/graphic_social_ad.webp'
+    ],
+    results: [
+      { value: '310%', label: 'Ad Click-Through Rate', iconType: 'trending-up' },
+      { value: '88%', label: 'Social Engagement Growth', iconType: 'users' },
+      { value: '99%', label: 'Brand Consistency Score', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 38,
+    title: 'Corporate Print & Brochure Design',
+    category: 'Graphic Designing',
+    categoryLabel: 'Print & Collaterals',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-38-laptop.webp',
+    description: 'High-resolution bi-fold brochures, corporate letterheads, business cards, and presentation decks.',
+    link: '/portfolio/38',
+    bgClass: 'bg-teal',
+    image: '/assets/images/Portfolio/projects/graphic_stationery.webp',
+    client: 'Vanguard Enterprises',
+    date: 'Jan 2026',
+    services: 'Brochure Design, Corporate Identity, Print Stationery',
+    projectUrl: 'https://nooryak.com',
+    gallery: ['/assets/images/Portfolio/projects/graphic_stationery.webp'],
+    subtitle: 'Corporate Print Collaterals',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/graphic_stationery.webp',
+    technologies: [
+      { name: 'InDesign', iconType: 'adobe' },
+      { name: 'Illustrator', iconType: 'adobe' },
+      { name: 'Photoshop', iconType: 'adobe' }
+    ],
+    overview: 'Premium corporate print design ensuring cohesive brand presence across all tangible touchpoints and conference materials.',
+    features: [
+      'Multi-page corporate capability brochures',
+      'Executive business card templates',
+      'Event roll-up banners and booth graphics',
+      'Vector logo guides and typography systems'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Vanguard Enterprises', iconType: 'user' },
+      { label: 'Industry', value: 'Corporate & Finance', iconType: 'globe' },
+      { label: 'Project Type', value: 'Corporate Print Collateral', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/graphic_stationery.webp'
+    ],
+    results: [
+      { value: '180%', label: 'Client Inquiries Generated', iconType: 'trending-up' },
+      { value: '100%', label: 'CMYK Print Ready', iconType: 'check-circle' },
+      { value: '98%', label: 'Executive Satisfaction', iconType: 'smile' }
+    ]
   }
-
 ];
