@@ -51,8 +51,8 @@ export async function PUT(req: Request) {
     let setting = await Setting.findOne({ key: KEY });
     
     if (setting) {
-      // If password is still obfuscated, keep existing password
-      if (config.pass === '********') {
+      // If password is still obfuscated or blank, keep existing password
+      if (!config.pass || config.pass === '********' || config.pass === '••••••••') {
         config.pass = setting.value.pass;
       }
       setting.value = config;

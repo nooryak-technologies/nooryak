@@ -2,36 +2,64 @@ import nodemailer from 'nodemailer';
 import dbConnect from '@/lib/mongodb';
 import Setting from '@/models/Setting';
 
+function cleanEmail(raw?: string): string {
+  if (!raw) return '';
+  return raw.replace(/\s+/g, '').trim();
+}
+
+/**
+ * Creates a nodemailer transporter from dynamic database settings or environment variables.
+ * Enforces tls: { rejectUnauthorized: false } to handle custom cPanel/Exim mail servers
+ * where SSL certificates may match the hosting server cluster hostname.
+ */
+function createTransporter(config: { host: string; port: string | number; user: string; pass: string }) {
+  const portNum = typeof config.port === 'string' ? parseInt(config.port, 10) : config.port;
+  const isSecure = portNum === 465;
+
+  return nodemailer.createTransport({
+    host: config.host,
+    port: portNum,
+    secure: isSecure,
+    auth: {
+      user: config.user,
+      pass: config.pass,
+    },
+    tls: {
+      rejectUnauthorized: false
+    },
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
+  });
+}
+
 export async function sendWelcomeEmail(userEmail: string, password: string, userName: string) {
   await dbConnect();
   const smtpSetting = await Setting.findOne({ key: 'smtp_config' });
 
-  if (!smtpSetting) {
-    throw new Error('SMTP is not configured. Please configure it in Settings.');
+  const host = smtpSetting?.value?.host || process.env.SMTP_HOST;
+  const port = smtpSetting?.value?.port || process.env.SMTP_PORT || '587';
+  const user = smtpSetting?.value?.user || process.env.SMTP_USER;
+  let pass = smtpSetting?.value?.pass || process.env.SMTP_PASS;
+  const fromName = smtpSetting?.value?.fromName || process.env.SMTP_FROM_NAME || 'Nooryak Admin';
+  const fromEmail = smtpSetting?.value?.fromEmail || process.env.SMTP_FROM_EMAIL || user;
+
+  if (!host || !user || !pass) {
+    throw new Error('SMTP is not configured in Admin Settings. Please configure it under Settings > SMTP Mail.');
   }
 
-  const { host, port, user, pass, fromName, fromEmail } = smtpSetting.value;
-
-  const transporter = nodemailer.createTransport({
-    host,
-    port: parseInt(port),
-    secure: port === '465', // true for 465, false for other ports
-    auth: {
-      user,
-      pass,
-    },
-  });
+  const transporter = createTransporter({ host, port, user, pass });
 
   const mailOptions = {
     from: `"${fromName}" <${fromEmail}>`,
-    to: userEmail,
+    to: cleanEmail(userEmail),
     subject: 'Welcome to Nooryak - Your Account Details',
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
         <h2 style="color: #ff7a18;">Welcome to Nooryak, ${userName}!</h2>
         <p>Your account has been created by the administrator. Here are your login credentials:</p>
         <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0;">
-          <p><strong>Email:</strong> ${userEmail}</p>
+          <p><strong>Email:</strong> ${cleanEmail(userEmail)}</p>
           <p><strong>Password:</strong> ${password}</p>
         </div>
         <p>Please log in and change your password for security.</p>
@@ -63,37 +91,38 @@ export async function sendEnquiryNotificationEmail(data: {
     await dbConnect();
     const smtpSetting = await Setting.findOne({ key: 'smtp_config' });
 
+    // Dynamic configuration from Admin Panel Settings (with env fallback)
     const host = smtpSetting?.value?.host || process.env.SMTP_HOST;
     const port = smtpSetting?.value?.port || process.env.SMTP_PORT || '587';
     const user = smtpSetting?.value?.user || process.env.SMTP_USER;
     const pass = smtpSetting?.value?.pass || process.env.SMTP_PASS;
-    const fromName = smtpSetting?.value?.fromName || process.env.SMTP_FROM_NAME || 'Nooryak Notification';
-    const fromEmail = smtpSetting?.value?.fromEmail || process.env.SMTP_FROM_EMAIL || user;
+    const fromName = smtpSetting?.value?.fromName || process.env.SMTP_FROM_NAME || 'Nooryak Admin';
+    const configuredFrom = smtpSetting?.value?.fromEmail || process.env.SMTP_FROM_EMAIL || user;
 
-    // Dynamic recipient from Admin Panel Settings (with fallback to env or SMTP user)
+    // Dynamic recipient configured from Admin Settings
     const recipientConfig = smtpSetting?.value?.recipientEmail || process.env.ENQUIRY_RECIPIENT_EMAIL;
-    const targetRecipient = (recipientConfig && recipientConfig.trim())
-      ? recipientConfig.trim()
-      : (user || fromEmail || 'abdulbahad.dev@gmail.com');
+    const targetRecipient = cleanEmail(recipientConfig) || cleanEmail(user) || cleanEmail(configuredFrom);
 
-    if (!host || !user || !pass) {
-      console.warn('SMTP is not configured in settings or environment. Skipping email dispatch.');
+    if (!host || !user || !pass || pass === '********' || pass === '••••••••') {
+      console.warn('SMTP is not fully configured in Admin Settings. Please visit Admin > Settings > SMTP Mail to set host, user, password.');
       return;
     }
 
-    const transporter = nodemailer.createTransport({
-      host,
-      port: parseInt(port),
-      secure: port === '465',
-      auth: {
-        user,
-        pass,
-      },
-    });
+    if (!targetRecipient) {
+      console.warn('No notification recipient email configured. Please set Notification Recipient Email in Settings > SMTP Mail.');
+      return;
+    }
+
+    // Sender logic: Use domain email (user) if fromEmail is a personal gmail/yahoo to avoid SPF/DMARC rejection
+    const effectiveFromEmail = (configuredFrom && configuredFrom.includes('@') && !configuredFrom.endsWith('@gmail.com') && !configuredFrom.endsWith('@yahoo.com'))
+      ? cleanEmail(configuredFrom)
+      : cleanEmail(user);
+
+    const transporter = createTransporter({ host, port, user, pass });
 
     const isContact = data.type === 'contact';
-    const subject = isContact ? 'Nooryak Enquiry from contact' : 'Nooryak SAAS Enquiry';
-    const heading = isContact ? 'New Contact Form Enquiry' : 'New SAAS Platform Enquiry';
+    const subject = isContact ? 'New Contact Enquiry - Nooryak Technologies' : 'New SAAS Platform Demo Request - Nooryak';
+    const heading = isContact ? 'New Contact Form Enquiry' : 'New SAAS Platform Demo Request';
 
     const htmlContent = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 620px; margin: 0 auto; background: #ffffff; border: 1.5px solid #E2E8F0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
@@ -110,7 +139,7 @@ export async function sendEnquiryNotificationEmail(data: {
             </tr>
             <tr>
               <td style="padding: 10px 0; color: #64748B; font-weight: 600; border-bottom: 1px solid #F1F5F9;">Email Address:</td>
-              <td style="padding: 10px 0; color: #0F172A; border-bottom: 1px solid #F1F5F9;"><a href="mailto:${data.email}" style="color: #FF5216; text-decoration: none; font-weight: 600;">${data.email}</a></td>
+              <td style="padding: 10px 0; color: #0F172A; border-bottom: 1px solid #F1F5F9;"><a href="mailto:${cleanEmail(data.email)}" style="color: #FF5216; text-decoration: none; font-weight: 600;">${cleanEmail(data.email)}</a></td>
             </tr>
             <tr>
               <td style="padding: 10px 0; color: #64748B; font-weight: 600; border-bottom: 1px solid #F1F5F9;">Phone Number:</td>
@@ -142,15 +171,15 @@ export async function sendEnquiryNotificationEmail(data: {
       </div>
     `;
 
-    await transporter.sendMail({
-      from: `"${fromName}" <${fromEmail}>`,
+    const info = await transporter.sendMail({
+      from: `"${fromName}" <${effectiveFromEmail}>`,
       to: targetRecipient,
-      replyTo: data.email,
+      replyTo: cleanEmail(data.email),
       subject,
       html: htmlContent,
     });
 
-    console.log(`Successfully dispatched notification email to ${targetRecipient} [Subject: ${subject}]`);
+    console.log(`Successfully dispatched enquiry notification to ${targetRecipient} [MessageId: ${info.messageId}]`);
   } catch (error: any) {
     console.error('Failed to send enquiry email notification:', error.message);
   }

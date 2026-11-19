@@ -327,10 +327,13 @@ export default function SettingPage() {
                                         <label>From Email</label>
                                         <input 
                                             type="email" 
-                                            placeholder="no-reply@nooryak.com" 
+                                            placeholder="testsmtp@nooryak.com" 
                                             value={smtpConfig.fromEmail}
                                             onChange={(e) => setSmtpConfig({...smtpConfig, fromEmail: e.target.value})}
                                         />
+                                        <span className="text-[11px] text-[#777] mt-1 block">
+                                            Domain email (e.g. testsmtp@nooryak.com) recommended for SPF/DMARC delivery.
+                                        </span>
                                     </div>
                                 </div>
 
