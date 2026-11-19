@@ -241,7 +241,6 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/funkiddoz_mobile.webp'
     ],
     subtitle: 'Fun Kiddoz Ecommerce',
-    badge: 'International Project',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
     scrollImage: '/assets/images/Portfolio/projects/funkiddoz_laptopvie.webp',
     mobileScrollImage: '/assets/images/Portfolio/projects/funkiddoz_mobile.webp',
@@ -285,7 +284,7 @@ export const projectsData: Project[] = [
     id: 18,
     title: 'Limras Gallery Ecom..',
     category: 'eCommerce',
-    categoryLabel: 'Corporate Gifts Book',
+    categoryLabel: 'Corporate Gifting Items',
     cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-18-laptop.webp',
     cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-18-mobile.webp',
     description: 'Limras Gallery  is the ecommerce website to selling the prices and gifts.',
@@ -406,7 +405,7 @@ export const projectsData: Project[] = [
     id: 21,
     title: 'Bazarway Shop Ecom..',
     category: 'eCommerce',
-    categoryLabel: 'Retail Shopping',
+    categoryLabel: 'UK Retail Shopping',
     cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-21-laptop.webp',
     cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-21-mobile.webp',
     description: 'Bazarway is the ecommerce website to selling the products.',
@@ -900,73 +899,13 @@ export const projectsData: Project[] = [
     badge: 'International Project'
   },
   {
-    id: 15,
-    title: 'Dizzle N Drift Website',
-    category: 'Web Development',
-    categoryLabel: 'Car Wash Booking',
-    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-15-laptop.webp',
-    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-15-mobile.webp',
-    description: 'On-demand eco-friendly mobile auto detailing & car wash  website.',
-    link: '/portfolio/15',
-    bgClass: 'bg-nature',
-    image: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
-    client: 'DND Mobile Wash',
-    date: 'Feb 2026',
-    services: 'Web Development, Booking Engine, Mobile Optimization',
-    projectUrl: '/coming-soon',
-    gallery: [
-      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
-      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.webp',
-      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.webp'
-    ],
-    subtitle: 'Dizzle N Drift Website',
-    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
-    scrollImage: '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
-    mobileScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_mobileview.webp',
-    tabletScrollImage: '/assets/images/Portfolio/projects/dndmobilewash_tabletview.webp',
-    technologies: [
-      { name: 'HTML5', iconType: 'html5' },
-      { name: 'CSS3', iconType: 'css3' },
-      { name: 'JavaScript', iconType: 'javascript' },
-      { name: 'PHP', iconType: 'php' },
-      { name: 'MySQL', iconType: 'mysql' }
-    ],
-    overview: 'DND Mobile Wash provides customer-centric mobile auto detailing scheduling, package selection, and instant service quote requests.',
-    features: [
-      'Package selection & online quote generator',
-      'Location-based mobile wash scheduling',
-      'Customer review & photo gallery',
-      'WhatsApp quick booking integration',
-      'Optimized fast loading layout'
-    ],
-    metaGrid: [
-      { label: 'Client', value: 'DND Mobile Wash', iconType: 'user' },
-      { label: 'Industry', value: 'Automotive Services', iconType: 'globe' },
-      { label: 'Project Type', value: 'On-Demand Service Portal', iconType: 'code' },
-      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
-      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
-      { label: 'Launch Date', value: 'Jan 2026', iconType: 'calendar' }
-    ],
-    screenshots: [
-      '/assets/images/Portfolio/projects/dndmobilewash_laptopview.webp',
-      '/assets/images/Portfolio/projects/dndmobilewash_tabletview.webp',
-      '/assets/images/Portfolio/projects/dndmobilewash_mobileview.webp'
-    ],
-    results: [
-      { value: '210%', label: 'More Mobile Wash Bookings', iconType: 'trending-up' },
-      { value: '85%', label: 'Repeat Customer Rate', iconType: 'shopping-cart' },
-      { value: '50%', label: 'Savings in Admin Time', iconType: 'users' },
-      { value: '4.9★', label: 'Service Satisfaction', iconType: 'smile' }
-    ]
-  },
-  {
     id: 17,
-    title: 'Kavis Construction..',
+    title: 'Kavis Construction',
     category: 'Web Development',
-    categoryLabel: 'Construction Services',
+    categoryLabel: 'UK Construction',
     cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-17-laptop.webp',
     cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-17-mobile.webp',
-    description: 'Guaranteed professional Construction & Renovation services',
+    description: 'Guaranteed professional UK Construction & Renovation services',
     link: '/portfolio/17',
     bgClass: 'bg-slate',
     image: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.webp',
@@ -979,7 +918,8 @@ export const projectsData: Project[] = [
       '/assets/images/Portfolio/projects/kavisconstruction_tabletview.webp',
       '/assets/images/Portfolio/projects/kavisconstruction_mobileview.webp'
     ],
-    subtitle: 'Kavis Construction Website',
+    subtitle: 'Kavis UK Construction Website',
+    badge: 'International Project',
     detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
     scrollImage: '/assets/images/Portfolio/projects/kavisconstruction-laptopview.webp',
     mobileScrollImage: '/assets/images/Portfolio/projects/kavisconstruction_mobileview.webp',
@@ -1177,5 +1117,725 @@ export const projectsData: Project[] = [
     services: 'Google Ads, Search Engine Marketing, Lead Nurturing',
     projectUrl: 'https://nooryak.com',
     gallery: ['/assets/images/Portfolio/portfolio_lead_gen.webp']
+  },
+  {
+    id: 24,
+    title: 'PrimeAxis Healthcare',
+    category: 'Web Development',
+    categoryLabel: 'Radiology & Healthcare',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-24-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-24-mobile.webp',
+    description: 'Complete healthcare and radiology equipment systems portal for hospitals and diagnostic clinics across the UAE.',
+    link: '/portfolio/24',
+    bgClass: 'bg-slate',
+    image: '/assets/images/Portfolio/projects/primeaxis_laptop.webp',
+    client: 'PRIMEAXIS Dubai, UAE',
+    date: 'Nov 2026',
+    services: 'Web Development, UI/UX Design, Healthcare Portal',
+    projectUrl: 'https://primeaxis.pro/',
+    gallery: [
+      '/assets/images/Portfolio/projects/primeaxis_laptop.webp',
+      '/assets/images/Portfolio/projects/primeaxis_tablet.webp',
+      '/assets/images/Portfolio/projects/primeaxis_mobile.webp'
+    ],
+    subtitle: 'PrimeAxis Radiology Systems',
+    badge: 'International Project',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/primeaxis_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/primeaxis_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/primeaxis_mobile.webp',
+    technologies: [
+      { name: 'React', iconType: 'react' },
+      { name: 'Tailwind CSS', iconType: 'css3' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'PRIMEAXIS delivers state-of-the-art radiology machines, complete turnkey hospital setup, Annual Maintenance Contracts (AMC), and dedicated clinical engineering support for hospitals and diagnostic centers across Dubai and the UAE.',
+    features: [
+      'AI-driven radiology & diagnostic equipment showcase (CT, MRI, Digital X-Ray, 4D USG)',
+      'Interactive Request-a-Demo & consultation booking workflow',
+      'Dedicated AMC & clinical support service portal',
+      'Multi-language ready medical product catalog',
+      'Fast React + Vite architecture with responsive design'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'PRIMEAXIS UAE', iconType: 'user' },
+      { label: 'Industry', value: 'Healthcare & Radiology', iconType: 'globe' },
+      { label: 'Project Type', value: 'International Healthcare Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/primeaxis_laptop.webp',
+      '/assets/images/Portfolio/projects/primeaxis_tablet.webp',
+      '/assets/images/Portfolio/projects/primeaxis_mobile.webp'
+    ],
+    results: [
+      { value: '100+', label: 'Hospitals & Clinics Served', iconType: 'users' },
+      { value: '250+', label: 'Radiology Systems Showcased', iconType: 'trending-up' },
+      { value: '98%', label: 'Customer Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Performance & Uptime', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 25,
+    title: 'SaaSReselling',
+    category: 'Software Solutions',
+    categoryLabel: 'White Label SaaS',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-25-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-25-mobile.webp',
+    description: 'All-in-one white-label SaaS platform helping agencies, freelancers, and entrepreneurs launch their own software brand.',
+    link: '/portfolio/25',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/saasreselling_laptop.webp',
+    client: 'SaaSReselling',
+    date: 'Nov 2026',
+    services: 'SaaS Architecture, Laravel Development, White-Label Platform',
+    projectUrl: 'https://saasreselling.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/saasreselling_laptop.webp',
+      '/assets/images/Portfolio/projects/saasreselling_tablet.webp',
+      '/assets/images/Portfolio/projects/saasreselling_mobile.webp'
+    ],
+    subtitle: 'SaaSReselling Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/saasreselling_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/saasreselling_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/saasreselling_mobile.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'SaaSReselling is an all-in-one white-label SaaS reselling platform engineered for agencies, freelancers, and entrepreneurs to launch, rebrand, sell, and scale ready-made software products under their own brand identity.',
+    features: [
+      'Complete white-label brand & custom domain management',
+      'Multi-tenant partner & agency subscription portal',
+      'Interactive live demo showcase for white-label products',
+      'Automated recurring billing and transparent plan tiers',
+      'Scalable Laravel backend with role-based permissions'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'SaaSReselling', iconType: 'user' },
+      { label: 'Industry', value: 'White-Label SaaS', iconType: 'globe' },
+      { label: 'Project Type', value: 'Multi-Tenant SaaS Platform', iconType: 'code' },
+      { label: 'Duration', value: '8 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/saasreselling_laptop.webp',
+      '/assets/images/Portfolio/projects/saasreselling_tablet.webp',
+      '/assets/images/Portfolio/projects/saasreselling_mobile.webp'
+    ],
+    results: [
+      { value: '240%', label: 'Agency Partner Signups', iconType: 'trending-up' },
+      { value: '10x', label: 'Faster SaaS Brand Launch', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Partner Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Cloud Uptime', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 26,
+    title: 'LaunchShop SaaS',
+    category: 'Software Solutions',
+    categoryLabel: 'eCommerce SaaS',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-26-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-26-mobile.webp',
+    description: 'No-code multi-tenant eCommerce SaaS builder enabling sellers to launch an online store in 2 minutes with 0% transaction fees.',
+    link: '/portfolio/26',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/launchshop_laptop.webp',
+    client: 'LaunchShop',
+    date: 'Nov 2026',
+    services: 'SaaS Development, Laravel Multi-Tenancy, Payment Gateway Integration',
+    projectUrl: 'http://launchshop.in/',
+    gallery: [
+      '/assets/images/Portfolio/projects/launchshop_laptop.webp',
+      '/assets/images/Portfolio/projects/launchshop_tablet.webp',
+      '/assets/images/Portfolio/projects/launchshop_mobile.webp'
+    ],
+    subtitle: 'LaunchShop eCommerce Builder',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/launchshop_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/launchshop_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/launchshop_mobile.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'LaunchShop is a fast, affordable Shopify alternative built on Laravel that lets Indian sellers and D2C brands launch complete online stores in 2 minutes with zero coding, advanced store themes, and 0% transaction fees.',
+    features: [
+      '2-minute instant online store provisioning with custom domains',
+      'Advanced conversion-focused store themes & zero-code customization',
+      'Integrated inventory, order tracking, and payment gateways',
+      '0% transaction fee subscription plans starting from ₹199/month',
+      'Dedicated seller analytics & mobile-friendly storefront engine'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'LaunchShop', iconType: 'user' },
+      { label: 'Industry', value: 'eCommerce SaaS', iconType: 'globe' },
+      { label: 'Project Type', value: 'Multi-Tenant Store Builder', iconType: 'code' },
+      { label: 'Duration', value: '10 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/launchshop_laptop.webp',
+      '/assets/images/Portfolio/projects/launchshop_tablet.webp',
+      '/assets/images/Portfolio/projects/launchshop_mobile.webp'
+    ],
+    results: [
+      { value: '2 Min', label: 'Average Store Setup Time', iconType: 'trending-up' },
+      { value: '0%', label: 'Transaction Commission', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Merchant Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Platform Uptime', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 27,
+    title: 'Website Builder SaaS',
+    category: 'Software Solutions',
+    categoryLabel: 'AI Website Builder',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-27-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-27-mobile.webp',
+    description: 'No-code drag-and-drop & AI-powered website builder SaaS with 10+ templates, custom domains, SSL, and white-label support.',
+    link: '/portfolio/27',
+    bgClass: 'bg-purple-soft',
+    image: '/assets/images/Portfolio/projects/websitebuilder_laptop.webp',
+    client: 'SaaSReselling Website Builder',
+    date: 'Nov 2026',
+    services: 'Laravel SaaS Development, Visual Page Builder, AI Integration',
+    projectUrl: 'https://websitebuilder.saasreselling.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/websitebuilder_laptop.webp',
+      '/assets/images/Portfolio/projects/websitebuilder_tablet.webp',
+      '/assets/images/Portfolio/projects/websitebuilder_mobile.webp'
+    ],
+    subtitle: 'AI Website Builder SaaS',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/websitebuilder_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/websitebuilder_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/websitebuilder_mobile.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'Website Builder is a no-code Laravel SaaS platform empowering freelancers, startups, agencies, and businesses to choose a template, customize content with an AI Page Rewriter, and publish with custom domains and free SSL in 3 simple steps.',
+    features: [
+      'Visual drag-and-drop editor with 10+ industry templates',
+      'Built-in AI Page Rewriter for instant content generation',
+      'One-click custom domain mapping with automated SSL',
+      'Client-ready white-label agency mode & tiered plans',
+      'Built-in SEO tools, traffic analytics, and WhatsApp lead widgets'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'SaaSReselling', iconType: 'user' },
+      { label: 'Industry', value: 'No-Code Website SaaS', iconType: 'globe' },
+      { label: 'Project Type', value: 'AI Website Builder Platform', iconType: 'code' },
+      { label: 'Duration', value: '9 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/websitebuilder_laptop.webp',
+      '/assets/images/Portfolio/projects/websitebuilder_tablet.webp',
+      '/assets/images/Portfolio/projects/websitebuilder_mobile.webp'
+    ],
+    results: [
+      { value: '3 Steps', label: 'Template to Live Launch', iconType: 'trending-up' },
+      { value: '10+', label: 'Industry-Ready Templates', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Creator Satisfaction', iconType: 'smile' },
+      { value: '99.9%', label: 'Hosting Reliability', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 28,
+    title: 'Billing POS (BillBOSS)',
+    category: 'Software Solutions',
+    categoryLabel: 'Billing & POS SaaS',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-28-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-28-mobile.webp',
+    description: 'Complete retail billing, inventory, stock transfer, expenses, and POS software built with Laravel and Vue.js.',
+    link: '/portfolio/28',
+    bgClass: 'bg-teal',
+    image: '/assets/images/Portfolio/projects/billbos_laptop.webp',
+    client: 'BillBOSS by Nooryak',
+    date: 'Nov 2026',
+    services: 'Laravel + Vue.js Development, POS Architecture, Inventory Management',
+    projectUrl: 'https://billing.nooryak.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/billbos_laptop.webp',
+      '/assets/images/Portfolio/projects/billbos_tablet.webp',
+      '/assets/images/Portfolio/projects/billbos_mobile.webp'
+    ],
+    subtitle: 'BillBOSS Billing & POS',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/billbos_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/billbos_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/billbos_mobile.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'Vue.js', iconType: 'vue' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'JavaScript', iconType: 'javascript' }
+    ],
+    overview: 'BillBOSS is a comprehensive cloud Billing, Inventory & Point-of-Sale (POS) SaaS built with Laravel and Vue.js—covering sales invoicing, purchases, multi-branch stock transfers, cash & bank tracking, staff clock-in, and real-time analytics.',
+    features: [
+      'Fast Point-of-Sale (POS) checkout & GST-ready invoicing',
+      'Real-time sales, purchases, expenses & cash-flow dashboard',
+      'Multi-warehouse stock transfer & stock adjustment controls',
+      'Staff clock-in attendance, role permissions & party ledgers',
+      'Top-selling product charts, online orders & financial reports'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'BillBOSS POS', iconType: 'user' },
+      { label: 'Industry', value: 'Retail & Accounting SaaS', iconType: 'globe' },
+      { label: 'Project Type', value: 'Billing & Inventory POS', iconType: 'code' },
+      { label: 'Duration', value: '10 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/billbos_laptop.webp',
+      '/assets/images/Portfolio/projects/billbos_tablet.webp',
+      '/assets/images/Portfolio/projects/billbos_mobile.webp'
+    ],
+    results: [
+      { value: '65%', label: 'Faster Billing Checkout', iconType: 'trending-up' },
+      { value: '100%', label: 'Real-Time Stock Accuracy', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Business Owner Rating', iconType: 'smile' },
+      { value: '99.9%', label: 'Cloud POS Uptime', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 29,
+    title: 'Nooryak CRM',
+    category: 'Software Solutions',
+    categoryLabel: 'Lead & Sales CRM',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-29-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-29-mobile.webp',
+    description: 'Smart SaaS CRM platform for managing leads, sales pipelines, deals, follow-up tasks, meetings, and revenue analytics.',
+    link: '/portfolio/29',
+    bgClass: 'bg-orange-soft',
+    image: '/assets/images/Portfolio/projects/nooryakcrm_laptop.webp',
+    client: 'Nooryak Technologies',
+    date: 'Nov 2026',
+    services: 'CRM Software Engineering, SaaS Dashboard UI/UX, Analytics',
+    projectUrl: '#',
+    gallery: [
+      '/assets/images/Portfolio/projects/nooryakcrm_laptop.webp',
+      '/assets/images/Portfolio/projects/nooryakcrm_tablet.webp',
+      '/assets/images/Portfolio/projects/nooryakcrm_mobile.webp'
+    ],
+    subtitle: 'Nooryak CRM Software',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/nooryakcrm_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/nooryakcrm_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/nooryakcrm_mobile.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'React', iconType: 'react' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'Node.js', iconType: 'nodejs' }
+    ],
+    overview: 'Nooryak CRM helps growing sales teams capture leads, track multi-stage deal pipelines (New Lead → Contacted → Qualified → Proposal → Negotiation → Won), schedule follow-up tasks and meetings, and monitor net revenue growth in real time.',
+    features: [
+      'Visual 6-stage sales pipeline with live conversion tracking',
+      'Centralized leads, contacts, and open deals management',
+      'Revenue vs. expenses & net profit executive charts',
+      'Daily task reminders, meeting calendar & automated reports',
+      'Mobile-ready sales dashboard for field teams'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Nooryak CRM', iconType: 'user' },
+      { label: 'Industry', value: 'CRM & Sales Automation', iconType: 'globe' },
+      { label: 'Project Type', value: 'SaaS CRM Platform', iconType: 'code' },
+      { label: 'Duration', value: '12 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Active Product', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/nooryakcrm_laptop.webp',
+      '/assets/images/Portfolio/projects/nooryakcrm_tablet.webp',
+      '/assets/images/Portfolio/projects/nooryakcrm_mobile.webp'
+    ],
+    results: [
+      { value: '24.5%', label: 'Average Deal Conversion', iconType: 'trending-up' },
+      { value: '3x', label: 'Faster Lead Follow-Up', iconType: 'users' },
+      { value: '99%', label: 'Team Adoption Rate', iconType: 'smile' },
+      { value: '99.9%', label: 'Platform Reliability', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 30,
+    title: 'BinaryEcom Software',
+    category: 'Software Solutions',
+    categoryLabel: 'Binary MLM eCommerce',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-30-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-30-mobile.webp',
+    description: 'Laravel eCommerce-based Binary MLM platform with dual-leg downline commissions, product orders, deposits, and withdrawals.',
+    link: '/portfolio/30',
+    bgClass: 'bg-slate',
+    image: '/assets/images/Portfolio/projects/binaryecom_laptop.webp',
+    client: 'BinaryEcom Platform',
+    date: 'Nov 2026',
+    services: 'Laravel MLM Engineering, eCommerce Integration, Wallet & Payout System',
+    projectUrl: 'https://binaryecom.nooryak.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/binaryecom_laptop.webp',
+      '/assets/images/Portfolio/projects/binaryecom_tablet.webp',
+      '/assets/images/Portfolio/projects/binaryecom_mobile.webp'
+    ],
+    subtitle: 'BinaryEcom MLM Platform',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/binaryecom_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/binaryecom_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/binaryecom_mobile.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'BinaryEcom is a full-featured Laravel eCommerce-based Binary MLM platform combining organic product retailing with dual-leg downline genealogy, automated referral & binary commission payouts, deposit/withdrawal approvals, and support ticketing.',
+    features: [
+      'Dual-leg binary genealogy tree & automated pair matching commissions',
+      'Integrated eCommerce product, category & order management',
+      'Automated deposit, withdrawal & charge ledger workflows',
+      'Member verification (email/mobile), cron payouts & financial reports',
+      'Built-in support ticket system & admin notice broadcast'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'BinaryEcom', iconType: 'user' },
+      { label: 'Industry', value: 'MLM & eCommerce SaaS', iconType: 'globe' },
+      { label: 'Project Type', value: 'Binary MLM eCommerce Software', iconType: 'code' },
+      { label: 'Duration', value: '8 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/binaryecom_laptop.webp',
+      '/assets/images/Portfolio/projects/binaryecom_tablet.webp',
+      '/assets/images/Portfolio/projects/binaryecom_mobile.webp'
+    ],
+    results: [
+      { value: '100%', label: 'Automated Commission Engine', iconType: 'trending-up' },
+      { value: '5 Steps', label: 'Distributor Onboarding Flow', iconType: 'users' },
+      { value: '98%', label: 'Admin Accuracy Score', iconType: 'smile' },
+      { value: '99.9%', label: 'Transaction Uptime', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 31,
+    title: 'BullionX MLM Software',
+    category: 'Software Solutions',
+    categoryLabel: 'MLM Profit Software',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-31-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-31-mobile.webp',
+    description: 'Laravel-powered gold profit-sharing and network marketing MLM software with risk management and automated passive payouts.',
+    link: '/portfolio/31',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/bullionx_laptop.webp',
+    client: 'BullionX Academy',
+    date: 'Nov 2026',
+    services: 'Laravel MLM Development, Profit-Sharing Engine, Investor Portal',
+    projectUrl: 'https://bullionx.nooryak.com/',
+    gallery: [
+      '/assets/images/Portfolio/projects/bullionx_laptop.webp',
+      '/assets/images/Portfolio/projects/bullionx_tablet.webp',
+      '/assets/images/Portfolio/projects/bullionx_mobile.webp'
+    ],
+    subtitle: 'BullionX MLM Software',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/bullionx_laptop.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/bullionx_tablet.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/bullionx_mobile.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'MySQL', iconType: 'mysql' },
+      { name: 'JavaScript', iconType: 'javascript' },
+      { name: 'HTML5', iconType: 'html5' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'BullionX MLM Software is a secure Laravel gold profit-sharing and network-growth platform designed to manage member networks, transparent profit-sharing execution, risk management frameworks, and automated passive income distributions.',
+    features: [
+      'Smart gold profit-sharing calculation & passive payout engine',
+      'Multi-level network growth & referral bonus tracking',
+      'Transparent risk management & investor achievement dashboards',
+      'Secure wallet deposits, withdrawal requests & KYC controls',
+      'Responsive member & admin portals built on Laravel'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'BullionX Academy', iconType: 'user' },
+      { label: 'Industry', value: 'FinTech & MLM Software', iconType: 'globe' },
+      { label: 'Project Type', value: 'Profit-Sharing MLM Platform', iconType: 'code' },
+      { label: 'Duration', value: '8 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Nov 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/bullionx_laptop.webp',
+      '/assets/images/Portfolio/projects/bullionx_tablet.webp',
+      '/assets/images/Portfolio/projects/bullionx_mobile.webp'
+    ],
+    results: [
+      { value: '100%', label: 'Automated Payout Accuracy', iconType: 'trending-up' },
+      { value: '3x', label: 'Network Expansion Speed', iconType: 'users' },
+      { value: '99%', label: 'Member Trust Score', iconType: 'smile' },
+      { value: '99.9%', label: 'Security & Uptime', iconType: 'check-circle' }
+    ]
   }
+,
+
+  {
+    id: 32,
+    title: 'Tech Era',
+    category: 'eCommerce',
+    categoryLabel: 'Tech & Gadgets',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-32-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-32-mobile.webp',
+    description: 'Modern electronics, gadgets, and tech accessories eCommerce platform.',
+    link: '/portfolio/32',
+    bgClass: 'bg-tech',
+    image: '/assets/images/Portfolio/projects/techera_laptop.webp',
+    client: 'Tech Era',
+    date: 'Feb 2026',
+    services: 'eCommerce Development, Laravel Backend, Custom UI/UX',
+    projectUrl: 'https://techera.website/',
+    gallery: [
+      '/assets/images/Portfolio/projects/techera_laptop.webp',
+      '/assets/images/Portfolio/projects/techera_tablet.webp',
+      '/assets/images/Portfolio/projects/techera_mobile.webp'
+    ],
+    subtitle: 'Tech Era Ecommerce',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/techera_laptop.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/techera_mobile.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/techera_tablet.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'Tech Era is a full-featured Laravel eCommerce store built for modern tech products, gadgets, and accessories with instant checkout, live stock counters, and smart search.',
+    features: [
+      'Laravel MVC high performance architecture',
+      'Custom responsive cart & instant checkout',
+      'Automated inventory & stock alerts',
+      'Multi-category filtering & live product search',
+      'Encrypted payment gateway integration'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Tech Era', iconType: 'user' },
+      { label: 'Industry', value: 'Consumer Electronics & Tech', iconType: 'globe' },
+      { label: 'Project Type', value: 'Laravel eCommerce Store', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/techera_laptop.webp',
+      '/assets/images/Portfolio/projects/techera_tablet.webp',
+      '/assets/images/Portfolio/projects/techera_mobile.webp'
+    ],
+    results: [
+      { value: '180%', label: 'Growth in Sales Inquiries', iconType: 'trending-up' },
+      { value: '45%', label: 'Higher Repeat Purchases', iconType: 'shopping-cart' },
+      { value: '99%', label: 'Positive Customer Feedback', iconType: 'smile' },
+      { value: '0.8s', label: 'Average Page Load Speed', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 33,
+    title: 'Nature Axis',
+    category: 'eCommerce',
+    categoryLabel: 'Organic & Wellness',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-33-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-33-mobile.webp',
+    description: 'Premium organic wellness, herbal care, and sustainable health products store.',
+    link: '/portfolio/33',
+    bgClass: 'bg-nature',
+    image: '/assets/images/Portfolio/projects/natureaxis_laptop.webp',
+    client: 'Nature Axis (NaturaiXS)',
+    date: 'Feb 2026',
+    services: 'eCommerce Development, Laravel Backend, Mobile First UI',
+    projectUrl: 'https://naturaixs.in/',
+    gallery: [
+      '/assets/images/Portfolio/projects/natureaxis_laptop.webp',
+      '/assets/images/Portfolio/projects/natureaxis_tablet.webp',
+      '/assets/images/Portfolio/projects/natureaxis_mobile.webp'
+    ],
+    subtitle: 'Nature Axis Ecommerce',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/natureaxis_laptop.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/natureaxis_mobile.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/natureaxis_tablet.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'Nature Axis (NaturaiXS) offers an organic shopping experience for pure herbal health supplements, ayurvedic care, and organic essentials backed by a lightning-fast Laravel architecture.',
+    features: [
+      'Organic wellness product catalog',
+      'Secure multi-tier coupon and checkout flow',
+      'Mobile-first responsive purchasing funnel',
+      'Real-time order tracking notifications',
+      'SEO optimized health product listings'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'Nature Axis (NaturaiXS)', iconType: 'user' },
+      { label: 'Industry', value: 'Organic Wellness & Health', iconType: 'globe' },
+      { label: 'Project Type', value: 'Laravel eCommerce Portal', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/natureaxis_laptop.webp',
+      '/assets/images/Portfolio/projects/natureaxis_tablet.webp',
+      '/assets/images/Portfolio/projects/natureaxis_mobile.webp'
+    ],
+    results: [
+      { value: '210%', label: 'Increase in Organic Traffic', iconType: 'trending-up' },
+      { value: '75%', label: 'Mobile Checkout Conversion', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Product Satisfaction Score', iconType: 'smile' },
+      { value: '100%', label: 'Mobile Responsive Layout', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 34,
+    title: 'WearNova',
+    category: 'eCommerce',
+    categoryLabel: 'Fashion & Apparel',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-34-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-34-mobile.webp',
+    description: 'Trendy fashion apparel, streetwear, and modern lifestyle clothing store.',
+    link: '/portfolio/34',
+    bgClass: 'bg-lavender',
+    image: '/assets/images/Portfolio/projects/wearnova_laptop.webp',
+    client: 'WearNova Fashion',
+    date: 'Feb 2026',
+    services: 'eCommerce Development, Laravel Backend, Modern Catalog',
+    projectUrl: 'https://wearnova.site/',
+    gallery: [
+      '/assets/images/Portfolio/projects/wearnova_laptop.webp',
+      '/assets/images/Portfolio/projects/wearnova_tablet.webp',
+      '/assets/images/Portfolio/projects/wearnova_mobile.webp'
+    ],
+    subtitle: 'WearNova Ecommerce',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/wearnova_laptop.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/wearnova_mobile.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/wearnova_tablet.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'WearNova is a modern fashion and streetwear retail destination delivering a smooth visual product catalog, variant selectors (sizes, colors), and seamless checkout experiences.',
+    features: [
+      'Apparel size & color variant selector',
+      'High resolution lookbook & product zoom',
+      'One-click guest and member checkout',
+      'Automated discount and promotional banner engine',
+      'Ultra-responsive mobile shopping UI'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'WearNova Fashion', iconType: 'user' },
+      { label: 'Industry', value: 'Fashion & Apparel', iconType: 'globe' },
+      { label: 'Project Type', value: 'Laravel Fashion Store', iconType: 'code' },
+      { label: 'Duration', value: '3 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/wearnova_laptop.webp',
+      '/assets/images/Portfolio/projects/wearnova_tablet.webp',
+      '/assets/images/Portfolio/projects/wearnova_mobile.webp'
+    ],
+    results: [
+      { value: '165%', label: 'Boost in Mobile Orders', iconType: 'trending-up' },
+      { value: '55%', label: 'Lower Cart Abandonment', iconType: 'shopping-cart' },
+      { value: '97%', label: 'Shopper Satisfaction', iconType: 'smile' },
+      { value: '1.1s', label: 'Fast Catalog Load Time', iconType: 'check-circle' }
+    ]
+  },
+  {
+    id: 35,
+    title: 'TrendKart',
+    category: 'eCommerce',
+    categoryLabel: 'Multi-Category Store',
+    cardLaptopThumb: '/assets/images/Portfolio/card-thumbs/project-35-laptop.webp',
+    cardMobileThumb: '/assets/images/Portfolio/card-thumbs/project-35-mobile.webp',
+    description: 'Trending consumer goods, lifestyle products, and everyday essentials online store.',
+    link: '/portfolio/35',
+    bgClass: 'bg-teal',
+    image: '/assets/images/Portfolio/projects/trendcart_laptop.webp',
+    client: 'TrendKart Online',
+    date: 'Feb 2026',
+    services: 'eCommerce Development, Laravel Backend, Multi-Vendor Architecture',
+    projectUrl: 'https://trendkart.online/',
+    gallery: [
+      '/assets/images/Portfolio/projects/trendcart_laptop.webp',
+      '/assets/images/Portfolio/projects/trendcart_tablet.webp',
+      '/assets/images/Portfolio/projects/trendcart_mobile.webp'
+    ],
+    subtitle: 'TrendKart Ecommerce',
+    detailHeroImage: '/assets/images/Portfolio/projects/herobanner_web.webp',
+    scrollImage: '/assets/images/Portfolio/projects/trendcart_laptop.webp',
+    mobileScrollImage: '/assets/images/Portfolio/projects/trendcart_mobile.webp',
+    tabletScrollImage: '/assets/images/Portfolio/projects/trendcart_tablet.webp',
+    technologies: [
+      { name: 'Laravel', iconType: 'laravel' },
+      { name: 'PHP', iconType: 'php' },
+      { name: 'CSS3', iconType: 'css3' }
+    ],
+    overview: 'TrendKart is a comprehensive multi-category online shopping store featuring curated daily trending deals, rapid search autocompletion, dynamic filters, and encrypted payments.',
+    features: [
+      'Dynamic daily deal & flash sale banners',
+      'High performance search & category facets',
+      'Integrated wishlisting and cart recovery',
+      'Multi-payment gateways (UPI, Cards, NetBanking)',
+      'Automated order management dashboard'
+    ],
+    metaGrid: [
+      { label: 'Client', value: 'TrendKart Online', iconType: 'user' },
+      { label: 'Industry', value: 'Retail & Multi-Category eCommerce', iconType: 'globe' },
+      { label: 'Project Type', value: 'Laravel eCommerce Platform', iconType: 'code' },
+      { label: 'Duration', value: '4 Weeks', iconType: 'clock' },
+      { label: 'Status', value: 'Completed', iconType: 'check-circle' },
+      { label: 'Launch Date', value: 'Feb 2026', iconType: 'calendar' }
+    ],
+    screenshots: [
+      '/assets/images/Portfolio/projects/trendcart_laptop.webp',
+      '/assets/images/Portfolio/projects/trendcart_tablet.webp',
+      '/assets/images/Portfolio/projects/trendcart_mobile.webp'
+    ],
+    results: [
+      { value: '190%', label: 'Monthly Active Buyers Growth', iconType: 'trending-up' },
+      { value: '70%', label: 'Repeat Customer Rate', iconType: 'shopping-cart' },
+      { value: '98%', label: 'Positive Order Feedback', iconType: 'smile' },
+      { value: '99.9%', label: 'Platform Availability', iconType: 'check-circle' }
+    ]
+  }
+
 ];

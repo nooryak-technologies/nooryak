@@ -541,6 +541,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/api/admin/settings/smtp/test/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/admin/settings/smtp/test">> = Specific
+  const handler = {} as typeof import("../../src/app/api/admin/settings/smtp/test/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/api/admin/stats/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/admin/stats">> = Specific

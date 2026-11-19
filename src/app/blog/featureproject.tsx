@@ -41,9 +41,9 @@ export default function FeatureProject({ blogs }: FeatureProjectProps) {
                     <div className="title-line w-20 h-1 bg-[#ff7a18] mt-1"></div>
                 </div>
 
-                <div className="featured_projects_child row">
+                <div className="featured_projects_child row g-2 g-md-4">
                     {blogs.map((b) => (
-                        <div className="col-lg-3 col-md-4 col-sm-12" key={b._id}>
+                        <div className="col-lg-3 col-md-4 col-6" key={b._id}>
                             <div className="card">
                                 <Link href={`/blog/${b.slug}`} className="img">
                                     <img src={b.image} alt={b.title} />

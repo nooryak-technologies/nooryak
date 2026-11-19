@@ -81,7 +81,7 @@ import avaterFour from "../../public/assets/images/home/client4.webp";
 import avaterFive from "../../public/assets/images/home/client5.webp";
 
 // Blog Images Import Here
-const blog_banner = { src: "../../public/assets/images/Blog/blog_banner.png" };
+const blog_banner = { src: "/assets/images/Blog/blog_banner.png" };
 
 // Services Images Import Here
 import Webdevelopment from "../../public/assets/images/services/webdevelopment.png";
@@ -123,8 +123,8 @@ export const Images = {
     blog_banner,
 
     // Services Images Import Here
-    Webdevelopment, Appdevlopment, softwaredevelopment1, optimization, setting, dashboard, support, react,softwaredevelopment ,aiautomation, mlmherobanner,
+    Webdevelopment, Appdevlopment, softwaredevelopment1, optimization, setting, dashboard, support, react, softwaredevelopment, aiautomation, mlmherobanner,
     // Tech Stack Icons
-    icon_react, icon_nextjs, icon_vuejs, icon_angular, icon_nodejs, icon_python,heroicon,
+    icon_react, icon_nextjs, icon_vuejs, icon_angular, icon_nodejs, icon_python, heroicon,
     icon_php, icon_laravel, icon_dotnet, icon_aws, icon_docker, icon_mongodb, software_development,
 };

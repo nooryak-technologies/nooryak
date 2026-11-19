@@ -20,6 +20,21 @@ function TechIcon({ name }: { name: string }) {
   if (n === 'wordpress') {
     return <img src="/assets/images/icons/wordpress.png" alt="WordPress" className="tech-icon-img" />;
   }
+  if (n === 'laravel') {
+    return <img src="/assets/images/services/icons/Laravel.png" alt="Laravel" className="tech-icon-img" />;
+  }
+  if (n === 'vue' || n === 'vue.js' || n === 'vuejs') {
+    return <img src="/assets/images/services/icons/Vue.js.png" alt="Vue.js" className="tech-icon-img" />;
+  }
+  if (n === 'react') {
+    return <img src="/assets/images/services/icons/React.png" alt="React" className="tech-icon-img" />;
+  }
+  if (n === 'nextjs' || n === 'next.js') {
+    return <img src="/assets/images/services/icons/Next.js.png" alt="Next.js" className="tech-icon-img" />;
+  }
+  if (n === 'nodejs' || n === 'node.js') {
+    return <img src="/assets/images/services/icons/Node.js.png" alt="Node.js" className="tech-icon-img" />;
+  }
   if (n === 'php') {
     return <img src="/assets/images/icons/php.png" alt="PHP" className="tech-icon-img" />;
   }
@@ -29,7 +44,7 @@ function TechIcon({ name }: { name: string }) {
   if (n === 'html5' || n === 'html') {
     return <img src="/assets/images/icons/html.png" alt="HTML5" className="tech-icon-img" />;
   }
-  if (n === 'css3' || n === 'css') {
+  if (n === 'css3' || n === 'css' || n === 'tailwind' || n === 'tailwind css') {
     return <img src="/assets/images/icons/css.png" alt="CSS3" className="tech-icon-img" />;
   }
   if (n === 'javascript' || n === 'js') {
@@ -259,7 +274,7 @@ export default function ProjectDetailPage() {
             <div className="row align-items-center g-5">
               <div className="col-lg-6 project-hero-info">
                 <div className="project-hero-badges">
-                  <span className="project-category-badge-premium">{project.category}</span>
+                  <span className="project-category-badge-premium">{project.categoryLabel || project.category}</span>
                   {project.badge && (
                     <span className="project-international-badge">
                       🌍 {project.badge}

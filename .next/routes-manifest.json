@@ -300,6 +300,12 @@
       "namedRegex": "^/api/admin/settings/smtp(?:/)?$"
     },
     {
+      "page": "/api/admin/settings/smtp/test",
+      "regex": "^/api/admin/settings/smtp/test(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/settings/smtp/test(?:/)?$"
+    },
+    {
       "page": "/api/admin/stats",
       "regex": "^/api/admin/stats(?:/)?$",
       "routeKeys": {},

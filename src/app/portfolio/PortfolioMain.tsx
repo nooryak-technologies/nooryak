@@ -33,18 +33,43 @@ const categories = [
   { name: 'Digital Marketing', icon: <Target size={15} /> }
 ];
 
-// Featured top-row projects (Row 1: Limras Gallery, Bazarway Shop, Bazarway Store; Row 2: Annsha Gifts, Fiori Celebrations, Arrow Computerz)
-const FEATURED_TOP_IDS = [18, 21, 13, 23, 22, 14];
+// Priority Order as defined in promptr.md:
+// 1) PrimeAxis, 2) Spark Event, 3) Radient, 4) Fiori, 5) Annsha, 6) Kavis Construction (UK),
+// 7) Bazarway Shop, 8) Red Panda, 9) KP Enterprise, 10) Tech Era, 11) Nature Axis,
+// 12) WearNova, 13) TrendKart, 14) BullionX MLM, 15) Elkins Aircond, 16) Bazarway,
+// 17) Limras Gallery, 18) Fun Kiddoz, 19) Arman Group, 20) Youverse
+const PORTFOLIO_PRIORITY_IDS = [
+  24, // 1) PrimeAxis Healthcare
+  19, // 2) Spark Events Website
+  7,  // 3) Radient Website
+  22, // 4) Fiori Celebrations
+  23, // 5) Annsha Gifts
+  17, // 6) Kavis Construction
+  21, // 7) Bazarway Shop
+  2,  // 8) Red Panda Vacations
+  6,  // 9) KP Enterprises
+  32, // 10) Tech Era
+  33, // 11) Nature Axis
+  34, // 12) WearNova
+  35, // 13) TrendKart
+  31, // 14) BullionX MLM Software
+  5,  // 15) Elkins Air Condition
+  13, // 16) Bazarway Website
+  18, // 17) Limras Gallery
+  16, // 18) Fun Kiddoz
+  4,  // 19) Arman Group
+  20  // 20) Youverse
+];
 
-function sortWithFeaturedFirst(list: Project[]): Project[] {
+function sortByPriority(list: Project[], priorityIds: number[]): Project[] {
   const rank = (id: number) => {
-    const idx = FEATURED_TOP_IDS.indexOf(id);
-    return idx === -1 ? FEATURED_TOP_IDS.length : idx;
+    const idx = priorityIds.indexOf(id);
+    return idx === -1 ? priorityIds.length + id : idx;
   };
   return [...list].sort((a, b) => rank(a.id) - rank(b.id));
 }
 
-const ORDERED_PROJECTS = sortWithFeaturedFirst(projectsData);
+const ORDERED_PROJECTS = sortByPriority(projectsData, PORTFOLIO_PRIORITY_IDS);
 
 export default function PortfolioMain() {
   const router = useRouter();
@@ -66,19 +91,19 @@ export default function PortfolioMain() {
     if (activeTab === 'All Projects') {
       setFilteredProjects(ORDERED_PROJECTS);
     } else if (activeTab === 'Web Development') {
-      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Web Development' || p.id === 13)));
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Web Development' || p.id === 13 || p.id === 17), PORTFOLIO_PRIORITY_IDS));
     } else if (activeTab === 'Mobile Apps') {
-      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps')));
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'App Development' || p.category === 'Mobile Apps'), PORTFOLIO_PRIORITY_IDS));
     } else if (activeTab === 'UI/UX Design') {
-      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Branding & Design' || p.category === 'UI/UX Design')));
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Branding & Design' || p.category === 'UI/UX Design'), PORTFOLIO_PRIORITY_IDS));
     } else if (activeTab === 'E-Commerce' || activeTab === 'eCommerce') {
-      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => (p.category === 'eCommerce' || p.category === 'E-Commerce' || p.id === 2) && p.id !== 13)));
+      setFilteredProjects(sortByPriority(projectsData.filter(p => (p.category === 'eCommerce' || p.category === 'E-Commerce' || p.id === 2 || p.id === 32 || p.id === 33 || p.id === 34 || p.id === 35) && p.id !== 13), PORTFOLIO_PRIORITY_IDS));
     } else if (activeTab === 'Software Solutions') {
-      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Web Development' || p.category === 'eCommerce')));
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Software Solutions' || p.id === 31 || p.id === 13 || p.id === 17), PORTFOLIO_PRIORITY_IDS));
     } else if (activeTab === 'Digital Marketing') {
-      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === 'Digital Marketing')));
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === 'Digital Marketing'), PORTFOLIO_PRIORITY_IDS));
     } else {
-      setFilteredProjects(sortWithFeaturedFirst(projectsData.filter(p => p.category === activeTab)));
+      setFilteredProjects(sortByPriority(projectsData.filter(p => p.category === activeTab), PORTFOLIO_PRIORITY_IDS));
     }
   }, [activeTab]);
 
@@ -196,7 +221,7 @@ export default function PortfolioMain() {
 
   const handleTabClick = (categoryName: string, e: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTab(categoryName);
-    setVisibleCount(6);
+    setVisibleCount(categoryName === 'Software Solutions' ? 9 : 6);
     pauseAutoSlide(4500);
     const button = e.currentTarget;
     const container = tabsNavRef.current;
@@ -242,6 +267,7 @@ export default function PortfolioMain() {
         return 'badge-teal';
       case 'App Development':
       case 'Mobile Apps':
+      case 'Software Solutions':
         return 'badge-purple';
       case 'Branding & Design':
       case 'UI/UX Design':

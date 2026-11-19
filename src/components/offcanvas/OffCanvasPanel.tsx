@@ -55,7 +55,6 @@ const OffCanvasPanel: React.FC<IProps> = ({ openOffcanvas, setOpenOffcanvas }) =
                                     className="ny-drawer-logo-img"
                                 />
                             </div>
-                            <span className="ny-drawer-tagline">DIGITAL &amp; SOFTWARE</span>
                         </Link>
 
                         <button

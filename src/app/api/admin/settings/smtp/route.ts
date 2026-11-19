@@ -20,8 +20,16 @@ export async function GET() {
       return NextResponse.json({ config: null });
     }
 
-    // Obfuscate password in GET
-    const config = { ...setting.value };
+    // Obfuscate password in GET and ensure default fields exist
+    const config = {
+      host: '',
+      port: '587',
+      user: '',
+      fromName: 'Nooryak Admin',
+      fromEmail: '',
+      recipientEmail: '',
+      ...setting.value
+    };
     if (config.pass) config.pass = '********';
 
     return NextResponse.json({ config });

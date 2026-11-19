@@ -2,7 +2,7 @@
 import { AppShell } from '@/components/admin/layout/AppShell';
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
-import { Mail, User, Lock, Bell, Palette, Save, Loader2 } from 'lucide-react';
+import { Mail, User, Lock, Bell, Palette, Save, Loader2, Send } from 'lucide-react';
 import "./setting.scss";
 import { useAuth } from '@/contexts/admin/AuthContext';
 
@@ -76,8 +76,10 @@ export default function SettingPage() {
         user: '',
         pass: '',
         fromName: 'Nooryak Admin',
-        fromEmail: ''
+        fromEmail: '',
+        recipientEmail: ''
     });
+    const [testing, setTesting] = useState(false);
 
     const fetchSMTP = async () => {
         setLoading(true);
@@ -121,6 +123,28 @@ export default function SettingPage() {
             toast.error('Network error');
         } finally {
             setSaving(false);
+        }
+    };
+
+    const handleTestSMTP = async () => {
+        setTesting(true);
+        try {
+            const res = await fetch('/api/admin/settings/smtp/test', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(smtpConfig)
+            });
+
+            const data = await res.json();
+            if (res.ok) {
+                toast.success(data.message || 'Test email sent successfully!');
+            } else {
+                toast.error(data.message || 'SMTP test failed');
+            }
+        } catch (err) {
+            toast.error('Network error during SMTP test');
+        } finally {
+            setTesting(false);
         }
     };
 
@@ -310,14 +334,56 @@ export default function SettingPage() {
                                     </div>
                                 </div>
 
-                                <div className="btn-row">
+                                <div className="mt-6 pt-6 border-t border-[#2a2a2a]">
+                                    <h4 className="text-white font-medium mb-1 flex items-center gap-2">
+                                        <Mail size={16} className="text-[#ff7a18]" />
+                                        Enquiry Notification Copy
+                                    </h4>
+                                    <p className="text-xs text-[#888] mb-4">When a user submits a Contact Us or SaaS enquiry, an email copy will be delivered to this address.</p>
+                                    <div className="form-group">
+                                        <label>Notification Recipient Email (Copy Destination)</label>
+                                        <input 
+                                            type="text" 
+                                            placeholder="e.g. abdulbahad.dev@gmail.com, nooryaktechnologies@gmail.com" 
+                                            value={smtpConfig.recipientEmail || ''}
+                                            onChange={(e) => setSmtpConfig({...smtpConfig, recipientEmail: e.target.value})}
+                                        />
+                                        <span className="text-[11px] text-[#777] mt-1 block">
+                                            Enter one or more comma-separated email addresses to receive copies of all website enquiries.
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="btn-row flex items-center gap-3 mt-6">
                                     <button 
                                         className="btn btn--primary" 
                                         onClick={handleSaveSMTP}
-                                        disabled={saving}
+                                        disabled={saving || testing}
                                     >
                                         {saving ? <Loader2 size={16} className="animate-spin mr-2"/> : <Save size={16} className="mr-2"/>}
                                         Save SMTP Config
+                                    </button>
+                                    <button 
+                                        type="button"
+                                        className="btn btn--secondary" 
+                                        onClick={handleTestSMTP}
+                                        disabled={testing || saving}
+                                        style={{
+                                            background: '#1f2937',
+                                            border: '1px solid #374151',
+                                            color: '#f3f4f6',
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            padding: '8px 16px',
+                                            borderRadius: '8px',
+                                            cursor: 'pointer',
+                                            fontSize: '13px',
+                                            fontWeight: 500,
+                                            transition: 'all 0.2s'
+                                        }}
+                                    >
+                                        {testing ? <Loader2 size={16} className="animate-spin mr-2"/> : <Send size={16} className="mr-2"/>}
+                                        Send Test Email
                                     </button>
                                 </div>
                             </div>

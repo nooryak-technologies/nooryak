@@ -63,21 +63,27 @@ export async function sendEnquiryNotificationEmail(data: {
     await dbConnect();
     const smtpSetting = await Setting.findOne({ key: 'smtp_config' });
 
-    if (!smtpSetting || !smtpSetting.value) {
-      console.warn('SMTP is not configured in settings. Skipping email dispatch to nooryaktechnologies@gmail.com.');
-      return;
-    }
+    const host = smtpSetting?.value?.host || process.env.SMTP_HOST;
+    const port = smtpSetting?.value?.port || process.env.SMTP_PORT || '587';
+    const user = smtpSetting?.value?.user || process.env.SMTP_USER;
+    const pass = smtpSetting?.value?.pass || process.env.SMTP_PASS;
+    const fromName = smtpSetting?.value?.fromName || process.env.SMTP_FROM_NAME || 'Nooryak Notification';
+    const fromEmail = smtpSetting?.value?.fromEmail || process.env.SMTP_FROM_EMAIL || user;
 
-    const { host, port, user, pass, fromName, fromEmail } = smtpSetting.value;
+    // Dynamic recipient from Admin Panel Settings (with fallback to env or SMTP user)
+    const recipientConfig = smtpSetting?.value?.recipientEmail || process.env.ENQUIRY_RECIPIENT_EMAIL;
+    const targetRecipient = (recipientConfig && recipientConfig.trim())
+      ? recipientConfig.trim()
+      : (user || fromEmail || 'abdulbahad.dev@gmail.com');
 
     if (!host || !user || !pass) {
-      console.warn('SMTP host/user/pass missing. Skipping email dispatch.');
+      console.warn('SMTP is not configured in settings or environment. Skipping email dispatch.');
       return;
     }
 
     const transporter = nodemailer.createTransport({
       host,
-      port: parseInt(port || '587'),
+      port: parseInt(port),
       secure: port === '465',
       auth: {
         user,
@@ -137,14 +143,14 @@ export async function sendEnquiryNotificationEmail(data: {
     `;
 
     await transporter.sendMail({
-      from: `"${fromName || 'Nooryak Notification'}" <${fromEmail || user}>`,
-      to: 'nooryaktechnologies@gmail.com',
+      from: `"${fromName}" <${fromEmail}>`,
+      to: targetRecipient,
       replyTo: data.email,
       subject,
       html: htmlContent,
     });
 
-    console.log(`Successfully dispatched notification email to nooryaktechnologies@gmail.com [Subject: ${subject}]`);
+    console.log(`Successfully dispatched notification email to ${targetRecipient} [Subject: ${subject}]`);
   } catch (error: any) {
     console.error('Failed to send enquiry email notification:', error.message);
   }
